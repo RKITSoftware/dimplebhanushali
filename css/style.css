@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('CrimsonText-Roman.woff2') format('woff2'),
+        url('CrimsonText-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.navbar li>a{
+    font-family: 'Montserrat';
+}
+
+.banner {
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1649814647912-2f96b41c0d3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80')100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: snow;
+    padding: 200px 0;
+}
+
+.banner h1 {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.notes{
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.notes h2{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.notes p{
+    font-family: 'Crimson Text';
+    line-height: 25px;
+    padding: 0 13% ;
+    color: gray;
+    font-size: 12px;
+    margin: 0;
+}
+
+.notes img{
+    margin: 2% 0;
+}
+
+.cards{
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.cards .thumbnail .cards-img1{
+    margin-top: 5%;
+}
+
+.cards .thumbnail .cards-img2{
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.cards .thumbnail h3{
+    margin-top: 6px;
+    margin-bottom: 25px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cards .thumbnail p{
+    font-family: 'Crimson Text';
+    line-height: 25px;
+    padding: 0 6%;
+    color: gray;
+    font-size: 15px;
+    padding-bottom: 3%;
+}
+
+
+.clients{
+    text-align: center;
+    padding: 6% 0;
+}
+
+.clients h3{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.clients img{
+    margin: 2% 2%;
+}
+
+.clients p{
+    font-family: 'Crimson Text';
+    padding: 0 15%;
+    font-size: 12px;
+    color: gray;
+}
+
+.clients .clients-p{
+    font-family: 'Crimson Text';
+    font-size: 10px;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 6%;
+}
+
+.about{
+    background-color: black;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.about .thumbnail1{
+    background: none;
+    border: 1px solid gray;
+    padding:  5% 0 8% 0;
+    margin: 0;
+    height: 340px;
+    margin: 2% 0;
+}
+
+.about .thumbnail1 h4{
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about .thumbnail1 img{
+    margin: 25px 0;
+}
+
+.about .thumbnail1 p{
+    font-family: 'Crimson Text';
+    line-height: 25px;
+    color: white;
+    padding: 0 8%;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.about .thumbnail1 form{
+    color: white;
+    text-align: start;
+    padding: 0 5%;
+}
+
+.about .thumbnail1 .form-group{
+    margin: 3% 0;
+}
+
+.about .thumbnail1 .form-group label{
+    margin: 0;
+}
+
+.about .thumbnail1 .form-group input{
+    background:none;
+    border-radius: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: .1px solid gray;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.about .thumbnail1 .form-btn {
+    text-align: end;
+}
+
+.about .thumbnail1 .form-btn .btn{
+    font-family: 'Montserrat';
+    color: #00c7fc;
+    font-size: 15px;
+    margin-top: 2%;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer{
+    padding: 3% 0;
+    background-color: #00c7fc;
+    color: white;
+}
+
+footer ul{
+    text-align: end;
+    margin: 0;
+    padding: 0;
+}
+
+ footer ul>li{
+    display: inline;
+    padding: 0 15px;
+ }
+
+@media screen and (max-width:600px) {
+
+    .banner p {
+        font-size: 10px;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .notes{
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 10% 0;
+    }
+    
+    .notes h2{
+        font-family: 'Montserrat';
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    .notes p{
+        font-family: 'Crimson Text';
+        line-height: 25px;
+        padding: 0 13% ;
+        color: gray;
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    .notes img{
+        margin: 2% 0;
+    }
+}

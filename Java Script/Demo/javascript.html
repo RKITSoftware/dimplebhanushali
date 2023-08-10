@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Java Script Demo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+
+<body style="background-image: url(background.jpg);">
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
-                <div class="card" style="background-color: cadetblue;" >
-                    <div class="card-header" style="background-color: aqua;" >
-                        <h2 class="text-center" >Registration Form Example</h2>
+                <div class="card" style="background-color: cadetblue;">
+                    <div class="card-header" style="background-color: aqua;">
+                        <h2 class="text-center">Registration Form Example</h2>
                     </div>
                     <div class="card-body">
                         <form id="form">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" >
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter Email">
                             </div>
 
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" >
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Enter Password">
                             </div>
 
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  placeholder="Confirm Password">
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                    placeholder="Confirm Password">
                             </div>
 
-                            <button type="submit" class="btn btn-block" style="background-color: greenyellow;">Register</button>
+                            <button type="submit" class="btn btn-block"
+                                style="background-color: greenyellow;">Register</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const registrationForm = document.getElementById("form");
 
-            registrationForm.addEventListener("submit", function(event) {
+            registrationForm.addEventListener("submit", function (event) {
                 event.preventDefault();
 
                 const nameInput = document.getElementById("name");
@@ -92,4 +98,5 @@
         });
     </script>
 </body>
+
 </html>

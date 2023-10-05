@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Elements from First Array at Specified Indices</title>
+
+    <!-- Add Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Add any custom CSS styles here */
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4">Remove Elements from First Array at Specified Indices</h1>
+
+        <!-- ... (rest of the HTML) ... -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>First Array</h2>
+                <p id="firstArray"></p>
+            </div>
+            <div class="col-md-6">
+                <h2>Indices Array</h2>
+                <p id="indicesArray"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Remove Elements</h2>
+                <button id="removeElementsButton" class="btn btn-danger">Remove Elements</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Resultant Array</h2>
+                <p id="resultArray"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JavaScript and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript code to remove elements from the first array at specified indices
+        let firstArray = ['apple', 'banana', 'cherry', 'orange', 'kiwi'];
+        let indicesArray = [1, 3];
+
+        // Function to update the displayed arrays
+        function updateArrays() {
+            document.getElementById('firstArray').textContent = `First Array: [${firstArray.join(', ')}]`;
+            document.getElementById('indicesArray').textContent = `Indices Array: [${indicesArray.join(', ')}]`;
+        }
+
+        // Function to remove elements from the first array at specified indices
+        function removeElements() {
+            // Sort the indicesArray in descending order to avoid index conflicts
+            indicesArray.sort((a, b) => b - a);
+
+            for (const index of indicesArray) {
+                if (index >= 0 && index < firstArray.length) {
+                    firstArray.splice(index, 1);
+                }
+            }
+            updateArrays();
+        }
+
+        // Add an event listener to the "Remove Elements" button
+        document.getElementById('removeElementsButton').addEventListener('click', function () {
+            removeElements();
+            document.getElementById('resultArray').textContent = `Resultant Array: [${firstArray.join(', ')}]`;
+        });
+
+        // Initialize displayed arrays
+        updateArrays();
+    </script>
+</body>
+
+</html>

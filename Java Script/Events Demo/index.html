@@ -4,54 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paint App</title>
+    <title>Paint App with Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.2/css/mdb.min.css">
-    <!-- Include Bootstrap CSS via CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Include MDB JS via CDN (optional) -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.2/js/mdb.min.js"></script>
 </head>
 
 <body>
-    <!-- Main div -->
-    <div class="">
+    <div class="container mt-5">
         <div class="row">
-            <div class="">
-                <!-- Tools -->
-                <div id="tools" class="">
+            <div class="col-md-8">
+                <canvas id="canvas" class="img-fluid border"></canvas>
+            </div>
+            <div class="col-md-4">
+                <div id="tools" class="p-4">
                     <!-- Color Picker -->
-                    <div class="form-group">
+                    <div clas s="form-group">
                         <label for="colorPicker">Choose Color</label>
                         <input type="color" id="colorPicker" class="form-control">
-                        <!-- Line Width Slider -->
+                    </div>
+                    <!-- Line Width Slider -->
+                    <div class="form-group">
                         <label for="lineWidth">Line Width</label>
                         <input type="range" id="lineWidth" class="form-control" min="1" max="10" value="2">
                     </div>
-                    <!-- Buttons -->
+                    <!-- Undo and Redo Buttons -->
                     <div class="btn-group" role="group">
                         <button id="undoButton" class="btn btn-secondary">Undo</button>
                         <button id="redoButton" class="btn btn-secondary">Redo</button>
+                    </div>
+                    <!-- Save and New File Buttons -->
+                    <div class="btn-group mt-3" role="group">
                         <button id="saveButton" class="btn btn-success">Save</button>
                         <button id="newFileButton" class="btn btn-danger">New File</button>
-                        <button id="openFileButton" class="btn btn-primary">Open File</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Drawing Area -->
-    <div>
-        <canvas id="canvas" class="img-fluid rounded border"></canvas>
-    </div>
-
     <script src="js/script.js"></script>
 </body>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add Student</h1>
+        <form id="student-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" id="age" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="grade" class="form-label">Grade</label>
+                <input type="text" id="grade" class="form-control">
+            </div>
+            <!-- Add Subject Field -->
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" class="form-control">
+            </div>
+            <!-- Add Country Field -->
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" id="country" class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Subject</th> <!-- Add Subject Column -->
+                    <th>Country</th> <!-- Add Country Column -->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="student-list"></tbody>
+        </table>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

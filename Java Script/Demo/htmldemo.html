@@ -1,102 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>JavaScript Demo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Using JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 </head>
 
-<body>
+<body onbeforeprint="beforePrintFunction()">
     <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <div class="card" style="background-color: cadetblue;">
-                    <div class="card-header" style="background-color: aqua;">
-                        <h2 class="text-center">Registration Form Example</h2>
-                    </div>
-                    <div class="card-body">
-                        <form id="form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Enter Email">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Enter Password">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-                                    placeholder="Confirm Password">
-                            </div>
-
-                            <button type="submit" class="btn btn-block"
-                                style="background-color: greenyellow;">Register</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="header">
+            <h2>Create Account</h2>
         </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="username" id="username" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="email" placeholder="a@florin-pop.com" id="email" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="9876543210"
+                    pattern="[6-9]{1}[0-9]{9}">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="gender">Select Gender</label>
+                <select name="gender" id="gender">
+                    <option value="volvo">Male</option>
+                    <option value="saab">Female</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="gender">Select Language</label>
+                <input type="checkbox" id="gujarati" name="gujarati" value="gujarati">
+                <label for="gujarati"> Gujarati</label>
+                <input type="checkbox" id="hindi" name="hindi" value="hindi">
+                <label for="hindi"> Hindi</label>
+                <input type="checkbox" id="english" name="english" value="english">
+                <label for="english"> English</label>
+                <!-- </div> -->
+                <div class="form-control">
+                    <label for="username">Password</label>
+                    <input type="password" placeholder="Password" id="password" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="username">Password check</label>
+                    <input type="password" placeholder="Password two" id="password2" />
+                    <small>Error message</small>
+                </div>
+                <button>Submit</button>
+        </form>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const registrationForm = document.getElementById("form");
-
-            registrationForm.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                const nameInput = document.getElementById("name");
-                const emailInput = document.getElementById("email");
-                const passwordInput = document.getElementById("password");
-                const confirmPasswordInput = document.getElementById("confirmPassword");
-
-                const name = nameInput.value;
-                const email = emailInput.value;
-                const password = passwordInput.value;
-                const confirmPassword = confirmPasswordInput.value;
-
-                if (name.trim() === "") {
-                    alert("Name field is required");
-                    nameInput.focus();
-                    return;
-                }
-                if (email.trim() === "") {
-                    alert("Email field is required");
-                    emailInput.focus();
-                    return;
-                }
-                if (!isValidEmail(email)) {
-                    alert("Invalid email format");
-                    emailInput.focus();
-                    return;
-                }
-                if (password.trim() === "") {
-                    alert("Password field is required");
-                    passwordInput.focus();
-                    return;
-                }
-                if (password !== confirmPassword) {
-                    alert("Passwords do not match");
-                    confirmPasswordInput.focus();
-                    return;
-                }
-                alert("Registration successful!");
-            });
-            function isValidEmail(email) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailPattern.test(email);
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

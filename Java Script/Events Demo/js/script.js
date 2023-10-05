@@ -41,6 +41,24 @@ function draw(e) {
 }
 
 // Draw with mouse
+canvas.addEventListener("mousedown mouseup", () => {
+    if (painting == true) {
+        trial()
+    } else {
+        context.closePath();
+    }
+})
+
+canvas.addMultipleListeners("mousedown", "mouseup", () => {
+    trial()
+})
+
+function trial() {
+    context.beginPath();
+    context.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    paths.push([]);
+}
+
 canvas.addEventListener("mousedown", () => {
     painting = true;
     context.beginPath();

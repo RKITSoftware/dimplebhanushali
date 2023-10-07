@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Events Sequence</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="eventContainer">
+        <h1 class="text-center">Key Events Sequence</h1>
+        <p class="text-center">Press keys to capture the sequence of key events (Key Down, Key Press, Key Up).</p>
+
+        <div>
+            <p class="text-center">Event Sequence:</p>
+            <ul id="eventList"></ul>
+        </div>
+    </div>
+
+    <script>
+        const eventContainer = document.getElementById('eventContainer');
+        const eventList = document.getElementById('eventList');
+        const capturedEvents = [];
+
+        document.addEventListener('keydown', (event) => {
+            capturedEvents.push(`Key Down: ${event.key}`);
+            updateEventList();
+        });
+
+        document.addEventListener('keypress', (event) => {
+            capturedEvents.push(`Key Press: ${event.key}`);
+            updateEventList();
+        });
+
+        document.addEventListener('keyup', (event) => {
+            capturedEvents.push(`Key Up: ${event.key}`);
+            updateEventList();
+        });
+
+        function updateEventList() {
+            eventList.innerHTML = '';
+
+            capturedEvents.forEach((event, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Event ${index + 1}: ${event}`;
+                eventList.appendChild(listItem);
+            });
+
+            // Scroll to the bottom of the container
+            eventContainer.scrollTop = eventContainer.scrollHeight;
+        }
+    </script>
+
+    <!-- Add Bootstrap JS and jQuery links for Bootstrap components -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

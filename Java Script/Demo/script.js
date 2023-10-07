@@ -12,6 +12,7 @@ form.addEventListener('submit', e => {
     checkInputs();
 });
 
+var flag = 0
 // Checking All Elements
 function checkInputs() {
     // trim to remove the whitespaces
@@ -24,6 +25,7 @@ function checkInputs() {
     // Username Checking
     if (usernameValue === '') {
         setErrorFor(username, 'Username cannot be blank');
+        flag += 1
     } else {
         setSuccessFor(username);
     }
@@ -31,15 +33,18 @@ function checkInputs() {
     // Email Checking
     if (emailValue === '') {
         setErrorFor(email, 'Email cannot be blank');
+        flag += 1
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Not a valid email');
+        flag += 1
     } else {
         setSuccessFor(email);
     }
 
     // Phone Number Checking
     if (phoneValue == '') {
-        setErrorFor('phone', 'Phone Number is Required')
+        setErrorFor(phone, 'Phone Number is Required')
+        flag += 1
     } else {
         setSuccessFor(phone)
     }
@@ -47,6 +52,7 @@ function checkInputs() {
     // Password Checking
     if (passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank');
+        flag += 1
     } else {
         setSuccessFor(password);
     }
@@ -54,12 +60,16 @@ function checkInputs() {
     // Confirm Password Checking
     if (password2Value === '') {
         setErrorFor(password2, 'Password2 cannot be blank');
+        flag += 1
     } else if (passwordValue !== password2Value) {
         setErrorFor(password2, 'Passwords does not match');
+        flag += 1
     } else {
         setSuccessFor(password2);
     }
-    success()
+    if (flag == 0) {
+        success()
+    }
 
 }
 
@@ -86,10 +96,4 @@ function setSuccessFor(input) {
 // Email Validation
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
-// beforePrintFunction()
-
-function beforePrintFunction() {
-    alert("You are about to print this document!");
 }

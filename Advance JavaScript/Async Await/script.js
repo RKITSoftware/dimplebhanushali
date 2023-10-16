@@ -5,7 +5,6 @@ function getCheese() {
             resolve(cheese)
         }, 2000)
     })
-
 }
 
 function makeDough(cheese) {
@@ -53,6 +52,7 @@ function bakePizza(dough) {
 
 // Async Await
 // this function is acnchronous in nature
+
 async function orderPizza() {
     try {
         const cheese = await getCheese();

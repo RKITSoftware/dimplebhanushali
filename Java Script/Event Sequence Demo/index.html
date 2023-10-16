@@ -24,14 +24,20 @@
             alert('Onclick Event Handler')
         }
 
-        test.addEventListener("click", () => {
-            alert('Add Event Listener')
-        });
-
         // jQuery equivalent to add a click event handler
         $('#test').click(() => {
             alert('jQuery Event Handler')
         });
+
+        test.addEventListener("click", () => {
+            alert('Add Event Listener')
+        });
+
+        //        test.onclick = () => {
+        //           alert(' .onClick Listener')
+        //        }
+
+
     </script>
 
 </body>

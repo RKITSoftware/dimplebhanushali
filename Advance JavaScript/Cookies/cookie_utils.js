@@ -11,7 +11,9 @@ const updateCookies = () => {
     })
 }
 
-export const setCookie = (key, value, date) => {
+
+
+const setCookie = (key, value, date) => {
     if (key == undefined) {
         alert('Please pass value')
         return
@@ -38,3 +40,5 @@ export const deleteAllCookies = () => {
 }
 
 updateCookies()
+
+export { setCookie }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration and Login Form</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="regUsername" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="regPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="button" id="registerButton" class="btn btn-primary">Register</button>
+        </form>
+
+        <h1 class="mt-5">Login Form</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" id="loginUsername" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="button" id="loginButton" class="btn btn-primary">Login</button>
+        </form>
+
+        <div id="message" class="mt-3 text-danger"></div>
+    </div>
+
+    <!-- Include Bootstrap JavaScript and jQuery from a CDN (for Bootstrap features like modals) -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

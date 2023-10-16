@@ -7,160 +7,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coder's Bank</title>
     <style>
-        /* Add some basic styling for the forms */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            background-color: #0074b8;
+            color: #fff;
+            padding: 10px;
+        }
+
         form {
-            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            margin: 20px;
         }
 
-        input[type="text"],
-        input[type="number"] {
-            padding: 5px;
-            margin-right: 10px;
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        select,
-        button {
-            padding: 5px 10px;
-            margin-right: 10px;
+        button,
+        input[type="submit"] {
+            background-color: #0074b8;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover,
+        input[type="submit"]:hover {
+            background-color: #005a9d;
+        }
+
+        #details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+        }
+
+        /* Style the select dropdown */
+        .account-type-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+            appearance: none;
+            /* Removes default appearance (e.g., arrow) */
+        }
+
+        /* Style the select options */
+        .account-type-select option {
+            background-color: #fff;
+            color: #333;
         }
     </style>
 </head>
 
 <body>
     <h2>Coder's Bank</h2>
-
-    <!-- Create Account Form -->
+    <!-- Add a dropdown for selecting the account type -->
     <form id="accountForm">
-        <input type="text" placeholder="Customer name" id="customerName" required>
-        <input type="number" placeholder="Initial balance" id="initialBalance" required>
-        <select id="accountType" required>
-            <option value="Savings">Savings Account</option>
-            <option value="Checking">Checking Account</option>
+        <input type="text" placeholder="Customer name" id="customerName">
+        <input type="number" placeholder="Initial balance" id="balance">
+        <label for="accountType">Account Type:</label>
+        <select id="accountType">
+            <option value="BankAccount">Standard</option>
+            <option value="CurrentAccount">Current</option>
         </select>
-        <button type="submit">Create Account</button>
+        <button>Create Account</button>
     </form>
 
-    <!-- Deposit Form -->
+    <br>
     <form id="depositForm">
-        <input type="number" placeholder="Account Number" id="accountNumber" required>
-        <input type="number" placeholder="Amount" id="depositAmount" required>
-        <button type="submit">Deposit</button>
+        <input type="number" placeholder="Account Number" id="accountNumber">
+        <input type="number" placeholder="Amount" id="amount">
+        <input type="submit" id="deposit" value="Deposit">
+        <input type="submit" id="withdraw" value="Withdraw">
     </form>
+    <br>
+    <div id="details">
+        <h2 id="accountHolderName">Account Details</h2>
+        <h3 id="accountBalance"></h3>
+        <h3 id="accountType"></h3>
+    </div>
 
-    <!-- Withdraw Form -->
-    <form id="withdrawForm">
-        <input type="number" placeholder="Account Number" id="withdrawAccountNumber" required>
-        <input type="number" placeholder="Amount" id="withdrawAmount" required>
-        <button type="submit">Withdraw</button>
-    </form>
+    <script src="./5_encapsulation.js"></script>
 
-    <!-- Display Account Info -->
-    <h3>Account Information</h3>
-    <div id="accountInfo"></div>
-
-    <script>
-        // Define a simple Account class
-        class Account {
-            constructor(customerName, initialBalance, accountType) {
-                this.customerName = customerName;
-                this.accountNumber = Account.generateAccountNumber();
-                this.balance = initialBalance;
-                this.accountType = accountType;
-            }
-
-            static generateAccountNumber() {
-                return Math.floor(Math.random() * 100000);
-            }
-
-            deposit(amount) {
-                this.balance += amount;
-            }
-
-            withdraw(amount) {
-                if (this.balance >= amount) {
-                    this.balance -= amount;
-                    return true; // Successful withdrawal
-                }
-                return false; // Insufficient balance
-            }
-
-            getAccountInfo() {
-                return `Account Number: ${this.accountNumber}<br>
-                        Customer Name: ${this.customerName}<br>
-                        Account Type: ${this.accountType}<br>
-                        Balance: $${this.balance.toFixed(2)}`;
-            }
-        }
-
-        // Handle the account creation form
-        const accountForm = document.getElementById('accountForm');
-        accountForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const customerName = document.getElementById('customerName').value;
-            const initialBalance = parseFloat(document.getElementById('initialBalance').value);
-            const accountType = document.getElementById('accountType').value;
-            const account = new Account(customerName, initialBalance, accountType);
-
-            // Display account information
-            const accountInfo = document.getElementById('accountInfo');
-            accountInfo.innerHTML = account.getAccountInfo();
-
-            // Clear form fields
-            document.getElementById('customerName').value = '';
-            document.getElementById('initialBalance').value = '';
-            document.getElementById('accountType').value = 'Savings';
-        });
-
-        // Handle the deposit form
-        const depositForm = document.getElementById('depositForm');
-        depositForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const accountNumber = parseInt(document.getElementById('accountNumber').value);
-            const depositAmount = parseFloat(document.getElementById('depositAmount').value);
-
-            // Find the account and deposit the amount
-            if (accountNumber === account.accountNumber) {
-                account.deposit(depositAmount);
-
-                // Update and display account information
-                const accountInfo = document.getElementById('accountInfo');
-                accountInfo.innerHTML = account.getAccountInfo();
-
-                // Clear form fields
-                document.getElementById('accountNumber').value = '';
-                document.getElementById('depositAmount').value = '';
-            } else {
-                alert('Account not found. Please enter a valid account number.');
-            }
-        });
-
-        // Handle the withdraw form
-        const withdrawForm = document.getElementById('withdrawForm');
-        withdrawForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const accountNumber = parseInt(document.getElementById('withdrawAccountNumber').value);
-            const withdrawAmount = parseFloat(document.getElementById('withdrawAmount').value);
-
-            // Find the account and attempt to withdraw the amount
-            if (accountNumber === account.accountNumber) {
-                const withdrawalSuccessful = account.withdraw(withdrawAmount);
-
-                if (withdrawalSuccessful) {
-                    // Update and display account information
-                    const accountInfo = document.getElementById('accountInfo');
-                    accountInfo.innerHTML = account.getAccountInfo();
-
-                    // Clear form fields
-                    document.getElementById('withdrawAccountNumber').value = '';
-                    document.getElementById('withdrawAmount').value = '';
-                } else {
-                    alert('Insufficient balance. Please enter a valid withdrawal amount.');
-                }
-            } else {
-                alert('Account not found. Please enter a valid account number.');
-            }
-        });
-    </script>
 </body>
 
 </html>

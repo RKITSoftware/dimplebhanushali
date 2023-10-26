@@ -11,8 +11,6 @@ const updateCookies = () => {
     })
 }
 
-
-
 const setCookie = (key, value, date) => {
     if (key == undefined) {
         alert('Please pass value')

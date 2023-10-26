@@ -10,7 +10,6 @@ function displayError(message) {
     messageElement.textContent = message;
 }
 
-
 document.getElementById("registerButton").addEventListener("click", function () {
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;

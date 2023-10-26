@@ -37,6 +37,8 @@
                 const data = await response.json();
                 loader.style.display = 'none'
                 fetchButton.disabled = false
+
+                console.log(data)
                 return data;
 
             } catch (error) {

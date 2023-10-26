@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Functions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1>jQuery and Bootstrap Example</h1>
+        <hr>
+
+        <h2>Array Manipulation with jQuery</h2>
+        <div class="row">
+            <div class="col">
+                <h4>Doubling Array</h4>
+                <button id="doubleArray" class="btn btn-primary">Double Array</button>
+                <div id="doubledResult"></div>
+            </div>
+            <div class="col">
+                <h4>Filtering Even Numbers</h4>
+                <button id="filterEven" class="btn btn-primary">Filter Even</button>
+                <div id="evenNumbersResult"></div>
+            </div>
+            <div class="col">
+                <h4>Each Element in Array</h4>
+                <button id="iterateArray" class="btn btn-primary">Iterate Array</button>
+                <div id="iterateResult"></div>
+            </div>
+        </div>
+
+        <h2>Deferred Objects</h2>
+        <div class="row">
+            <div class="col">
+                <button id="deferredSuccess" class="btn btn-primary">Deferred Success</button>
+            </div>
+            <div class="col">
+                <button id="deferredFail" class="btn btn-danger">Deferred Fail</button>
+            </div>
+        </div>
+        <div id="deferredResult" class="mt-3"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

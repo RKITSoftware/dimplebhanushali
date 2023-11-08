@@ -26,6 +26,35 @@ $(document).ready(function () {
         $("#iterateResult").html(result);
     });
 
+    $("#testRegex").click(function () {
+        // Clear previous matches
+        $("#matches").empty();
+
+        // Get the regex pattern and input text
+        var regexPattern = $("#regex").val();
+        var inputText = $("#inputText").val();
+
+        try {
+            var regex = new RegExp(regexPattern, "g");
+            var matches = inputText.match(regex);
+
+            if (matches) {
+                // Display matched portions in a list
+                for (var i = 0; i < matches.length; i++) {
+                    $("#matches").append("<p>Match " + (i + 1) + ": " + matches[i] + "</p>");
+                }
+            } else {
+                $("#matches").text("No matches found.");
+            }
+        } catch (error) {
+            $("#matches").text("Invalid regex pattern: " + error.message);
+        }
+    });
+
+    // "/^w+[/.-]?\w*@\w*(\.)"
+
+
+
     // Deferred Objects
     const deferred = $.Deferred();
 

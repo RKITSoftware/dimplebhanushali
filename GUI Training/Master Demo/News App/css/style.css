@@ -8,7 +8,7 @@
 
 :root {
     --primary-text-color: #183b56;
-    --secondary-text-color: #577592;
+    --secondary-text-color: #3d5adbe4;
     --accent-color: #ed3322;
     --accent-color-dark: #9a29e5;
 }
@@ -139,9 +139,11 @@ main {
 }
 
 .card:hover {
-    box-shadow: 1px 1px 8px #d4ecff;
+    box-shadow: 1px 1px 8px #f00;
     background-color: #f9fdff;
+    animation: rotate 1s linear;
     transform: translateY(-2px);
+    transform: rotate(360deg);
 }
 
 .card-header img {
@@ -156,4 +158,16 @@ main {
 
 .news-source {
     margin-block: 12px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        /* Start with no rotation (0 degrees) */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees at the end */
+    }
 }

@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\bin\Debug\Scope & Accessibility modifier.exe.config
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\bin\Debug\Scope & Accessibility modifier.exe
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\bin\Debug\Scope & Accessibility modifier.pdb
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\obj\Debug\Scope & Accessibility modifier.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\obj\Debug\Scope & Accessibility modifier.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\obj\Debug\Scope & Accessibility modifier.exe
+E:\API_RKIT\Programs\Scope & Accessibility modifier\Scope & Accessibility modifier\Scope & Accessibility modifier\obj\Debug\Scope & Accessibility modifier.pdb

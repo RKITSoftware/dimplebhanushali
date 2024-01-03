@@ -1,0 +1,7 @@
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\bin\Debug\AutoBoxing Unboxing.exe.config
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\bin\Debug\AutoBoxing Unboxing.exe
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\bin\Debug\AutoBoxing Unboxing.pdb
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\obj\Debug\AutoBoxing Unboxing.csproj.AssemblyReference.cache
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\obj\Debug\AutoBoxing Unboxing.csproj.CoreCompileInputs.cache
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\obj\Debug\AutoBoxing Unboxing.exe
+E:\API_RKIT\AutoBoxing Unboxing\AutoBoxing Unboxing\AutoBoxing Unboxing\obj\Debug\AutoBoxing Unboxing.pdb

@@ -1,0 +1,7 @@
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.AssemblyReference.cache
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+E:\API_RKIT\HelloWorld\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

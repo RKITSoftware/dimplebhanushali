@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe.config
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.pdb
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.exe
+E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.pdb

@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Data table\Data table\Data table\bin\Debug\Data table.exe.config
+E:\API_RKIT\Programs\Data table\Data table\Data table\bin\Debug\Data table.exe
+E:\API_RKIT\Programs\Data table\Data table\Data table\bin\Debug\Data table.pdb
+E:\API_RKIT\Programs\Data table\Data table\Data table\obj\Debug\Data table.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Data table\Data table\Data table\obj\Debug\Data table.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Data table\Data table\Data table\obj\Debug\Data table.exe
+E:\API_RKIT\Programs\Data table\Data table\Data table\obj\Debug\Data table.pdb

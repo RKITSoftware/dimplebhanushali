@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\bin\Debug\Exception Handling.exe.config
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\bin\Debug\Exception Handling.exe
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\bin\Debug\Exception Handling.pdb
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\obj\Debug\Exception Handling.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\obj\Debug\Exception Handling.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\obj\Debug\Exception Handling.exe
+E:\API_RKIT\Programs\Exception Handling\Exception Handling\Exception Handling\obj\Debug\Exception Handling.pdb

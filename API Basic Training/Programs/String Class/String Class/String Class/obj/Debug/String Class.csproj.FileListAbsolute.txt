@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\String Class\String Class\String Class\bin\Debug\String Class.exe.config
+E:\API_RKIT\Programs\String Class\String Class\String Class\bin\Debug\String Class.exe
+E:\API_RKIT\Programs\String Class\String Class\String Class\bin\Debug\String Class.pdb
+E:\API_RKIT\Programs\String Class\String Class\String Class\obj\Debug\String Class.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\String Class\String Class\String Class\obj\Debug\String Class.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\String Class\String Class\String Class\obj\Debug\String Class.exe
+E:\API_RKIT\Programs\String Class\String Class\String Class\obj\Debug\String Class.pdb

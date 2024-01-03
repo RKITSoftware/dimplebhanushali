@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Create and Adding References to Assemblies", "Create and Adding References to Assemblies\Create and Adding References to Assemblies.csproj", "{2945E186-7C19-418A-B874-D2595558A496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapping", "WebScrapping\WebScrapping.csproj", "{C6C49408-D42B-40E6-82A4-72ED6173D6F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2945E186-7C19-418A-B874-D2595558A496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2945E186-7C19-418A-B874-D2595558A496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2945E186-7C19-418A-B874-D2595558A496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2945E186-7C19-418A-B874-D2595558A496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C49408-D42B-40E6-82A4-72ED6173D6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C49408-D42B-40E6-82A4-72ED6173D6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C49408-D42B-40E6-82A4-72ED6173D6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C49408-D42B-40E6-82A4-72ED6173D6F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B181827-64B9-4A38-AC2D-D64BA6749A49}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitwise Operator", "Bitwise Operator\Bitwise Operator.csproj", "{2AB51289-A2D1-4FAD-9224-B8FAC117ECAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AB51289-A2D1-4FAD-9224-B8FAC117ECAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB51289-A2D1-4FAD-9224-B8FAC117ECAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB51289-A2D1-4FAD-9224-B8FAC117ECAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB51289-A2D1-4FAD-9224-B8FAC117ECAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAC1A7DF-0838-4584-95E1-27FF8411FC61}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.deps.json
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.dll
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.pdb
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.GeneratedMSBuildEditorConfig.editorconfig
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.AssemblyInfoInputs.cache
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.AssemblyInfo.cs
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.dll
+E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.pdb

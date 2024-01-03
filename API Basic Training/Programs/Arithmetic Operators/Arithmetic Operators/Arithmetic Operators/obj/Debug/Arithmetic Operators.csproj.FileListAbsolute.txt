@@ -1,0 +1,7 @@
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\bin\Debug\Arithmetic Operators.exe.config
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\bin\Debug\Arithmetic Operators.exe
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\bin\Debug\Arithmetic Operators.pdb
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\obj\Debug\Arithmetic Operators.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\obj\Debug\Arithmetic Operators.exe
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\obj\Debug\Arithmetic Operators.pdb
+E:\API_RKIT\Arithmetic Operators\Arithmetic Operators\Arithmetic Operators\obj\Debug\Arithmetic Operators.csproj.AssemblyReference.cache

@@ -1,0 +1,7 @@
+E:\API_RKIT\DataType\DataType\DataType\bin\Debug\DataType.exe.config
+E:\API_RKIT\DataType\DataType\DataType\bin\Debug\DataType.exe
+E:\API_RKIT\DataType\DataType\DataType\bin\Debug\DataType.pdb
+E:\API_RKIT\DataType\DataType\DataType\obj\Debug\DataType.csproj.AssemblyReference.cache
+E:\API_RKIT\DataType\DataType\DataType\obj\Debug\DataType.csproj.CoreCompileInputs.cache
+E:\API_RKIT\DataType\DataType\DataType\obj\Debug\DataType.exe
+E:\API_RKIT\DataType\DataType\DataType\obj\Debug\DataType.pdb

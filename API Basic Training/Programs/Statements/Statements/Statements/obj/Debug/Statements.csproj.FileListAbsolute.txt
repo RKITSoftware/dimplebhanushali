@@ -1,0 +1,7 @@
+E:\API_RKIT\Statements\Statements\Statements\bin\Debug\Statements.exe.config
+E:\API_RKIT\Statements\Statements\Statements\bin\Debug\Statements.exe
+E:\API_RKIT\Statements\Statements\Statements\bin\Debug\Statements.pdb
+E:\API_RKIT\Statements\Statements\Statements\obj\Debug\Statements.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Statements\Statements\Statements\obj\Debug\Statements.exe
+E:\API_RKIT\Statements\Statements\Statements\obj\Debug\Statements.pdb
+E:\API_RKIT\Statements\Statements\Statements\obj\Debug\Statements.csproj.AssemblyReference.cache

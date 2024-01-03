@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.exe.config
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.exe
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.pdb
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.exe
+E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.pdb

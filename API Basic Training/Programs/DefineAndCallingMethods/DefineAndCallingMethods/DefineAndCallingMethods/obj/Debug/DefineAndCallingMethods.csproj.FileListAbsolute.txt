@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\bin\Debug\DefineAndCallingMethods.exe.config
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\bin\Debug\DefineAndCallingMethods.exe
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\bin\Debug\DefineAndCallingMethods.pdb
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\obj\Debug\DefineAndCallingMethods.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\obj\Debug\DefineAndCallingMethods.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\obj\Debug\DefineAndCallingMethods.exe
+E:\API_RKIT\Programs\DefineAndCallingMethods\DefineAndCallingMethods\DefineAndCallingMethods\obj\Debug\DefineAndCallingMethods.pdb

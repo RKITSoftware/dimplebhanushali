@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Exception_Handling
 {
+    /// <summary>
+    /// This program demonstrates exception handling in C# when downloading content from a web page.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -36,6 +39,11 @@ namespace Exception_Handling
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Downloads the content of a web page using HttpClient.
+        /// </summary>
+        /// <param name="url">The URL of the web page to download.</param>
+        /// <returns>The content of the web page.</returns>
         static string DownloadWebPage(string url)
         {
             using (HttpClient client = new HttpClient())

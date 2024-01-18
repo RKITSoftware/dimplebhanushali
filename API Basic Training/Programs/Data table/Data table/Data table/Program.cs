@@ -61,8 +61,10 @@ namespace Data_table
 
             Console.ReadKey();
         }
-
-        //method to display DataTable
+        /// <summary>
+        /// Displays the content of a DataTable.
+        /// </summary>
+        /// <param name="table">The DataTable to be displayed.</param>
         static void DisplayDataTable(DataTable table)
         {
             foreach (DataRow row in table.Rows)
@@ -71,7 +73,10 @@ namespace Data_table
             }
         }
 
-        //method to display DataRow array
+        /// <summary>
+        /// Displays the content of an array of DataRow objects.
+        /// </summary>
+        /// <param name="rows">The DataRow array to be displayed.</param>
         static void DisplayDataRowArray(DataRow[] rows)
         {
             foreach (DataRow row in rows)

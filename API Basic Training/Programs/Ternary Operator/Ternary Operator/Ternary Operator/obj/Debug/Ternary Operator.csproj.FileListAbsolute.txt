@@ -1,7 +1,0 @@
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\bin\Debug\Ternary Operator.exe.config
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\bin\Debug\Ternary Operator.exe
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\bin\Debug\Ternary Operator.pdb
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\obj\Debug\Ternary Operator.csproj.AssemblyReference.cache
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\obj\Debug\Ternary Operator.csproj.CoreCompileInputs.cache
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\obj\Debug\Ternary Operator.exe
-E:\API_RKIT\Ternary Operator\Ternary Operator\Ternary Operator\obj\Debug\Ternary Operator.pdb

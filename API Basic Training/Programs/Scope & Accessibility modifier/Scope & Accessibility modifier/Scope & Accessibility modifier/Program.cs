@@ -1,29 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Scope___Accessibility_modifier
+namespace Scope_And_Accessibility_Modifiers
 {
-    class Program : ProtectedMod
+    /// <summary>
+    /// A program demonstrating the us_age of scope and accessibility modifiers.
+    /// </summary>
+    public class Program : ProtectedMod
     {
+        /// <summary>
+        /// A nested class demonstrating access modifiers.
+        /// </summary>
         class AccessModifiers
         {
             public int num;
-            //private AccessModifiers can only be used in same class
-            int age;
+            // private AccessModifiers can only be used in the same class
+            private int _age;
 
+            /// <summary>
+            /// Default constructor.
+            /// </summary>
             public AccessModifiers()
-            {}
+            { }
 
+            /// <summary>
+            /// Parameterized constructor for private member.
+            /// </summary>
+            /// <param name="input_age">_age value to set.</param>
             public AccessModifiers(int inputAge)
             {
-                age = inputAge;
-                Console.WriteLine($"Private Age => {age}");
+                _age = inputAge;
+                Console.WriteLine($"Private _age => {_age}");
             }
         }
 
+        /// <summary>
+        /// Entry point of the program.
+        /// </summary>
+        /// <param name="args">Command line arguments.</param>
         static void Main(string[] args)
         {
             AccessModifiers modifiers = new AccessModifiers();
@@ -35,11 +48,14 @@ namespace Scope___Accessibility_modifier
             Program program = new Program();
             program.num2 = 22;
             Console.WriteLine($"Protected Number => {program.num2}");
-            
+
             Console.ReadKey();
         }
     }
 
+    /// <summary>
+    /// A class with a protected member.
+        /// </summary>
     class ProtectedMod
     {
         protected int num2;

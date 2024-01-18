@@ -67,7 +67,6 @@ namespace Date_Time_Class
             Console.WriteLine($"Universal Time: {universalTime}");
 
             Console.ReadKey();
-
         }
     }
 }

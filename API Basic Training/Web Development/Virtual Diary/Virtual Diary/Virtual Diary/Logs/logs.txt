@@ -1,0 +1,34 @@
+INFO: 15-01-2024 18:09:27 - Attempting to retrieve diary entries from cache.
+INFO: 15-01-2024 18:09:27 - Cache miss. Retrieving diary entries from the source.
+INFO: 15-01-2024 18:09:27 - Diary entries added to cache.
+INFO: 16-01-2024 09:58:04 - Attempting to add a new task to diary entry with Id: 10.
+INFO: 16-01-2024 09:58:04 - New task added to diary entry with Id 10 successfully.
+INFO: 16-01-2024 09:58:18 - Attempting to retrieve diary entry with Id: 10 from cache.
+INFO: 16-01-2024 09:58:18 - Cache miss. Retrieving all diary entries from the source.
+INFO: 16-01-2024 09:58:18 - Diary entries added to cache.
+INFO: 16-01-2024 09:58:18 - Diary entry with Id 10 retrieved successfully.
+INFO: 16-01-2024 09:58:38 - Attempting to delete task with Id: 3 within diary entry with Id: 10.
+INFO: 16-01-2024 09:58:38 - Diary entries cache invalidated.
+INFO: 16-01-2024 09:58:38 - Task with Id 3 within diary entry with Id 10 deleted successfully.
+INFO: 16-01-2024 09:58:44 - Attempting to retrieve diary entry with Id: 10 from cache.
+INFO: 16-01-2024 09:58:44 - Cache miss. Retrieving all diary entries from the source.
+INFO: 16-01-2024 09:58:44 - Diary entries added to cache.
+INFO: 16-01-2024 09:58:44 - Diary entry with Id 10 retrieved successfully.
+INFO: 16-01-2024 10:28:06 - Attempting to retrieve diary entries from cache.
+INFO: 16-01-2024 10:28:06 - Cache miss. Retrieving diary entries from the source.
+INFO: 16-01-2024 10:28:07 - Diary entries added to cache.
+INFO: 16-01-2024 12:09:47 - Attempting to retrieve diary entries from cache.
+INFO: 16-01-2024 12:09:47 - Cache miss. Retrieving diary entries from the source.
+INFO: 16-01-2024 12:09:47 - Diary entries added to cache.
+INFO: 16-01-2024 12:09:58 - Attempting to retrieve diary entry with Id: 10 from cache.
+INFO: 16-01-2024 12:09:58 - Diary entries retrieved from cache.
+INFO: 16-01-2024 12:09:58 - Diary entry with Id 10 retrieved successfully.
+INFO: 16-01-2024 12:10:36 - Attempting to delete diary entry with Id: 10.
+INFO: 16-01-2024 12:10:36 - Diary entries cache invalidated.
+INFO: 16-01-2024 12:10:36 - Diary entry with Id 10 deleted successfully.
+INFO: 16-01-2024 12:11:17 - Attempting to retrieve diary entry with Id: 10 from cache.
+INFO: 16-01-2024 12:11:17 - Cache miss. Retrieving all diary entries from the source.
+INFO: 16-01-2024 12:11:17 - Diary entries added to cache.
+WARN: 16-01-2024 12:11:17 - No Entry Found With Id => 10
+INFO: 16-01-2024 12:11:21 - Attempting to retrieve diary entries from cache.
+INFO: 16-01-2024 12:11:21 - Diary entries retrieved from cache.

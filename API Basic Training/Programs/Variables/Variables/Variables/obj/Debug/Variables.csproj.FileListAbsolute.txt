@@ -1,7 +1,0 @@
-E:\API_RKIT\Variables\Variables\Variables\bin\Debug\Variables.exe.config
-E:\API_RKIT\Variables\Variables\Variables\bin\Debug\Variables.exe
-E:\API_RKIT\Variables\Variables\Variables\bin\Debug\Variables.pdb
-E:\API_RKIT\Variables\Variables\Variables\obj\Debug\Variables.csproj.CoreCompileInputs.cache
-E:\API_RKIT\Variables\Variables\Variables\obj\Debug\Variables.exe
-E:\API_RKIT\Variables\Variables\Variables\obj\Debug\Variables.pdb
-E:\API_RKIT\Variables\Variables\Variables\obj\Debug\Variables.csproj.AssemblyReference.cache

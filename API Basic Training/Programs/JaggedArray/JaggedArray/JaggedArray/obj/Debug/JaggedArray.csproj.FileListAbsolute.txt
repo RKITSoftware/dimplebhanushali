@@ -1,7 +1,0 @@
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\obj\Debug\JaggedArray.csproj.AssemblyReference.cache
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\obj\Debug\JaggedArray.csproj.CoreCompileInputs.cache
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\bin\Debug\JaggedArray.exe.config
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\bin\Debug\JaggedArray.exe
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\bin\Debug\JaggedArray.pdb
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\obj\Debug\JaggedArray.exe
-E:\API_RKIT\JaggedArray\JaggedArray\JaggedArray\obj\Debug\JaggedArray.pdb

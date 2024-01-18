@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnSubmit").click(function () {
+                let uservalue = {
+                    'Id': $("#Id").val(),
+                    'Name': $("#Name").val(),
+                    'Course': $("#Course").val(),
+                    'Sem': $("#Sem").val()
+                };
+
+                console.log('User Value:', uservalue);
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:49680/api/App/AddStudents", 
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(uservalue),
+
+                    success: function () {
+                        alert('Congrats Data is submitted');
+                    },
+                    error: function () {
+                        alert("Failed");
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+
+<h2>Index</h2>
+
+<div>
+    <label>Id:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="Id" name="Id" value="" /><br />
+    <label>Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="Name" name="Name" value="" /><br />
+    <label>Course:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="Course" name="Course" value="" /><br />
+    <label>Sem:</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" id="Sem" name="Sem" value="" /><br />
+    <input type="button" id="btnSubmit" name="btn1" value="Sign In" />
+</div>

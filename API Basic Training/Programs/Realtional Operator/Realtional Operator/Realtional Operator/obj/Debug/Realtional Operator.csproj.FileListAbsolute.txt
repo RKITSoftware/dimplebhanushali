@@ -1,6 +1,0 @@
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\bin\Debug\Realtional Operator.exe.config
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\bin\Debug\Realtional Operator.exe
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\bin\Debug\Realtional Operator.pdb
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\obj\Debug\Realtional Operator.csproj.CoreCompileInputs.cache
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\obj\Debug\Realtional Operator.exe
-E:\API_RKIT\Realtional Operator\Realtional Operator\Realtional Operator\obj\Debug\Realtional Operator.pdb

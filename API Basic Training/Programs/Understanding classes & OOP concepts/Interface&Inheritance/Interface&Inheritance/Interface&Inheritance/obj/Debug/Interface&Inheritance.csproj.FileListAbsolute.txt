@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\bin\Debug\Interface&Inheritance.exe.config
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\bin\Debug\Interface&Inheritance.exe
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\bin\Debug\Interface&Inheritance.pdb
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\obj\Debug\Interface&Inheritance.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\obj\Debug\Interface&Inheritance.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\obj\Debug\Interface&Inheritance.exe
+E:\API_RKIT\Programs\Interface&Inheritance\Interface&Inheritance\Interface&Inheritance\obj\Debug\Interface&Inheritance.pdb

@@ -1,0 +1,8 @@
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\bin\Debug\Encapsulations.exe.config
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\bin\Debug\Encapsulations.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\bin\Debug\Encapsulations.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\obj\Debug\Encapsulations.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\obj\Debug\Encapsulations.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\obj\Debug\Encapsulations.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\obj\Debug\Encapsulations.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Understanding classes & OOP concepts\Encapsulations\Encapsulations\Encapsulations\obj\Debug\Encapsulations.pdb

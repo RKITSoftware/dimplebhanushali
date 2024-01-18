@@ -5,3 +5,11 @@ E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumeratio
 E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.pdb
 E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.exe
 E:\API_RKIT\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe.config
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.pdb

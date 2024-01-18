@@ -1,0 +1,7 @@
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\bin\Debug\Classes&OOP.exe.config
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\bin\Debug\Classes&OOP.exe
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\bin\Debug\Classes&OOP.pdb
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\obj\Debug\Classes&OOP.csproj.AssemblyReference.cache
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\obj\Debug\Classes&OOP.csproj.CoreCompileInputs.cache
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\obj\Debug\Classes&OOP.exe
+E:\API_RKIT\Programs\Classes&OOP\Classes&OOP\Classes&OOP\obj\Debug\Classes&OOP.pdb

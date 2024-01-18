@@ -5,3 +5,11 @@ E:\API_RKIT\Programs\Collections\Collections\Collections\obj\Debug\Collections.c
 E:\API_RKIT\Programs\Collections\Collections\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
 E:\API_RKIT\Programs\Collections\Collections\Collections\obj\Debug\Collections.exe
 E:\API_RKIT\Programs\Collections\Collections\Collections\obj\Debug\Collections.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\bin\Debug\Collections.exe.config
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\bin\Debug\Collections.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\bin\Debug\Collections.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\obj\Debug\Collections.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\obj\Debug\Collections.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\obj\Debug\Collections.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Collections\Collections\Collections\obj\Debug\Collections.pdb

@@ -1,7 +1,0 @@
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\bin\Debug\Assignment operator.exe.config
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\bin\Debug\Assignment operator.exe
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\bin\Debug\Assignment operator.pdb
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\obj\Debug\Assignment operator.csproj.AssemblyReference.cache
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\obj\Debug\Assignment operator.csproj.CoreCompileInputs.cache
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\obj\Debug\Assignment operator.exe
-E:\API_RKIT\Assignment operator\Assignment operator\Assignment operator\obj\Debug\Assignment operator.pdb

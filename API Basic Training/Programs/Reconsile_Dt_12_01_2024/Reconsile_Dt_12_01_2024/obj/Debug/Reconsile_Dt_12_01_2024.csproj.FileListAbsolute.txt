@@ -1,0 +1,8 @@
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\obj\Debug\Reconsile_Dt_12_01_2024.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\obj\Debug\Reconsile_Dt_12_01_2024.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\obj\Debug\Reconsile_Dt_12_01_2024.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\bin\Debug\Reconsile_Dt_12_01_2024.exe.config
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\bin\Debug\Reconsile_Dt_12_01_2024.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\bin\Debug\Reconsile_Dt_12_01_2024.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\obj\Debug\Reconsile_Dt_12_01_2024.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Reconsile_Dt_12_01_2024\Reconsile_Dt_12_01_2024\obj\Debug\Reconsile_Dt_12_01_2024.pdb

@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace String_Class
+namespace StringOperations
 {
     internal class Program
     {
+        /// <summary>
+        /// Main entry point of the program.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
+            // String Operations
+
             // Sample strings
             string str1 = "Hello, World!";
             string str2 = "   Trim Example   ";

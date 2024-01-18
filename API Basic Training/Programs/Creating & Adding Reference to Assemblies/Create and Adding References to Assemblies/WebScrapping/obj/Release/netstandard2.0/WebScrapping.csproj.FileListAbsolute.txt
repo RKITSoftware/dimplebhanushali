@@ -8,3 +8,13 @@ E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding
 E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.csproj.CoreCompileInputs.cache
 E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.dll
 E:\API_RKIT\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.deps.json
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.dll
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\bin\Release\netstandard2.0\WebScrapping.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.AssemblyInfoInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.AssemblyInfo.cs
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.dll
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Creating & Adding Reference to Assemblies\Create and Adding References to Assemblies\WebScrapping\obj\Release\netstandard2.0\WebScrapping.pdb

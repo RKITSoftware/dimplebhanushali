@@ -1,48 +1,20 @@
--- index
+use DDL;
+-- creating index
+CREATE INDEX 
+	idx_p01_f02_f03
+ON 
+	emp01 (p01f02,p01f03); -- firstname
 
-USE 
-	Practices;
-   
--- without using index
+-- using index
+explain analyze
+SELECT 
+	p01f02,
+	p01f03,
+	p01f04,
+	p01f05
+FROM 
+	emp01 
+WHERE	
+	p01f02 = 'Dimple';
 
-SELECT
-	CustomerID,
-    CustomerName,
-    City
-FROM
-	Customers
-WHERE
-	CustomerID > 85;
-    
-EXPLAIN SELECT
-	CustomerID,
-    CustomerName,
-    City
-FROM
-	Customers
-WHERE
-	CustomerID > 85;
 
--- with index
-    
-CREATE INDEX
-	Index_ID 
-ON
-	Customers(CustomerID);
-    
-EXPLAIN SELECT
-	CustomerID,
-    CustomerName,
-    City
-FROM
-	Customers
-WHERE
-	CustomerID > 85;
-    
--- Unique Index
--- Doesnt allow duplicate values
-
-CREATE UNIQUE INDEX
-	Index_Contact
-ON
-	Customers(CustomerID, CustomerName);

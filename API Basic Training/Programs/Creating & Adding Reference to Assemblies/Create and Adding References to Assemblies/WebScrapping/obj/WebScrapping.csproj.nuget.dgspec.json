@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\API_RKIT\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj": {}
+    "F:\\Dimple - 371\\dimplebhanushali\\API Basic Training\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj": {}
   },
   "projects": {
-    "E:\\API_RKIT\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj": {
+    "F:\\Dimple - 371\\dimplebhanushali\\API Basic Training\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\API_RKIT\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj",
+        "projectUniqueName": "F:\\Dimple - 371\\dimplebhanushali\\API Basic Training\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj",
         "projectName": "WebScrapping",
-        "projectPath": "E:\\API_RKIT\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj",
-        "packagesPath": "C:\\Users\\Dimple\\.nuget\\packages\\",
-        "outputPath": "E:\\API_RKIT\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\obj\\",
+        "projectPath": "F:\\Dimple - 371\\dimplebhanushali\\API Basic Training\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\WebScrapping.csproj",
+        "packagesPath": "C:\\Users\\dimple.m\\.nuget\\packages\\",
+        "outputPath": "F:\\Dimple - 371\\dimplebhanushali\\API Basic Training\\Programs\\Creating & Adding Reference to Assemblies\\Create and Adding References to Assemblies\\WebScrapping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dimple\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dimple.m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +62,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

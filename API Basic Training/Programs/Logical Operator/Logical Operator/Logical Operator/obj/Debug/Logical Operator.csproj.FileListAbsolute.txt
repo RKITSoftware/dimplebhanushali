@@ -1,7 +1,0 @@
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\bin\Debug\Logical Operator.exe.config
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\bin\Debug\Logical Operator.exe
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\bin\Debug\Logical Operator.pdb
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\obj\Debug\Logical Operator.csproj.AssemblyReference.cache
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\obj\Debug\Logical Operator.csproj.CoreCompileInputs.cache
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\obj\Debug\Logical Operator.exe
-E:\API_RKIT\Logical Operator\Logical Operator\Logical Operator\obj\Debug\Logical Operator.pdb

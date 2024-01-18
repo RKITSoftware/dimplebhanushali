@@ -1,6 +1,0 @@
-E:\API_RKIT\While Loop\While Loop\While Loop\bin\Debug\While Loop.exe.config
-E:\API_RKIT\While Loop\While Loop\While Loop\bin\Debug\While Loop.exe
-E:\API_RKIT\While Loop\While Loop\While Loop\bin\Debug\While Loop.pdb
-E:\API_RKIT\While Loop\While Loop\While Loop\obj\Debug\While Loop.csproj.CoreCompileInputs.cache
-E:\API_RKIT\While Loop\While Loop\While Loop\obj\Debug\While Loop.exe
-E:\API_RKIT\While Loop\While Loop\While Loop\obj\Debug\While Loop.pdb

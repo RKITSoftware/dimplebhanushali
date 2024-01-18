@@ -1,0 +1,70 @@
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Versoning with Query String.dll.config
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Versoning with Query String.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Versoning with Query String.pdb
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csc.exe
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csc.exe.config
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csc.rsp
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csi.exe
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csi.exe.config
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\csi.rsp
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.AppContext.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Collections.Immutable.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Console.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Globalization.Calendars.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.IO.Compression.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.IO.FileSystem.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Net.Http.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Net.Sockets.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Reflection.Metadata.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.ValueTuple.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Xml.XPath.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\vbc.exe
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\vbc.exe.config
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\vbc.rsp
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\VBCSCompiler.exe
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\roslyn\VBCSCompiler.exe.config
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Newtonsoft.Json.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Net.Http.Formatting.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Web.Http.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Web.Http.WebHost.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Newtonsoft.Json.xml
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Net.Http.Formatting.xml
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Web.Http.xml
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\System.Web.Http.WebHost.xml
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\obj\Debug\Versoning with Query String.csproj.AssemblyReference.cache
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\obj\Debug\Versoning with Query String.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\obj\Debug\Versoning with Query String.csproj.CopyComplete
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\obj\Debug\Versoning with Query String.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\obj\Debug\Versoning with Query String.pdb
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Microsoft.Web.Infrastructure.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\Swashbuckle.Core.dll
+F:\Dimple - 371\Web Development\Versoning with Query String\Versoning with Query String\bin\WebActivatorEx.dll

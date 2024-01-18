@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{AE5CB67A-1B1D-49E5-BC18-45ED3DE3B3EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsDemo", "CorsDemo\CorsDemo.csproj", "{4BA4ECC5-56F9-457F-BAAC-B2CAE70CD524}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE5CB67A-1B1D-49E5-BC18-45ED3DE3B3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5CB67A-1B1D-49E5-BC18-45ED3DE3B3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5CB67A-1B1D-49E5-BC18-45ED3DE3B3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5CB67A-1B1D-49E5-BC18-45ED3DE3B3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA4ECC5-56F9-457F-BAAC-B2CAE70CD524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA4ECC5-56F9-457F-BAAC-B2CAE70CD524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA4ECC5-56F9-457F-BAAC-B2CAE70CD524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA4ECC5-56F9-457F-BAAC-B2CAE70CD524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FC91745-4431-4831-971B-70F6AA58E79E}
+	EndGlobalSection
+EndGlobal

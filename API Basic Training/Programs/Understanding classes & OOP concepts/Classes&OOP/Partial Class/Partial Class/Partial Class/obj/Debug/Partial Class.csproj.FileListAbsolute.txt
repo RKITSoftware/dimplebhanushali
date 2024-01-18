@@ -1,0 +1,8 @@
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\bin\Debug\Partial Class.exe.config
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\bin\Debug\Partial Class.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\bin\Debug\Partial Class.pdb
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\obj\Debug\Partial Class.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\obj\Debug\Partial Class.exe
+F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Partial Class\Partial Class\Partial Class\obj\Debug\Partial Class.pdb

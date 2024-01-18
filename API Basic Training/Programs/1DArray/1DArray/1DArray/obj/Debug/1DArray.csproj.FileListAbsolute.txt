@@ -1,7 +1,0 @@
-E:\API_RKIT\1DArray\1DArray\1DArray\bin\Debug\1DArray.exe.config
-E:\API_RKIT\1DArray\1DArray\1DArray\bin\Debug\1DArray.exe
-E:\API_RKIT\1DArray\1DArray\1DArray\bin\Debug\1DArray.pdb
-E:\API_RKIT\1DArray\1DArray\1DArray\obj\Debug\1DArray.csproj.AssemblyReference.cache
-E:\API_RKIT\1DArray\1DArray\1DArray\obj\Debug\1DArray.csproj.CoreCompileInputs.cache
-E:\API_RKIT\1DArray\1DArray\1DArray\obj\Debug\1DArray.exe
-E:\API_RKIT\1DArray\1DArray\1DArray\obj\Debug\1DArray.pdb

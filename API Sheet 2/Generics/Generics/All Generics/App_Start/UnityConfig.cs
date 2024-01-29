@@ -2,7 +2,7 @@ using System;
 
 using Unity;
 
-namespace All_Generics
+namespace Dynamic_Values
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.

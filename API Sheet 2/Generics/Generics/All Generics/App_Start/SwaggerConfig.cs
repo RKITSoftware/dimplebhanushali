@@ -1,11 +1,11 @@
 using System.Web.Http;
 using WebActivatorEx;
-using All_Generics;
+using Dynamic_Values;
 using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace All_Generics
+namespace Dynamic_Values
 {
     public class SwaggerConfig
     {
@@ -32,7 +32,7 @@ namespace All_Generics
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "All_Generics");
+                        c.SingleApiVersion("v1", "Dynamic_Values");
 
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //

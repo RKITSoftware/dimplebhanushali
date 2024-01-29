@@ -1,0 +1,10 @@
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\bin\Debug\WebScrappingLibrary.dll
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\bin\Debug\WebScrappingLibrary.pdb
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\bin\Debug\HtmlAgilityPack.dll
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\bin\Debug\HtmlAgilityPack.pdb
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\bin\Debug\HtmlAgilityPack.xml
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\obj\Debug\WebScrapingLibrary.csproj.AssemblyReference.cache
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\obj\Debug\WebScrapingLibrary.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\obj\Debug\WebScrapingLibrary.csproj.CopyComplete
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\obj\Debug\WebScrappingLibrary.dll
+F:\Dimple - 371\dimplebhanushali\API Sheet 2\Base Library Features\WebScrapping using Base Library\WebScrappingLibrary\obj\Debug\WebScrappingLibrary.pdb

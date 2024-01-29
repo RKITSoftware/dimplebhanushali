@@ -1,6 +1,6 @@
-﻿using Lambda_Expression.Models;
+﻿using Lambda_Expression.BL;
+using Lambda_Expression.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace Lambda_Expression.Controllers
@@ -8,7 +8,7 @@ namespace Lambda_Expression.Controllers
     [RoutePrefix("api")]
     public class EmployeesController : ApiController
     {
-        private List<Employee> _employees = Employee.lstEmployees;
+        private BLEmployee _employees = new BLEmployee();
 
         /// <summary>
         /// Gets all employees.
@@ -17,7 +17,7 @@ namespace Lambda_Expression.Controllers
         [Route("GetAllEmployees")]
         public IEnumerable<Employee> GetAllEmployees()
         {
-            return _employees;
+            return _employees.GetAllEmployees();
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Lambda_Expression.Controllers
         [Route("Employee/{id}")]
         public IHttpActionResult GetEmployeeById(int id)
         {
-            Employee objEmp = _employees.FirstOrDefault(emp => emp.Id == id);
+            Employee objEmp = BLEmployee.GetEmployeeById(id);
 
             if (objEmp == null)
                 return NotFound(); // Return 404 if employee not found
@@ -42,8 +42,7 @@ namespace Lambda_Expression.Controllers
         [Route("AddEmployee")]
         public IHttpActionResult AddEmployee(Employee objEmp)
         {
-            objEmp.Id = _employees.Count + 1;
-            _employees.Add(objEmp);
+            _employees.AddEmployee(objEmp);
 
             return Ok(objEmp);
         }
@@ -55,16 +54,8 @@ namespace Lambda_Expression.Controllers
         [Route("EditEmployee/{id}")]
         public IHttpActionResult EditEmployee(int id, Employee objEmp)
         {
-            Employee objExistingEmp = _employees.FirstOrDefault(emp => emp.Id == id);
-
-            if (objExistingEmp == null)
-                return NotFound(); // Return 404 if employee not found
-
-            objExistingEmp.Name = objEmp.Name;
-            objExistingEmp.Salary = objEmp.Salary;
-            objExistingEmp.Department = objEmp.Department;
-
-            return Ok(objExistingEmp);
+            _employees.EditEmployee(id,objEmp);
+            return Ok(objEmp);
         }
 
         /// <summary>
@@ -74,13 +65,8 @@ namespace Lambda_Expression.Controllers
         [Route("DeleteEmployee/{id}")]
         public IHttpActionResult DeleteEmployee(int id)
         {
-            Employee objExistingEmp = _employees.FirstOrDefault(emp => emp.Id == id);
-
-            if (objExistingEmp == null)
-                return NotFound(); // Return 404 if employee not found
-
-            _employees.Remove(objExistingEmp);
-            return Ok(objExistingEmp);
+            _employees.DeleteEmployee(id);
+            return Ok(BLEmployee.GetEmployeeById(id));
         }
     }
 }

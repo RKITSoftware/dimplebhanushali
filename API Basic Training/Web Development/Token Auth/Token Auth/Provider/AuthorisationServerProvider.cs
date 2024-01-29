@@ -37,5 +37,4 @@ namespace Token_Auth.Provider
             }
         }
     }
-
 }

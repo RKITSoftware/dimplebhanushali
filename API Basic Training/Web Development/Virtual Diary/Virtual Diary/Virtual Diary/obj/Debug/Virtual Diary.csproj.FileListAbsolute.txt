@@ -135,3 +135,122 @@ F:\Dimple - 371\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Sy
 F:\Dimple - 371\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.csproj.CopyComplete
 F:\Dimple - 371\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.dll
 F:\Dimple - 371\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Virtual Diary.dll.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Virtual Diary.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Virtual Diary.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csc.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csc.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csc.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csi.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csi.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\csi.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Buffers.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Collections.Immutable.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Memory.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Numerics.Vectors.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Reflection.Metadata.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\vbc.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\vbc.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\vbc.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\VBCSCompiler.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\roslyn\VBCSCompiler.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\AutoMapper.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Castle.Core.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\EntityFramework.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\EntityFramework.SqlServer.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Fluent.Infrastructure.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.WebApi.Versioning.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Abstractions.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Logging.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Tokens.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.Web.Infrastructure.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Newtonsoft.Json.Bson.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Newtonsoft.Json.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Owin.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Swashbuckle.Core.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Buffers.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Configuration.ConfigurationManager.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Memory.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Net.Http.Formatting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Numerics.Vectors.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Text.Encodings.Web.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Text.Json.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Threading.Tasks.Extensions.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.ValueTuple.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Cors.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Helpers.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.Cors.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.WebHost.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Mvc.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Razor.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.Deployment.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.Razor.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\WebActivatorEx.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\AutoMapper.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Castle.Core.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\EntityFramework.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\EntityFramework.SqlServer.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.AspNet.WebApi.Versioning.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.Bcl.AsyncInterfaces.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Abstractions.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Logging.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Microsoft.IdentityModel.Tokens.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Newtonsoft.Json.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Newtonsoft.Json.Bson.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\Newtonsoft.Json.Bson.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Buffers.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Configuration.ConfigurationManager.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Memory.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Net.Http.Formatting.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Numerics.Vectors.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Text.Encodings.Web.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Text.Json.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Threading.Tasks.Extensions.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.ValueTuple.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Helpers.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.Cors.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Http.WebHost.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Mvc.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.Razor.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.Deployment.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\bin\System.Web.WebPages.Razor.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.csproj.CopyComplete
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\Virtual Diary\Virtual Diary\Virtual Diary\obj\Debug\Virtual Diary.pdb

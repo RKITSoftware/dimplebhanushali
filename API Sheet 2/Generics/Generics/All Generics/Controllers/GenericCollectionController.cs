@@ -1,30 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.Http;
 
-namespace All_Generics.Controllers
+namespace Dynamic_Values.Controllers
 {
-    /// <summary>
-    /// Provides a controller for handling generic collections.
-    /// </summary>
-    public static class ListStorage
-    {
-        /// <summary>
-        /// Gets or sets the list of integers.
-        /// </summary>
-        public static List<int> NumList { get; } = new List<int> { 11, 22 };
-
-        /// <summary>
-        /// Gets or sets the list of booleans.
-        /// </summary>
-        public static List<bool> BoolList { get; } = new List<bool> { true };
-
-        /// <summary>
-        /// Gets or sets the list of strings.
-        /// </summary>
-        public static List<string> StrList { get; } = new List<string> { "Val 1", "Val 2" };
-    }
-
     /// <summary>
     /// Controller for handling generic collections.
     /// </summary>

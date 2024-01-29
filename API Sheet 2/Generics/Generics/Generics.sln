@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{D54F7659-318C-4DEE-A899-762BE4BBA98E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "All Generics", "All Generics\All Generics.csproj", "{5745ED64-DB4F-4F85-BAEF-817D6ED147A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic Value", "All Generics\Dynamic Value.csproj", "{5745ED64-DB4F-4F85-BAEF-817D6ED147A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic Collection", "Generic Collection\Generic Collection.csproj", "{4740329D-0ADB-4D49-A663-B2A23F8DCDCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5745ED64-DB4F-4F85-BAEF-817D6ED147A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5745ED64-DB4F-4F85-BAEF-817D6ED147A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5745ED64-DB4F-4F85-BAEF-817D6ED147A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4740329D-0ADB-4D49-A663-B2A23F8DCDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4740329D-0ADB-4D49-A663-B2A23F8DCDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4740329D-0ADB-4D49-A663-B2A23F8DCDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4740329D-0ADB-4D49-A663-B2A23F8DCDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

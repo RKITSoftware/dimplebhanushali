@@ -95,6 +95,8 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BL\CustomerV1BL.cs" />
+    <Compile Include="BL\CustomerV2BL.cs" />
     <Compile Include="Controllers\CustomerV1Controller.cs" />
     <Compile Include="Controllers\CustomerV2Controller.cs" />
     <Compile Include="Custom\CustomControllerSelector.cs" />

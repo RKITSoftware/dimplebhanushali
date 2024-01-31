@@ -1,25 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Net;
-using System.Web;
+using System.Net.Http;
+using System.Security.Principal;
+using System.Threading;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using System.Threading;
-using System.Security.Principal;
 
 namespace Basic_Authentication.Authorisation_Provider
 {
+    /// <summary>
+    /// Provides authorization based on basic authentication credentials.
+    /// </summary>
     public class Authorisation : AuthorizationFilterAttribute
     {
+        /// <summary>
+        /// Gets or sets the roles required for authorization. Multiple roles can be specified using commas.
+        /// </summary>
         public string Roles { get; set; }
+
+        /// <summary>
+        /// Gets or sets an array of allowed roles for authorization.
+        /// </summary>
         public string[] AllowRoles { get; set; }
 
+        /// <summary>
+        /// Called when authorization is required.
+        /// </summary>
+        /// <param name="actionContext">The context for the action being authorized.</param>
         public override void OnAuthorization(HttpActionContext actionContext)
         {
             if (actionContext.Request.Headers.Authorization == null)
             {
+                // No Authorization header provided, return unauthorized response
                 actionContext.Response = actionContext.Request
                     .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login Failed");
             }
@@ -36,25 +48,23 @@ namespace Basic_Authentication.Authorisation_Provider
 
                     if (ValidateUser.IsLogin(username, password))
                     {
+                        // Valid user, set the user roles
                         string[] userRoles = ValidateUser.GetUserRoles(username);
                         Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), userRoles);
-
                     }
                     else
                     {
+                        // Invalid credentials, return unauthorized response
                         actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "Login Failed");
-
                     }
-
                 }
                 catch (Exception ex)
                 {
+                    // Handle unexpected errors and return internal server error
                     actionContext.Response = actionContext.Request
                        .CreateErrorResponse(HttpStatusCode.InternalServerError, "Server error - Login Failed");
-
                 }
             }
         }
-
     }
 }

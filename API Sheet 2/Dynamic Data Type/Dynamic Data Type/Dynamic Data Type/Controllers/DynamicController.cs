@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Dynamic_Data_Type.BL;
 
 namespace Dynamic_Data_Type.Controllers
 {
     /// <summary>
     /// Controller for handling dynamic data in an ASP.NET Web API.
     /// </summary>
+    [RoutePrefix("api/Dynamic")]
     public class DynamicController : ApiController
     {
-        // List to store dynamically received data
-        private static List<dynamic> _dynamicDataList = new List<dynamic>();
+        private static DynamicBL _dynamicBL = new DynamicBL();
 
         /// <summary>
         /// Adds dynamic data to the list.
         /// </summary>
         /// <param name="data">Dynamic data to be added.</param>
         /// <returns>HttpResponseMessage indicating the status of the operation.</returns>
-        // POST: api/dynamic
-        public HttpResponseMessage Post([FromBody] dynamic data)
+        [HttpPost, Route("AddData")]
+        public HttpResponseMessage AddData([FromBody] dynamic data)
         {
             try
             {
-                _dynamicDataList.Add(data);
+                _dynamicBL.AddDynamicData(data);
                 return Request.CreateResponse(HttpStatusCode.OK, $"Data Added => {data}");
             }
             catch (Exception ex)
@@ -37,10 +38,10 @@ namespace Dynamic_Data_Type.Controllers
         /// Gets all dynamically received data.
         /// </summary>
         /// <returns>IHttpActionResult containing the list of dynamic data.</returns>
-        // GET: api/dynamic
-        public IHttpActionResult Get()
+        [HttpGet, Route("GetAllData")]
+        public IHttpActionResult GetAllData()
         {
-            return Ok(_dynamicDataList);
+            return Ok(_dynamicBL.GetAllDynamicData());
         }
 
         /// <summary>
@@ -48,12 +49,14 @@ namespace Dynamic_Data_Type.Controllers
         /// </summary>
         /// <param name="id">Index of the item to retrieve.</param>
         /// <returns>IHttpActionResult containing the dynamically received data at the specified index.</returns>
-        // GET: api/dynamic/1
-        public IHttpActionResult Get(int id)
+        [HttpGet, Route("GetData/{id}")]
+        public IHttpActionResult Get([FromUri] int id)
         {
-            if (id >= 0 && id < _dynamicDataList.Count)
+            var dynamicData = _dynamicBL.GetDynamicDataById(id);
+
+            if (dynamicData != null)
             {
-                return Ok(_dynamicDataList[id]);
+                return Ok(dynamicData);
             }
             else
             {
@@ -67,14 +70,15 @@ namespace Dynamic_Data_Type.Controllers
         /// <param name="id">Index of the item to update.</param>
         /// <param name="updatedData">Updated dynamic data.</param>
         /// <returns>HttpResponseMessage indicating the status of the operation.</returns>
-        // PUT: api/dynamic/1
-        public HttpResponseMessage Put(int id, [FromBody] dynamic updatedData)
+        [HttpPut, Route("EditData/{id}")]
+        public HttpResponseMessage EditData([FromUri] int id, [FromBody] dynamic updatedData)
         {
             try
             {
-                if (id >= 0 && id < _dynamicDataList.Count)
+                bool success = _dynamicBL.UpdateDynamicData(id, updatedData);
+
+                if (success)
                 {
-                    _dynamicDataList[id] = updatedData;
                     return Request.CreateResponse(HttpStatusCode.OK, $"Updated data at index {id}");
                 }
                 else
@@ -93,14 +97,15 @@ namespace Dynamic_Data_Type.Controllers
         /// </summary>
         /// <param name="id">Index of the item to delete.</param>
         /// <returns>HttpResponseMessage indicating the status of the operation.</returns>
-        // DELETE: api/dynamic/1
-        public HttpResponseMessage Delete(int id)
+        [HttpDelete, Route("DeleteData/{id}")]
+        public HttpResponseMessage DeleteData([FromUri] int id)
         {
             try
             {
-                if (id >= 0 && id < _dynamicDataList.Count)
+                bool success = _dynamicBL.DeleteDynamicDataById(id);
+
+                if (success)
                 {
-                    _dynamicDataList.RemoveAt(id);
                     return Request.CreateResponse(HttpStatusCode.OK, $"Deleted data at index {id}");
                 }
                 else
@@ -118,10 +123,10 @@ namespace Dynamic_Data_Type.Controllers
         /// Deletes all dynamically received data.
         /// </summary>
         /// <returns>IHttpActionResult indicating the status of the operation.</returns>
-        // DELETE: api/dynamic
+        [HttpDelete, Route("DeleteAll")]
         public IHttpActionResult DeleteAll()
         {
-            _dynamicDataList.Clear();
+            _dynamicBL.DeleteAllDynamicData();
             return Ok("All data deleted");
         }
     }

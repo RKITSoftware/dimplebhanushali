@@ -93,13 +93,14 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authorisation Provider\Authorisation.cs" />
+    <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidateUser.cs" />
+    <Compile Include="User Validation\ValidateUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

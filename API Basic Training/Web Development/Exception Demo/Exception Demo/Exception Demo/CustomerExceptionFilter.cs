@@ -1,38 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http.Filters;
 
 namespace Exception_Demo
 {
+    /// <summary>
+    /// Exception filter for handling exceptions in the CustomerController of a Web API application.
+    /// </summary>
     public class CustomerExceptionFilter : ExceptionFilterAttribute
     {
+        /// <summary>
+        /// Overrides the OnException method to handle exceptions during the processing of an HTTP request.
+        /// </summary>
+        /// <param name="actionExecutedContext">The context for the action that threw the exception.</param>
         public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
+            // Log or handle the exception and generate a response.
             ShowError(actionExecutedContext.Exception);
+
+            // Create a response message with InternalServerError status, content, and reason phrase.
             var response = new HttpResponseMessage(HttpStatusCode.InternalServerError)
             {
-                Content = new StringContent("Some Occured !!!"),
+                Content = new StringContent("Some Error Occurred !!!"),
                 ReasonPhrase = "Internal Server Error !!!"
             };
+
+            // Set the response to be sent back to the client.
+            actionExecutedContext.Response = response;
         }
 
-        public void ShowError(Exception exception)
+        /// <summary>
+        /// Logs or handles the exception and returns a message indicating that the exception has been handled.
+        /// </summary>
+        /// <param name="exception">The exception that occurred.</param>
+        /// <returns>A message indicating that the exception has been handled.</returns>
+        public string ShowError(Exception exception)
         {
             try
             {
-                Console.WriteLine("Exception Handled");
+                // Log or handle the exception as needed.
+                return "Exception Handled";
             }
-
             catch (Exception ex)
             {
-                Console.WriteLine(" Error Occured => " + ex.Message);
+                // Handle any further exceptions that might occur during logging or handling.
+                return $"Error Occurred => {ex.Message}";
             }
         }
-
     }
 }

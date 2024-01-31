@@ -1,44 +1,53 @@
 ﻿using Basic_Authentication.Authorisation_Provider;
-using Basic_Authentication.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using Basic_Authentication.BL;
 using System.Web.Http;
 using System.Web.Routing;
 
 namespace Basic_Authentication.Controllers
 {
+    /// <summary>
+    /// API Controller for managing employee data.
+    /// </summary>
     public class EmployeeController : ApiController
     {
-        public List<Employee> EmpList = new List<Employee>
-        {
-            new Employee {Id = 1 , FirstName ="Dimple" , LastName="Mithiya", City="Rajkot"},
-            new Employee {Id = 2 , FirstName ="Ankit" , LastName="Katarmal", City="London"},
-            new Employee {Id = 3 , FirstName ="Ram" , LastName="Krishna", City="Ahmedabad"}
-        };
+        private static EmployeeBL _employee;
 
+        /// <summary>
+        /// Static constructor to initialize the EmployeeBL instance.
+        /// </summary>
+        static EmployeeController()
+        {
+            _employee = new EmployeeBL();
+        }
+
+        /// <summary>
+        /// Gets all employees with admin role authorization.
+        /// </summary>
+        /// <returns>List of all employees.</returns>
         [HttpGet]
-        [Authorisation(Roles ="admin")]
+        [Authorisation(Roles = "admin")]
         [Route("api/Get")]
         public IHttpActionResult Get()
         {
-            return Ok(EmpList);
+            return Ok(_employee.GetAllEmployees());
         }
 
+        /// <summary>
+        /// Gets an employee by ID with employee role authorization.
+        /// </summary>
+        /// <param name="id">The ID of the employee.</param>
+        /// <returns>The employee with the specified ID or a BadRequest if the ID is null.</returns>
         [HttpGet]
-        [Authorisation(Roles =("employee"))]
+        [Authorisation(Roles = "employee")]
         [Route("api/GetbyId/{id}")]
         public IHttpActionResult GetById(int id)
         {
-            Employee employee = EmpList.Find(e => e.Id == id);
-            if (employee == null)
+            if (id == null)
             {
                 return BadRequest();
             }
-            return Ok(employee);
-        }
 
+            return Ok(_employee.GetEmployeeById(id));
+        }
     }
 }

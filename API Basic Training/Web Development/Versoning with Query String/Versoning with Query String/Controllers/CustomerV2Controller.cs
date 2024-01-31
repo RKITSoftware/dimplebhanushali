@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using Versoning_with_Query_String.BL;
 using Versoning_with_Query_String.Models;
 
 namespace Versoning_with_Query_String.Controllers
@@ -13,6 +11,9 @@ namespace Versoning_with_Query_String.Controllers
     /// </summary>
     public class CustomerV2Controller : ApiController
     {
+        // Create an instance of the Business Logic class
+        private readonly CustomerV2BL _customerV2BL = new CustomerV2BL();
+
         /// <summary>
         /// Retrieves the list of all customers for version 2.
         /// </summary>
@@ -20,7 +21,8 @@ namespace Versoning_with_Query_String.Controllers
         [HttpGet]
         public List<Customer2> GetAllCustomers()
         {
-            return Customer2.lstCustomers2;
+            // Use the Business Logic class method to get all customers
+            return _customerV2BL.GetAllCustomers().ToList();
         }
 
         /// <summary>
@@ -31,13 +33,13 @@ namespace Versoning_with_Query_String.Controllers
         [HttpGet]
         public IHttpActionResult GetCustomerById(int id)
         {
-            // Find the customer with the given ID in the list
-            Customer2 objCustomer2 = Customer2.lstCustomers2.FirstOrDefault(cust => cust.Id == id);
+            // Use the Business Logic class method to get a customer by ID
+            Customer2 customer = _customerV2BL.GetCustomerById(id);
 
-            if (objCustomer2 != null)
+            if (customer != null)
             {
                 // Return OK with the customer data if found
-                return Ok(objCustomer2);
+                return Ok(customer);
             }
 
             // Return NotFound if customer not found
@@ -52,18 +54,17 @@ namespace Versoning_with_Query_String.Controllers
         [HttpPost]
         public IHttpActionResult AddCustomer(Customer2 cust)
         {
-            if (cust == null)
+            // Use the Business Logic class method to add a new customer
+            Customer2 addedCustomer = _customerV2BL.AddCustomer(cust);
+
+            if (addedCustomer != null)
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with the added customer data
+                return Ok(addedCustomer);
             }
 
-            // Assign a new ID to the customer and add to the list
-            cust.Id = Customer2.lstCustomers2.Count + 1;
-            Customer2.lstCustomers2.Add(cust);
-
-            // Return OK with the added customer data
-            return Ok(cust);
+            // Return BadRequest if the input data is invalid
+            return BadRequest("Invalid Data");
         }
 
         /// <summary>
@@ -75,22 +76,17 @@ namespace Versoning_with_Query_String.Controllers
         [HttpPut]
         public IHttpActionResult EditCustomer(int id, Customer2 cust)
         {
-            if (id == null)
+            // Use the Business Logic class method to edit an existing customer
+            Customer2 editedCustomer = _customerV2BL.EditCustomer(id, cust);
+
+            if (editedCustomer != null)
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with the updated customer data
+                return Ok(editedCustomer);
             }
 
-            // Find the existing customer with the given ID in the list
-            Customer2 existingCust = Customer2.lstCustomers2.FirstOrDefault(c => c.Id == id);
-
-            // Update the existing customer data
-            existingCust.PhoneNumber = cust.PhoneNumber;
-            existingCust.Name = cust.Name;
-            existingCust.Gender = cust.Gender;
-
-            // Return OK with the updated customer data
-            return Ok(existingCust);
+            // Return BadRequest if the input data is invalid
+            return BadRequest("Invalid Data");
         }
 
         /// <summary>
@@ -101,17 +97,17 @@ namespace Versoning_with_Query_String.Controllers
         [HttpDelete]
         public IHttpActionResult DeleteCustomer(int id)
         {
-            if (id == null)
+            // Use the Business Logic class method to delete a customer
+            string deletionMessage = _customerV2BL.DeleteCustomer(id);
+
+            if (deletionMessage != null)
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with a deletion message
+                return Ok(deletionMessage);
             }
 
-            // Remove the customer with the given ID from the list
-            Customer2.lstCustomers2.Remove(Customer2.lstCustomers2.FirstOrDefault(c => c.Id == id));
-
-            // Return OK with a deletion message
-            return Ok($"Customer With id {id} Deleted !!!");
+            // Return BadRequest if the input data is invalid
+            return BadRequest("Invalid Data");
         }
     }
 }

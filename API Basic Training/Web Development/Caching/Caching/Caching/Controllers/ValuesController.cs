@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace Caching.Controllers
 {
+    /// <summary>
+    /// Controller for handling caching operations.
+    /// </summary>
     public class ValuesController : ApiController
     {
-        // GET api/values
+
+        /// <summary>
+        /// Retrieves a list of values and adds them to the cache.
+        /// </summary>
+        /// <returns>An IEnumerable of strings representing values.</returns>
         public IEnumerable<string> Get()
         {
             var result = new string[] { "Dimple", "Mithiya" };
@@ -17,30 +20,32 @@ namespace Caching.Controllers
             return result;
         }
 
-        // GET api/values/5
+        /// <summary>
+        /// Retrieves a cached value based on the specified ID.
+        /// </summary>
+        /// <param name="id">The ID used to retrieve the cached value.</param>
+        /// <returns>A concatenated string of cached values or an error message.</returns>
         public string Get(int id)
         {
-            var result = CacheModel.Get("ID111");
-
-            CacheModel.Remove("ID111");
-            var result2 = CacheModel.Get("ID123");
-
-            return "value";
+            string result = CacheModel.Get("ID111").ToString();
+            return result;
         }
 
-        // POST api/values
-        public void Post([FromBody] string value)
+        /// <summary>
+        /// Removes a cached item based on the specified key.
+        /// </summary>
+        /// <param name="key">The key associated with the cached item to be removed.</param>
+        /// <returns>A message indicating whether the key was successfully removed or not found.</returns>
+        public string Remove(string key)
         {
+            // Assuming CacheModel is a custom caching class with a static method Remove
+            if (key != null)
+            {
+                CacheModel.Remove(key);
+                return "Key Removed";
+            }
+            return "Key Not Found";
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
     }
 }

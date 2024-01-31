@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCL Demo", "BCL Demo\BCL Demo.csproj", "{7AB2CD1E-45A2-4C6C-830E-15252FC64737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List To Set", "List To Set\List To Set.csproj", "{EF908C08-D823-4B3A-919E-9FCD401B0B8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AB2CD1E-45A2-4C6C-830E-15252FC64737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB2CD1E-45A2-4C6C-830E-15252FC64737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB2CD1E-45A2-4C6C-830E-15252FC64737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB2CD1E-45A2-4C6C-830E-15252FC64737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF908C08-D823-4B3A-919E-9FCD401B0B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF908C08-D823-4B3A-919E-9FCD401B0B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF908C08-D823-4B3A-919E-9FCD401B0B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF908C08-D823-4B3A-919E-9FCD401B0B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6530EF5D-37B3-4DEF-9F98-8DF74F96B997}
+	EndGlobalSection
+EndGlobal

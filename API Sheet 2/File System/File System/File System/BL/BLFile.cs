@@ -155,5 +155,37 @@ namespace File_System.BL
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets information about a file.
+        /// </summary>
+        /// <param name="fileName">The name of the file to get information about.</param>
+        /// <returns>FileInfo object containing information about the file or null if the file is not found.</returns>
+        public FileInfo GetFileInfo(string fileName)
+        {
+            string filePath = HttpContext.Current.Server.MapPath($"{UploadsFolder}{fileName}");
+
+            if (File.Exists(filePath))
+            {
+                return new FileInfo(filePath);
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Gets information about the uploads directory.
+        /// </summary>
+        /// <returns>DirectoryInfo object containing information about the uploads directory or null if the directory is not found.</returns>
+        public DirectoryInfo GetUploadsDirectoryInfo()
+        {
+            string uploadPath = HttpContext.Current.Server.MapPath("~/uploads/");
+
+            if (Directory.Exists(uploadPath))
+            {
+                return new DirectoryInfo(uploadPath);
+            }
+
+            return null;
+        }
     }
 }

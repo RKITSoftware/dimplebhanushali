@@ -67,8 +67,7 @@ namespace Serialisation.Controllers
         [Route("api/XmlToString")]
         public IHttpActionResult XmlToString([FromBody] XElement root)
         {
-            string jsonOutput = BLSerialisation.ConvertXmlToString(root);
-            return Ok(jsonOutput);
+            return Ok(BLSerialisation.ConvertXmlToString(root));
         }
 
         /// <summary>

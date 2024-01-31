@@ -21,9 +21,9 @@ namespace File_System.Controllers
         /// Initializes a new instance of the <see cref="CLFileController"/> class.
         /// </summary>
         /// <param name="fileLogic">The business logic for file operations.</param>
-        public CLFileController(BLFile fileLogic)
+        public CLFileController()
         {
-            _fileLogic = fileLogic ?? throw new ArgumentNullException(nameof(fileLogic));
+            _fileLogic = new BLFile();
         }
 
         /// <summary>
@@ -70,6 +70,40 @@ namespace File_System.Controllers
                 // Handle unexpected errors and return an internal server error
                 return InternalServerError(ex);
             }
+        }
+
+        /// <summary>
+        /// Gets Information about File.
+        /// </summary>
+        /// <param name="filename">filename</param>
+        /// <returns>File information</returns>
+        [HttpGet, Route("GetFileInfo/{filename}")]
+        public IHttpActionResult GetFileInfo([FromUri] string filename)
+        {
+            if (filename != null)
+            {
+                FileInfo fileInfo = _fileLogic.GetFileInfo(filename);
+
+                if (fileInfo != null)
+                {
+                    return Ok(fileInfo);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            return BadRequest();
+        }
+
+        /// <summary>
+        /// Get Directory Information of File.
+        /// </summary>
+        /// <returns>Directory Info</returns>
+        [HttpGet, Route("GetDirectoryInfo")]
+        public IHttpActionResult GetDirectoryInfo()
+        {
+            return Ok(_fileLogic.GetUploadsDirectoryInfo());
         }
 
         /// <summary>

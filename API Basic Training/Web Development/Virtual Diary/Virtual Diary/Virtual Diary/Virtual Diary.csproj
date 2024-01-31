@@ -202,6 +202,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BasicAuth\BasicAuthenticationAttribute.cs" />
     <Compile Include="BasicAuth\BasicAuthorisationAttribute.cs" />
+    <Compile Include="BL\DiaryEntryManagerBL.cs" />
     <Compile Include="Controllers\DiaryEntryV1Controller.cs" />
     <Compile Include="Controllers\DiaryEntryV2Controller.cs" />
     <Compile Include="Exceptions\CustomException.cs" />

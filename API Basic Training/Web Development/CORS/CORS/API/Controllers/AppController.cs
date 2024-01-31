@@ -1,105 +1,83 @@
-﻿using API.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Runtime.CompilerServices;
+﻿using API.BL;
+using API.Models;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
+    /// <summary>
+    /// API Controller for managing student data.
+    /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AppController : ApiController
     {
-        private static List<Students> lstStudents = new List<Students>
-        {
-            new Students { Id = 1, Name = "Dimple", Course = "MCA", Sem = 4 },
-            new Students { Id = 2, Name = "Ankit", Course = "MSC", Sem = 3 },
-            new Students { Id = 3, Name = "Pankaj", Course = "BCA", Sem = 2 },
-            new Students { Id = 4, Name = "Krishna", Course = "EC", Sem = 1 },
-            new Students { Id = 5, Name = "Abc", Course = "MCA", Sem = 4 },
-        };
+        private static StudentBL _students;
 
+        static AppController()
+        {
+            _students = new StudentBL();
+        }
+
+        /// <summary>
+        /// Adds a new student.
+        /// </summary>
+        /// <param name="objStu">The student to be added.</param>
+        /// <returns>Result of the add operation.</returns>
         [HttpPost]
-        public IHttpActionResult AddStudents(Students stu)
+        public IHttpActionResult AddStudents(Students objStu)
         {
-            Console.WriteLine("Received POST request to AddStudents");
-
-            if (stu != null)
+            if (objStu != null)
             {
-                Students student = new Students();
-                student.Id = stu.Id;
-                student.Name = stu.Name;
-                student.Course = stu.Course;
-                student.Sem = stu.Sem;
-
-                lstStudents.Add(student);
-
+                _students.AddStudent(objStu);
                 string successMessage = "Student added successfully!";
-                return Ok(new { Message = successMessage, Student = stu });
+                return Ok(new { Message = successMessage, Student = objStu });
             }
 
-            Console.WriteLine("Invalid Student Data");
             return BadRequest("Invalid Student Data");
         }
 
+        /// <summary>
+        /// Gets a list of all students.
+        /// </summary>
+        /// <returns>List of students.</returns>
         [HttpGet]
         [Route("api/GetStudents")]
         public IHttpActionResult GetStudents()
         {
-            return Ok(lstStudents);
+            return Ok(_students.GetAllStudents());
         }
 
+        /// <summary>
+        /// Updates details of an existing student.
+        /// </summary>
+        /// <param name="id">The ID of the student to be updated.</param>
+        /// <param name="objStu">The updated student information.</param>
+        /// <returns>Result of the update operation.</returns>
         [HttpPut]
-        public IHttpActionResult UpdateStudent(int id, Students stu)
+        public IHttpActionResult UpdateStudent(int id, Students objStu)
         {
-            if (stu != null)
+            if (objStu != null)
             {
-                Students objStu = lstStudents.FirstOrDefault(std => std.Id == id);
-
-                if (objStu != null)
-                {
-                    objStu.Name = stu.Name;
-                    objStu.Sem = stu.Sem;
-                    objStu.Course = stu.Course;
-
-                    return Ok(objStu);
-                }
-                else
-                {
-                    return NotFound();
-                }
+                return Ok(_students.EditStudentDetails(id, objStu));
             }
 
             return BadRequest("Invalid Student Data");
         }
 
+        /// <summary>
+        /// Deletes a student by ID.
+        /// </summary>
+        /// <param name="id">The ID of the student to be deleted.</param>
+        /// <returns>Result of the delete operation.</returns>
         [HttpDelete]
         public IHttpActionResult DeleteStudent(int id)
         {
-            try
+            if (id == null)
             {
-                Students objStu = lstStudents.FirstOrDefault(stu => stu.Id == id);
+                return BadRequest("Id Can Not Be Null");
+            }
 
-                if (objStu != null)
-                {
-                    lstStudents.Remove(objStu);
-                    return Ok();
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message}");
-                return BadRequest();
-            }
+            return Ok(_students.DeleteStudent(id));
         }
-
-
     }
 }

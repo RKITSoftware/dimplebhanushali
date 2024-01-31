@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using Versoning_with_Query_String.BL;
 using Versoning_with_Query_String.Models;
 
 namespace Versoning_with_Query_String.Controllers
@@ -13,6 +10,14 @@ namespace Versoning_with_Query_String.Controllers
     /// </summary>
     public class CustomerV1Controller : ApiController
     {
+        private CustomerV1BL _customerBL;
+
+        public CustomerV1Controller()
+        {
+            // Initialize the Business Logic class
+            _customerBL = new CustomerV1BL();
+        }
+
         /// <summary>
         /// Retrieves the list of all customers.
         /// </summary>
@@ -20,7 +25,7 @@ namespace Versoning_with_Query_String.Controllers
         [HttpGet]
         public List<Customer1> GetAllCustomers()
         {
-            return Customer1.lstCustomers1;
+            return _customerBL.GetAllCustomers();
         }
 
         /// <summary>
@@ -31,13 +36,12 @@ namespace Versoning_with_Query_String.Controllers
         [HttpGet]
         public IHttpActionResult GetCustomerById(int id)
         {
-            // Find the customer with the given ID in the list
-            Customer1 objCustomer1 = Customer1.lstCustomers1.FirstOrDefault(cust => cust.Id == id);
+            Customer1 customer = _customerBL.GetCustomerById(id);
 
-            if (objCustomer1 != null)
+            if (customer != null)
             {
                 // Return OK with the customer data if found
-                return Ok(objCustomer1);
+                return Ok(customer);
             }
 
             // Return NotFound if customer not found
@@ -52,18 +56,16 @@ namespace Versoning_with_Query_String.Controllers
         [HttpPost]
         public IHttpActionResult AddCustomer(Customer1 cust)
         {
-            if (cust == null)
+            Customer1 addedCustomer = _customerBL.AddCustomer(cust);
+
+            if (addedCustomer != null)
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with the added customer data
+                return Ok(addedCustomer);
             }
 
-            // Assign a new ID to the customer and add to the list
-            cust.Id = Customer1.lstCustomers1.Count + 1;
-            Customer1.lstCustomers1.Add(cust);
-
-            // Return OK with the added customer data
-            return Ok(cust);
+            // Return BadRequest if the input data is invalid
+            return BadRequest("Invalid Data");
         }
 
         /// <summary>
@@ -75,22 +77,16 @@ namespace Versoning_with_Query_String.Controllers
         [HttpPut]
         public IHttpActionResult EditCustomer(int id, Customer1 cust)
         {
-            if (id == null)
+            Customer1 editedCustomer = _customerBL.EditCustomer(id, cust);
+
+            if (editedCustomer != null)
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with the updated customer data
+                return Ok(editedCustomer);
             }
 
-            // Find the existing customer with the given ID in the list
-            Customer1 existingCust = Customer1.lstCustomers1.FirstOrDefault(c => c.Id == id);
-
-            // Update the existing customer data
-            existingCust.PhoneNumber = cust.PhoneNumber;
-            existingCust.LastName = cust.LastName;
-            existingCust.FistName = cust.FistName;
-
-            // Return OK with the updated customer data
-            return Ok(existingCust);
+            // Return BadRequest if the input data is invalid
+            return BadRequest("Invalid Data");
         }
 
         /// <summary>
@@ -101,17 +97,16 @@ namespace Versoning_with_Query_String.Controllers
         [HttpDelete]
         public IHttpActionResult DeleteCustomer(int id)
         {
-            if (id == null)
+            string deletionMessage = _customerBL.DeleteCustomer(id);
+
+            if (deletionMessage.Contains("Deleted"))
             {
-                // Return BadRequest if the input data is invalid
-                return BadRequest("Invalid Data");
+                // Return OK with a deletion message
+                return Ok(deletionMessage);
             }
 
-            // Remove the customer with the given ID from the list
-            Customer1.lstCustomers1.Remove(Customer1.lstCustomers1.FirstOrDefault(c => c.Id == id));
-
-            // Return OK with a deletion message
-            return Ok($"Customer With id {id} Deleted !!!");
+            // Return BadRequest if the input data is invalid
+            return BadRequest(deletionMessage);
         }
     }
 }

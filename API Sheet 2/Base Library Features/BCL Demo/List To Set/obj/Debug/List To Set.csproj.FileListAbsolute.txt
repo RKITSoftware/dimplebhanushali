@@ -1,0 +1,6 @@
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\bin\Debug\List To Set.dll
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\bin\Debug\List To Set.pdb
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\obj\Debug\List To Set.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\obj\Debug\List To Set.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\obj\Debug\List To Set.dll
+F:\Dimple - 371\Git\training\API Sheet 2\Base Library Features\BCL Demo\List To Set\obj\Debug\List To Set.pdb

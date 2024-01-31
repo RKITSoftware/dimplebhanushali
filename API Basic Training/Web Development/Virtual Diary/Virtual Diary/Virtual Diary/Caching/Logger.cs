@@ -38,7 +38,10 @@ namespace Virtual_Diary.Logging
             LogToFile($"ERROR: {DateTime.Now} - {message} - Exception: {ex}");
         }
 
-        // Private helper method to write log entries to the file
+        /// <summary>
+        /// Private helper method to write log entries to the file
+        /// </summary>
+        /// <param name="logEntry">log Entry</param>
         private static void LogToFile(string logEntry)
         {
             try

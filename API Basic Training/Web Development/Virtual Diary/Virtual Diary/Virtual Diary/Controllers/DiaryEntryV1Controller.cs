@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Caching;
 using System.Web.Http;
 using Virtual_Diary.BasicAuth;
+using Virtual_Diary.BL;
 using Virtual_Diary.Logging;
 using Virtual_Diary.Models;
 
@@ -17,38 +16,14 @@ namespace Virtual_Diary.Controllers
     public class DiaryEntryV1Controller : ApiController
     {
         private const string CacheKey = "DiaryEntriesCache";
+        private static DiaryEntryManagerBL _diaryManager;
 
-        /// <summary>
-        /// Retrieves all diary entries from cache or the source.
-        /// </summary>
-        /// <returns>List of diary entries.</returns>
-        private List<DiaryEntry> GetDiaryEntriesFromCacheOrSource()
+        static DiaryEntryV1Controller()
         {
-            Logger.LogInfo("Attempting to retrieve diary entries from cache.");
-
-            var cache = MemoryCache.Default;
-            var diaryEntries = cache.Get(CacheKey) as List<DiaryEntry>;
-
-            if (diaryEntries == null)
-            {
-                Logger.LogInfo("Cache miss. Retrieving diary entries from the source.");
-
-                // If not in cache, retrieve from the source (e.g., database)
-                diaryEntries = DiaryEntry.lstDiaryEntries.ToList();
-
-                // Cache the result for a specific duration (e.g., 10 minutes)
-                cache.Add(CacheKey, diaryEntries, DateTimeOffset.Now.AddMinutes(10));
-
-                Logger.LogInfo("Diary entries added to cache.");
-            }
-            else
-            {
-                Logger.LogInfo("Diary entries retrieved from cache.");
-            }
-
-            return diaryEntries;
+            _diaryManager = new DiaryEntryManagerBL();
         }
 
+        
         /// <summary>
         /// Retrieves all diary entries.
         /// </summary>
@@ -60,7 +35,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                var diaryEntries = GetDiaryEntriesFromCacheOrSource();
+                var diaryEntries = _diaryManager.GetDiaryEntriesFromCacheOrSource();
                 return diaryEntries;
             }
             catch (Exception ex)
@@ -82,17 +57,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                var diaryEntries = GetDiaryEntriesFromCacheOrSource();
-                var diaryEntry = diaryEntries.FirstOrDefault(d => d.Id == id);
-
-                if (diaryEntry == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {id}");
-                    return BadRequest($"No Entry Found With Id => {id}");
-                }
-
-                Logger.LogInfo($"Diary entry with Id {id} retrieved successfully.");
-
+                DiaryEntry diaryEntry = _diaryManager.GetDiaryEntryById(id);
                 return Ok(diaryEntry);
             }
             catch (Exception ex)
@@ -114,22 +79,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo("Attempting to create a new diary entry.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                newDiaryEntry.Id = DiaryEntry.lstDiaryEntries.Count + 1;
-                DiaryEntry.lstDiaryEntries.Add(newDiaryEntry);
-
-                Logger.LogInfo("New diary entry created successfully.");
-
+                _diaryManager.CreateDiaryEntry(newDiaryEntry);
                 return Ok(newDiaryEntry);
             }
             catch (Exception ex)
@@ -152,34 +102,8 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to edit diary entry with Id: {id}.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                var diaryEntryToEdit = DiaryEntry.lstDiaryEntries.FirstOrDefault(d => d.Id == id);
-
-                if (diaryEntryToEdit == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {id}");
-                    return BadRequest($"No Entry Found With Id => {id}");
-                }
-
-                // Update diary entry details
-                diaryEntryToEdit.Content = updatedDiaryEntry.Content;
-                diaryEntryToEdit.DateCreated = updatedDiaryEntry.DateCreated;
-                // Assuming Tasks is a list that needs to be updated
-                diaryEntryToEdit.Tasks = updatedDiaryEntry.Tasks;
-
-                Logger.LogInfo($"Diary entry with Id {id} edited successfully.");
-
-                return Ok(diaryEntryToEdit);
+                _diaryManager.EditDiaryEntry(id, updatedDiaryEntry);
+                return Ok(updatedDiaryEntry);
             }
             catch (Exception ex)
             {
@@ -200,30 +124,9 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to delete diary entry with Id: {id}.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                var diaryEntryToRemove = DiaryEntry.lstDiaryEntries.FirstOrDefault(d => d.Id == id);
-
-                if (diaryEntryToRemove == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {id}");
-                    return BadRequest($"No Entry Found With Id => {id}");
-                }
-
-                DiaryEntry.lstDiaryEntries.Remove(diaryEntryToRemove);
-
-                Logger.LogInfo($"Diary entry with Id {id} deleted successfully.");
-
-                return Ok(diaryEntryToRemove);
+                DiaryEntry deletedDiaryEntry = _diaryManager.GetDiaryEntryById(id);
+                _diaryManager.DeleteDiaryEntry(id);
+                return Ok(deletedDiaryEntry);
             }
             catch (Exception ex)
             {

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Caching;
 using System.Web.Http;
 using Virtual_Diary.BasicAuth;
+using Virtual_Diary.BL;
 using Virtual_Diary.Logging;
 using Virtual_Diary.Models;
 
@@ -13,9 +11,16 @@ namespace Virtual_Diary.Controllers
     /// Controller for managing tasks within diary entries with authentication and caching.
     /// </summary>
     [RoutePrefix("api/v2")]
+    [BasicAuthentication]
     public class DiaryEntryV2Controller : ApiController
     {
         private const string CacheKey = "DiaryEntriesCache";
+        private static DiaryEntryManagerBL _diaryManager;
+
+        static DiaryEntryV2Controller()
+        {
+            _diaryManager = new DiaryEntryManagerBL();
+        }
 
         /// <summary>
         /// Adds a new task to a diary entry.
@@ -30,30 +35,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to add a new task to diary entry with Id: {id}.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                var diaryEntry = DiaryEntry.lstDiaryEntries.FirstOrDefault(d => d.Id == id);
-
-                if (diaryEntry == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {id}");
-                    return BadRequest($"No Entry Found With Id => {id}");
-                }
-
-                newTask.Id = diaryEntry.Tasks.Count + 1;
-                diaryEntry.Tasks.Add(newTask);
-
-                Logger.LogInfo($"New task added to diary entry with Id {id} successfully.");
-
+                _diaryManager.AddTaskToDiaryEntry(id, newTask);
                 return Ok(newTask);
             }
             catch (Exception ex)
@@ -76,47 +58,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to retrieve task with Id: {taskId} within diary entry with Id: {entryId} from cache.");
-
-                var cache = MemoryCache.Default;
-                var diaryEntries = cache.Get(CacheKey) as List<DiaryEntry>;
-
-                if (diaryEntries == null)
-                {
-                    Logger.LogInfo("Cache miss. Retrieving all diary entries from the source.");
-
-                    // If not in cache, retrieve from the source (e.g., database)
-                    diaryEntries = DiaryEntry.lstDiaryEntries.ToList();
-
-                    // Cache the result for a specific duration (e.g., 10 minutes)
-                    cache.Add(CacheKey, diaryEntries, DateTimeOffset.Now.AddMinutes(10));
-
-                    Logger.LogInfo("Diary entries added to cache.");
-                }
-                else
-                {
-                    Logger.LogInfo("Diary entries retrieved from cache.");
-                }
-
-                var diaryEntry = diaryEntries.FirstOrDefault(d => d.Id == entryId);
-
-                if (diaryEntry == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {entryId}");
-                    return BadRequest($"No Entry Found With Id => {entryId}");
-                }
-
-                var task = diaryEntry.Tasks.FirstOrDefault(t => t.Id == taskId);
-
-                if (task == null)
-                {
-                    Logger.LogWarn($"No Task Found With Id => {taskId}");
-                    return BadRequest($"No Task Found With Id => {taskId}");
-                }
-
-                Logger.LogInfo($"Task with Id {taskId} within diary entry with Id {entryId} retrieved successfully.");
-
-                return Ok(task);
+                return Ok(_diaryManager.GetTaskWithinDiaryEntry(entryId, taskId));
             }
             catch (Exception ex)
             {
@@ -139,40 +81,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to update task with Id: {taskId} within diary entry with Id: {entryId}.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                var diaryEntry = DiaryEntry.lstDiaryEntries.FirstOrDefault(d => d.Id == entryId);
-
-                if (diaryEntry == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {entryId}");
-                    return BadRequest($"No Entry Found With Id => {entryId}");
-                }
-
-                var task = diaryEntry.Tasks.FirstOrDefault(t => t.Id == taskId);
-
-                if (task == null)
-                {
-                    Logger.LogWarn($"No Task Found With Id => {taskId}");
-                    return BadRequest($"No Task Found With Id => {taskId}");
-                }
-
-                // Update task details
-                task.TaskName = updatedTask.TaskName;
-                task.IsCompleted = updatedTask.IsCompleted;
-
-                Logger.LogInfo($"Task with Id {taskId} within diary entry with Id {entryId} updated successfully.");
-
-                return Ok(task);
+                return Ok(_diaryManager.UpdateTaskWithinDiaryEntry(entryId, taskId, updatedTask));
             }
             catch (Exception ex)
             {
@@ -194,38 +103,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                Logger.LogInfo($"Attempting to delete task with Id: {taskId} within diary entry with Id: {entryId}.");
-
-                var cache = MemoryCache.Default;
-
-                // If in cache, invalidate the cache
-                if (cache.Contains(CacheKey))
-                {
-                    cache.Remove(CacheKey);
-                    Logger.LogInfo("Diary entries cache invalidated.");
-                }
-
-                var diaryEntry = DiaryEntry.lstDiaryEntries.FirstOrDefault(d => d.Id == entryId);
-
-                if (diaryEntry == null)
-                {
-                    Logger.LogWarn($"No Entry Found With Id => {entryId}");
-                    return BadRequest($"No Entry Found With Id => {entryId}");
-                }
-
-                var task = diaryEntry.Tasks.FirstOrDefault(t => t.Id == taskId);
-
-                if (task == null)
-                {
-                    Logger.LogWarn($"No Task Found With Id => {taskId}");
-                    return BadRequest($"No Task Found With Id => {taskId}");
-                }
-
-                // Remove task
-                diaryEntry.Tasks.Remove(task);
-
-                Logger.LogInfo($"Task with Id {taskId} within diary entry with Id {entryId} deleted successfully.");
-
+                _diaryManager.DeleteTaskWithinDiaryEntry(entryId, taskId);
                 return Ok();
             }
             catch (Exception ex)

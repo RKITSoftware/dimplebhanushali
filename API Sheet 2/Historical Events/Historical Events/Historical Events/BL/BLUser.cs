@@ -15,14 +15,14 @@ namespace Historical_Events.BL
             _connection = connectionString;
         }
 
-        public string RegisterUser(User objUser)
+        public string RegisterUser(usr01 objUser)
         {
             if (objUser == null)
             {
-                return "invalid Details";
+                return "Invalid details";
             }
             InsertUser(objUser);
-            return "User Added";
+            return "User added";
         }
 
         public bool LoginUser(string userName, string password)
@@ -31,30 +31,37 @@ namespace Historical_Events.BL
             return ValidateUser.IsLogin(userName, password);
         }
 
-        public static List<User> GetAllUsers()
+        public static List<usr01> GetAllUsers()
         {
-            string query = "SELECT * FROM users";
+            string query = @"SELECT 
+                                    r01f01, 
+                                    r01f02, 
+                                    r01f03, 
+                                    r01f04, 
+                                    r01f05 
+                            FROM 
+                                    usr01";
             return GetUsersFromDatabase(query);
         }
 
-        public User GetUserById(int id)
+        public usr01 GetUserById(int id)
         {
-            string query = $"SELECT * FROM users WHERE Id = {id};";
-            List<User> users = GetUsersFromDatabase(query);
+            string query = $"SELECT r01f01, r01f02, r01f03, r01f04, r01f05 FROM usr01 WHERE r01f01 = {id};";
+            List<usr01> users = GetUsersFromDatabase(query);
 
             return users.Count > 0 ? users[0] : null;
         }
 
-        public User DeleteUser(int id)
+        public usr01 DeleteUser(int id)
         {
             // Get the user to be deleted
-            User deletedUser = GetUserById(id);
+            usr01 deletedUser = GetUserById(id);
 
             if (deletedUser != null)
             {
                 // Execute the delete query
-                string query = $"DELETE FROM users WHERE Id = {id};";
-                GetUsersFromDatabase(query);
+                string query = $"DELETE FROM usr01 WHERE r01f01 = {id};";
+                ExecuteNonQuery(query);
 
                 // Return the deleted user
                 return deletedUser;
@@ -64,8 +71,7 @@ namespace Historical_Events.BL
             return null;
         }
 
-
-        private static List<User> GetUsersFromDatabase(string query)
+        private static List<usr01> GetUsersFromDatabase(string query)
         {
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -73,48 +79,70 @@ namespace Historical_Events.BL
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
-                    return GetUsersFromDatabase(command);
+                    return GetUsersFromDataReader(command.ExecuteReader());
                 }
             }
         }
 
-        private static List<User> GetUsersFromDatabase(MySqlCommand command)
+        private static List<usr01> GetUsersFromDataReader(MySqlDataReader reader)
         {
-            using (MySqlDataReader reader = command.ExecuteReader())
+            List<usr01> resultList = new List<usr01>();
+
+            while (reader.Read())
             {
-                List<User> resultList = new List<User>();
-
-                while (reader.Read())
+                usr01 objUser = new usr01
                 {
-                    User objUser = new User
-                    {
-                        Id = Convert.ToInt32(reader["Id"]),
-                        Name = reader["name"].ToString(),
-                        Password = reader["password"].ToString(),
-                        UserName = reader["username"].ToString(),
-                        Roles = reader["role"].ToString()
-                    };
+                    r01f01 = Convert.ToInt32(reader["r01f01"]),
+                    r01f02 = reader["r01f02"].ToString(),
+                    r01f03 = reader["r01f03"].ToString(),
+                    r01f04 = reader["r01f04"].ToString(),
+                    r01f05 = reader["r01f05"].ToString()
+                };
 
-                    resultList.Add(objUser);
-                }
-                return resultList;
+                resultList.Add(objUser);
             }
+
+            return resultList;
         }
 
-        private void InsertUser(User user)
+        private void InsertUser(usr01 user)
         {
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
                 connection.Open();
 
-                string query = "INSERT INTO users (Name, UserName, Password, Role) VALUES (@Name, @UserName, @Password, @Roles)";
+                string query = @"INSERT INTO 
+                                            usr01 
+                                                (r01f02, 
+                                                r01f03, 
+                                                r01f04, 
+                                                r01f05) 
+                                VALUES 
+                                                (@r01f02, 
+                                                @r01f03, 
+                                                @r01f04, 
+                                                @r01f05)";
+
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Name", user.Name);
-                    command.Parameters.AddWithValue("@UserName", user.UserName);
-                    command.Parameters.AddWithValue("@Password", BLAES.Encrypt(user.Password)); // store Encrypted Password
-                    command.Parameters.AddWithValue("@Roles", "user");
+                    command.Parameters.AddWithValue("@r01f02", user.r01f02);
+                    command.Parameters.AddWithValue("@r01f03", user.r01f03);
+                    command.Parameters.AddWithValue("@r01f04", user.r01f04);
+                    command.Parameters.AddWithValue("@r01f05", user.r01f05);
 
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void ExecuteNonQuery(string query)
+        {
+            using (MySqlConnection connection = new MySqlConnection(_connection))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
                     command.ExecuteNonQuery();
                 }
             }

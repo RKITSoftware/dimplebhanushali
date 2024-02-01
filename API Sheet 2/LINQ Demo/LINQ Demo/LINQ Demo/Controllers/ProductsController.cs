@@ -7,8 +7,14 @@ using LINQ_Demo.Models;
 
 namespace LINQ_Demo.Controllers
 {
+    /// <summary>
+    /// Controller for managing products using LINQ_Demo.
+    /// </summary>
     public class ProductsController : ApiController
     {
+        /// <summary>
+        /// Gets all products.
+        /// </summary>
         [HttpGet]
         [Route("api/products")]
         public IHttpActionResult GetAllProducts()
@@ -24,6 +30,9 @@ namespace LINQ_Demo.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets sorted products based on the specified column.
+        /// </summary>
         [HttpGet]
         [Route("api/products/sort")]
         public IHttpActionResult GetSortedProducts(string columnName, bool ascending = true)
@@ -39,6 +48,9 @@ namespace LINQ_Demo.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets a product by its ID.
+        /// </summary>
         [HttpGet]
         [Route("api/products/{id}")]
         public IHttpActionResult GetProductById(int id)
@@ -62,6 +74,9 @@ namespace LINQ_Demo.Controllers
             }
         }
 
+        /// <summary>
+        /// Creates a new product.
+        /// </summary>
         [HttpPost]
         [Route("api/products")]
         public IHttpActionResult CreateProduct([FromBody] Product newProduct)
@@ -77,6 +92,9 @@ namespace LINQ_Demo.Controllers
             }
         }
 
+        /// <summary>
+        /// Updates an existing product.
+        /// </summary>
         [HttpPut]
         [Route("api/products/{id}")]
         public IHttpActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
@@ -92,6 +110,9 @@ namespace LINQ_Demo.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes a product by its ID.
+        /// </summary>
         [HttpDelete]
         [Route("api/products/{id}")]
         public IHttpActionResult DeleteProduct(int id)

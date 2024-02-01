@@ -1,8 +1,12 @@
-﻿namespace ORMDemo.Models
+﻿using ServiceStack.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ORMDemo.Models
 {
     /// <summary>
     /// Represents a product entity in the database.
     /// </summary>
+    [Table("prdct01")]
     public class prdct01
     {
         /// <summary>

@@ -5,30 +5,52 @@ using System.Linq;
 
 namespace Lambda_Expression.BL
 {
+    /// <summary>
+    /// Employee BL File for Handling Employee CRUD.
+    /// </summary>
     public class BLEmployee
     {
+        /// <summary>
+        /// A static list of employees for demonstration purposes.
+        /// </summary>
+        public static List<Employee> lstEmployees = new List<Employee>
+        {
+            new Employee { Id = 1, Name = "Dimple Mithiya", Department = "Development", Salary = 50000 },
+            new Employee { Id = 2, Name = "Pankaj Mithiya", Department = "Business", Salary = 75000 },
+            new Employee { Id = 3, Name = "Ankit Bhanushali", Department = "Business Analytics", Salary = 80000 }
+        };
+
+        /// <summary>
+        /// Gets all employees.
+        /// </summary>
         public List<Employee> GetAllEmployees()
         {
-            return Employee.lstEmployees;
+            return lstEmployees;
         }
 
+        /// <summary>
+        /// Gets an employee by ID.
+        /// </summary>
         public static Employee GetEmployeeById(int id)
         {
             if (id != null)
             {
-                return Employee.lstEmployees.FirstOrDefault(emp => emp.Id == id);
+                return lstEmployees.FirstOrDefault(emp => emp.Id == id);
             }
             return null;
         }
 
+        /// <summary>
+        /// Adds a new employee.
+        /// </summary>
         public string AddEmployee(Employee objEmp)
         {
             try
             {
                 if (objEmp != null)
                 {
-                    objEmp.Id = Employee.lstEmployees.Count + 1;
-                    Employee.lstEmployees.Add(objEmp);
+                    objEmp.Id = lstEmployees.Count + 1;
+                    lstEmployees.Add(objEmp);
                     return "Employee Added Successfully";
                 }
                 else
@@ -42,6 +64,9 @@ namespace Lambda_Expression.BL
             }
         }
 
+        /// <summary>
+        /// Edits an existing employee.
+        /// </summary>
         public Employee EditEmployee(int id, Employee objEmp)
         {
             try
@@ -63,17 +88,44 @@ namespace Lambda_Expression.BL
             }
         }
 
+        /// <summary>
+        /// Deletes an employee by ID.
+        /// </summary>
         public string DeleteEmployee(int id)
         {
             try
             {
-                Employee.lstEmployees.Remove(BLEmployee.GetEmployeeById(id));
+                lstEmployees.Remove(BLEmployee.GetEmployeeById(id));
                 return $"Employee with Id => {id} Deleted";
             }
             catch (Exception ex)
             {
                 return ex.Message;
             }
+        }
+
+        /// <summary>
+        /// Gets all employees with salary greater than a specified amount.
+        /// </summary>
+        public List<Employee> GetEmployeesWithSalaryGreaterThan(int salary)
+        {
+            return lstEmployees.Where(emp => emp.Salary > salary).ToList();
+        }
+
+        /// <summary>
+        /// Gets the highest paid employee.
+        /// </summary>
+        public Employee GetHighestPaidEmployee()
+        {
+            return lstEmployees.OrderByDescending(emp => emp.Salary).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Gets the average salary of all employees.
+        /// </summary>
+        public double GetAverageSalary()
+        {
+            return lstEmployees.Average(emp => emp.Salary);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Generic_Collection.Models;
+﻿using Generic_Collection.BL;
+using Generic_Collection.Models;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -11,46 +12,26 @@ namespace Generic_Collection.Controllers
     public class StackController : ApiController
     {
         // Static stack to store Person objects
-        private static Stack<Person> _persons = new Stack<Person> { };
-
-        /// <summary>
-        /// Constructor to initialize the stack with 10 Person records.
-        /// </summary>
-        public StackController()
-        {
-            // Initialize the stack before using it
-            _persons = new Stack<Person>();
-
-            // Push persons onto the stack
-            for (int i = 1; i < 11; i++)
-            {
-                _persons.Push(new Person
-                {
-                    Id = i,
-                    Name = "Person " + i,
-                    Age = 23,
-                });
-            }
-        }
+        private static PersonsBL _persons = new PersonsBL();
 
         /// <summary>
         /// Get all Person records from the stack.
         /// </summary>
         [HttpGet]
         [Route("GetAll")]
-        public IHttpActionResult GetAllStudents()
+        public IHttpActionResult GetAllPersons()
         {
-            return Ok(_persons);
+            return Ok(_persons.GetAllPersonDetails());
         }
 
         /// <summary>
         /// Get the top Person record from the stack without removing it.
         /// </summary>
         [HttpGet]
-        [Route("GetStudent")]
-        public IHttpActionResult GetStudent()
+        [Route("GetPerson")]
+        public IHttpActionResult GetPerson()
         {
-            return Ok(_persons.Peek());
+            return Ok(_persons.GetPerson());
         }
 
         /// <summary>
@@ -58,10 +39,9 @@ namespace Generic_Collection.Controllers
         /// </summary>
         [HttpPost]
         [Route("Add")]
-        public IHttpActionResult AddStudent(Person person)
+        public IHttpActionResult AddPerson(Person objPerson)
         {
-            _persons.Push(person);
-            return Ok(_persons);
+            return Ok(_persons.AddPerson(objPerson));
         }
 
         /// <summary>
@@ -69,10 +49,9 @@ namespace Generic_Collection.Controllers
         /// </summary>
         [HttpDelete]
         [Route("Remove")]
-        public IHttpActionResult RemoveStudent()
+        public IHttpActionResult RemovePerson()
         {
-            _persons.Pop();
-            return Ok(_persons);
+            return Ok(_persons.RemovePerson());
         }
     }
 }

@@ -5,6 +5,9 @@ using System.Web.Http;
 
 namespace Lambda_Expression.Controllers
 {
+    /// <summary>
+    /// Employee Controleer for Handling Employee CRUD.
+    /// </summary>
     [RoutePrefix("api")]
     public class EmployeesController : ApiController
     {
@@ -67,6 +70,43 @@ namespace Lambda_Expression.Controllers
         {
             _employees.DeleteEmployee(id);
             return Ok(BLEmployee.GetEmployeeById(id));
+        }
+
+        /// <summary>
+        /// Gets all employees with salary greater than a specified amount.
+        /// </summary>
+        [HttpGet]
+        [Route("GetEmployeesWithSalaryGreaterThan/{salary}")]
+        public IEnumerable<Employee> GetEmployeesWithSalaryGreaterThan(int salary)
+        {
+            return _employees.GetEmployeesWithSalaryGreaterThan(salary);
+        }
+
+        /// <summary>
+        /// Gets the highest paid employee.
+        /// </summary>
+        [HttpGet]
+        [Route("GetHighestPaidEmployee")]
+        public IHttpActionResult GetHighestPaidEmployee()
+        {
+            Employee highestPaidEmployee = _employees.GetHighestPaidEmployee();
+
+            if (highestPaidEmployee == null)
+                return NotFound(); // Return 404 if no employee found
+
+            return Ok(highestPaidEmployee);
+        }
+
+        /// <summary>
+        /// Gets the average salary of all employees.
+        /// </summary>
+        [HttpGet]
+        [Route("GetAverageSalary")]
+        public IHttpActionResult GetAverageSalary()
+        {
+            double averageSalary = _employees.GetAverageSalary();
+
+            return Ok(averageSalary);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Historical_Events.Controllers
         }
 
         [HttpPost, Route("Register")]
-        public IHttpActionResult RegisterUser(User objUser)
+        public IHttpActionResult RegisterUser(usr01 objUser)
         {
             try
             {

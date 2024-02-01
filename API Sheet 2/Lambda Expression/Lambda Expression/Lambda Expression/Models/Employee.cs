@@ -27,14 +27,6 @@ namespace Lambda_Expression.Models
         /// </summary>
         public long Salary { get; set; }
 
-        /// <summary>
-        /// A static list of employees for demonstration purposes.
-        /// </summary>
-        public static List<Employee> lstEmployees = new List<Employee>
-        {
-            new Employee { Id = 1, Name = "Dimple Mithiya", Department = "Development", Salary = 50000 },
-            new Employee { Id = 2, Name = "Pankaj Mithiya", Department = "Business", Salary = 75000 },
-            new Employee { Id = 3, Name = "Ankit Bhanushali", Department = "Business Analytics", Salary = 80000 }
-        };
+        
     }
 }

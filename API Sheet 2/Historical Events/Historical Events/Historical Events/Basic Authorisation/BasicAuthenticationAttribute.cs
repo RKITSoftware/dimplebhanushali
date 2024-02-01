@@ -12,8 +12,10 @@ using System.Web.Http.Filters;
 
 namespace Historical_Events.Basic_Authorisation
 {
+    /// <summary>
+    /// Custom Authorization Filter for handling Basic Authentication.
+    /// </summary>
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
-
     {
         /// <summary>
         /// Handles authorization by validating basic authentication credentials.
@@ -39,14 +41,19 @@ namespace Historical_Events.Basic_Authorisation
                     if (ValidateUser.IsLogin(username, password))
                     {
                         // User authenticated successfully
-                        User userDetails = ValidateUser.GetUserDetails(username, password);
+                        usr01 userDetails = ValidateUser.GetUserDetails(username, password);
 
+                        // Create a generic identity
                         var identity = new GenericIdentity(username);
-                        identity.AddClaim(new Claim(ClaimTypes.Name, userDetails.UserName));
+                        identity.AddClaim(new Claim(ClaimTypes.Name, userDetails.r01f03));
 
-                        IPrincipal principal = new GenericPrincipal(identity, userDetails.Roles.ToString().Split(','));
+                        // Create a generic principal
+                        IPrincipal principal = new GenericPrincipal(identity, userDetails.r01f05.ToString().Split(','));
+
+                        // Set the current principal for the thread
                         Thread.CurrentPrincipal = principal;
 
+                        // Set the user for the HttpContext if available
                         if (HttpContext.Current != null)
                         {
                             HttpContext.Current.User = principal;

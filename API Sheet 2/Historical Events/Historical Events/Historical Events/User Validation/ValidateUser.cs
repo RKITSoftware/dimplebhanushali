@@ -16,7 +16,8 @@ namespace Historical_Events.User_Validation
         {
             string encryptedPassword = BLAES.Encrypt(password);
             // Check if there is any user with the provided username and encrypted password
-            return BLUser.GetAllUsers().Any(user => user.UserName.Equals(username) && user.Password == encryptedPassword);
+            return BLUser.GetAllUsers()
+                         .Any(user => user.r01f03.Equals(username) && user.r01f04 == encryptedPassword);
         }
 
         /// <summary>
@@ -25,10 +26,10 @@ namespace Historical_Events.User_Validation
         /// <param name="username">The username for which details are requested.</param>
         /// <param name="encryptedPassword">The encrypted password for which details are requested.</param>
         /// <returns>The User object if found, otherwise null.</returns>
-        public static User GetUserDetails(string username, string encryptedPassword)
+        public static usr01 GetUserDetails(string username, string encryptedPassword)
         {
             // Retrieve the user details based on the provided username and encrypted password
-            return BLUser.GetAllUsers().FirstOrDefault(user => user.UserName.Equals(username) && user.Password == encryptedPassword);
+            return BLUser.GetAllUsers().FirstOrDefault(user => user.r01f03.Equals(username) && user.r01f04 == encryptedPassword);
         }
     }
 }

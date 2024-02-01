@@ -1,7 +1,6 @@
 ﻿using Historical_Events.Basic_Authorisation;
 using Historical_Events.BL;
 using Historical_Events.Models;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -25,7 +24,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.GetAllEvents();
+                List<hstevt01> resultList = _blHistory.GetAllEvents();
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -39,7 +38,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                HistoricalEvent result = _blHistory.GetEventById(id);
+                hstevt01 result = _blHistory.GetEventById(id);
 
                 if (result != null)
                     return Ok(result);
@@ -57,7 +56,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.SearchEvents(startYear, endYear, startDate, endDate, keyword);
+                List<hstevt01> resultList = _blHistory.SearchEvents(startYear, endYear, startDate, endDate, keyword);
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -71,7 +70,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.GetEventsByCategory(category);
+                List<hstevt01> resultList = _blHistory.GetEventsByCategory(category);
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -85,7 +84,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.GetLatestEvents(count);
+                List<hstevt01> resultList = _blHistory.GetLatestEvents(count);
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -99,7 +98,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.GetEventsByDateRange(startDate, endDate);
+                List<hstevt01> resultList = _blHistory.GetEventsByDateRange(startDate, endDate);
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -113,7 +112,7 @@ namespace Historical_Events.Controllers
         {
             try
             {
-                List<HistoricalEvent> resultList = _blHistory.GetEventsByKeyword(keyword);
+                List<hstevt01> resultList = _blHistory.GetEventsByKeyword(keyword);
                 return Ok(resultList);
             }
             catch (Exception ex)
@@ -139,7 +138,7 @@ namespace Historical_Events.Controllers
         [HttpPost, Route("Create")]
         [BasicAuthentication]
         [BasicAuthorisation(Roles = "admin")]
-        public IHttpActionResult CreateHistoricalEvent(HistoricalEvent newEvent)
+        public IHttpActionResult CreateHistoricalEvent(hstevt01 newEvent)
         {
             try
             {
@@ -155,7 +154,7 @@ namespace Historical_Events.Controllers
         [HttpPut, Route("Edit/{id}")]
         [BasicAuthentication]
         [BasicAuthorisation(Roles = "admin")]
-        public IHttpActionResult EditHistoricalEvent(int id, HistoricalEvent updatedEvent)
+        public IHttpActionResult EditHistoricalEvent(int id, hstevt01 updatedEvent)
         {
             try
             {

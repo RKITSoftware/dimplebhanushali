@@ -190,8 +190,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\HistoricalEvent.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\hstevt01.cs" />
+    <Compile Include="Models\usr01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User Validation\ValidateUser.cs" />
   </ItemGroup>

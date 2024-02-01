@@ -1,7 +1,7 @@
 ﻿using Historical_Events.Models;
 using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace Historical_Events.BL
 {
@@ -14,47 +14,77 @@ namespace Historical_Events.BL
             _connection = connectionString;
         }
 
-        public List<HistoricalEvent> GetAllEvents()
+        public List<hstevt01> GetAllEvents()
         {
-            string query = "SELECT * FROM historicalevent";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04 
+                            FROM 
+                                    hstevt01";
             return GetHistoricalEventsFromDatabase(query);
         }
 
-        public HistoricalEvent GetEventById(int id)
+        public hstevt01 GetEventById(int id)
         {
-            string query = $"SELECT * FROM historicalevent WHERE Id = {id};";
-            List<HistoricalEvent> events = GetHistoricalEventsFromDatabase(query);
+            string query = $"SELECT " +
+                                    $"t01f01, " +
+                                    $"t01f02, " +
+                                    $"t01f03, " +
+                                    $"t01f04 " +
+                           $"FROM " +
+                                    $"hstevt01 " +
+                            $"WHERE " +
+                                   $"t01f01 = {id};";
+            List<hstevt01> events = GetHistoricalEventsFromDatabase(query);
 
             return events.Count > 0 ? events[0] : null;
         }
 
-        public List<HistoricalEvent> SearchEvents(int? startYear, int? endYear, string startDate, string endDate, string keyword)
+        public List<hstevt01> SearchEvents(int? startYear, int? endYear, string startDate, string endDate, string keyword)
         {
             // Construct the base query
-            string query = "SELECT * FROM historicalevent WHERE 1 = 1";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04 
+                            FROM 
+                                    hstevt01 
+                            WHERE 
+                                    1 = 1";
 
             // Append conditions based on parameters
             if (startYear.HasValue && endYear.HasValue)
             {
-                query += $" AND YEAR(PublishDate) BETWEEN {startYear} AND {endYear}";
+                query += $" AND YEAR(t01f02) BETWEEN {startYear} AND {endYear}";
             }
 
             if (!string.IsNullOrEmpty(startDate) && !string.IsNullOrEmpty(endDate))
             {
-                query += $" AND PublishDate BETWEEN '{startDate}' AND '{endDate}'";
+                query += $" AND t01f02 BETWEEN '{startDate}' AND '{endDate}'";
             }
 
             if (!string.IsNullOrEmpty(keyword))
             {
-                query += $" AND HeadlineText LIKE '%{keyword}%'";
+                query += $" AND t01f04 LIKE '%{keyword}%'";
             }
 
             return GetHistoricalEventsFromDatabase(query);
         }
 
-        public List<HistoricalEvent> GetEventsByCategory(string category)
+        public List<hstevt01> GetEventsByCategory(string category)
         {
-            string query = "SELECT * FROM historicalevent WHERE HeadlineCategory = @Category;";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04  
+                            FROM 
+                                    hstevt01 
+                            WHERE 
+                                    t01f03 = @Category;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -69,9 +99,19 @@ namespace Historical_Events.BL
             }
         }
 
-        public List<HistoricalEvent> GetLatestEvents(int count)
+        public List<hstevt01> GetLatestEvents(int count)
         {
-            string query = "SELECT * FROM historicalevent ORDER BY PublishDate DESC LIMIT @Count;";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04  
+                            FROM 
+                                    hstevt01 
+                            ORDER BY 
+                                    t01f02 
+                            DESC 
+                                LIMIT @Count;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -86,9 +126,19 @@ namespace Historical_Events.BL
             }
         }
 
-        public List<HistoricalEvent> GetEventsByDateRange(string startDate, string endDate)
+        public List<hstevt01> GetEventsByDateRange(string startDate, string endDate)
         {
-            string query = "SELECT * FROM historicalevent WHERE PublishDate BETWEEN @StartDate AND @EndDate;";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04  
+                            FROM 
+                                    hstevt01 
+                            WHERE 
+                                    t01f02 
+                            BETWEEN 
+                                    @StartDate AND @EndDate;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -104,9 +154,17 @@ namespace Historical_Events.BL
             }
         }
 
-        public List<HistoricalEvent> GetEventsByKeyword(string keyword)
+        public List<hstevt01> GetEventsByKeyword(string keyword)
         {
-            string query = "SELECT * FROM historicalevent WHERE HeadlineText LIKE @Keyword;";
+            string query = @"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04  
+                            FROM 
+                                    hstevt01 
+                            WHERE 
+                                    t01f04 LIKE @Keyword;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -123,7 +181,11 @@ namespace Historical_Events.BL
 
         public List<string> GetUniqueCategories()
         {
-            string query = "SELECT DISTINCT HeadlineCategory FROM historicalevent;";
+            string query = @"SELECT 
+                            DISTINCT 
+                                    t01f03 
+                            FROM    
+                                    hstevt01;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -136,10 +198,17 @@ namespace Historical_Events.BL
             }
         }
 
-        public void CreateHistoricalEvent(HistoricalEvent newEvent)
+        public void CreateHistoricalEvent(hstevt01 newEvent)
         {
-            string query = "INSERT INTO historicalevent (PublishDate, HeadlineCategory, HeadlineText) " +
-                           "VALUES (@PublishDate, @HeadlineCategory, @HeadlineText);";
+            string query = @"INSERT INTO 
+                                    hstevt01 
+                                            (t01f02, 
+                                            t01f03, 
+                                            t01f04) 
+                            VALUES 
+                                            (@t01f02, 
+                                            @t01f03, 
+                                            @t01f04);";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -147,38 +216,41 @@ namespace Historical_Events.BL
 
                 using (MySqlCommand insertCommand = new MySqlCommand(query, connection))
                 {
-                    insertCommand.Parameters.AddWithValue("@PublishDate", newEvent.PublishDate);
-                    insertCommand.Parameters.AddWithValue("@HeadlineCategory", newEvent.HeadlineCategory);
-                    insertCommand.Parameters.AddWithValue("@HeadlineText", newEvent.HeadlineText);
+                    insertCommand.Parameters.AddWithValue("@t01f02", newEvent.t01f02);
+                    insertCommand.Parameters.AddWithValue("@t01f03", newEvent.t01f03);
+                    insertCommand.Parameters.AddWithValue("@t01f04", newEvent.t01f04);
 
                     insertCommand.ExecuteNonQuery();
                 }
             }
         }
 
-        public void EditHistoricalEvent(int id, HistoricalEvent updatedEvent)
+        public void EditHistoricalEvent(int id, hstevt01 updatedEvent)
         {
-            string query = $"SELECT * FROM historicalevent WHERE Id = {id};";
-            List<HistoricalEvent> existingEvents = GetHistoricalEventsFromDatabase(query);
+            string query = $"SELECT t01f01, t01f02, t01f03, t01f04  FROM hstevt01 WHERE t01f01 = {id};";
+            List<hstevt01> existingEvents = GetHistoricalEventsFromDatabase(query);
 
             if (existingEvents.Count == 0)
             {
                 throw new Exception("Event not found");
             }
 
-            HistoricalEvent existingEvent = existingEvents[0];
+            hstevt01 existingEvent = existingEvents[0];
 
             // Update event properties
-            existingEvent.PublishDate = updatedEvent.PublishDate;
-            existingEvent.HeadlineCategory = updatedEvent.HeadlineCategory;
-            existingEvent.HeadlineText = updatedEvent.HeadlineText;
+            existingEvent.t01f02 = updatedEvent.t01f02;
+            existingEvent.t01f03 = updatedEvent.t01f03;
+            existingEvent.t01f04 = updatedEvent.t01f04;
 
             // Execute the update query
-            query = "UPDATE historicalevent SET " +
-                    "PublishDate = @PublishDate, " +
-                    "HeadlineCategory = @HeadlineCategory, " +
-                    "HeadlineText = @HeadlineText " +
-                    "WHERE Id = @Id;";
+            query = @"UPDATE 
+                                hstevt01 
+                    SET 
+                                t01f02 = @t01f02,  
+                                t01f03 = @t01f03,  
+                                t01f04 = @t01f04  
+                    WHERE 
+                                t01f01 = @Id;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -186,9 +258,9 @@ namespace Historical_Events.BL
 
                 using (MySqlCommand updateCommand = new MySqlCommand(query, connection))
                 {
-                    updateCommand.Parameters.AddWithValue("@PublishDate", existingEvent.PublishDate);
-                    updateCommand.Parameters.AddWithValue("@HeadlineCategory", existingEvent.HeadlineCategory);
-                    updateCommand.Parameters.AddWithValue("@HeadlineText", existingEvent.HeadlineText);
+                    updateCommand.Parameters.AddWithValue("@t01f02", existingEvent.t01f02);
+                    updateCommand.Parameters.AddWithValue("@t01f03", existingEvent.t01f03);
+                    updateCommand.Parameters.AddWithValue("@t01f04", existingEvent.t01f04);
                     updateCommand.Parameters.AddWithValue("@Id", id);
 
                     updateCommand.ExecuteNonQuery();
@@ -198,7 +270,10 @@ namespace Historical_Events.BL
 
         public void DeleteHistoricalEvent(int id)
         {
-            string query = "DELETE FROM historicalevent WHERE Id = @Id;";
+            string query = @"DELETE FROM 
+                                            hstevt01 
+                            WHERE 
+                                            t01f01 = @Id;";
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
                 connection.Open();
@@ -216,7 +291,7 @@ namespace Historical_Events.BL
             }
         }
 
-        private List<HistoricalEvent> GetHistoricalEventsFromDatabase(string query)
+        private List<hstevt01> GetHistoricalEventsFromDatabase(string query)
         {
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -229,20 +304,20 @@ namespace Historical_Events.BL
             }
         }
 
-        private List<HistoricalEvent> GetHistoricalEventsFromDatabase(MySqlCommand command)
+        private List<hstevt01> GetHistoricalEventsFromDatabase(MySqlCommand command)
         {
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                List<HistoricalEvent> resultList = new List<HistoricalEvent>();
+                List<hstevt01> resultList = new List<hstevt01>();
 
                 while (reader.Read())
                 {
-                    HistoricalEvent historicalEvent = new HistoricalEvent
+                    hstevt01 historicalEvent = new hstevt01
                     {
-                        Id = Convert.ToInt32(reader["Id"]),
-                        PublishDate = Convert.ToInt32(reader["PublishDate"]),
-                        HeadlineCategory = reader["HeadlineCategory"].ToString(),
-                        HeadlineText = reader["HeadlineText"].ToString()
+                        t01f01 = Convert.ToInt32(reader["t01f01"]),
+                        t01f02 = Convert.ToInt32(reader["t01f02"]),
+                        t01f03 = reader["t01f03"].ToString(),
+                        t01f04 = reader["t01f04"].ToString()
                     };
 
                     resultList.Add(historicalEvent);
@@ -260,7 +335,7 @@ namespace Historical_Events.BL
 
                 while (reader.Read())
                 {
-                    categories.Add(reader["HeadlineCategory"].ToString());
+                    categories.Add(reader["t01f03"].ToString());
                 }
                 return categories;
             }

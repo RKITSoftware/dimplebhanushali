@@ -3,52 +3,62 @@ using System.IO;
 
 namespace Basic_File_operations
 {
-    internal class Program
+    /// <summary>
+    /// Entry point for the program demonstrating basic file operations.
+    /// </summary>
+    public class Program
     {
+        /// <summary>
+        /// The main method where the program execution starts.
+        /// </summary>
+        /// <param name="args">Command-line arguments (not used in this program).</param>
         static void Main(string[] args)
         {
-            // Requesting the user to enter the name of the file (without extension)
-            Console.Write("Enter the name of the file (without extension): => ");
-            string fileName = Console.ReadLine();
+            // Get the current directory
+            string currentDirectory = Directory.GetCurrentDirectory();
 
-            // Add ".txt" extension to the file name
-            string filePath = $"{fileName}.txt";
+            // Specify the file name
+            string fileName = "example.txt";
 
-            // Requesting the user to enter the text to be written to the file
-            Console.Write($"Enter the text to be written to '{filePath}': => \n");
-            string fileContent = Console.ReadLine();
+            // Combine the directory and file name to create the full file path
+            string filePath = Path.Combine(currentDirectory, fileName);
 
-            try
+            // Create an instance of FileOperations
+            FileOperations fileHandler = new FileOperations();
+
+            // Check if the file exists
+            if (File.Exists(filePath))
             {
-                // Write text to the file
-                File.WriteAllText(filePath, fileContent);
+                Console.WriteLine("File exists.");
 
-                // Notify the user about the successful write operation
-                Console.WriteLine($"Text successfully written to '{filePath}'.");
+                // Read and display the content of the file
+                fileHandler.ReadFile(filePath);
 
-                // Ask the user if they want to download the file
-                Console.WriteLine("Do you want to download the file? (yes/no):");
-                string downloadOption = Console.ReadLine().ToLower();
+                // Append additional content to the file
+                fileHandler.AppendToFile(filePath, "Additional content");
+                Console.WriteLine("Content appended to the file.");
 
-                if (downloadOption == "yes" || downloadOption == "y")
-                {
-                    // Read the file content and print it to the console
-                    string content = File.ReadAllText(filePath);
-                    Console.WriteLine($"\nFile Content:\n{content}");
+                // Read and display the updated content
+                fileHandler.ReadFile(filePath);
 
-                    // Provide an option to download the file
-                    Console.WriteLine($"\nDownload link: {Path.GetFullPath(filePath)}");
-                }
-                else
-                {
-                    Console.WriteLine("File not downloaded. Exiting...");
-                }
+                // Delete the file
+                fileHandler.DeleteFile(filePath);
+                Console.WriteLine("File deleted.");
             }
-            catch (Exception ex)
+            else
             {
-                // Handle and display any exceptions that may occur
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("File does not exist. Creating...");
+
+                // Create a new file and write some content
+                fileHandler.CreateAndWriteFile(filePath);
+                Console.WriteLine("File created and written.");
             }
+
+            // Get File Info
+            fileHandler.GetFileInfo(filePath);
+
+            // Get Directory Info
+            fileHandler.GetDirectoryInfo(currentDirectory);
 
             // Wait for a key press before closing the console window
             Console.ReadKey();

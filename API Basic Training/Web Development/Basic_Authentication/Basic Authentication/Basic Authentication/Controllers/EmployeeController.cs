@@ -27,7 +27,7 @@ namespace Basic_Authentication.Controllers
         [HttpGet]
         [Authorisation(Roles = "admin")]
         [Route("api/Get")]
-        public IHttpActionResult Get()
+        public IHttpActionResult GetAllEmployees()
         {
             return Ok(_employee.GetAllEmployees());
         }
@@ -40,7 +40,7 @@ namespace Basic_Authentication.Controllers
         [HttpGet]
         [Authorisation(Roles = "employee")]
         [Route("api/GetbyId/{id}")]
-        public IHttpActionResult GetById(int id)
+        public IHttpActionResult GetEmployeeById(int id)
         {
             if (id == null)
             {

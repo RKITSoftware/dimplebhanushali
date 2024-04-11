@@ -5,3 +5,11 @@ E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File oper
 E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.CoreCompileInputs.cache
 E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.exe
 E:\API_RKIT\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.exe
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\bin\Debug\Basic File operations.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.exe
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Basic File operations\Basic File operations\Basic File operations\obj\Debug\Basic File operations.pdb

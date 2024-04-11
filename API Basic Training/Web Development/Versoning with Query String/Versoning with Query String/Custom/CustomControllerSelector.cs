@@ -49,7 +49,6 @@ namespace Versoning_with_Query_String.Custom
             //    version = versionQueryString["v"];
             //}
 
-
             // Custom Headers
             // Extract Version from the custom headers 'customerService-Version'
             string customHeader = "customerService-Version";
@@ -61,7 +60,6 @@ namespace Versoning_with_Query_String.Custom
                     version = version.Substring(0,version.IndexOf(','));
                 }
             }
-
 
             // Append 'V1' or 'V2' to the controller name based on the version number
             var modifiedControllerName = version == "1" ? controllerName + "V1" : controllerName + "V2";

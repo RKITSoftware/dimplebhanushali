@@ -1,0 +1,36 @@
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\nlog.config
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\appsettings.Development.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\appsettings.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Logging API.exe
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Logging API.deps.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Logging API.runtimeconfig.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Logging API.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Logging API.pdb
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\NLog.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.AssemblyInfoInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.AssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.MvcApplicationPartsAssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.MvcApplicationPartsAssemblyInfo.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets\msbuild.Logging API.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets\msbuild.build.Logging API.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Logging API.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Logging API.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets.pack.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets.build.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\staticwebassets.development.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\scopedcss\bundle\Logging API.styles.css
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.csproj.CopyComplete
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\refint\Logging API.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.pdb
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\Logging API.genruntimeconfig.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Logging API\Logging API\obj\Debug\net6.0\ref\Logging API.dll

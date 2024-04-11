@@ -1,0 +1,22 @@
+2024-04-01 12:01:32.2259 | INFO | Microsoft.Hosting.Lifetime | Now listening on: https://localhost:7003 
+2024-04-01 12:01:32.2259 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5244 
+2024-04-01 12:01:32.2259 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-04-01 12:01:32.2259 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-04-01 12:01:32.2259 | INFO | Microsoft.Hosting.Lifetime | Content root path: F:\Dimple - 371\Git\training\ASP.NET Core\NlogDemo\NlogDemo 
+2024-04-01 12:01:34.4346 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/index.html - - 
+2024-04-01 12:01:35.1759 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/index.html - - - 200 - text/html;charset=utf-8 744.3702ms 
+2024-04-01 12:01:35.6969 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - 
+2024-04-01 12:01:35.6969 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_vs/browserLink - - 
+2024-04-01 12:01:35.7105 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 13.2244ms 
+2024-04-01 12:01:35.7265 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5534ms 
+2024-04-01 12:01:35.8676 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - 
+2024-04-01 12:01:36.0657 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.3694ms 
+2024-04-01 12:01:43.1158 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/WeatherForecast/Division?a=11&b=2 - - 
+2024-04-01 12:01:43.1773 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'NlogDemo.Controllers.WeatherForecastController.Division (NlogDemo)' 
+2024-04-01 12:01:43.2062 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "Division", controller = "WeatherForecast"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Division(System.Decimal, System.Decimal) on controller NlogDemo.Controllers.WeatherForecastController (NlogDemo). 
+2024-04-01 12:01:43.3002 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method NlogDemo.Controllers.WeatherForecastController.Division (NlogDemo) - Validation state: Valid 
+2024-04-01 12:01:44.5288 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method NlogDemo.Controllers.WeatherForecastController.Division (NlogDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1220.8773ms. 
+2024-04-01 12:01:44.5343 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.Decimal'. 
+2024-04-01 12:01:44.6015 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action NlogDemo.Controllers.WeatherForecastController.Division (NlogDemo) in 1371.7366ms 
+2024-04-01 12:01:44.6015 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'NlogDemo.Controllers.WeatherForecastController.Division (NlogDemo)' 
+2024-04-01 12:01:44.6015 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/WeatherForecast/Division?a=11&b=2 - - - 200 - application/json;+charset=utf-8 1484.7798ms 

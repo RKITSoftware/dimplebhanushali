@@ -1,0 +1,413 @@
+2024-03-26 11:06:26.5357|Microsoft.Extensions.Hosting.Internal.Host|DEBUG|Hosting starting 
+2024-03-26 11:06:26.9031|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|DEBUG|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-03-26 11:06:27.2078|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|DEBUG|Using development certificate: CN=localhost (Thumbprint: FCBE0DFD0A16744F1D0462A90AD4E142C4EEDB5B) 
+2024-03-26 11:06:27.2950|Microsoft.Hosting.Lifetime|INFO|Now listening on: https://localhost:7260 
+2024-03-26 11:06:27.2950|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://localhost:5112 
+2024-03-26 11:06:27.2950|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Logging 
+2024-03-26 11:06:27.2950|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2024-03-26 11:06:27.2950|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2024-03-26 11:06:27.2950|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2024-03-26 11:06:27.2950|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2024-03-26 11:06:27.2950|Microsoft.Hosting.Lifetime|INFO|Content root path: F:\Dimple - 371\Git\training\ASP.NET Core\Logging\Logging 
+2024-03-26 11:06:27.2950|Microsoft.Extensions.Hosting.Internal.Host|DEBUG|Hosting started 
+2024-03-26 11:06:27.7547|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|DEBUG|Connection id "0HN2DAQNF7E1R" received FIN. 
+2024-03-26 11:06:27.7547|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAQNF7E1R" accepted. 
+2024-03-26 11:06:27.7547|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAQNF7E1R" started. 
+2024-03-26 11:06:27.7841|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|DEBUG|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-03-26 11:06:27.8364|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAQNF7E1R" stopped. 
+2024-03-26 11:06:27.8364|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|DEBUG|Connection id "0HN2DAQNF7E1R" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-03-26 11:06:29.0790|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAQNF7E1S" accepted. 
+2024-03-26 11:06:29.0790|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAQNF7E1S" started. 
+2024-03-26 11:06:29.1717|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|DEBUG|Connection 0HN2DAQNF7E1S established using the following protocol: Tls12 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-03-26 11:06:29.2075|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 1 with length 450 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:29.2570|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-03-26 11:06:29.2895|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/swagger/index.html - - 
+2024-03-26 11:06:29.3489|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|DEBUG|Wildcard detected, all requests with hosts will be allowed. 
+2024-03-26 11:06:29.3489|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:06:29.4988|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|DEBUG|Response markup is scheduled to include browser refresh script injection. 
+2024-03-26 11:06:29.4988|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 989 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 65 and flags NONE. 
+2024-03-26 11:06:29.6823|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 16 and flags NONE. 
+2024-03-26 11:06:29.6988|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|DEBUG|Response markup was updated to include browser refresh script injection. 
+2024-03-26 11:06:29.7009|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:29.7009|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/swagger/index.html - - - 200 - text/html;charset=utf-8 418.2482ms 
+2024-03-26 11:06:30.2860|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 3 with length 109 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:30.2860|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:30.2860|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/_framework/aspnetcore-browser-refresh.js - - 
+2024-03-26 11:06:30.2860|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/_vs/browserLink - - 
+2024-03-26 11:06:30.3005|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 3 with length 90 and flags END_HEADERS. 
+2024-03-26 11:06:30.3005|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 3 with length 11984 and flags NONE. 
+2024-03-26 11:06:30.3005|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:30.3005|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 12.5062ms 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 9986 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 9517 and flags NONE. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:30.3280|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0443ms 
+2024-03-26 11:06:30.4884|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 7 with length 66 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:30.4884|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/swagger/v1/swagger.json - - 
+2024-03-26 11:06:30.4884|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:06:30.6653|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 7 with length 35 and flags END_HEADERS. 
+2024-03-26 11:06:30.6653|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 7 with length 1743 and flags NONE. 
+2024-03-26 11:06:30.6653|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:30.6653|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.8233ms 
+2024-03-26 11:06:35.6666|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 9 with length 40 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:35.6666|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/WeatherForecast - - 
+2024-03-26 11:06:35.6666|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:06:35.6709|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2024-03-26 11:06:35.7033|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|1 candidate(s) found for the request path '/WeatherForecast' 
+2024-03-26 11:06:35.7033|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|Endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' with route pattern 'WeatherForecast' is valid for the request path '/WeatherForecast' 
+2024-03-26 11:06:35.7033|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|DEBUG|Request matched endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:35.7033|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executing endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Logging.WeatherForecast] Get() on controller Logging.Controllers.WeatherForecastController (Logging). 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of authorization filters (in the following order): None 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of resource filters (in the following order): None 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of exception filters (in the following order): None 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executing controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executed controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:35.7232|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executing action method Logging.Controllers.WeatherForecastController.Get (Logging) - Validation state: Valid 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action method Logging.Controllers.WeatherForecastController.Get (Logging), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.4426ms. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2024-03-26 11:06:35.7335|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'Logging.WeatherForecast[]'. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 9 with length 66 and flags END_HEADERS. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 9 with length 504 and flags NONE. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action Logging.Controllers.WeatherForecastController.Get (Logging) in 32.8784ms 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executed endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 9 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:35.7475|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/WeatherForecast - - - 200 - application/json;+charset=utf-8 95.4223ms 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" received HEADERS frame for stream ID 11 with length 32 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/WeatherForecast - - 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|1 candidate(s) found for the request path '/WeatherForecast' 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|Endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' with route pattern 'WeatherForecast' is valid for the request path '/WeatherForecast' 
+2024-03-26 11:06:37.0893|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|DEBUG|Request matched endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executing endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Logging.WeatherForecast] Get() on controller Logging.Controllers.WeatherForecastController (Logging). 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of authorization filters (in the following order): None 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of resource filters (in the following order): None 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of exception filters (in the following order): None 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executing controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executed controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executing action method Logging.Controllers.WeatherForecastController.Get (Logging) - Validation state: Valid 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action method Logging.Controllers.WeatherForecastController.Get (Logging), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.048ms. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'Logging.WeatherForecast[]'. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending HEADERS frame for stream ID 11 with length 34 and flags END_HEADERS. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 11 with length 494 and flags NONE. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action Logging.Controllers.WeatherForecastController.Get (Logging) in 1.1597ms 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executed endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAQNF7E1S" sending DATA frame for stream ID 11 with length 0 and flags END_STREAM. 
+2024-03-26 11:06:37.0909|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/WeatherForecast - - - 200 - application/json;+charset=utf-8 3.1296ms 
+2024-03-26 11:07:44.9547|Microsoft.Extensions.Hosting.Internal.Host|DEBUG|Hosting starting 
+2024-03-26 11:07:45.1833|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|DEBUG|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-03-26 11:07:45.5043|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|DEBUG|Using development certificate: CN=localhost (Thumbprint: FCBE0DFD0A16744F1D0462A90AD4E142C4EEDB5B) 
+2024-03-26 11:07:45.5746|Microsoft.Hosting.Lifetime|INFO|Now listening on: https://localhost:7260 
+2024-03-26 11:07:45.5746|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://localhost:5112 
+2024-03-26 11:07:45.5770|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Logging 
+2024-03-26 11:07:45.5770|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2024-03-26 11:07:45.5770|Microsoft.AspNetCore.Hosting.Diagnostics|DEBUG|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2024-03-26 11:07:45.5770|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2024-03-26 11:07:45.5770|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Development 
+2024-03-26 11:07:45.5770|Microsoft.Hosting.Lifetime|INFO|Content root path: F:\Dimple - 371\Git\training\ASP.NET Core\Logging\Logging 
+2024-03-26 11:07:45.5770|Microsoft.Extensions.Hosting.Internal.Host|DEBUG|Hosting started 
+2024-03-26 11:07:45.8894|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|DEBUG|Connection id "0HN2DAREODIL8" received FIN. 
+2024-03-26 11:07:45.8894|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAREODIL8" accepted. 
+2024-03-26 11:07:45.9050|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAREODIL8" started. 
+2024-03-26 11:07:45.9308|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|DEBUG|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-03-26 11:07:45.9731|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAREODIL8" stopped. 
+2024-03-26 11:07:45.9731|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|DEBUG|Connection id "0HN2DAREODIL8" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-03-26 11:07:46.9417|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAREODIL9" accepted. 
+2024-03-26 11:07:46.9417|Microsoft.AspNetCore.Server.Kestrel.Connections|DEBUG|Connection id "0HN2DAREODIL9" started. 
+2024-03-26 11:07:47.0108|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|DEBUG|Connection 0HN2DAREODIL9 established using the following protocol: Tls12 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-03-26 11:07:47.0489|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received HEADERS frame for stream ID 1 with length 450 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:07:47.0874|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-03-26 11:07:47.1033|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/swagger/index.html - - 
+2024-03-26 11:07:47.1557|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|DEBUG|Wildcard detected, all requests with hosts will be allowed. 
+2024-03-26 11:07:47.1557|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:07:47.2957|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|DEBUG|Response markup is scheduled to include browser refresh script injection. 
+2024-03-26 11:07:47.3084|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 989 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 65 and flags NONE. 
+2024-03-26 11:07:47.4942|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 16 and flags NONE. 
+2024-03-26 11:07:47.5113|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|DEBUG|Response markup was updated to include browser refresh script injection. 
+2024-03-26 11:07:47.5113|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-03-26 11:07:47.5176|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/swagger/index.html - - - 200 - text/html;charset=utf-8 417.5460ms 
+2024-03-26 11:07:48.0956|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received HEADERS frame for stream ID 3 with length 109 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:07:48.0956|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:07:48.0956|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/_framework/aspnetcore-browser-refresh.js - - 
+2024-03-26 11:07:48.0956|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/_vs/browserLink - - 
+2024-03-26 11:07:48.1130|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending HEADERS frame for stream ID 3 with length 90 and flags END_HEADERS. 
+2024-03-26 11:07:48.1130|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 3 with length 11984 and flags NONE. 
+2024-03-26 11:07:48.1130|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2024-03-26 11:07:48.1130|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 16.4558ms 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 9986 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1322|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1542|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 9517 and flags NONE. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2024-03-26 11:07:48.1549|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.5125ms 
+2024-03-26 11:07:48.3057|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received HEADERS frame for stream ID 7 with length 66 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:07:48.3057|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/swagger/v1/swagger.json - - 
+2024-03-26 11:07:48.3057|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:07:48.4571|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending HEADERS frame for stream ID 7 with length 65 and flags END_HEADERS. 
+2024-03-26 11:07:48.4571|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 7 with length 1743 and flags NONE. 
+2024-03-26 11:07:48.4571|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2024-03-26 11:07:48.4571|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.3081ms 
+2024-03-26 11:07:54.0236|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received HEADERS frame for stream ID 9 with length 40 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-03-26 11:07:54.0236|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request starting HTTP/2 GET https://localhost:7260/WeatherForecast - - 
+2024-03-26 11:07:54.0236|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|TRACE|All hosts are allowed. 
+2024-03-26 11:07:54.0236|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2024-03-26 11:07:54.0851|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|1 candidate(s) found for the request path '/WeatherForecast' 
+2024-03-26 11:07:54.0851|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|DEBUG|Endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' with route pattern 'WeatherForecast' is valid for the request path '/WeatherForecast' 
+2024-03-26 11:07:54.0851|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|DEBUG|Request matched endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:07:54.0948|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executing endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Logging.WeatherForecast] Get() on controller Logging.Controllers.WeatherForecastController (Logging). 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of authorization filters (in the following order): None 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of resource filters (in the following order): None 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of exception filters (in the following order): None 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executing controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|DEBUG|Executed controller factory for controller Logging.Controllers.WeatherForecastController (Logging) 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:07:54.1108|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executing action method Logging.Controllers.WeatherForecastController.Get (Logging) - Validation state: Valid 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action method Logging.Controllers.WeatherForecastController.Get (Logging), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0342ms. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:07:54.1246|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'Logging.WeatherForecast[]'. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending HEADERS frame for stream ID 9 with length 66 and flags END_HEADERS. 
+2024-03-26 11:07:54.1427|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 9 with length 504 and flags NONE. 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|TRACE|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|INFO|Executed action Logging.Controllers.WeatherForecastController.Get (Logging) in 43.447ms 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Routing.EndpointMiddleware|INFO|Executed endpoint 'Logging.Controllers.WeatherForecastController.Get (Logging)' 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" sending DATA frame for stream ID 9 with length 0 and flags END_STREAM. 
+2024-03-26 11:07:54.1558|Microsoft.AspNetCore.Hosting.Diagnostics|INFO|Request finished HTTP/2 GET https://localhost:7260/WeatherForecast - - - 200 - application/json;+charset=utf-8 140.8412ms 
+2024-03-26 11:07:54.1750|Microsoft.AspNetCore.Server.Kestrel.Http2|TRACE|Connection id "0HN2DAREODIL9" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 

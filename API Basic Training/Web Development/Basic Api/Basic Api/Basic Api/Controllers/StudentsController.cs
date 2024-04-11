@@ -12,7 +12,11 @@ namespace Basic_Api.Controllers
     public class StudentsController : ApiController
     {
         StudentBL studentBL = new StudentBL();
-        // Gets all students.
+
+        /// <summary>
+        /// Gets all students.
+        /// </summary>
+        /// <returns>List of all students.</returns>
         [HttpGet]
         [Route("api/GetAllStudents")]
         public IHttpActionResult GetAllStudents()
@@ -21,7 +25,11 @@ namespace Basic_Api.Controllers
             return Ok(students);
         }
 
-        // Gets a student by ID.
+        /// <summary>
+        /// Gets a student by ID.
+        /// </summary>
+        /// <param name="id">The ID of the student.</param>
+        /// <returns>The student with the specified ID.</returns>
         [HttpGet]
         [Route("api/GetStudentById/{id}")]
         public IHttpActionResult GetStudentById(int id)
@@ -37,7 +45,11 @@ namespace Basic_Api.Controllers
             }
         }
 
-        // Adds a new student.
+        /// <summary>
+        /// Adds a new student.
+        /// </summary>
+        /// <param name="objStudent">The student to be added.</param>
+        /// <returns>Result of the add operation.</returns>
         [HttpPost]
         [Route("api/AddStudent")]
         public IHttpActionResult AddStudent(Student objStudent)
@@ -53,7 +65,12 @@ namespace Basic_Api.Controllers
             }
         }
 
-        // Edits an existing student.
+        /// <summary>
+        /// Edits an existing student.
+        /// </summary>
+        /// <param name="id">The ID of the student to be edited.</param>
+        /// <param name="objStudent">The updated student information.</param>
+        /// <returns>Result of the edit operation.</returns>
         [HttpPut]
         [Route("api/EditStudent/{id}")]
         public IHttpActionResult EditStudent(int id, Student objStudent)
@@ -69,7 +86,11 @@ namespace Basic_Api.Controllers
             }
         }
 
-        // Deletes a student by ID.
+        /// <summary>
+        /// Deletes a student by ID.
+        /// </summary>
+        /// <param name="id">The ID of the student to be deleted.</param>
+        /// <returns>Result of the delete operation.</returns>
         [HttpDelete]
         [Route("api/DeleteStudent/{id}")]
         public IHttpActionResult DeleteStudent(int id)

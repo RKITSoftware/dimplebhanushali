@@ -1,0 +1,7 @@
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.AssemblyInfoInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.AssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.MvcApplicationPartsAssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Overview\API Overview\API Overview\obj\Debug\net5.0\API Overview.MvcApplicationPartsAssemblyInfo.cache

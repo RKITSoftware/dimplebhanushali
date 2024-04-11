@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Filters Web API.props" />
+</Project>

@@ -15,7 +15,6 @@ namespace Virtual_Diary.Controllers
     [BasicAuthentication]
     public class DiaryEntryV1Controller : ApiController
     {
-        private const string CacheKey = "DiaryEntriesCache";
         private static DiaryEntryManagerBL _diaryManager;
 
         static DiaryEntryV1Controller()

@@ -4,9 +4,14 @@ using System.Linq;
 
 namespace Basic_Authentication.BL
 {
+    /// <summary>
+    /// Class for Performing Crud for Students.
+    /// </summary>
     public class EmployeeBL
     {
-        // Static list to simulate a data store for employee data
+        /// <summary>
+        /// Generate Employee List For Testing.
+        /// </summary>
         public static List<Employee> EmpList = new List<Employee>
         {
             new Employee {Id = 1 , FirstName ="Dimple" , LastName="Mithiya", City="Rajkot"},

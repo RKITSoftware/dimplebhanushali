@@ -2,9 +2,6 @@
 
 namespace Enumerations
 {
-    /// <summary>
-    /// Enumeration type representing different types of animals.
-    /// </summary>
     enum AnimalType
     {
         Lion,
@@ -14,9 +11,6 @@ namespace Enumerations
         Monkey
     }
 
-    /// <summary>
-    /// Enumeration type representing different animal habitats.
-    /// </summary>
     enum Habitat
     {
         Savannah,
@@ -24,13 +18,13 @@ namespace Enumerations
         Arctic
     }
 
-    /// <summary>
-    /// Main program class.
-    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
+            // Example of Enum methods
+            PerformEnumMethods();
+
             // Create an array of animals
             Animal[] zoo = new Animal[]
             {
@@ -52,50 +46,54 @@ namespace Enumerations
             // Wait for a key press before closing the console window
             Console.ReadKey();
         }
-    }
 
-    /// <summary>
-    /// Represents an animal with properties such as name, type, and habitat.
-    /// </summary>
-    class Animal
-    {
-        /// <summary>
-        /// Gets or sets the name of the animal.
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Gets or sets the type of the animal (e.g., Lion, Elephant).
-        /// </summary>
-        public AnimalType Type { get; set; }
-
-        /// <summary>
-        /// Gets or sets the habitat of the animal (e.g., Savannah, Jungle).
-        /// </summary>
-        public Habitat Habitat { get; set; }
-
-        /// <summary>
-        /// Constructor to initialize an instance of the Animal class.
-        /// </summary>
-        /// <param name="name">The name of the animal.</param>
-        /// <param name="type">The type of the animal.</param>
-        /// <param name="habitat">The habitat of the animal.</param>
-        public Animal(string name, AnimalType type, Habitat habitat)
+        static void PerformEnumMethods()
         {
-            Name = name;
-            Type = type;
-            Habitat = habitat;
-        }
+            // Example of Enum methods
+            AnimalType lion = AnimalType.Lion;
+            AnimalType elephant = AnimalType.Elephant;
 
-        /// <summary>
-        /// Display information about the animal.
-        /// </summary>
-        public void DisplayInfo()
-        {
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Type: {Type}");
-            Console.WriteLine($"Habitat: {Habitat}");
-            Console.WriteLine();
+            // Compare two enum values
+            Console.WriteLine($"Comparison Result: {lion.CompareTo(elephant)}");
+
+            // Format enum values
+            Console.WriteLine($"Formatted Lion: {Enum.Format(typeof(AnimalType), lion, "G")}");
+            Console.WriteLine($"Formatted Elephant: {Enum.Format(typeof(AnimalType), elephant, "D")}");
+
+            // Get hash code for enum values
+            Console.WriteLine($"Hash Code Lion: {lion.GetHashCode()}");
+            Console.WriteLine($"Hash Code Elephant: {elephant.GetHashCode()}");
+
+            // Get name of enum values
+            Console.WriteLine($"Name Lion: {Enum.GetName(typeof(AnimalType), lion)}");
+            Console.WriteLine($"Name Elephant: {Enum.GetName(typeof(AnimalType), elephant)}");
+
+            // Get names and values of AnimalType enum
+            Console.WriteLine("AnimalType Enum Values:");
+            foreach (string name in Enum.GetNames(typeof(AnimalType)))
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.WriteLine("AnimalType Enum Values (as integers):");
+            foreach (int value in Enum.GetValues(typeof(AnimalType)))
+            {
+                Console.WriteLine(value);
+            }
+
+            // Check if a value exists in an enum
+            Console.WriteLine($"Is Lion defined in AnimalType enum? {Enum.IsDefined(typeof(AnimalType), "Lion")}");
+
+            // Parse string to enum
+            AnimalType parsedType;
+            if (Enum.TryParse("Elephant", out parsedType))
+            {
+                Console.WriteLine($"Parsed Enum Value: {parsedType}");
+            }
+            else
+            {
+                Console.WriteLine("Failed to parse enum value.");
+            }
         }
     }
 }

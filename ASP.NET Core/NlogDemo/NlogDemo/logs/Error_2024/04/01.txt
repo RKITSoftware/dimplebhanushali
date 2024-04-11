@@ -1,0 +1,1 @@
+2024-04-01 12:01:43.3002 | ERROR | NlogDemo.Controllers.WeatherForecastController | Anser = 5.5 

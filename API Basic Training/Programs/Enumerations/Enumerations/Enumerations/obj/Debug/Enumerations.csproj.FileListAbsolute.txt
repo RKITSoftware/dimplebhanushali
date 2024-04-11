@@ -13,3 +13,11 @@ F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumer
 F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.CoreCompileInputs.cache
 F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.exe
 F:\Dimple - 371\dimplebhanushali\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.exe
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\bin\Debug\Enumerations.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.exe
+F:\Dimple - 371\Git\training\API Basic Training\Programs\Enumerations\Enumerations\Enumerations\obj\Debug\Enumerations.pdb

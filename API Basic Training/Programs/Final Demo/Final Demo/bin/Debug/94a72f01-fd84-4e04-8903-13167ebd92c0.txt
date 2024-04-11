@@ -1,0 +1,5 @@
+Vehicle Details:
+License Plate: 1
+Model: 1
+Parking Ticket: 94a72f01-fd84-4e04-8903-13167ebd92c0
+Date and Time: 2024-02-07 17:28:36

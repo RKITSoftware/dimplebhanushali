@@ -1,0 +1,266 @@
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\BasicAuth.dll.config
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\BasicAuth.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\BasicAuth.pdb
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csc.exe
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csc.exe.config
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csc.rsp
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csi.exe
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csi.exe.config
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\csi.rsp
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Console.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\vbc.exe
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\vbc.exe.config
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\vbc.rsp
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\Newtonsoft.Json.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Web.Http.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\Newtonsoft.Json.xml
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Web.Http.xml
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.xml
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CopyComplete
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\obj\Debug\BasicAuth.dll
+C:\Users\Dell\source\repos\BasicAuth\BasicAuth\obj\Debug\BasicAuth.pdb
+F:\Demo\BasicAuth\BasicAuth\bin\BasicAuth.dll.config
+F:\Demo\BasicAuth\BasicAuth\bin\BasicAuth.dll
+F:\Demo\BasicAuth\BasicAuth\bin\BasicAuth.pdb
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csc.exe
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csc.exe.config
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csc.rsp
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csi.exe
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csi.exe.config
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\csi.rsp
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.AppContext.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Collections.Immutable.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Console.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.IO.Compression.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Reflection.Metadata.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.AccessControl.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Claims.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.ValueTuple.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\vbc.exe
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\vbc.exe.config
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\vbc.rsp
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe
+F:\Demo\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe.config
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Newtonsoft.Json.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Web.Http.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Newtonsoft.Json.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Web.Http.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Demo\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.AssemblyReference.cache
+F:\Demo\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CoreCompileInputs.cache
+F:\Demo\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CopyComplete
+F:\Demo\BasicAuth\BasicAuth\obj\Debug\BasicAuth.dll
+F:\Demo\BasicAuth\BasicAuth\obj\Debug\BasicAuth.pdb
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Abstractions.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Logging.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Tokens.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.Jwt.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Owin.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Buffers.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Memory.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Numerics.Vectors.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Text.Encodings.Web.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Text.Json.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.Threading.Tasks.Extensions.dll
+F:\Demo\BasicAuth\BasicAuth\bin\System.ValueTuple.dll
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Bcl.AsyncInterfaces.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Abstractions.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Logging.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Tokens.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.Jwt.xml
+F:\Demo\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Buffers.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Memory.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Numerics.Vectors.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Text.Encodings.Web.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Text.Json.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.Threading.Tasks.Extensions.xml
+F:\Demo\BasicAuth\BasicAuth\bin\System.ValueTuple.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\BasicAuth.dll.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\BasicAuth.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\BasicAuth.pdb
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csc.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csc.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csc.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csi.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csi.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\csi.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.AppContext.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Collections.Immutable.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Console.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.IO.Compression.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.IO.Pipes.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Reflection.Metadata.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.AccessControl.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Claims.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.ValueTuple.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\vbc.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\vbc.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\vbc.rsp
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\roslyn\VBCSCompiler.exe.config
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Abstractions.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Logging.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Tokens.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.Jwt.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Newtonsoft.Json.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Owin.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Buffers.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Memory.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Numerics.Vectors.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Text.Encodings.Web.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Text.Json.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Threading.Tasks.Extensions.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.ValueTuple.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Web.Http.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Bcl.AsyncInterfaces.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Abstractions.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Logging.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.IdentityModel.Tokens.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.Jwt.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Buffers.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Memory.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Numerics.Vectors.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Text.Encodings.Web.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Text.Json.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Threading.Tasks.Extensions.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.ValueTuple.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Newtonsoft.Json.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Net.Http.Formatting.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Web.Http.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\System.Web.Http.WebHost.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\obj\Debug\BasicAuth.csproj.CopyComplete
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\obj\Debug\BasicAuth.dll
+F:\Dimple - 371\Git\training\API Basic Training\Web Development\BasicAuth\BasicAuth\obj\Debug\BasicAuth.pdb

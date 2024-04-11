@@ -1,0 +1,8 @@
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\bin\Debug\Final Demo.exe.config
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\bin\Debug\Final Demo.exe
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\bin\Debug\Final Demo.pdb
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\obj\Debug\Final Demo.csproj.AssemblyReference.cache
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\obj\Debug\Final Demo.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\obj\Debug\Final Demo.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\obj\Debug\Final Demo.exe
+F:\Dimple - 371\Basic API\Final Demo\Final Demo\Final Demo\obj\Debug\Final Demo.pdb

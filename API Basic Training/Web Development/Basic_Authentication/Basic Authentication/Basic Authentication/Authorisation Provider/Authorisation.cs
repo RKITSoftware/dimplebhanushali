@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Security.Principal;
+using System.Text;
 using System.Threading;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
@@ -40,22 +41,27 @@ namespace Basic_Authentication.Authorisation_Provider
                 try
                 {
                     string authToken = actionContext.Request.Headers.Authorization.Parameter;
+                    string decodedToken = Encoding.UTF8.GetString(Convert.FromBase64String(authToken));
 
-                    string[] usernamePassword = authToken.Split(':');
+                    string[] usernamePassword = decodedToken.Split(':');
 
-                    string username = usernamePassword[0];
-                    string password = usernamePassword[1];
-
-                    if (ValidateUser.IsLogin(username, password))
+                    if (usernamePassword.Length == 2)
                     {
-                        // Valid user, set the user roles
-                        string[] userRoles = ValidateUser.GetUserRoles(username);
-                        Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), userRoles);
-                    }
-                    else
-                    {
-                        // Invalid credentials, return unauthorized response
-                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "Login Failed");
+                        string username = usernamePassword[0];
+                        string password = usernamePassword[1];
+
+
+                        if (ValidateUser.IsLogin(username, password))
+                        {
+                            // Valid user, set the user roles
+                            string[] userRoles = ValidateUser.GetUserRoles(username);
+                            Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username), userRoles);
+                        }
+                        else
+                        {
+                            // Invalid credentials, return unauthorized response
+                            actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "Login Failed");
+                        }
                     }
                 }
                 catch (Exception ex)

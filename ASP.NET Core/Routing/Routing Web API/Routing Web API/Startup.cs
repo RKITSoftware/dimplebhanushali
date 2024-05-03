@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.OpenApi.Models;
-
-namespace Routing_Web_API
+﻿namespace Routing_Web_API
 {
     /// <summary>
     /// Class responsible for configuring the application's services and request pipeline.
@@ -47,7 +44,7 @@ namespace Routing_Web_API
                 endpoints.MapControllers();
 
                 // Map the Greeting action to the /api/CLRouting endpoint with GET method
-                //api/CLRouting/?name=yash
+                //api/CLRouting/?name=Dimple
                 endpoints.MapGet("/api/CLRouting", async context =>
                 {
                     // You can handle the request logic directly here

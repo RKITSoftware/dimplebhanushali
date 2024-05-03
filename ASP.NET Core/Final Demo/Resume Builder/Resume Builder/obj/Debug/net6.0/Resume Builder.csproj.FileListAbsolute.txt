@@ -1,0 +1,94 @@
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\appsettings.Development.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\appsettings.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.exe
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.deps.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.runtimeconfig.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.pdb
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.AssemblyInfoInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.AssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.MvcApplicationPartsAssemblyInfo.cs
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.MvcApplicationPartsAssemblyInfo.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets\msbuild.Resume Builder.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets\msbuild.build.Resume Builder.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Resume Builder.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Resume Builder.props
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets.pack.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets.build.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\staticwebassets.development.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\scopedcss\bundle\Resume Builder.styles.css
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.csproj.CopyComplete
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\refint\Resume Builder.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.pdb
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\Resume Builder.genruntimeconfig.cache
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\ref\Resume Builder.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Google.Protobuf.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\K4os.Compression.LZ4.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\K4os.Compression.LZ4.Streams.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\K4os.Hash.xxHash.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\MySql.Data.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Newtonsoft.Json.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\NLog.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\NLog.Database.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ServiceStack.Common.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ServiceStack.Interfaces.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ServiceStack.OrmLite.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ServiceStack.OrmLite.MySql.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ServiceStack.Text.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Drawing.Common.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.IO.Pipelines.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Security.Permissions.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Text.Json.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.Windows.Extensions.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\ZstdSharp.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win-x64\native\comerr64.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win-x64\native\gssapi64.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win-x64\native\k5sprt64.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win-x64\native\krb5_64.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win-x64\native\krbcc64.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\StackExchange.Redis.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itextsharp.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.barcodes.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.bouncy-castle-connector.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.forms.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.io.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.kernel.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.layout.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.pdfa.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.pdfua.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.sign.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.styledxmlparser.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.svg.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itext.commons.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\itextsharp.xmlworker.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll

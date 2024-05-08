@@ -1,0 +1,42 @@
+2024-05-08 12:23:30.3722||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BM1P287CA0024.INDP287.PROD.OUTLOOK.COM 2024-05-08T06:53:30.256Z 08DC6F2B5592DA7A]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Services\Implemntations\EmailService.cs:line 57
+2024-05-08 12:25:34.2769||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BMXP287CA0003.INDP287.PROD.OUTLOOK.COM 2024-05-08T06:55:34.155Z 08DC6EC51D931608]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Services\Implemntations\EmailService.cs:line 57
+2024-05-08 12:28:33.7046||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BM1P287CA0008.INDP287.PROD.OUTLOOK.COM 2024-05-08T06:58:33.459Z 08DC6E6568555904]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes)
+2024-05-08 12:31:01.2616||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BMXPR01CA0082.INDPRD01.PROD.OUTLOOK.COM 2024-05-08T07:01:01.109Z 08DC6EC63F90CB0F]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes)
+2024-05-08 12:32:47.6191||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BMXP287CA0006.INDP287.PROD.OUTLOOK.COM 2024-05-08T07:02:47.509Z 08DC6F08678AC917]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes)
+2024-05-08 12:34:18.4094||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BMXPR01CA0096.INDPRD01.PROD.OUTLOOK.COM 2024-05-08T07:04:18.303Z 08DC6E8AD5195FCA]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes)
+2024-05-08 12:35:41.7391||ERROR|Resume_Builder.DL.Implemntations.NLogService|Failed to send email to: dimplemithiya@gmail.com System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, account locked. Contact your administrator. [BMXP287CA0011.INDP287.PROD.OUTLOOK.COM 2024-05-08T07:05:41.665Z 08DC6F17DA331DF2]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes)

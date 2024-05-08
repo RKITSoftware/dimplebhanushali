@@ -1,3 +1,5 @@
+using NLog.Web;
+
 namespace Resume_Builder
 {
     public class Program
@@ -14,8 +16,9 @@ namespace Resume_Builder
                {
                    webBuilder.UseStartup<Startup>();
                })
-              .Build()
-              .Run();
+               .UseNLog()
+               .Build()
+               .Run();
         }
     }
 }

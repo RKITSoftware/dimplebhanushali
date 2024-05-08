@@ -6,6 +6,7 @@ using Resume_Builder.Models.DTO;
 using Resume_Builder.Models.POCO;
 using Resume_Builder.Models;
 using Microsoft.AspNetCore.Authorization;
+using Resume_Builder.DL.Interfaces;
 
 namespace Resume_Builder.Controllers
 {
@@ -37,7 +38,6 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
-
         [HttpPost]
         [AllowAnonymous]
         public IActionResult Post([FromBody] DTOUSR01 model)
@@ -48,6 +48,7 @@ namespace Resume_Builder.Controllers
             if (!response.HasError)
             {
                 response = _crudService.Save();
+                _crudService.SendEmail(model.R01F04, "Welcome to Certificate Generator");
             }
             return Ok(response);
         }

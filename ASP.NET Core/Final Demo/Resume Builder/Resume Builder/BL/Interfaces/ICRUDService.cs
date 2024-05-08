@@ -59,5 +59,7 @@ namespace Resume_Builder.BL.Interfaces
         /// <param name="id">The ID of the user.</param>
         /// <returns>The user details.</returns>
         object GetUserDetails(int id);
+
+        void SendEmail(string email, string message);
     }
 }

@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
+using Resume_Builder.DL.Interfaces;
 
 namespace Resume_Builder.DL.Services
 {
@@ -43,14 +44,22 @@ namespace Resume_Builder.DL.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         /// <summary>
+        /// Instance of HttpContextAccessor for Passing user id from Http Context.
+        /// </summary>
+        private readonly IEmailService _sender;
+
+        /// <summary>
         /// Constructor for CRUDImplementation.
         /// </summary>
         /// <param name="dbConnectionFactory">Database connection factory.</param>
         /// <param name="httpContextAccessor">HTTP context accessor.</param>
-        public CRUDImplementation(DbConnectionFactory dbConnectionFactory, IHttpContextAccessor httpContextAccessor)
+        public CRUDImplementation(DbConnectionFactory dbConnectionFactory, 
+                                  IHttpContextAccessor httpContextAccessor,
+                                  IEmailService sender)
         {
             _dbConnectionFactory = dbConnectionFactory;
             _httpContextAccessor = httpContextAccessor;
+            _sender = sender;
         }
 
         /// <summary>
@@ -163,13 +172,181 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         public Response Validate()
         {
-            // Initialize response object
             response = new Response();
 
             try
             {
-                // Validate table existence and object uniqueness
-                // (Implementation omitted for brevity)
+                using (var db = _dbConnectionFactory.CreateConnection())
+                {
+                    // Check if the table exists
+                    if (!db.TableExists<T>())
+                    {
+                        response.HasError = true;
+                        response.Message = "Table does not exist.";
+                        return response;
+                    }
+                }
+
+                Type typeObj = _objT.GetType();
+
+                switch (typeObj.Name)
+                {
+                    case "EDU01":
+                        if (_objT != null)
+                        {
+                            EDU01 eduObj = _objT as EDU01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<EDU01>(x => x.U01F04 == eduObj.U01F04);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "CER01":
+                        if (_objT != null)
+                        {
+                            CER01 cerObj = _objT as CER01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<CER01>(x => x.R01F03 == cerObj.R01F03);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "EXP01":
+                        if (_objT != null)
+                        {
+                            EXP01 expObj = _objT as EXP01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<EXP01>(x => x.P01F03 == expObj.P01F03 && x.P01F04 == expObj.P01F04);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "LAN01":
+                        if (_objT != null)
+                        {
+                            LAN01 expObj = _objT as LAN01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<LAN01>(x => x.N01F03 == expObj.N01F03);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "PRO01":
+                        if (_objT != null)
+                        {
+                            PRO01 proObj = _objT as PRO01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<PRO01>(x => x.O01F03 == proObj.O01F03);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "SKL01":
+                        if (_objT != null)
+                        {
+                            SKL01 sklObj = _objT as SKL01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<SKL01>(x => x.L01F03 == sklObj.L01F03);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "USR01":
+                        if (_objT != null)
+                        {
+                            USR01 usrObj = _objT as USR01;
+                            using (var db = _dbConnectionFactory.CreateConnection())
+                            {
+                                bool isDuplicate = db.Exists<USR01>(x => x.R01F04 == usrObj.R01F04 && x.R01F05 == usrObj.R01F05);
+                                if (isDuplicate)
+                                {
+                                    response.HasError = true;
+                                    response.Message = "Duplicate entry found.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            response.HasError = true;
+                            response.Message = "Object to validate is null.";
+                        }
+                        break;
+
+                    case "RES01":
+                        break;
+
+                    default:
+                        response.HasError = true;
+                        response.Message = "Unknown table type.";
+                        break;
+                }
+
             }
             catch (Exception ex)
             {
@@ -186,7 +363,6 @@ namespace Resume_Builder.DL.Services
         /// <param name="id">The ID of the item to delete.</param>
         public Response ValidateOnDelete(int id)
         {
-            // Initialize response object
             response = new Response();
 
             if (operation == EnumMessage.D)
@@ -195,8 +371,17 @@ namespace Resume_Builder.DL.Services
                 {
                     using (var db = _dbConnectionFactory.CreateConnection())
                     {
-                        // Check if record exists before deletion
-                        // (Implementation omitted for brevity)
+                        T existingObj = db.SingleById<T>(id);
+
+                        if (existingObj == null)
+                        {
+                            response.HasError = true;
+                            response.Message = $"No record found with Id => {id}.";
+                        }
+                        else
+                        {
+                            response.Message = $"Record with Id => {id} exists and can be deleted.";
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -270,6 +455,11 @@ namespace Resume_Builder.DL.Services
             }
 
             return userDetails;
+        }
+
+        public void SendEmail(string email, string message)
+        {
+            _sender.Send(email, message, null);
         }
     }
 }

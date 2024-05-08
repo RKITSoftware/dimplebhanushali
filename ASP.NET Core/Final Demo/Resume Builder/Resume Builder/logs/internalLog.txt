@@ -1,0 +1,517 @@
+2024-05-06 10:56:16.2506 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 10:56:16.3148 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 10:56:16.3358 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 10:56:16.3358 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 10:56:16.3358 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 10:56:16.3358 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 10:56:16.3507 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 10:56:16.3507 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 10:56:16.3871 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 10:56:16.4173 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 10:56:16.4457 Info Configuration initialized.
+2024-05-06 11:53:38.1280 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:53:38.1998 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 11:53:38.1998 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:53:38.1998 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 11:53:38.1998 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:53:38.1998 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 11:53:38.2182 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:53:38.2182 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 11:53:38.2770 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 11:53:38.3047 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 11:53:38.3314 Info Configuration initialized.
+2024-05-06 11:56:35.2945 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:56:35.3365 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 11:56:35.3365 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:56:35.3365 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 11:56:35.3365 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:56:35.3365 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 11:56:35.3554 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 11:56:35.3554 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 11:56:35.3842 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 11:56:35.4138 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 11:56:35.4423 Info Configuration initialized.
+2024-05-06 12:24:38.1877 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:24:38.2192 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:24:38.2192 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:24:38.2192 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:24:38.2192 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:24:38.2192 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:24:38.2329 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:24:38.2329 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:24:38.2601 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:24:38.2813 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:24:38.3014 Info Configuration initialized.
+2024-05-06 12:25:19.1572 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:25:19.2162 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:25:19.2162 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:25:19.2162 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:25:19.2162 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:25:19.2162 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:25:19.2313 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:25:19.2313 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:25:19.2893 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:25:19.3168 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:25:19.3444 Info Configuration initialized.
+2024-05-06 12:26:25.4503 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:26:25.4858 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:26:25.4858 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:26:25.4858 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:26:25.4858 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:26:25.4858 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:26:25.4977 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:26:25.4977 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:26:25.5306 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:26:25.5540 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:26:25.5762 Info Configuration initialized.
+2024-05-06 12:29:21.9449 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:29:22.0871 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:29:22.0871 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:29:22.0871 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:29:22.0871 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:29:22.0871 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:29:22.1046 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:29:22.1046 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:29:22.2880 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:29:22.3225 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:29:22.3514 Info Configuration initialized.
+2024-05-06 12:40:09.7114 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:40:09.8541 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:40:09.8541 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:40:09.8541 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:40:09.8541 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:40:09.8541 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:40:09.8723 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:40:09.8723 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:40:09.9089 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:40:09.9361 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:40:09.9643 Info Configuration initialized.
+2024-05-06 12:41:17.4092 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:41:17.4742 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:41:17.4742 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:41:17.4742 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:41:17.4742 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:41:17.4742 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:41:17.4886 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:41:17.4886 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:41:17.5274 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:41:17.5571 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:41:17.5793 Info Configuration initialized.
+2024-05-06 12:56:37.6474 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:56:37.6897 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 12:56:37.6897 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:56:37.6906 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 12:56:37.6906 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:56:37.6906 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 12:56:37.6906 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 12:56:37.6906 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 12:56:37.7333 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 12:56:37.7584 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 12:56:37.7841 Info Configuration initialized.
+2024-05-06 13:05:47.5051 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:05:47.5584 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 13:05:47.5590 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:05:47.5590 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 13:05:47.5590 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:05:47.5590 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 13:05:47.5764 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:05:47.5764 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 13:05:47.6174 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 13:05:47.6445 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 13:05:47.6699 Info Configuration initialized.
+2024-05-06 13:14:19.0886 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:14:19.1376 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 13:14:19.1376 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:14:19.1376 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 13:14:19.1376 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:14:19.1376 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 13:14:19.1549 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 13:14:19.1549 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 13:14:19.2050 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 13:14:19.2354 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 13:14:19.2645 Info Configuration initialized.
+2024-05-06 14:47:25.9152 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 14:47:25.9472 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 14:47:25.9472 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 14:47:25.9472 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 14:47:25.9472 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 14:47:25.9472 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 14:47:25.9609 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 14:47:25.9609 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 14:47:25.9912 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 14:47:26.0146 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 14:47:26.0412 Info Configuration initialized.
+2024-05-06 15:05:39.1256 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:05:39.1634 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 15:05:39.1634 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:05:39.1634 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 15:05:39.1634 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:05:39.1634 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 15:05:39.1775 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:05:39.1775 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 15:05:39.2204 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 15:05:39.2462 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 15:05:39.2733 Info Configuration initialized.
+2024-05-06 15:15:32.2708 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:15:32.3006 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 15:15:32.3006 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:15:32.3006 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 15:15:32.3006 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:15:32.3006 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 15:15:32.3154 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:15:32.3154 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 15:15:32.3514 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 15:15:32.3750 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 15:15:32.3973 Info Configuration initialized.
+2024-05-06 15:23:36.3658 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:23:36.4419 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 15:23:36.4419 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:23:36.4419 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 15:23:36.4419 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:23:36.4419 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 15:23:36.4592 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:23:36.4592 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 15:23:36.5068 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 15:23:36.5321 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 15:23:36.5587 Info Configuration initialized.
+2024-05-06 15:53:11.7274 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:53:11.7611 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 15:53:11.7611 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:53:11.7611 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 15:53:11.7611 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:53:11.7611 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 15:53:11.7858 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:53:11.7858 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 15:53:11.8297 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 15:53:11.8559 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 15:53:11.8828 Info Configuration initialized.
+2024-05-06 15:54:46.7091 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:54:46.7452 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 15:54:46.7452 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:54:46.7452 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 15:54:46.7452 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:54:46.7452 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 15:54:46.7589 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 15:54:46.7589 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 15:54:46.7877 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 15:54:46.8113 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 15:54:46.8359 Info Configuration initialized.
+2024-05-06 16:00:15.8646 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:00:15.9222 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 16:00:15.9222 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:00:15.9222 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 16:00:15.9222 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:00:15.9222 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 16:00:15.9396 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:00:15.9396 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 16:00:15.9897 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 16:00:16.0152 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 16:00:16.0433 Info Configuration initialized.
+2024-05-06 16:09:15.9222 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:09:16.0447 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 16:09:16.0447 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:09:16.0447 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 16:09:16.0447 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:09:16.0447 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 16:09:16.0811 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 16:09:16.0811 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 16:09:16.2198 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 16:09:16.2462 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 16:09:16.2809 Info Configuration initialized.
+2024-05-06 17:08:10.4219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:08:10.4609 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:08:10.4609 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:08:10.4609 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:08:10.4609 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:08:10.4609 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:08:10.4749 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:08:10.4749 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:08:10.5135 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:08:10.5398 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:08:10.5691 Info Configuration initialized.
+2024-05-06 17:14:41.3084 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:14:41.3405 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:14:41.3405 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:14:41.3405 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:14:41.3405 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:14:41.3405 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:14:41.3541 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:14:41.3541 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:14:41.3849 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:14:41.4083 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:14:41.4324 Info Configuration initialized.
+2024-05-06 17:21:40.8943 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:21:40.9454 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:21:40.9461 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:21:40.9461 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:21:40.9461 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:21:40.9461 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:21:40.9660 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:21:40.9660 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:21:41.0040 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:21:41.0347 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:21:41.0582 Info Configuration initialized.
+2024-05-06 17:23:22.8814 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:23:22.9463 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:23:22.9463 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:23:22.9476 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:23:22.9476 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:23:22.9476 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:23:22.9694 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:23:22.9694 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:23:22.9968 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:23:23.0191 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:23:23.0442 Info Configuration initialized.
+2024-05-06 17:46:50.4600 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:46:50.5212 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:46:50.5212 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:46:50.5212 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:46:50.5212 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:46:50.5212 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:46:50.5444 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:46:50.5444 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:46:50.6170 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:46:50.6451 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:46:50.6756 Info Configuration initialized.
+2024-05-06 17:47:24.0408 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:47:24.1046 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:47:24.1046 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:47:24.1046 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:47:24.1046 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:47:24.1046 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:47:24.1228 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:47:24.1228 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:47:24.2061 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:47:24.2476 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:47:24.2807 Info Configuration initialized.
+2024-05-06 17:52:20.6311 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:52:20.6647 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:52:20.6647 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:52:20.6647 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:52:20.6647 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:52:20.6647 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:52:20.6647 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:52:20.6647 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:52:20.7071 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:52:20.7280 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:52:20.7509 Info Configuration initialized.
+2024-05-06 17:57:33.7416 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:57:33.8417 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:57:33.8417 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:57:33.8417 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:57:33.8417 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:57:33.8417 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:57:33.8560 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:57:33.8560 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:57:34.1351 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:57:34.1607 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:57:34.1927 Info Configuration initialized.
+2024-05-06 17:59:42.3876 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:59:42.4237 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 17:59:42.4237 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:59:42.4237 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 17:59:42.4237 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:59:42.4237 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 17:59:42.4436 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 17:59:42.4436 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 17:59:42.4777 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 17:59:42.5023 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 17:59:42.5256 Info Configuration initialized.
+2024-05-06 18:00:07.0954 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:00:07.1549 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 18:00:07.1549 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:00:07.1549 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 18:00:07.1566 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:00:07.1566 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 18:00:07.1719 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:00:07.1719 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 18:00:07.2016 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 18:00:07.2242 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 18:00:07.2481 Info Configuration initialized.
+2024-05-06 18:01:27.4535 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:01:27.5219 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 18:01:27.5219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:01:27.5219 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 18:01:27.5219 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:01:27.5219 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 18:01:27.5395 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:01:27.5395 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 18:01:27.5790 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 18:01:27.6084 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 18:01:27.6365 Info Configuration initialized.
+2024-05-06 18:19:58.9462 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:19:58.9982 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 18:19:58.9982 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:19:58.9982 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 18:19:58.9982 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:19:58.9982 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 18:19:59.0148 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:19:59.0148 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 18:19:59.0552 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 18:19:59.0823 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 18:19:59.1113 Info Configuration initialized.
+2024-05-06 18:26:04.3222 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:26:04.3612 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-06 18:26:04.3612 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:26:04.3612 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-06 18:26:04.3612 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:26:04.3612 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-06 18:26:04.3753 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-06 18:26:04.3753 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-06 18:26:04.4078 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-06 18:26:04.4303 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-06 18:26:04.4566 Info Configuration initialized.
+2024-05-08 09:37:06.9924 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:37:07.0596 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 09:37:07.0596 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:37:07.0596 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 09:37:07.0596 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:37:07.0596 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 09:37:07.0736 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:37:07.0736 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 09:37:07.1082 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 09:37:07.1399 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 09:37:07.1880 Info Configuration initialized.
+2024-05-08 09:42:58.7186 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:42:58.7828 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 09:42:58.7828 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:42:58.7828 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 09:42:58.7828 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:42:58.7828 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 09:42:58.8069 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 09:42:58.8069 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 09:42:58.8544 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 09:42:58.8829 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 09:42:58.9133 Info Configuration initialized.
+2024-05-08 10:00:09.6743 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:00:09.7421 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 10:00:09.7518 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:00:09.7518 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 10:00:09.7518 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:00:09.7518 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 10:00:09.7760 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:00:09.7760 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 10:00:09.8367 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 10:00:09.8648 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 10:00:09.8929 Info Configuration initialized.
+2024-05-08 10:23:16.6279 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:23:16.7335 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 10:23:16.7335 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:23:16.7335 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 10:23:16.7335 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:23:16.7335 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 10:23:16.7534 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:23:16.7534 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 10:23:16.8603 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 10:23:16.9113 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 10:23:16.9723 Info Configuration initialized.
+2024-05-08 10:55:36.0076 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:55:36.1769 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 10:55:36.1769 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:55:36.1769 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 10:55:36.1769 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:55:36.1769 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 10:55:36.1955 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 10:55:36.1955 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 10:55:36.3247 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 10:55:36.3940 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 10:55:36.4349 Info Configuration initialized.
+2024-05-08 11:17:54.8318 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:17:54.9263 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 11:17:54.9263 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:17:54.9263 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 11:17:54.9263 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:17:54.9263 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 11:17:54.9408 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:17:54.9408 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 11:17:54.9881 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 11:17:55.0157 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 11:17:55.0439 Info Configuration initialized.
+2024-05-08 11:20:51.1176 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:20:51.2053 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 11:20:51.2053 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:20:51.2053 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 11:20:51.2053 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:20:51.2053 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 11:20:51.2344 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:20:51.2344 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 11:20:51.4183 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 11:20:51.4464 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 11:20:51.5017 Info Configuration initialized.
+2024-05-08 11:44:07.2262 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:44:07.4146 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 11:44:07.4146 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:44:07.4146 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 11:44:07.4146 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:44:07.4146 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 11:44:07.4304 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:44:07.4304 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 11:44:07.5032 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 11:44:07.5335 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 11:44:07.5915 Info Configuration initialized.
+2024-05-08 11:48:52.2416 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:48:52.3125 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 11:48:52.3125 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:48:52.3125 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 11:48:52.3125 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:48:52.3125 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 11:48:52.3399 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:48:52.3404 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 11:48:52.4018 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 11:48:52.4283 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 11:48:52.4562 Info Configuration initialized.
+2024-05-08 11:59:51.4735 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:59:51.5682 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 11:59:51.5682 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:59:51.5694 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 11:59:51.5694 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:59:51.5694 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 11:59:51.5694 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 11:59:51.5694 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 11:59:51.6299 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 11:59:51.6599 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 11:59:51.6894 Info Configuration initialized.
+2024-05-08 12:03:35.2295 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:03:35.2850 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 12:03:35.2850 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:03:35.2850 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 12:03:35.2850 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:03:35.2850 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 12:03:35.2994 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:03:35.2994 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 12:03:35.3317 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 12:03:35.3544 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 12:03:35.3790 Info Configuration initialized.
+2024-05-08 12:16:17.6500 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:16:17.7458 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 12:16:17.7458 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:16:17.7458 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 12:16:17.7458 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:16:17.7458 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 12:16:17.8234 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:16:17.8234 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 12:16:17.9406 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 12:16:17.9729 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 12:16:18.0111 Info Configuration initialized.
+2024-05-08 12:22:13.4544 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:22:13.5562 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 12:22:13.5562 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:22:13.5562 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 12:22:13.5562 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:22:13.5617 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 12:22:13.5764 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:22:13.5764 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 12:22:13.6593 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 12:22:13.6845 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 12:22:13.7189 Info Configuration initialized.
+2024-05-08 12:24:35.2636 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:24:35.3122 Info Registered target NLog.Targets.FileTarget(Name=exceptionsFile)
+2024-05-08 12:24:35.3122 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:24:35.3122 Info Registered target NLog.Targets.FileTarget(Name=errorsFile)
+2024-05-08 12:24:35.3122 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:24:35.3122 Info Registered target NLog.Targets.FileTarget(Name=traceFile)
+2024-05-08 12:24:35.3280 Warn Error has been raised. Exception: NLog.NLogConfigurationException: ${level} cannot assign unknown property 'color='
+2024-05-08 12:24:35.3280 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=alldata)
+2024-05-08 12:24:35.3644 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-08 12:24:35.3894 Info Validating config: TargetNames=exceptionsFile, errorsFile, traceFile, alldata, ConfigItems=77, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\NLog.config
+2024-05-08 12:24:35.4128 Info Configuration initialized.

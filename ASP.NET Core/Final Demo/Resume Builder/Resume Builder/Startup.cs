@@ -40,8 +40,13 @@ namespace Resume_Builder
             services.AddScoped<ICRUDService<RES01>,CRUDImplementation<RES01>>();
             services.AddScoped<ICRUDService<SKL01>,CRUDImplementation<SKL01>>();
             services.AddScoped<ICRUDService<USR01>,CRUDImplementation<USR01>>();
+            
+            services.AddScoped<IEmailService,EmailService>();
+            services.AddScoped<ILogging,NLogService>();
 
             services.AddScoped<ResumeGenerationService>();
+            services.AddScoped<BulkResumeGenerationService>();
+            services.AddScoped<CSVToJSON>();
 
 
             // Configures Controllers
@@ -49,7 +54,16 @@ namespace Resume_Builder
             {
                 // Add JwtAuthenticationFilter as a global filter, excluding specific endpoint
                 options.Filters.Add(typeof(JwtAuthenticationFilter));
+
             });
+
+            //services.AddControllers();
+            
+            services.AddHttpClient("YourHttpClientName", client =>
+            {
+                client.Timeout = TimeSpan.FromSeconds(30); // Set a timeout of 30 seconds for both read and write operations
+            });
+
             // Add Filters
             services.AddScoped<JwtAuthenticationFilter>();
 

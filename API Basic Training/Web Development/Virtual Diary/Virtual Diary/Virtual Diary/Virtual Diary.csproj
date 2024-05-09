@@ -202,15 +202,19 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BasicAuth\BasicAuthenticationAttribute.cs" />
     <Compile Include="BasicAuth\BasicAuthorisationAttribute.cs" />
-    <Compile Include="BL\DiaryEntryManagerBL.cs" />
-    <Compile Include="Controllers\DiaryEntryV1Controller.cs" />
-    <Compile Include="Controllers\DiaryEntryV2Controller.cs" />
-    <Compile Include="Exceptions\CustomException.cs" />
+    <Compile Include="BL\BLDiaryEntryManager.cs" />
+    <Compile Include="BL\BLUser.cs" />
+    <Compile Include="Controllers\CLUserController.cs" />
+    <Compile Include="Controllers\CLDiaryEntryV1Controller.cs" />
+    <Compile Include="Controllers\CLDiaryEntryV2Controller.cs" />
+    <Compile Include="Exceptions\CustomExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Caching\Logger.cs" />
+    <Compile Include="Helper\enmMessageExtensions.cs" />
     <Compile Include="Models\DiaryEntry.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TaskDetail.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

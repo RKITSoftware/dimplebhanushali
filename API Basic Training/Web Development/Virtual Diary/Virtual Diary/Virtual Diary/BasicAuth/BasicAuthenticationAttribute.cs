@@ -56,19 +56,14 @@ namespace Virtual_Diary.BasicAuth
                         else
                         {
                             // HttpContext not available
-                            throw new CustomException("Authorization Denied");
+                            throw new UnauthorizedAccessException("Authorization Denied");
                         }
                     }
                     else
                     {
                         // Invalid credentials
-                        throw new CustomException("Invalid Credentials");
+                        throw new UnauthorizedAccessException("Invalid Credentials");
                     }
-                }
-                catch (CustomException ex)
-                {
-                    // Custom exception with specific error message
-                    SetUnauthorizedResponse(actionContext, ex.Message);
                 }
                 catch (Exception)
                 {

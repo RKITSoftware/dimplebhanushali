@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
+using Virtual_Diary.Exceptions;
 
 namespace Virtual_Diary
 {
@@ -12,6 +13,9 @@ namespace Virtual_Diary
             // Enable CORS globally
             EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
+
+            // Add Exception Filter Globally
+            config.Filters.Add(new CustomExceptionFilter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

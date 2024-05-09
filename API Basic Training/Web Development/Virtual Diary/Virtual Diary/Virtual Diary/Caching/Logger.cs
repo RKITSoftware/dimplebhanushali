@@ -8,7 +8,14 @@ namespace Virtual_Diary.Logging
     /// </summary>
     public static class Logger
     {
-        private static readonly string LogFilePath = "F:\\Dimple - 371\\Web Development\\Virtual Diary\\Virtual Diary\\Virtual Diary\\Logs\\logs.txt";
+        #region Private Members
+
+        private static readonly string LogFileName = "logs.txt";
+        private static readonly string LogFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", LogFileName);
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Logs informational messages.
@@ -38,6 +45,9 @@ namespace Virtual_Diary.Logging
             LogToFile($"ERROR: {DateTime.Now} - {message} - Exception: {ex}");
         }
 
+        #endregion
+
+        #region Private Methods
         /// <summary>
         /// Private helper method to write log entries to the file
         /// </summary>
@@ -57,5 +67,8 @@ namespace Virtual_Diary.Logging
                 Console.WriteLine($"Error writing to log file: {logEntry}");
             }
         }
+
+        #endregion
+
     }
 }

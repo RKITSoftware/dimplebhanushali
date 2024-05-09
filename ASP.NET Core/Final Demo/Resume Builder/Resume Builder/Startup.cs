@@ -58,7 +58,7 @@ namespace Resume_Builder
             });
 
             //services.AddControllers();
-            
+
             services.AddHttpClient("YourHttpClientName", client =>
             {
                 client.Timeout = TimeSpan.FromSeconds(30); // Set a timeout of 30 seconds for both read and write operations

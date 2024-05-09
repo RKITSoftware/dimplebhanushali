@@ -23,15 +23,10 @@ namespace Dynamic_Data_Type.Controllers
         [HttpPost, Route("AddData")]
         public HttpResponseMessage AddData([FromBody] dynamic data)
         {
-            try
-            {
-                _dynamicBL.AddDynamicData(data);
-                return Request.CreateResponse(HttpStatusCode.OK, $"Data Added => {data}");
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, $"Error: {ex.Message}");
-            }
+
+            _dynamicBL.AddDynamicData(data);
+            return Request.CreateResponse(HttpStatusCode.OK, $"Data Added => {data}");
+
         }
 
         /// <summary>
@@ -58,10 +53,9 @@ namespace Dynamic_Data_Type.Controllers
             {
                 return Ok(dynamicData);
             }
-            else
-            {
-                return NotFound();
-            }
+
+            return NotFound();
+
         }
 
         /// <summary>
@@ -73,23 +67,17 @@ namespace Dynamic_Data_Type.Controllers
         [HttpPut, Route("EditData/{id}")]
         public HttpResponseMessage EditData([FromUri] int id, [FromBody] dynamic updatedData)
         {
-            try
-            {
-                bool success = _dynamicBL.UpdateDynamicData(id, updatedData);
 
-                if (success)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, $"Updated data at index {id}");
-                }
-                else
-                {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, "Index not found");
-                }
-            }
-            catch (Exception ex)
+            bool success = _dynamicBL.UpdateDynamicData(id, updatedData);
+
+            if (success)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, $"Error: {ex.Message}");
+                return Request.CreateResponse(HttpStatusCode.OK, $"Updated data at index {id}");
             }
+
+            return Request.CreateResponse(HttpStatusCode.NotFound, "Index not found");
+
+
         }
 
         /// <summary>
@@ -100,23 +88,16 @@ namespace Dynamic_Data_Type.Controllers
         [HttpDelete, Route("DeleteData/{id}")]
         public HttpResponseMessage DeleteData([FromUri] int id)
         {
-            try
-            {
-                bool success = _dynamicBL.DeleteDynamicDataById(id);
 
-                if (success)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, $"Deleted data at index {id}");
-                }
-                else
-                {
-                    return Request.CreateResponse(HttpStatusCode.NotFound, "Index not found");
-                }
-            }
-            catch (Exception ex)
+            bool success = _dynamicBL.DeleteDynamicDataById(id);
+
+            if (success)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, $"Error: {ex.Message}");
+                return Request.CreateResponse(HttpStatusCode.OK, $"Deleted data at index {id}");
             }
+
+            return Request.CreateResponse(HttpStatusCode.NotFound, "Index not found");
+
         }
 
         /// <summary>

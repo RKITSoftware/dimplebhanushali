@@ -1,5 +1,4 @@
 ﻿using Lambda_Expression.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +9,7 @@ namespace Lambda_Expression.BL
     /// </summary>
     public class BLEmployee
     {
+        #region Public Members
         /// <summary>
         /// A static list of employees for demonstration purposes.
         /// </summary>
@@ -20,6 +20,9 @@ namespace Lambda_Expression.BL
             new Employee { Id = 3, Name = "Ankit Bhanushali", Department = "Business Analytics", Salary = 80000 }
         };
 
+        #endregion
+
+        #region Public Methods
         /// <summary>
         /// Gets all employees.
         /// </summary>
@@ -45,23 +48,15 @@ namespace Lambda_Expression.BL
         /// </summary>
         public string AddEmployee(Employee objEmp)
         {
-            try
+            if (objEmp != null)
             {
-                if (objEmp != null)
-                {
-                    objEmp.Id = lstEmployees.Count + 1;
-                    lstEmployees.Add(objEmp);
-                    return "Employee Added Successfully";
-                }
-                else
-                {
-                    return "Error Occured ! Please try again";
-                }
+                objEmp.Id = lstEmployees.Count + 1;
+                lstEmployees.Add(objEmp);
+                return "Employee Added Successfully";
             }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+
+            return "Error Occured ! Please try again";
+
         }
 
         /// <summary>
@@ -69,23 +64,17 @@ namespace Lambda_Expression.BL
         /// </summary>
         public Employee EditEmployee(int id, Employee objEmp)
         {
-            try
+            if (id != null)
             {
-                if (id != null)
-                {
-                    Employee objExistingEmp = BLEmployee.GetEmployeeById(id);
-                    objExistingEmp.Name = objEmp.Name;
-                    objExistingEmp.Salary = objEmp.Salary;
-                    objExistingEmp.Department = objEmp.Department;
+                Employee objExistingEmp = BLEmployee.GetEmployeeById(id);
+                objExistingEmp.Name = objEmp.Name;
+                objExistingEmp.Salary = objEmp.Salary;
+                objExistingEmp.Department = objEmp.Department;
 
-                    return objExistingEmp;
-                }
-                return null;
+                return objExistingEmp;
             }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            return null;
+
         }
 
         /// <summary>
@@ -93,15 +82,10 @@ namespace Lambda_Expression.BL
         /// </summary>
         public string DeleteEmployee(int id)
         {
-            try
-            {
-                lstEmployees.Remove(BLEmployee.GetEmployeeById(id));
-                return $"Employee with Id => {id} Deleted";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+
+            lstEmployees.Remove(BLEmployee.GetEmployeeById(id));
+            return $"Employee with Id => {id} Deleted";
+
         }
 
         /// <summary>
@@ -127,5 +111,8 @@ namespace Lambda_Expression.BL
         {
             return lstEmployees.Average(emp => emp.Salary);
         }
+
+        #endregion
+
     }
 }

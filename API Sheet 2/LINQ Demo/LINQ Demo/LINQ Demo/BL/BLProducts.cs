@@ -9,6 +9,7 @@ namespace LINQ_Demo.BL
     /// </summary>
     public class BLProducts
     {
+        #region Public Members
         /// <summary>
         /// DataTable to store product data.
         /// </summary>
@@ -31,6 +32,10 @@ namespace LINQ_Demo.BL
             productsTable.Rows.Add(3, "Smartphone", "Electronics", 599.99m);
             productsTable.Rows.Add(4, "Chair", "Furniture", 49.99m);
         }
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Gets a copy of all products in DataTable.
@@ -101,7 +106,7 @@ namespace LINQ_Demo.BL
             if (updatedProduct != null)
             {
                 // Find the existing product
-                var existingProduct = productsTable.AsEnumerable()
+                DataRow existingProduct = productsTable.AsEnumerable()
                     .FirstOrDefault(row => row.Field<int>("Id") == id);
 
                 if (existingProduct != null)
@@ -121,7 +126,7 @@ namespace LINQ_Demo.BL
         public static void DeleteProduct(int id)
         {
             // Find the existing product
-            var productToDelete = productsTable.AsEnumerable()
+            DataRow productToDelete = productsTable.AsEnumerable()
                 .FirstOrDefault(row => row.Field<int>("Id") == id);
 
             if (productToDelete != null)
@@ -130,5 +135,7 @@ namespace LINQ_Demo.BL
                 productsTable.Rows.Remove(productToDelete);
             }
         }
+
+        #endregion
     }
 }

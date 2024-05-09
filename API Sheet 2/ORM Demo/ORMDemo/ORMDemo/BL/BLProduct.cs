@@ -10,6 +10,7 @@ namespace ORMDemo.BL
     /// </summary>
     public class BLProduct
     {
+        #region Public Methods
         /// <summary>
         /// Retrieves all products from the database.
         /// </summary>
@@ -117,5 +118,6 @@ namespace ORMDemo.BL
                 }
             }
         }
+        #endregion
     }
 }

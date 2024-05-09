@@ -6,8 +6,6 @@ namespace AES.Controllers
     [RoutePrefix("api")]
     public class EncryptionController : ApiController
     {
-        #region Public Methods 
-
         /// <summary>
         /// Encryption by AES Algorithm
         /// </summary>
@@ -71,7 +69,5 @@ namespace AES.Controllers
         {
             return Ok(BLRSA.Decrypt(cipherText));
         }
-
-        #endregion
     }
 }

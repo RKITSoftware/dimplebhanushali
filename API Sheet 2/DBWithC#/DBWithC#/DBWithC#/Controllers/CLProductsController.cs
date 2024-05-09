@@ -67,13 +67,10 @@ namespace DBWithC_.Controllers
         /// <param name="objProduct">Updated product information.</param>
         /// <returns>The updated product.</returns>
         [HttpPut, Route("EditProduct/{id}")]
-        public IHttpActionResult EditProduct([FromUri] int id, prdct01 objProduct)
+        public IHttpActionResult EditProduct([FromBody] prdct01 objProduct)
         {
-            if (id == null)
-            {
-                return BadRequest($"Invalid Id");
-            }
-            return Ok(_products.EditProduct(id, objProduct));
+           
+            return Ok(_products.EditProduct(objProduct));
         }
 
         /// <summary>
@@ -86,7 +83,7 @@ namespace DBWithC_.Controllers
         {
             if (id == null)
             {
-                return BadRequest($"Invalid Id");
+                return BadRequest("Please Provide valid id");
             }
             return Ok(_products.DeleteProduct(id));
         }

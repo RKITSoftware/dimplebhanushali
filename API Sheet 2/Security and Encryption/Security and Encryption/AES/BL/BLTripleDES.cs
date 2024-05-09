@@ -9,8 +9,11 @@ namespace AES.BL
     /// </summary>
     public class BLTripleDES
     {
+        #region Private Member
         private static TripleDESCryptoServiceProvider _objDes = new TripleDESCryptoServiceProvider();
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Encrypts the specified plain text using TripleDES.
         /// </summary>
@@ -52,5 +55,6 @@ namespace AES.BL
                 return Encoding.UTF8.GetString(decryptedBytes);
             }
         }
+        #endregion
     }
 }

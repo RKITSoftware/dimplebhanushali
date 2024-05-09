@@ -1,9 +1,7 @@
 ﻿using LINQ_Demo.BL;
-using System;
-using System.Data;
-using System.Linq;
-using System.Web.Http;
 using LINQ_Demo.Models;
+using System.Data;
+using System.Web.Http;
 
 namespace LINQ_Demo.Controllers
 {
@@ -19,15 +17,9 @@ namespace LINQ_Demo.Controllers
         [Route("api/products")]
         public IHttpActionResult GetAllProducts()
         {
-            try
-            {
-                DataTable allProducts = BLProducts.GetProducts();
-                return Ok(allProducts);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            DataTable allProducts = BLProducts.GetProducts();
+            return Ok(allProducts);
         }
 
         /// <summary>
@@ -37,15 +29,10 @@ namespace LINQ_Demo.Controllers
         [Route("api/products/sort")]
         public IHttpActionResult GetSortedProducts(string columnName, bool ascending = true)
         {
-            try
-            {
-                DataTable sortedProducts = BLProducts.GetSortedProducts(columnName, ascending);
-                return Ok(sortedProducts);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            DataTable sortedProducts = BLProducts.GetSortedProducts(columnName, ascending);
+            return Ok(sortedProducts);
+
         }
 
         /// <summary>
@@ -55,23 +42,8 @@ namespace LINQ_Demo.Controllers
         [Route("api/products/{id}")]
         public IHttpActionResult GetProductById(int id)
         {
-            try
-            {
-                DataRow product = BLProducts.GetProductById(id);
-
-                if (product != null)
-                {
-                    return Ok(product);
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            DataRow product = BLProducts.GetProductById(id);
+            return Ok(product);
         }
 
         /// <summary>
@@ -81,15 +53,9 @@ namespace LINQ_Demo.Controllers
         [Route("api/products")]
         public IHttpActionResult CreateProduct([FromBody] Product newProduct)
         {
-            try
-            {
-                BLProducts.AddProduct(newProduct);
-                return Created(Request.RequestUri + "/" + newProduct.Id, newProduct);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            BLProducts.AddProduct(newProduct);
+            return Created(Request.RequestUri + "/" + newProduct.Id, newProduct);
+
         }
 
         /// <summary>
@@ -99,15 +65,10 @@ namespace LINQ_Demo.Controllers
         [Route("api/products/{id}")]
         public IHttpActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
         {
-            try
-            {
-                BLProducts.UpdateProduct(id, updatedProduct);
-                return Ok(updatedProduct);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            BLProducts.UpdateProduct(id, updatedProduct);
+            return Ok(updatedProduct);
+
         }
 
         /// <summary>
@@ -117,15 +78,10 @@ namespace LINQ_Demo.Controllers
         [Route("api/products/{id}")]
         public IHttpActionResult DeleteProduct(int id)
         {
-            try
-            {
-                BLProducts.DeleteProduct(id);
-                return Ok($"Product with ID {id} has been deleted.");
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            BLProducts.DeleteProduct(id);
+            return Ok($"Product with ID {id} has been deleted.");
+
         }
     }
 }

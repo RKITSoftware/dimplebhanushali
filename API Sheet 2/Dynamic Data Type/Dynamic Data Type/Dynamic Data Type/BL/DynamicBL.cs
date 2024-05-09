@@ -8,8 +8,11 @@ namespace Dynamic_Data_Type.BL
     /// </summary>
     public class DynamicBL
     {
+        #region Private Member
         private static List<dynamic> _dynamicDataList = new List<dynamic>();
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Adds dynamic data to the list.
         /// </summary>
@@ -39,10 +42,9 @@ namespace Dynamic_Data_Type.BL
             {
                 return _dynamicDataList[id];
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
+
         }
 
         /// <summary>
@@ -53,22 +55,14 @@ namespace Dynamic_Data_Type.BL
         /// <returns>True if the update is successful, false otherwise.</returns>
         public bool UpdateDynamicData(int id, dynamic updatedData)
         {
-            try
+            if (id >= 0 && id < _dynamicDataList.Count)
             {
-                if (id >= 0 && id < _dynamicDataList.Count)
-                {
-                    _dynamicDataList[id] = updatedData;
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                _dynamicDataList[id] = updatedData;
+                return true;
             }
-            catch (Exception)
-            {
-                return false;
-            }
+
+            return false;
+
         }
 
         /// <summary>
@@ -78,22 +72,16 @@ namespace Dynamic_Data_Type.BL
         /// <returns>True if the deletion is successful, false otherwise.</returns>
         public bool DeleteDynamicDataById(int id)
         {
-            try
+
+            if (id >= 0 && id < _dynamicDataList.Count)
             {
-                if (id >= 0 && id < _dynamicDataList.Count)
-                {
-                    _dynamicDataList.RemoveAt(id);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                _dynamicDataList.RemoveAt(id);
+                return true;
             }
-            catch (Exception)
-            {
-                return false;
-            }
+
+            return false;
+
+
         }
 
         /// <summary>
@@ -103,5 +91,7 @@ namespace Dynamic_Data_Type.BL
         {
             _dynamicDataList.Clear();
         }
+
+        #endregion
     }
 }

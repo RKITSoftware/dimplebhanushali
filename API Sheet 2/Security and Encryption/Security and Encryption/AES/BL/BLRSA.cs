@@ -10,8 +10,11 @@ namespace AES.BL
     /// </summary>
     public class BLRSA
     {
+        #region Private Member
         private static RSACryptoServiceProvider _objRsa = new RSACryptoServiceProvider();
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Encrypts the specified plain text using RSA.
         /// </summary>
@@ -45,5 +48,6 @@ namespace AES.BL
             // Convert the decrypted bytes to UTF-8 string
             return Encoding.UTF8.GetString(decryptedBytes);
         }
+        #endregion
     }
 }

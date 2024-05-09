@@ -6,6 +6,7 @@ namespace LINQ_With_List.BL
 {
     public class BLProductList
     {
+        #region Public Members
         /// <summary>
         /// List to store product data.
         /// </summary>
@@ -26,6 +27,9 @@ namespace LINQ_With_List.BL
             };
         }
 
+        #endregion
+
+        #region Public Methods
         /// <summary>
         /// Gets a copy of all products in List.
         /// </summary>
@@ -87,7 +91,7 @@ namespace LINQ_With_List.BL
             if (updatedProduct != null)
             {
                 // Find the existing product
-                var existingProduct = ProductsList.FirstOrDefault(p => p.Id == id);
+                Product existingProduct = ProductsList.FirstOrDefault(p => p.Id == id);
 
                 if (existingProduct != null)
                 {
@@ -105,15 +109,13 @@ namespace LINQ_With_List.BL
         /// <param name="id">The ID of the product to delete.</param>
         public static void DeleteProduct(int id)
         {
-            // Find the existing product
-            var productToDelete = ProductsList.FirstOrDefault(p => p.Id == id);
-
-            if (productToDelete != null)
-            {
-                // Remove the product from the List
-                ProductsList.Remove(productToDelete);
-            }
+            // Remove the product
+            ProductsList.RemoveAll(p => p.Id == id);
         }
+
+        #endregion
+
+        #region Private Methods
 
         /// <summary>
         /// Gets the value of a specified property from an object using reflection.
@@ -125,6 +127,6 @@ namespace LINQ_With_List.BL
         {
             return obj.GetType().GetProperty(propertyName)?.GetValue(obj, null);
         }
-
+        #endregion
     }
 }

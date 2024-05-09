@@ -11,8 +11,11 @@ namespace DBWithC_.BL
     /// </summary>
     public class BLProduct
     {
+        #region Private Member
         private static string _myConnection;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Static constructor to initialize the database connection.
         /// </summary>
@@ -20,7 +23,9 @@ namespace DBWithC_.BL
         {
             _myConnection = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
         }
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Retrieves all products from the database.
         /// </summary>
@@ -72,19 +77,17 @@ namespace DBWithC_.BL
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString))
             {
                 conn.Open();
-                string query = @"SELECT 
+                string query = string.Format(@"SELECT 
                                         t01f01, 
                                         t01f02, 
                                         t01f03 
                                 FROM 
                                         prdct01 
                                 WHERE 
-                                        t01f01 = @t01f01";
+                                        t01f01 = {0}",id);
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@t01f01", id);
-
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -112,19 +115,16 @@ namespace DBWithC_.BL
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString))
             {
                 conn.Open();
-                string query = @"INSERT INTO 
+                string query = string.Format(@"INSERT INTO 
                                             prdct01 
                                             (t01f02, 
                                             t01f03) 
                                 VALUES 
-                                            (@t01f02, 
-                                            @t01f03)";
+                                            ('{0}', 
+                                            {1})",objProduct.t01f02,objProduct.t01f03);
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@t01f02", objProduct.t01f02);
-                    cmd.Parameters.AddWithValue("@t01f03", objProduct.t01f03);
-
                     cmd.ExecuteNonQuery();
 
                     objProduct.t01f01 = (int)cmd.LastInsertedId;
@@ -140,25 +140,21 @@ namespace DBWithC_.BL
         /// <param name="id">ID of the product to be updated.</param>
         /// <param name="objProduct">Updated product information.</param>
         /// <returns>The updated product.</returns>
-        public prdct01 EditProduct(int id, prdct01 objProduct)
+        public prdct01 EditProduct(prdct01 objProduct)
         {
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString))
             {
                 conn.Open();
-                string query = @"UPDATE 
+                string query = string.Format(@"UPDATE 
                                         prdct01 
                                 SET 
-                                        t01f02 = @t01f02, 
-                                        t01f03 = @t01f03 
+                                        t01f02 = '{0}', 
+                                        t01f03 = {1}
                                 WHERE 
-                                        t01f01 = @id";
+                                        t01f01 = {2}", objProduct.t01f02, objProduct.t01f03,objProduct.t01f01);
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@t01f02", objProduct.t01f02);
-                    cmd.Parameters.AddWithValue("@t01f03", objProduct.t01f03);
-                    cmd.Parameters.AddWithValue("@id", id);
-
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -175,19 +171,19 @@ namespace DBWithC_.BL
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString))
             {
                 conn.Open();
-                string query = @"DELETE FROM 
+                string query = string.Format(@"DELETE FROM 
                                             prdct01 
                                 WHERE 
-                                           t01f01 = @id";
+                                           t01f01 = {0}",id);
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
-
                     cmd.ExecuteNonQuery();
                     return $"Product with Id => {id} Deleted";
                 }
             }
         }
+
+        #endregion
     }
 }

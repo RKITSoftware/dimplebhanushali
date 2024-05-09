@@ -1,6 +1,5 @@
 ﻿using LINQ_With_List.BL;
 using LINQ_With_List.Models;
-using System;
 using System.Web.Http;
 
 namespace LINQ_With_List.Controllers
@@ -18,14 +17,7 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist")]
         public IHttpActionResult GetAllProducts()
         {
-            try
-            {
-                return Ok(BLProductList.GetProducts());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(BLProductList.GetProducts());
         }
 
         /// <summary>
@@ -38,14 +30,8 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/sort")]
         public IHttpActionResult GetSortedProducts(string columnName, bool ascending = true)
         {
-            try
-            {
-                return Ok(BLProductList.GetSortedProducts(columnName, ascending));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            return Ok(BLProductList.GetSortedProducts(columnName, ascending));
         }
 
         /// <summary>
@@ -57,23 +43,14 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/{id}")]
         public IHttpActionResult GetProductById(int id)
         {
-            try
-            {
-                Product product = BLProductList.GetProductById(id);
+            Product product = BLProductList.GetProductById(id);
 
-                if (product != null)
-                {
-                    return Ok(product);
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception ex)
+            if (product != null)
             {
-                return BadRequest(ex.Message);
+                return Ok(product);
             }
+
+            return NotFound();
         }
 
         /// <summary>
@@ -85,16 +62,11 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist")]
         public IHttpActionResult CreateProduct([FromBody] Product newProduct)
         {
-            try
-            {
-                newProduct.Id = BLProductList.ProductsList.Count + 1;
-                BLProductList.AddProduct(newProduct);
-                return Created(Request.RequestUri + "/" + newProduct.Id, newProduct);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            newProduct.Id = BLProductList.ProductsList.Count + 1;
+            BLProductList.AddProduct(newProduct);
+            return Created(Request.RequestUri + "/" + newProduct.Id, newProduct);
+
         }
 
         /// <summary>
@@ -107,15 +79,10 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/{id}")]
         public IHttpActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
         {
-            try
-            {
-                BLProductList.UpdateProduct(id, updatedProduct);
-                return Ok(updatedProduct);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            BLProductList.UpdateProduct(id, updatedProduct);
+            return Ok(updatedProduct);
+
         }
 
         /// <summary>
@@ -127,15 +94,9 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/{id}")]
         public IHttpActionResult DeleteProduct(int id)
         {
-            try
-            {
-                BLProductList.DeleteProduct(id);
-                return Ok($"Product with ID {id} has been deleted.");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            BLProductList.DeleteProduct(id);
+            return Ok($"Product with ID {id} has been deleted.");
+
         }
     }
 }

@@ -3,7 +3,7 @@
 namespace Resume_Builder.Models.POCO
 {
     /// <summary>
-    /// User Model Class representing Properties of User.
+    /// Plain Old CLR Object (POCO) representing a User.
     /// </summary>
     public class USR01
     {

@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Resume_Builder.Models.DTO
 {
+    /// <summary>
+    /// Data Transfer Object (DTO) for Skill.
+    /// </summary>
     public class DTOSKL01
     {
         /// <summary>

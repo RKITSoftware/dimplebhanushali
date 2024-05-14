@@ -1,7 +1,20 @@
 ﻿namespace Resume_Builder.Helpers
 {
+    /// <summary>
+    /// Extension methods for object mapping.
+    /// </summary>
     public static class MapperExtension
     {
+        #region Publci Methods
+
+        /// <summary>
+        /// Maps properties from the source object to the destination object.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the source object.</typeparam>
+        /// <typeparam name="TDestination">The type of the destination object.</typeparam>
+        /// <param name="source">The source object.</param>
+        /// <param name="destination">The destination object.</param>
+        /// <returns>The destination object with mapped properties.</returns>
         public static TDestination Map<TSource, TDestination>(this TSource source, TDestination destination)
         {
             if (destination == null)
@@ -33,5 +46,7 @@
 
             return destination;
         }
+
+        #endregion
     }
 }

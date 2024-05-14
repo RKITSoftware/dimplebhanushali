@@ -10,8 +10,11 @@ namespace Virtual_Diary.Logging
     {
         #region Private Members
 
-        private static readonly string LogFileName = "logs.txt";
-        private static readonly string LogFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", LogFileName);
+        // filename
+        private static readonly string _logFileName = "logs.txt";
+
+        //File Path
+        private static readonly string _logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", _logFileName);
 
         #endregion
 
@@ -56,7 +59,7 @@ namespace Virtual_Diary.Logging
         {
             try
             {
-                using (StreamWriter objSw = File.AppendText(LogFilePath))
+                using (StreamWriter objSw = File.AppendText(_logFilePath))
                 {
                     objSw.WriteLine(logEntry);
                 }

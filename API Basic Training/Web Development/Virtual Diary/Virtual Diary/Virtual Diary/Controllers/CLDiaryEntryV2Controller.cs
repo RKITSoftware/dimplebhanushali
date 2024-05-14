@@ -16,15 +16,23 @@ namespace Virtual_Diary.Controllers
     public class CLDiaryEntryV2Controller : ApiController
     {
         #region Private Members
-        private const string CacheKey = "DiaryEntriesCache";
+        /// <summary>
+        /// Instance of BLDiaryManager.
+        /// </summary>
         private static BLDiaryEntryManager _diaryManager;
         #endregion
 
         #region Public Members
+        /// <summary>
+        /// Instance of Response for setting response as output in methods.
+        /// </summary>
         public Response response;
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor for initialising BLDiaryManager's Instance.
+        /// </summary>
         static CLDiaryEntryV2Controller()
         {
             _diaryManager = new BLDiaryEntryManager();

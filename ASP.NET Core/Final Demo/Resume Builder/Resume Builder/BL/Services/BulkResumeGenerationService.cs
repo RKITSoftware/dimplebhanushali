@@ -8,11 +8,32 @@ using System.Net;
 
 namespace Resume_Builder.BL.Services
 {
+    /// <summary>
+    /// This Class Handles BUlk Resume Generations.
+    /// </summary>
     public class BulkResumeGenerationService
     {
+        #region Private Members
+
+        /// <summary>
+        /// Http Context Accessor Instance.
+        /// </summary>
         private readonly IHttpContextAccessor _httpContextAccessor;
+
+        /// <summary>
+        /// Email Send Service.
+        /// </summary>
         private readonly IEmailService _sender;
 
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Constructor for initialising httpContextAccessor and EmailService Instance.
+        /// </summary>
+        /// <param name="httpContextAccessor">Http Context Accessor</param>
+        /// <param name="sender">IEmailService</param>
         public BulkResumeGenerationService(IHttpContextAccessor httpContextAccessor,
             IEmailService sender)
         {
@@ -20,6 +41,15 @@ namespace Resume_Builder.BL.Services
             _sender = sender;
         }
 
+        #endregion
+
+        #region Public Method
+
+        /// <summary>
+        /// Generates resumes in PDF format from JSON data.
+        /// </summary>
+        /// <param name="json">JSON string containing resume data.</param>
+        /// <returns>A ZIP archive containing PDF resumes as byte arrays.</returns>
         public byte[] GenerateResumesFromJson(string json)
         {
             try
@@ -27,12 +57,14 @@ namespace Resume_Builder.BL.Services
                 var resumesData = JsonConvert.DeserializeObject<List<RES02>>(json);
                 List<byte[]> resumeBytesList = new List<byte[]>();
 
+                // Generate PDF resumes for each user data
                 foreach (var userData in resumesData)
                 {
                     byte[] resumeBytes = GenerateResumePDF(userData);
                     resumeBytesList.Add(resumeBytes);
                 }
 
+                // Create a ZIP archive containing all generated resumes
                 return CreateZip(resumeBytesList);
             }
             catch (Exception ex)
@@ -42,6 +74,15 @@ namespace Resume_Builder.BL.Services
             }
         }
 
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Generates a PDF resume for a user.
+        /// </summary>
+        /// <param name="userData">User data to include in the resume.</param>
+        /// <returns>Byte array representing the PDF resume.</returns>
         private byte[] GenerateResumePDF(RES02 userData)
         {
             // Create a new PDF document
@@ -60,6 +101,11 @@ namespace Resume_Builder.BL.Services
             return memoryStream.ToArray();
         }
 
+        /// <summary>
+        /// Adds user details to a PDF document.
+        /// </summary>
+        /// <param name="document">The PDF document to which user details are added.</param>
+        /// <param name="userData">User data containing information to be added.</param>
         private void AddUserDetails(Document document, RES02 userData)
         {
             PdfPTable table = new PdfPTable(1); // 1 column for user information
@@ -69,39 +115,28 @@ namespace Resume_Builder.BL.Services
             PdfPCell infoCell = new PdfPCell();
             infoCell.Border = PdfPCell.NO_BORDER;
 
+            // Add basic user details, objective section, education, work experience, certificates, projects, languages, and skills
             AddBasicUserDetails(infoCell, userData.UserDetails);
-
-            // Add ObjectiveSection Objective Section
             infoCell.AddElement(Chunk.NEWLINE);
             AddObjectiveSection(infoCell);
-
-            // Add education details
             bool isTitle = true;
             foreach (var education in userData.Education)
             {
                 AddDetailsSection(infoCell, "EDUCATION", isTitle, education.Institute, education.Degree, education.FieldOfStudy, education.EducationYear.ToString());
                 isTitle = false;
             }
-
-            // Add work experience details
-            //infoCell.AddElement(Chunk.NEWLINE);
             isTitle = true;
             foreach (var experience in userData.WorkExperience)
             {
                 AddDetailsSection(infoCell, "WORK EXPERIENCE", isTitle, experience.Company, experience.Position, experience.StartDate.ToString(), experience.EndDate.ToString());
                 isTitle = false;
             }
-
-            // Add Certification details
-            //infoCell.AddElement(Chunk.NEWLINE);
             isTitle = true;
             foreach (var certificate in userData.Certificates)
             {
                 AddDetailsSection(infoCell, "CERTIFICATES", isTitle, certificate.CertificateName, certificate.Organization);
                 isTitle = false;
             }
-
-            // Add project details
             infoCell.AddElement(Chunk.NEWLINE);
             isTitle = true;
             foreach (var project in userData.Projects)
@@ -109,24 +144,24 @@ namespace Resume_Builder.BL.Services
                 AddDetailsSection(infoCell, "PROJECTS", isTitle, project.ProjectName, project.Description, project.StartDate.ToString(), project.EndDate.ToString());
                 isTitle = false;
             }
-
-            // Add language details
             infoCell.AddElement(Chunk.NEWLINE);
             isTitle = true;
             AddLanguagesSection(infoCell, "LANGUAGES", userData.KnownLanguages, isTitle);
-
-            // Add skills details
             infoCell.AddElement(Chunk.NEWLINE);
             AddSkillsSection(infoCell, "SKILLS", userData.Skills, isTitle);
 
             table.AddCell(infoCell);
-
             document.Add(table);
         }
 
+        /// <summary>
+        /// Adds basic user details to a PDF document.
+        /// </summary>
+        /// <param name="cell">The cell to which user details are added.</param>
+        /// <param name="user">User data containing basic information.</param>
         private void AddBasicUserDetails(PdfPCell cell, User user)
         {
-            // Create a nested table with 2 columns
+            // Create a nested table with user image and details
             PdfPTable nestedTable = new PdfPTable(2);
             nestedTable.DefaultCell.Border = PdfPCell.NO_BORDER;
 
@@ -141,67 +176,28 @@ namespace Resume_Builder.BL.Services
             // Add user details on the right side
             PdfPCell detailsCell = new PdfPCell();
             detailsCell.Border = PdfPCell.NO_BORDER;
-            // Add user name and professional title
             string fullName = $"{user.FirstName} {user.LastName}";
             Paragraph name = new Paragraph(fullName, FontFactory.GetFont(FontFactory.TIMES_BOLDITALIC, 14));
             Paragraph title = new Paragraph(user.ProfessionalTitle, FontFactory.GetFont(FontFactory.TIMES_BOLD, 11));
             detailsCell.AddElement(name);
             detailsCell.AddElement(title);
-
             // Add contact information
             Paragraph contactInfo = new Paragraph();
-            contactInfo.Add(new Chunk("Email: ", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10))); // Bold font for "Email: "
+            contactInfo.Add(new Chunk("Email: ", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10)));
             contactInfo.Add(new Chunk($"{user.Email}\n", FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10)));
-            contactInfo.Add(new Chunk("Phone: ", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10))); // Bold font for "Phone: "
+            contactInfo.Add(new Chunk("Phone: ", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10)));
             contactInfo.Add(new Chunk($"{user.Mobile}", FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10)));
             detailsCell.AddElement(contactInfo);
 
             nestedTable.AddCell(detailsCell);
-
-            // Add the nested table to the main cell
             cell.AddElement(nestedTable);
         }
 
-        private void AddCertificateSection(PdfPCell cell, string title, List<Certificate> certificates, bool includeTitle)
-        {
-            if (includeTitle)
-            {
-                cell.AddElement(new Paragraph());
-                Chunk titleChunk = new Chunk(title.ToUpper(), FontFactory.GetFont(FontFactory.TIMES_BOLDITALIC, 11));
-                cell.AddElement(titleChunk);
-                Paragraph line = new Paragraph(string.Format("{0}", new string('_', 100)), FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10));
-                cell.AddElement(line);
-            }
-
-            PdfPTable table = new PdfPTable(2); // 2 columns for CertificateName and Organization
-            table.WidthPercentage = 100;
-
-            // Add table headers
-            PdfPCell certificateCell = new PdfPCell(new Phrase("Certificate Name", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10)));
-            certificateCell.Border = PdfPCell.NO_BORDER;
-            table.AddCell(certificateCell);
-
-            PdfPCell organizationCell = new PdfPCell(new Phrase("Organization", FontFactory.GetFont(FontFactory.TIMES_BOLD, 10)));
-            organizationCell.Border = PdfPCell.NO_BORDER;
-            table.AddCell(organizationCell);
-
-            // Add certificate details
-            foreach (var certificate in certificates)
-            {
-                PdfPCell nameCell = new PdfPCell(new Phrase(certificate.CertificateName, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 11)));
-                nameCell.Border = PdfPCell.NO_BORDER;
-                table.AddCell(nameCell);
-
-                PdfPCell orgCell = new PdfPCell(new Phrase(certificate.Organization, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 11)));
-                orgCell.Border = PdfPCell.NO_BORDER;
-                table.AddCell(orgCell);
-            }
-
-            cell.AddElement(table);
-            cell.AddElement(Chunk.NEWLINE);
-        }
-
-
+        /// <summary>
+        /// Creates a ZIP archive containing PDF resumes.
+        /// </summary>
+        /// <param name="files">List of byte arrays representing PDF resumes.</param>
+        /// <returns>Byte array representing the ZIP archive.</returns>
         private byte[] CreateZip(List<byte[]> files)
         {
             using (var memoryStream = new MemoryStream())
@@ -221,6 +217,13 @@ namespace Resume_Builder.BL.Services
             }
         }
 
+        /// <summary>
+        /// Adds a section with details to a PDF cell.
+        /// </summary>
+        /// <param name="cell">The PDF cell to which the section is added.</param>
+        /// <param name="sectionTitle">Title of the section.</param>
+        /// <param name="includeTitle">Specifies whether to include the section title.</param>
+        /// <param name="fields">Fields to include in the section.</param>
         private void AddDetailsSection(PdfPCell cell, string sectionTitle, bool includeTitle, params string[] fields)
         {
             PdfPTable table = new PdfPTable(fields.Length);
@@ -247,6 +250,13 @@ namespace Resume_Builder.BL.Services
             cell.AddElement(Chunk.NEWLINE);
         }
 
+        /// <summary>
+        /// Adds a section for listing languages to a PDF cell.
+        /// </summary>
+        /// <param name="cell">The PDF cell to which the section is added.</param>
+        /// <param name="title">Title of the section.</param>
+        /// <param name="languages">List of languages to include.</param>
+        /// <param name="includeTitle">Specifies whether to include the section title.</param>
         private void AddLanguagesSection(PdfPCell cell, string title, List<string> languages, bool includeTitle)
         {
             if (includeTitle)
@@ -272,6 +282,13 @@ namespace Resume_Builder.BL.Services
             cell.AddElement(Chunk.NEWLINE);
         }
 
+        /// <summary>
+        /// Adds a section for listing skills to a PDF cell.
+        /// </summary>
+        /// <param name="cell">The PDF cell to which the section is added.</param>
+        /// <param name="title">Title of the section.</param>
+        /// <param name="skills">List of skills to include.</param>
+        /// <param name="includeTitle">Specifies whether to include the section title.</param>
         private void AddSkillsSection(PdfPCell cell, string title, List<string> skills, bool includeTitle)
         {
             if (includeTitle)
@@ -297,7 +314,10 @@ namespace Resume_Builder.BL.Services
             cell.AddElement(Chunk.NEWLINE);
         }
 
-
+        /// <summary>
+        /// Adds an objective section to a PDF cell.
+        /// </summary>
+        /// <param name="cell">The PDF cell to which the objective section is added.</param>
         private void AddObjectiveSection(PdfPCell cell)
         {
             cell.AddElement(new Paragraph());
@@ -311,5 +331,6 @@ namespace Resume_Builder.BL.Services
             cell.AddElement(Chunk.NEWLINE);
         }
 
+        #endregion
     }
 }

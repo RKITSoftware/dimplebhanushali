@@ -1,7 +1,7 @@
-﻿using System.Net;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Virtual_Diary.BasicAuth;
 using Virtual_Diary.BL;
+using Virtual_Diary.Helper;
 using Virtual_Diary.Models;
 
 namespace Virtual_Diary.Controllers
@@ -14,6 +14,15 @@ namespace Virtual_Diary.Controllers
     public class CLUserController : ApiController
     {
         public Response response;
+        public BLUser _blUser;
+
+        /// <summary>
+        /// Constructor for Initialising BlUser.
+        /// </summary>
+        public CLUserController()
+        {
+            _blUser = new BLUser();
+        }
 
         /// <summary>
         /// Creates a new user.
@@ -25,12 +34,14 @@ namespace Virtual_Diary.Controllers
         public IHttpActionResult CreateUser(User objUser)
         {
             response = new Response();
-            response = BLUser.CreateUser(objUser);
-            if (response.IsError)
+            _blUser.operation = enmOperations.I;
+            response = _blUser.PreSave(objUser);
+            response = _blUser.Validate();
+            if (!response.IsError)
             {
-                return Content(HttpStatusCode.InternalServerError, response.Message);
+                response = _blUser.Save();
             }
-            return Ok(response.Message);
+            return Ok(response);
         }
 
         /// <summary>
@@ -41,11 +52,8 @@ namespace Virtual_Diary.Controllers
         public IHttpActionResult GetUsers()
         {
             response = new Response();
-            response = BLUser.GetUsers();
-            if (response.IsError)
-            {
-                return Content(HttpStatusCode.InternalServerError, response.Message);
-            }
+            response = _blUser.GetAllUsers();
+           
             return Ok(response.Data);
         }
 
@@ -58,12 +66,9 @@ namespace Virtual_Diary.Controllers
         public IHttpActionResult GetUserById(int id)
         {
             response = new Response();
-            response = BLUser.GetUserById(id);
-            if (response.IsError)
-            {
-                return Content(HttpStatusCode.NotFound, response.Message);
-            }
-            return Ok(response.Data);
+            response = _blUser.GetUserById(id);
+           
+            return Ok(response);
         }
 
         /// <summary>
@@ -76,12 +81,14 @@ namespace Virtual_Diary.Controllers
         public IHttpActionResult UpdateUser(User objUser)
         {
             response = new Response();
-            response = BLUser.UpdateUser(objUser);
-            if (response.IsError)
+            _blUser.operation = enmOperations.U;
+            response = _blUser.PreSave(objUser);
+            response = _blUser.Validate();
+            if (!response.IsError)
             {
-                return Content(HttpStatusCode.NotFound, response.Message);
+                response = _blUser.Save();
             }
-            return Ok(response.Message);
+            return Ok(response);
         }
 
         /// <summary>
@@ -93,11 +100,7 @@ namespace Virtual_Diary.Controllers
         public IHttpActionResult DeleteUser(int id)
         {
             response = new Response();
-            response = BLUser.DeleteUser(id);
-            if (response.IsError)
-            {
-                return Content(HttpStatusCode.NotFound, response.Message);
-            }
+            response = _blUser.DeleteUser(id);
             return Ok(response.Message);
         }
     }

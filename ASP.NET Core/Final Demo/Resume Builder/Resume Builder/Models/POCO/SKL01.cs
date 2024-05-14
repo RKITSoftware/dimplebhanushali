@@ -1,7 +1,7 @@
 ﻿namespace Resume_Builder.Models.POCO
 {
     /// <summary>
-    /// Skills Model
+    /// Plain Old CLR Object (POCO) representing a Skill.
     /// </summary>
     public class SKL01
     {

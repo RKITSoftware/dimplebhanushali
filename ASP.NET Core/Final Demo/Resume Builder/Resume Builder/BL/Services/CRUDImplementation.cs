@@ -1,14 +1,11 @@
 ﻿using Resume_Builder.BL.Interfaces;
 using Resume_Builder.Data;
+using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models;
 using Resume_Builder.Models.POCO;
 using ServiceStack.OrmLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Data;
-using Resume_Builder.DL.Interfaces;
 
 namespace Resume_Builder.DL.Services
 {
@@ -18,6 +15,8 @@ namespace Resume_Builder.DL.Services
     /// <typeparam name="T">Type of the model class.</typeparam>
     public class CRUDImplementation<T> : ICRUDService<T> where T : class
     {
+        #region Public Members
+
         /// <summary>
         /// Instance of Response.
         /// </summary>
@@ -32,6 +31,10 @@ namespace Resume_Builder.DL.Services
         /// Enume Message Operation 
         /// </summary>
         public static EnumMessage operation;
+
+        #endregion
+
+        #region Private Members
 
         /// <summary>
         /// Instance of Db Connection Factory.
@@ -48,6 +51,10 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         private readonly IEmailService _sender;
 
+        #endregion
+
+        #region Constructor
+
         /// <summary>
         /// Constructor for CRUDImplementation.
         /// </summary>
@@ -61,6 +68,10 @@ namespace Resume_Builder.DL.Services
             _httpContextAccessor = httpContextAccessor;
             _sender = sender;
         }
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Retrieves all items.
@@ -457,9 +468,16 @@ namespace Resume_Builder.DL.Services
             return userDetails;
         }
 
+        /// <summary>
+        /// Sends an email message to the specified email address.
+        /// </summary>
+        /// <param name="email">The email address of the recipient.</param>
+        /// <param name="message">The message content to be sent.</param>
         public void SendEmail(string email, string message)
         {
             _sender.Send(email, message, null);
         }
+
+        #endregion
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Historical_Events.Basic_Authorisation;
 using Historical_Events.BL;
 using Historical_Events.Models;
+using Historical_Events.Models.DTO;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,6 +14,7 @@ namespace Historical_Events.Controllers
     {
         private readonly BLHistory _blHistory;
 
+        public Response response;
         public HistoryController()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
@@ -22,149 +24,95 @@ namespace Historical_Events.Controllers
         [HttpGet, Route("GetAll")]
         public IHttpActionResult GetAll()
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.GetAllEvents();
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetAllEvents();
+            return Ok(response);
         }
 
         [HttpGet, Route("GetById/{id}")]
         public IHttpActionResult GetById(int id)
         {
-            try
-            {
-                hstevt01 result = _blHistory.GetEventById(id);
-
-                if (result != null)
-                    return Ok(result);
-                else
-                    return NotFound();
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetEventById(id);
+            return Ok(response);
         }
 
         [HttpGet, Route("Search")]
         public IHttpActionResult Search(int? startYear = null, int? endYear = null, string startDate = null, string endDate = null, string keyword = null)
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.SearchEvents(startYear, endYear, startDate, endDate, keyword);
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.SearchEvents(startYear, endYear, startDate, endDate, keyword);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetByCategory/{category}")]
         public IHttpActionResult GetByCategory(string category)
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.GetEventsByCategory(category);
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetEventsByCategory(category);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetLatest/{count}")]
         public IHttpActionResult GetLatest(int count)
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.GetLatestEvents(count);
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetLatestEvents(count);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetByDateRange/{startDate}/{endDate}")]
         public IHttpActionResult GetByDateRange(string startDate, string endDate)
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.GetEventsByDateRange(startDate, endDate);
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetEventsByDateRange(startDate, endDate);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetByKeyword/{keyword}")]
         public IHttpActionResult GetByKeyword(string keyword)
         {
-            try
-            {
-                List<hstevt01> resultList = _blHistory.GetEventsByKeyword(keyword);
-                return Ok(resultList);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetEventsByKeyword(keyword);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetUniqueCategories")]
         public IHttpActionResult GetUniqueCategories()
         {
-            try
-            {
-                List<string> categories = _blHistory.GetUniqueCategories();
-                return Ok(categories);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            response = _blHistory.GetUniqueCategories();
+            return Ok(response);
         }
 
         [HttpPost, Route("Create")]
         [BasicAuthentication]
         [BasicAuthorisation(Roles = "admin")]
-        public IHttpActionResult CreateHistoricalEvent(hstevt01 newEvent)
+        public IHttpActionResult CreateHistoricalEvent(DTOHstEvt01 objDTOHstEvt01)
         {
-            try
+            _blHistory.enmOperation = Helpers.enmOperation.I;
+
+            _blHistory.Presave(objDTOHstEvt01);
+
+            response = _blHistory.Validate();
+            if (response.isError)
             {
-                _blHistory.CreateHistoricalEvent(newEvent);
-                return Ok();
+                return Ok(response);
             }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            response = _blHistory.Save();
+            return Ok(response);
         }
 
         [HttpPut, Route("Edit/{id}")]
         [BasicAuthentication]
         [BasicAuthorisation(Roles = "admin")]
-        public IHttpActionResult EditHistoricalEvent(int id, hstevt01 updatedEvent)
+        public IHttpActionResult EditHistoricalEvent(DTOHstEvt01 objDTOHstEvt01)
         {
-            try
+            _blHistory.enmOperation = Helpers.enmOperation.U;
+
+            _blHistory.Presave(objDTOHstEvt01);
+
+            response = _blHistory.Validate();
+            if (response.isError)
             {
-                _blHistory.EditHistoricalEvent(id, updatedEvent);
-                return Ok();
+                return Ok(response);
             }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            response = _blHistory.Save();
+            return Ok(response);
         }
 
         [HttpDelete, Route("Delete/{id}")]
@@ -172,15 +120,14 @@ namespace Historical_Events.Controllers
         [BasicAuthorisation(Roles = "admin")]
         public IHttpActionResult DeleteHistoricalEvent(int id)
         {
-            try
+            response = _blHistory.ValidateOnDelete(id);
+            if (response.isError)
             {
-                _blHistory.DeleteHistoricalEvent(id);
-                return Ok();
+                return Ok(response);
             }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+
+            response = _blHistory.Delete(id);
+            return Ok(response);
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web;
 
 namespace Historical_Events.BL
 {
@@ -43,7 +40,7 @@ namespace Historical_Events.BL
 
         /// <summary>
         /// Decryption of cipher text to plain text
-        /// </summary>
+        /// </summary> |
         /// <param name="cipherText"> Cipher text in base64 string </param>
         /// <returns> Plain text in UTF8 string </returns>
         public static string Decrypt(string cipherText)

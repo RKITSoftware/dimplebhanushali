@@ -60,6 +60,11 @@ namespace Resume_Builder.BL.Interfaces
         /// <returns>The user details.</returns>
         object GetUserDetails(int id);
 
+        /// <summary>
+        /// Sends Email to perticular Email Address.
+        /// </summary>
+        /// <param name="email">Email id</param>
+        /// <param name="message">Email Message/ Body.</param>
         void SendEmail(string email, string message);
     }
 }

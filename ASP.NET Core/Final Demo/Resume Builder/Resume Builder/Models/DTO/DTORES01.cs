@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Resume_Builder.Models.DTO
 {
+    /// <summary>
+    /// Data Transfer Object (DTO) for Response.
+    /// </summary>
     public class DTORES01
     {
         /// <summary>

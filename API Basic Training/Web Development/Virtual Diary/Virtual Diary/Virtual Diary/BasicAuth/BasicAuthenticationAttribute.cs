@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
+using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Web;
+using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using Virtual_Diary.Exceptions;
 using Virtual_Diary.Models;
 
 namespace Virtual_Diary.BasicAuth
@@ -23,6 +25,7 @@ namespace Virtual_Diary.BasicAuth
         /// <param name="actionContext">The context for the action.</param>
         public override void OnAuthorization(HttpActionContext actionContext)
         {
+            if (SkipAuthorization(actionContext)) return;
             if (actionContext.Request.Headers.Authorization == null)
             {
                 // No authorization header present
@@ -43,7 +46,7 @@ namespace Virtual_Diary.BasicAuth
                         // User authenticated successfully
                         User userDetails = ValidateUser.GetUserDetails(username, password);
 
-                        var identity = new GenericIdentity(username);
+                        GenericIdentity identity = new GenericIdentity(username);
                         identity.AddClaim(new Claim(ClaimTypes.Name, userDetails.UserName));
 
                         IPrincipal principal = new GenericPrincipal(identity, userDetails.Roles.ToString().Split(','));
@@ -82,6 +85,21 @@ namespace Virtual_Diary.BasicAuth
         {
             actionContext.Response = actionContext.Request
                 .CreateErrorResponse(System.Net.HttpStatusCode.Unauthorized, message);
+        }
+
+        /// <summary>
+        /// To allow anonymous users to access endpoint
+        /// </summary>
+        /// <param name="actionContext"></param>
+        /// <returns></returns>
+        public static bool SkipAuthorization(HttpActionContext actionContext)
+        {
+            // Use Contract.Assert to ensure that the actionContext is not null.
+            Contract.Assert(actionContext != null);
+
+            // Check if the action or controller has the AllowAnonymousAttribute.
+            return actionContext.ActionDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any()
+                       || actionContext.ControllerContext.ControllerDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any();
         }
     }
 }

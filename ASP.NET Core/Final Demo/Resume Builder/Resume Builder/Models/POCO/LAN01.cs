@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace Resume_Builder.Models.POCO
+﻿namespace Resume_Builder.Models.POCO
 {
     /// <summary>
-    /// Language Model
+    /// Plain Old CLR Object (POCO) representing a Language.
     /// </summary>
     public class LAN01
     {

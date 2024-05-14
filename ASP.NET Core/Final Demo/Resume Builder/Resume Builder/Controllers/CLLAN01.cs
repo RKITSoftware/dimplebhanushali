@@ -8,6 +8,9 @@ using Resume_Builder.Models.POCO;
 
 namespace Resume_Builder.Controllers
 {
+    /// <summary>
+    /// Controller responsible for CRUD operations related to language details.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CLLAN01 : ControllerBase
@@ -15,11 +18,19 @@ namespace Resume_Builder.Controllers
         private readonly ICRUDService<LAN01> _crudService;
         public Response response;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CLLAN01"/> class.
+        /// </summary>
+        /// <param name="crudService">The CRUD service for language details.</param>
         public CLLAN01(ICRUDService<LAN01> crudService)
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        /// <summary>
+        /// Retrieves all language details.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of language details.</returns>
         [HttpGet, Route("GetAll")]
         public IActionResult GetAll()
         {
@@ -28,6 +39,10 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Retrieves language details associated with the current user.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of language details.</returns>
         [HttpGet, Route("GetById")]
         public IActionResult Get()
         {
@@ -36,6 +51,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Adds a new language detail.
+        /// </summary>
+        /// <param name="model">The language detail data to add.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPost]
         public IActionResult Post([FromBody] DTOLAN01 model)
         {
@@ -49,6 +69,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Updates an existing language detail.
+        /// </summary>
+        /// <param name="model">The language detail data to update.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPut]
         public IActionResult Put([FromBody] DTOLAN01 model)
         {
@@ -62,6 +87,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Deletes a language detail.
+        /// </summary>
+        /// <param name="id">The ID of the language detail to delete.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

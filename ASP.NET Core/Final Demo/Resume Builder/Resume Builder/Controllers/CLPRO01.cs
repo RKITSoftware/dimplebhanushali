@@ -8,6 +8,9 @@ using Resume_Builder.Models.POCO;
 
 namespace Resume_Builder.Controllers
 {
+    /// <summary>
+    /// Controller responsible for CRUD operations related to project details.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CLPRO01 : ControllerBase
@@ -15,11 +18,19 @@ namespace Resume_Builder.Controllers
         private readonly ICRUDService<PRO01> _crudService;
         public Response response;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CLPRO01"/> class.
+        /// </summary>
+        /// <param name="crudService">The CRUD service for project details.</param>
         public CLPRO01(ICRUDService<PRO01> crudService)
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        /// <summary>
+        /// Retrieves all project details.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of project details.</returns>
         [HttpGet, Route("GetAll")]
         public IActionResult GetAll()
         {
@@ -28,6 +39,10 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Retrieves project details associated with the current user.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of project details.</returns>
         [HttpGet, Route("GetById")]
         public IActionResult Get()
         {
@@ -36,6 +51,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Adds a new project detail.
+        /// </summary>
+        /// <param name="model">The project detail data to add.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPost]
         public IActionResult Post([FromBody] DTOPRO01 model)
         {
@@ -49,6 +69,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Updates an existing project detail.
+        /// </summary>
+        /// <param name="model">The project detail data to update.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPut]
         public IActionResult Put([FromBody] DTOPRO01 model)
         {
@@ -62,6 +87,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Deletes a project detail.
+        /// </summary>
+        /// <param name="id">The ID of the project detail to delete.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

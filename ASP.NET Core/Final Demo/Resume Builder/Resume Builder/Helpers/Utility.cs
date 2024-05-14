@@ -2,8 +2,13 @@
 
 namespace Resume_Builder.Helpers
 {
+    /// <summary>
+    /// Utility methods for common operations.
+    /// </summary>
     public static class Utility
     {
+        #region Public Methods
+
         /// <summary>
         /// Extension method to get user id from jwt claims
         /// </summary>
@@ -17,7 +22,6 @@ namespace Resume_Builder.Helpers
             return Convert.ToInt32(userIdClaim.Value);
         }
 
-
         /// <summary>
         /// Extension method to get user id from jwt claims
         /// </summary>
@@ -30,5 +34,7 @@ namespace Resume_Builder.Helpers
 
             return userIdClaim.Value;
         }
+
+        #endregion
     }
 }

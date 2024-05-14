@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Resume_Builder.Models.DTO
 {
     /// <summary>
-    /// Experience Model
+    /// Data Transfer Object (DTO) for Experience.
     /// </summary>
     public class DTOEXP01
     {

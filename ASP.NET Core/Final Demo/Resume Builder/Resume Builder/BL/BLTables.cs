@@ -10,7 +10,16 @@ namespace Resume_Builder.BL
     /// </summary>
     public class BLTables
     {
+        #region Private Member
+
+        /// <summary>
+        /// Instance of Db Connection Factory.
+        /// </summary>
         private DbConnectionFactory _connectionFactory;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Constructor for BLTables.
@@ -20,6 +29,10 @@ namespace Resume_Builder.BL
         {
             _connectionFactory = dbConnectionFactory;
         }
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Creates tables if they do not exist.
@@ -58,5 +71,7 @@ namespace Resume_Builder.BL
                 db.DropAndCreateTable<SKL01>();
             }
         }
+
+        #endregion
     }
 }

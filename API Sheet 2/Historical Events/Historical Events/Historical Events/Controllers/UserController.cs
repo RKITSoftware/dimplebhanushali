@@ -1,6 +1,7 @@
 ﻿using Historical_Events.BL;
+using Historical_Events.Helpers;
 using Historical_Events.Models;
-using System;
+using Historical_Events.Models.DTO;
 using System.Configuration;
 using System.Web.Http;
 
@@ -10,6 +11,8 @@ namespace Historical_Events.Controllers
     public class UserController : ApiController
     {
         private readonly BLUser _userManager;
+        
+        public Response response;
 
         public UserController()
         {
@@ -17,94 +20,61 @@ namespace Historical_Events.Controllers
         }
 
         [HttpPost, Route("Register")]
-        public IHttpActionResult RegisterUser(usr01 objUser)
+        public IHttpActionResult RegisterUser(DTOUSR01 objUsr)
         {
-            try
+            _userManager.operation = enmOperation.I;
+
+            _userManager.PreSave(objUsr);
+            
+            response = _userManager.Validate();
+            if (!response.isError)
             {
-                string result = _userManager.RegisterUser(objUser);
-                return Ok(result);
+                response = _userManager.Save();
             }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return InternalServerError(ex);
-            }
+            return Ok(response);
+        }
+
+        [HttpPost,Route("CreateTables")]
+        public IHttpActionResult CreateTable()
+        {
+            _userManager.CreateTables();
+            return Ok();
         }
 
         [HttpPost, Route("Login")]
         public IHttpActionResult LoginUser(string userName, string password)
         {
-            try
-            {
-                bool isAuthenticated = _userManager.LoginUser(userName, password);
-
-                if (isAuthenticated)
-                {
-                    return Ok("Login successful");
-                }
-                else
-                {
-                    return Unauthorized();
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return InternalServerError(ex);
-            }
+            response = _userManager.LoginUser(userName, password);
+            return Ok(response);
         }
 
         [HttpGet, Route("GetAll")]
         public IHttpActionResult GetAllUsers()
         {
-            try
-            {
-                var users = BLUser.GetAllUsers();
-                return Ok(users);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return InternalServerError(ex);
-            }
+            response = _userManager.GetAllUsers();
+            return Ok(response);
         }
 
         [HttpGet, Route("GetById/{id}")]
         public IHttpActionResult GetUserById(int id)
         {
-            try
-            {
-                var user = _userManager.GetUserById(id);
-
-                if (user != null)
-                {
-                    return Ok(user);
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return InternalServerError(ex);
-            }
+            response = _userManager.GetUserById(id);
+            return Ok(response);
         }
 
         [HttpDelete, Route("Delete/{id}")]
         public IHttpActionResult DeleteUser(int id)
         {
-            try
+            _userManager.operation = enmOperation.D;
+
+            response = _userManager.ValidateOnDelete(id);
+
+            if (!response.isError)
             {
-                var result = _userManager.DeleteUser(id);
-                return Ok(result);
+                response = _userManager.DeleteUser(id);
             }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return InternalServerError(ex);
-            }
+
+            return Ok(response);
         }
     }
 }

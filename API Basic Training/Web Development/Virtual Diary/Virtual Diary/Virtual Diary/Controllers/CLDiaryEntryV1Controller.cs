@@ -17,14 +17,23 @@ namespace Virtual_Diary.Controllers
     public class CLDiaryEntryV1Controller : ApiController
     {
         #region Private Members
+        /// <summary>
+        /// Instance of BLDiary Manager.
+        /// </summary>
         private static BLDiaryEntryManager _diaryManager;
         #endregion
 
         #region Public Members
+        /// <summary>
+        /// Instance of response for Setting response.
+        /// </summary>
         public Response response;
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor for initialising BLDiaryManager instance.
+        /// </summary>
         static CLDiaryEntryV1Controller()
         {
             _diaryManager = new BLDiaryEntryManager();
@@ -42,7 +51,7 @@ namespace Virtual_Diary.Controllers
         {
             try
             {
-                var diaryEntries = _diaryManager.GetDiaryEntriesFromCacheOrSource();
+                List<DiaryEntry> diaryEntries = _diaryManager.GetDiaryEntriesFromCacheOrSource();
                 return diaryEntries;
             }
             catch (Exception ex)

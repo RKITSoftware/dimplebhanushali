@@ -1,9 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace Resume_Builder.Models.POCO
+﻿namespace Resume_Builder.Models.POCO
 {
     /// <summary>
-    /// Certificate Entity
+    /// Plain Old CLR Object (POCO) representing a certificate.
     /// </summary>
     public class CER01
     {

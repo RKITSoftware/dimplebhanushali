@@ -1,7 +1,7 @@
 ﻿namespace Resume_Builder.Models.POCO
 {
     /// <summary>
-    /// Education Model
+    /// Plain Old CLR Object (POCO) representing a Education.
     /// </summary>
     public class EDU01
     {

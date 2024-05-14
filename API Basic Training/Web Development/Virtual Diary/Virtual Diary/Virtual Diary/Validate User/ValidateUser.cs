@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Virtual_Diary.BL;
 using Virtual_Diary.Models;
 
 namespace Virtual_Diary
@@ -6,7 +7,7 @@ namespace Virtual_Diary
     /// <summary>
     /// Provides methods to validate user credentials and retrieve user details.
     /// </summary>
-    internal class ValidateUser
+    public class ValidateUser
     {
         /// <summary>
         /// Validates user login credentials.
@@ -17,7 +18,7 @@ namespace Virtual_Diary
         public static bool IsLogin(string username, string password)
         {
             // Check if there is any user with the provided username and password
-            return User.GetUsers().Any(user => user.UserName.Equals(username) && user.Password == password);
+            return BLUser.GetUsers().Any(user => user.UserName.Equals(username) && user.Password == password);
         }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace Virtual_Diary
         public static User GetUserDetails(string username, string password)
         {
             // Retrieve the user details based on the provided username and password
-            return User.GetUsers().FirstOrDefault(user => user.UserName.Equals(username) && user.Password == password);
+            return BLUser.GetUsers().FirstOrDefault(user => user.UserName.Equals(username) && user.Password == password);
         }
     }
 }

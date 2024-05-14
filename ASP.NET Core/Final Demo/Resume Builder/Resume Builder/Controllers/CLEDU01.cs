@@ -8,6 +8,9 @@ using Resume_Builder.Models.POCO;
 
 namespace Resume_Builder.Controllers
 {
+    /// <summary>
+    /// Controller responsible for CRUD operations related to education details.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CLEDU01 : ControllerBase
@@ -15,11 +18,19 @@ namespace Resume_Builder.Controllers
         private readonly ICRUDService<EDU01> _crudService;
         public Response response;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CLEDU01"/> class.
+        /// </summary>
+        /// <param name="crudService">The CRUD service for education details.</param>
         public CLEDU01(ICRUDService<EDU01> crudService)
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        /// <summary>
+        /// Retrieves all education details.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of education details.</returns>
         [HttpGet, Route("GetAll")]
         public IActionResult GetAll()
         {
@@ -28,6 +39,10 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Retrieves education details associated with the current user.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of education details.</returns>
         [HttpGet, Route("GetById")]
         public IActionResult Get()
         {
@@ -36,6 +51,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Adds a new education detail.
+        /// </summary>
+        /// <param name="model">The education detail data to add.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPost]
         public IActionResult Post([FromBody] DTOEDU01 model)
         {
@@ -49,6 +69,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Updates an existing education detail.
+        /// </summary>
+        /// <param name="model">The education detail data to update.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPut]
         public IActionResult Put([FromBody] DTOEDU01 model)
         {
@@ -62,6 +87,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Deletes an education detail.
+        /// </summary>
+        /// <param name="id">The ID of the education detail to delete.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

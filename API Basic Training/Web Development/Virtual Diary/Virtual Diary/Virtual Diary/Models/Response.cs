@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-namespace Virtual_Diary.Models
+﻿namespace Virtual_Diary.Models
 {
     /// <summary>
     /// Represents a generic response structure for API responses.

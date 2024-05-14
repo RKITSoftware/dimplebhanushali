@@ -1,12 +1,6 @@
-﻿using Historical_Events.Models;
-using Historical_Events.User_Validation;
+﻿using Historical_Events.User_Validation;
 using System;
 using System.Net.Http;
-using System.Security.Claims;
-using System.Security.Principal;
-using System.Text;
-using System.Threading;
-using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
@@ -17,6 +11,8 @@ namespace Historical_Events.Basic_Authorisation
     /// </summary>
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
+        #region Public Methods
+
         /// <summary>
         /// Handles authorization by validating basic authentication credentials.
         /// </summary>
@@ -34,41 +30,20 @@ namespace Historical_Events.Basic_Authorisation
                 {
                     // Decode and extract username and password from the authorization header
                     string authToken = actionContext.Request.Headers.Authorization.Parameter;
-                    string[] userNamePassword = Encoding.UTF8.GetString(Convert.FromBase64String(authToken)).Split(':');
-                    string username = userNamePassword[0];
-                    string password = userNamePassword[1];
+                    
+                    string token = authToken.Substring("Bearer ".Length).Trim();
 
-                    if (ValidateUser.IsLogin(username, password))
+                    BLValidateUser blValidateUser = new BLValidateUser();
+                    
+                    if(blValidateUser.ValidateJwtToken(token))
                     {
-                        // User authenticated successfully
-                        usr01 userDetails = ValidateUser.GetUserDetails(username, password);
-
-                        // Create a generic identity
-                        var identity = new GenericIdentity(username);
-                        identity.AddClaim(new Claim(ClaimTypes.Name, userDetails.r01f03));
-
-                        // Create a generic principal
-                        IPrincipal principal = new GenericPrincipal(identity, userDetails.r01f05.ToString().Split(','));
-
-                        // Set the current principal for the thread
-                        Thread.CurrentPrincipal = principal;
-
-                        // Set the user for the HttpContext if available
-                        if (HttpContext.Current != null)
-                        {
-                            HttpContext.Current.User = principal;
-                        }
-                        else
-                        {
-                            // HttpContext not available
-                            throw new NotImplementedException("Authorization Denied");
-                        }
+                        return;
                     }
                     else
                     {
-                        // Invalid credentials
-                        throw new NotImplementedException("Invalid Credentials");
+                        SetUnauthorizedResponse(actionContext, "Login Failed");
                     }
+
                 }
                 catch (Exception)
                 {
@@ -77,6 +52,10 @@ namespace Historical_Events.Basic_Authorisation
                 }
             }
         }
+
+        #endregion
+
+        #region Private Methods
 
         /// <summary>
         /// Sets an unauthorized response with the specified error message.
@@ -88,5 +67,7 @@ namespace Historical_Events.Basic_Authorisation
             actionContext.Response = actionContext.Request
                 .CreateErrorResponse(System.Net.HttpStatusCode.Unauthorized, message);
         }
+
+        #endregion
     }
 }

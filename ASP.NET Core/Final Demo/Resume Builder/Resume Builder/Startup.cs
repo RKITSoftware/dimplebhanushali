@@ -6,6 +6,7 @@ using Resume_Builder.Data;
 using Resume_Builder.DL.Implemntations;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.DL.Services;
+using Resume_Builder.Middlewares;
 using Resume_Builder.Middlewares.Filters;
 using Resume_Builder.Models.POCO;
 
@@ -113,6 +114,7 @@ namespace Resume_Builder
                 app.UseSwaggerUI();
             }
 
+            app.UseRateLimitingMiddleware();
             app.UseHttpsRedirection();
             app.UseAuthorization();
 

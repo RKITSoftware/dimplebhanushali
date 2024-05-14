@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Resume_Builder.BL.Interfaces;
 using Resume_Builder.DL.Services;
 using Resume_Builder.Helpers;
@@ -9,6 +8,9 @@ using Resume_Builder.Models.POCO;
 
 namespace Resume_Builder.Controllers
 {
+    /// <summary>
+    /// Controller responsible for CRUD operations related to work experience details.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CLEXP01 : ControllerBase
@@ -16,11 +18,19 @@ namespace Resume_Builder.Controllers
         private readonly ICRUDService<EXP01> _crudService;
         public Response response;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CLEXP01"/> class.
+        /// </summary>
+        /// <param name="crudService">The CRUD service for work experience details.</param>
         public CLEXP01(ICRUDService<EXP01> crudService)
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        /// <summary>
+        /// Retrieves all work experience details.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of work experience details.</returns>
         [HttpGet, Route("GetAll")]
         public IActionResult GetAll()
         {
@@ -29,6 +39,10 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Retrieves work experience details associated with the current user.
+        /// </summary>
+        /// <returns>An HTTP response containing the list of work experience details.</returns>
         [HttpGet, Route("GetById")]
         public IActionResult Get()
         {
@@ -37,7 +51,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
-
+        /// <summary>
+        /// Adds a new work experience detail.
+        /// </summary>
+        /// <param name="model">The work experience detail data to add.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPost]
         public IActionResult Post([FromBody] DTOEXP01 model)
         {
@@ -51,6 +69,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Updates an existing work experience detail.
+        /// </summary>
+        /// <param name="model">The work experience detail data to update.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpPut]
         public IActionResult Put([FromBody] DTOEXP01 model)
         {
@@ -64,6 +87,11 @@ namespace Resume_Builder.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Deletes a work experience detail.
+        /// </summary>
+        /// <param name="id">The ID of the work experience detail to delete.</param>
+        /// <returns>An HTTP response indicating success or failure.</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

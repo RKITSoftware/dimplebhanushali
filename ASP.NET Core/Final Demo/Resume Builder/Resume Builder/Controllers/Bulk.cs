@@ -1,14 +1,13 @@
-﻿using iTextSharp.tool.xml.css;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Resume_Builder.BL.Services;
 using Resume_Builder.Models.DTO;
-using System;
-using System.IO;
-using System.Text;
 
 namespace Resume_Builder.Controllers
 {
+    /// <summary>
+    /// Controller responsible for bulk operations related to resume generation.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class Bulk : ControllerBase
@@ -17,6 +16,12 @@ namespace Resume_Builder.Controllers
         private readonly CSVToJSON _csvToJSON;
         private readonly HttpClient _httpClient;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Bulk"/> class.
+        /// </summary>
+        /// <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
+        /// <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
+        /// <param name="httpClient">The HTTP client for making HTTP requests.</param>
         public Bulk(BulkResumeGenerationService resumeGenerationService, CSVToJSON csvToJSON, HttpClient httpClient)
         {
             _resumeGenerationService = resumeGenerationService;
@@ -24,6 +29,11 @@ namespace Resume_Builder.Controllers
             _httpClient = httpClient;
         }
 
+        /// <summary>
+        /// Generates resumes in bulk from a list of RES02 objects.
+        /// </summary>
+        /// <param name="lstRes">The list of RES02 objects representing resume data.</param>
+        /// <returns>A zip file containing the generated resumes.</returns>
         [HttpPost]
         public async Task<IActionResult> GenerateResumes([FromBody] List<RES02> lstRes)
         {
@@ -47,7 +57,11 @@ namespace Resume_Builder.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Converts an uploaded Excel file to JSON format.
+        /// </summary>
+        /// <param name="file">The Excel file to convert.</param>
+        /// <returns>The converted JSON data.</returns>
         [HttpPost("upload")]
         public async Task<IActionResult> ConvertFromExcel(IFormFile file)
         {

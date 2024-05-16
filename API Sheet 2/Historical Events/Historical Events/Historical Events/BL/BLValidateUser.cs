@@ -13,8 +13,13 @@ using System.Web;
 
 namespace Historical_Events.User_Validation
 {
+    /// <summary>
+    /// Business logic class for managing Historical Events.
+    /// </summary>
     public class BLValidateUser
     {
+        #region Public Methods
+
         /// <summary>
         /// Validates user login credentials.
         /// </summary>
@@ -23,34 +28,25 @@ namespace Historical_Events.User_Validation
         /// <returns>True if the login is successful, otherwise false.</returns>
         public bool IsLogin(string username, string password)
         {
-            string encryptedPassword = BLAES.Encrypt(password);
+            BLAES _objBlAes = new BLAES();
+            password = _objBlAes.Encrypt(password);
             // Check if there is any user with the provided username and encrypted password
 
             bool isCredentialCorrect;
             using (IDbConnection db = MyDbContext.CreateConnection())
             {
-                isCredentialCorrect = db.Exists<usr01>(usr => usr.r01f03 == username && usr.r01f04 == password);
+                isCredentialCorrect = db.Exists<USR01>(usr => usr.r01f03 == username && usr.r01f06 == password);
             }
 
             return isCredentialCorrect;
         }
 
         /// <summary>
-        /// Retrieves user details based on provided login credentials.
+        /// GEnerates JWT Token for User Logged in.
         /// </summary>
-        /// <param name="username">The username for which details are requested.</param>
-        /// <param name="encryptedPassword">The encrypted password for which details are requested.</param>
-        /// <returns>The User object if found, otherwise null.</returns>
-        public usr01 GetUserDetails(string username, string encryptedPassword)
-        {
-            using (IDbConnection db = MyDbContext.CreateConnection())
-            {
-                usr01 objUsr01 = db.Single<usr01>(usr => usr.r01f03 == username && usr.r01f04 == encryptedPassword);
-                return objUsr01;
-            }
-        }
-
-        public string GenerateJwtToken(string username)
+        /// <param name="username">username.</param>
+        /// <returns>String of JWT Token.</returns>
+        public string GenerateJwtToken(string username, int userId, string role)
         {
             // Define token parameters
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -59,7 +55,9 @@ namespace Historical_Events.User_Validation
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-            new Claim(ClaimTypes.Name, username)
+                    new Claim(ClaimTypes.Name, username),
+                    new Claim("Id", userId.ToString()), // Add user ID claim
+                    new Claim(ClaimTypes.Role, role) // Add user ID claim
                 }),
                 Expires = DateTime.UtcNow.AddHours(1), // Token expiration time
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -71,7 +69,7 @@ namespace Historical_Events.User_Validation
 
             return tokenString;
         }
-        
+
         /// <summary>
         /// Validate token & if token is validated then add claims to current user 
         /// </summary>
@@ -79,11 +77,11 @@ namespace Historical_Events.User_Validation
         /// <returns></returns>
         public bool ValidateJwtToken(string jwtToken)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("SecretKeyOfHistoricalEventsForJwtToken");
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            byte[] key = Encoding.ASCII.GetBytes("SecretKeyOfHistoricalEventsForJwtToken");
 
             // Token validation parameters
-            var validationParameters = new TokenValidationParameters
+            TokenValidationParameters validationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(key),
@@ -111,5 +109,7 @@ namespace Historical_Events.User_Validation
                 return false;
             }
         }
+
+        #endregion
     }
 }

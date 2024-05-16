@@ -10,6 +10,10 @@ namespace AES.BL
     public class BLTripleDES
     {
         #region Private Member
+
+        /// <summary>
+        /// Instance of Triple DES Encryption Service Provider.
+        /// </summary>
         private static TripleDESCryptoServiceProvider _objDes = new TripleDESCryptoServiceProvider();
         #endregion
 

@@ -5,16 +5,30 @@ using System.Collections.Generic;
 
 namespace Historical_Events.DL
 {
+    /// <summary>
+    /// Database class for managing users.
+    /// </summary>
     public class DbUsr01Context
     {
+        /// <summary>
+        /// Connection string.
+        /// </summary>
         private static string _connection;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DbUsr01Context"/> class.
+        /// </summary>
+        /// <param name="connectionString">Connection string of the database.</param>
         public DbUsr01Context(string connectionString)
         {
             _connection = connectionString;
         }
 
-        public List<usr01> GetAllUsers()
+        /// <summary>
+        /// Retrieves all users from the database.
+        /// </summary>
+        /// <returns>A list of all users.</returns>
+        public List<USR01> GetAllUsers()
         {
             string query = @"SELECT 
                                     r01f01, 
@@ -28,7 +42,12 @@ namespace Historical_Events.DL
             return GetUsersFromDatabase(query);
         }
 
-        public usr01 GetUserById(int id)
+        /// <summary>
+        /// Retrieves a user by their ID from the database.
+        /// </summary>
+        /// <param name="id">The ID of the user to retrieve.</param>
+        /// <returns>The user with the specified ID.</returns>
+        public USR01 GetUserById(int id)
         {
             string query = $@"SELECT 
                                     r01f01, 
@@ -40,12 +59,17 @@ namespace Historical_Events.DL
                                     usr01 
                               WHERE 
                                     r01f01 = {id};";
-            List<usr01> users = GetUsersFromDatabase(query);
+            List<USR01> users = GetUsersFromDatabase(query);
 
             return users.Count > 0 ? users[0] : null;
         }
 
-        private static List<usr01> GetUsersFromDatabase(string query)
+        /// <summary>
+        /// Retrieves users from the database based on the provided query.
+        /// </summary>
+        /// <param name="query">The SQL query to retrieve users.</param>
+        /// <returns>A list of users.</returns>
+        private static List<USR01> GetUsersFromDatabase(string query)
         {
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -58,13 +82,18 @@ namespace Historical_Events.DL
             }
         }
 
-        private static List<usr01> GetUsersFromDataReader(MySqlDataReader reader)
+        /// <summary>
+        /// Retrieves users from the provided data reader.
+        /// </summary>
+        /// <param name="reader">The data reader containing user data.</param>
+        /// <returns>A list of users.</returns>
+        private static List<USR01> GetUsersFromDataReader(MySqlDataReader reader)
         {
-            List<usr01> resultList = new List<usr01>();
+            List<USR01> resultList = new List<USR01>();
 
             while (reader.Read())
             {
-                usr01 objUser = new usr01
+                USR01 objUser = new USR01
                 {
                     r01f01 = Convert.ToInt32(reader["r01f01"]),
                     r01f02 = reader["r01f02"].ToString(),
@@ -78,6 +107,5 @@ namespace Historical_Events.DL
 
             return resultList;
         }
-
     }
 }

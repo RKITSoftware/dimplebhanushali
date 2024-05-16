@@ -10,12 +10,15 @@ namespace DBWithC_.Controllers
     [RoutePrefix("api")]
     public class CLProductsController : ApiController
     {
-        private static BLProduct _products;
+        /// <summary>
+        /// Instance of BLProduct.
+        /// </summary>
+        private BLProduct _products;
 
         /// <summary>
-        /// Static constructor to initialize the business logic class.
+        /// Public constructor to initialize the business logic class.
         /// </summary>
-        static CLProductsController()
+        public CLProductsController()
         {
             _products = new BLProduct();
         }
@@ -38,10 +41,6 @@ namespace DBWithC_.Controllers
         [HttpGet, Route("GetProduct/{id}")]
         public IHttpActionResult GetProduct([FromUri] int id)
         {
-            if (id == null)
-            {
-                return BadRequest($"Product With Id => {id} Not Found");
-            }
             return Ok(_products.GetProduct(id));
         }
 
@@ -53,10 +52,6 @@ namespace DBWithC_.Controllers
         [HttpPost, Route("AddProduct")]
         public IHttpActionResult AddProduct(prdct01 objProduct)
         {
-            if (objProduct == null)
-            {
-                return BadRequest($"Invalid Details");
-            }
             return Ok(_products.AddProduct(objProduct));
         }
 
@@ -69,7 +64,6 @@ namespace DBWithC_.Controllers
         [HttpPut, Route("EditProduct/{id}")]
         public IHttpActionResult EditProduct([FromBody] prdct01 objProduct)
         {
-           
             return Ok(_products.EditProduct(objProduct));
         }
 
@@ -81,10 +75,6 @@ namespace DBWithC_.Controllers
         [HttpDelete, Route("DeleteProduct/{id}")]
         public IHttpActionResult DeleteProduct([FromUri] int id)
         {
-            if (id == null)
-            {
-                return BadRequest("Please Provide valid id");
-            }
             return Ok(_products.DeleteProduct(id));
         }
     }

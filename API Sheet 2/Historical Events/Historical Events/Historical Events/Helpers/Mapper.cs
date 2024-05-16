@@ -3,8 +3,19 @@ using System.Linq;
 
 namespace Historical_Events.Helpers
 {
+    /// <summary>
+    /// Helper class for mapping properties between objects of different types.
+    /// </summary>
     public static class Mapper
     {
+        /// <summary>
+        /// Maps properties from a source object to a destination object.
+        /// </summary>
+        /// <typeparam name="TSource">The type of the source object.</typeparam>
+        /// <typeparam name="TDestination">The type of the destination object.</typeparam>
+        /// <param name="source">The source object from which to map properties.</param>
+        /// <param name="destination">The destination object to which properties will be mapped.</param>
+        /// <returns>The destination object with mapped properties.</returns>
         public static TDestination Map<TSource, TDestination>(this TSource source, TDestination destination)
         {
             if (destination == null)

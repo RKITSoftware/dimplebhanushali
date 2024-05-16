@@ -10,6 +10,19 @@ namespace LINQ_With_List.Controllers
     public class CLProductsController : ApiController
     {
         /// <summary>
+        /// Instance of BLProduct with List.
+        /// </summary>
+        private BLProductList _oblBlProd;
+
+        /// <summary>
+        /// Constructor for Initialising New Instance of BLProduct.
+        /// </summary>
+        public CLProductsController()
+        {
+            _oblBlProd = new BLProductList();
+        }
+
+        /// <summary>
         /// Gets all products from the List.
         /// </summary>
         /// <returns>All products in the List.</returns>
@@ -17,7 +30,7 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist")]
         public IHttpActionResult GetAllProducts()
         {
-            return Ok(BLProductList.GetProducts());
+            return Ok(_oblBlProd.GetProducts());
         }
 
         /// <summary>
@@ -31,7 +44,7 @@ namespace LINQ_With_List.Controllers
         public IHttpActionResult GetSortedProducts(string columnName, bool ascending = true)
         {
 
-            return Ok(BLProductList.GetSortedProducts(columnName, ascending));
+            return Ok(_oblBlProd.GetSortedProducts(columnName, ascending));
         }
 
         /// <summary>
@@ -43,7 +56,7 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/{id}")]
         public IHttpActionResult GetProductById(int id)
         {
-            Product product = BLProductList.GetProductById(id);
+            Product product = _oblBlProd.GetProductById(id);
 
             if (product != null)
             {
@@ -64,7 +77,7 @@ namespace LINQ_With_List.Controllers
         {
 
             newProduct.Id = BLProductList.ProductsList.Count + 1;
-            BLProductList.AddProduct(newProduct);
+            _oblBlProd.AddProduct(newProduct);
             return Created(Request.RequestUri + "/" + newProduct.Id, newProduct);
 
         }
@@ -80,7 +93,7 @@ namespace LINQ_With_List.Controllers
         public IHttpActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
         {
 
-            BLProductList.UpdateProduct(id, updatedProduct);
+            _oblBlProd.UpdateProduct(id, updatedProduct);
             return Ok(updatedProduct);
 
         }
@@ -94,7 +107,7 @@ namespace LINQ_With_List.Controllers
         [Route("api/productslist/{id}")]
         public IHttpActionResult DeleteProduct(int id)
         {
-            BLProductList.DeleteProduct(id);
+            _oblBlProd.DeleteProduct(id);
             return Ok($"Product with ID {id} has been deleted.");
 
         }

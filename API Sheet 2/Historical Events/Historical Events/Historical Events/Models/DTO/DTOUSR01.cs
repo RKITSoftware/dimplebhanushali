@@ -3,12 +3,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Historical_Events.Models.DTO
 {
+    /// <summary>
+    /// Entity Representing DTO Model for User.
+    /// </summary>
     public class DTOUSR01
     {
         /// <summary>
         /// User Id
         /// </summary>
         [JsonProperty("r01101")]
+        [ServiceStack.DataAnnotations.PrimaryKey, ServiceStack.DataAnnotations.AutoIncrement]
         [Required(ErrorMessage = "User id is required")]
         [Range(0, int.MaxValue, ErrorMessage = "Invalid user id")]
         public int r01f01 { get; set; }
@@ -32,6 +36,7 @@ namespace Historical_Events.Models.DTO
         /// </summary>
         [JsonProperty("r01104")]
         [Required(ErrorMessage = "Emailid is required")]
+        //[DataType(DataType.EmailAddress)]
         [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email id")]
         public string r01f04 { get; set; }
 
@@ -40,7 +45,7 @@ namespace Historical_Events.Models.DTO
         /// </summary>
         [JsonProperty("r01105")]
         [Required(ErrorMessage = "Mobile number is required")]
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "Invalid mobile number")]
+        [RegularExpression(@"^[6-9]\d{9}$", ErrorMessage = "Invalid mobile number")]
         public string r01f05 { get; set; }
 
         /// <summary>

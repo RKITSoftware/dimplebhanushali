@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing.Printing;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -11,6 +10,9 @@ namespace AES.BL
     public class BLRSA
     {
         #region Private Member
+        /// <summary>
+        /// Instance of RSA Encryption Service Provider.
+        /// </summary>
         private static RSACryptoServiceProvider _objRsa = new RSACryptoServiceProvider();
         #endregion
 

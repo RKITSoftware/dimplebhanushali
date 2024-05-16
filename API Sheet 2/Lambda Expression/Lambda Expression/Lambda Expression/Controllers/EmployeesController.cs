@@ -11,6 +11,9 @@ namespace Lambda_Expression.Controllers
     [RoutePrefix("api")]
     public class EmployeesController : ApiController
     {
+        /// <summary>
+        /// Instance of BLEmployee.
+        /// </summary>
         private BLEmployee _employees = new BLEmployee();
 
         /// <summary>

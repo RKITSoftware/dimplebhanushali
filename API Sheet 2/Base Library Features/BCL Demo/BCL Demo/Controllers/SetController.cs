@@ -13,6 +13,9 @@ namespace BCL_Demo.Controllers
     [RoutePrefix("api/set")]
     public class SetController : ApiController
     {
+        /// <summary>
+        /// Instance of Referenced Library.
+        /// </summary>
         private static ListToSet<dynamic> _mySet;
         
         /// <summary>

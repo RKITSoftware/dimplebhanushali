@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Historical_Events.Models
 {
     [Table("hstevt01")]
-    public class hstevt01
+    public class HSTEVT01
     {
         /// <summary>
         /// Id

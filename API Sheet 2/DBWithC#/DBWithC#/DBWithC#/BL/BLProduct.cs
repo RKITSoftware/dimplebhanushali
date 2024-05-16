@@ -12,14 +12,17 @@ namespace DBWithC_.BL
     public class BLProduct
     {
         #region Private Member
-        private static string _myConnection;
+        /// <summary>
+        /// Connection String
+        /// </summary>
+        private string _myConnection;
         #endregion
 
         #region Constructor
         /// <summary>
         /// Static constructor to initialize the database connection.
         /// </summary>
-        static BLProduct()
+        public BLProduct()
         {
             _myConnection = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
         }

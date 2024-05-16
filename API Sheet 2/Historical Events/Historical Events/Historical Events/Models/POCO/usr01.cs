@@ -1,16 +1,17 @@
-﻿using ServiceStack.DataAnnotations;
+﻿using Historical_Events.Helpers;
+using ServiceStack.DataAnnotations;
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Historical_Events.Models
 {
     [Alias("usr01")]
-    public class usr01
+    public class USR01
     {
         /// <summary>
         /// User Id
         /// </summary>
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
+
         public int r01f01 { get; set; }
 
         /// <summary>
@@ -36,17 +37,23 @@ namespace Historical_Events.Models
         /// <summary>
         /// Password
         /// </summary>
-        public string r01f06 { get; set; }  
+        public string r01f06 { get; set; }
 
         /// <summary>
         /// Roles
         /// </summary>
-        public string r01f07 { get; set; }
+        public string r01f07 { get; set; } = enmRoles.U.ToString();
 
+        /// <summary>
+        /// CreatedAt
+        /// </summary>
         [IgnoreOnUpdate]
-        public DateTime CreatedAt { get; set; }
+        public DateTime r01f08 { get; set; }
 
+        /// <summary>
+        /// UpdatedAt
+        /// </summary>
         [IgnoreOnInsert]
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? r01f09 { get; set; }
     }
 }

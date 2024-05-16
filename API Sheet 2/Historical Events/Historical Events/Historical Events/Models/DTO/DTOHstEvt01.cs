@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Historical_Events.Models.DTO
 {
+    /// <summary>
+    /// Entity Representing DTO Model for HIstorical Events.
+    /// </summary>
     public class DTOHstEvt01
     {
         /// <summary>

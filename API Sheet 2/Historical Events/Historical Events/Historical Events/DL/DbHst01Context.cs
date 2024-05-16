@@ -2,19 +2,34 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 
 namespace Historical_Events.DL
 {
+    /// <summary>
+    /// DB Class for Handling Historical Events.
+    /// </summary>
     public class DbHst01Context
     {
         #region Private Members
         
+        /// <summary>
+        /// Connection String
+        /// </summary>
         private readonly string _connection;
+
+        /// <summary>
+        /// Page Size.
+        /// </summary>
+        private readonly int _pageSize = 10;
         
         #endregion
 
         #region Public Members
         
+        /// <summary>
+        /// Instance of Response Class.
+        /// </summary>
         public Response response;
         
         #endregion
@@ -34,22 +49,36 @@ namespace Historical_Events.DL
 
         #region Public Methods
 
-        public List<hstevt01> GetAllEvents()
+        /// <summary>
+        /// Retrieves a paginated list of historical events from the database.
+        /// </summary>
+        /// <param name="pageNumber">The page number (1-based).</param>
+        /// <returns>A paginated list of historical events.</returns>
+        public List<HSTEVT01> GetAllEvents(int pageNumber)
         {
-            string query = @"SELECT 
-                                    t01f01, 
-                                    t01f02, 
-                                    t01f03, 
-                                    t01f04 
-                            FROM 
-                                    hstevt01";
+            int offset = (pageNumber - 1) * _pageSize; // Calculate the offset
 
-            List<hstevt01> data = GetHistoricalEventsFromDatabase(query);
+            string query = $@"SELECT 
+                            t01f01, 
+                            t01f02, 
+                            t01f03, 
+                            t01f04 
+                    FROM 
+                            hstevt01 
+                    LIMIT
+                            {_pageSize} OFFSET {offset};"; // Apply pagination
+
+            List<HSTEVT01> data = GetHistoricalEventsFromDatabase(query);
 
             return data;
         }
 
-        public hstevt01 GetEventById(int id)
+        /// <summary>
+        /// Retrieves a historical event by its ID from the database.
+        /// </summary>
+        /// <param name="id">The ID of the historical event to retrieve.</param>
+        /// <returns>The historical event if found; otherwise, null.</returns>
+        public HSTEVT01 GetEventById(int id)
         {
             string query = $"SELECT " +
                                     $"t01f01, " +
@@ -60,23 +89,35 @@ namespace Historical_Events.DL
                                     $"hstevt01 " +
                             $"WHERE " +
                                    $"t01f01 = {id};";
-            List<hstevt01> events = GetHistoricalEventsFromDatabase(query);
+            List<HSTEVT01> events = GetHistoricalEventsFromDatabase(query);
 
             return events.Count > 0 ? events[0] : null;
         }
 
-        public List<hstevt01> SearchEvents(int? startYear, int? endYear, string startDate, string endDate, string keyword)
+        /// <summary>
+        /// Retrieves a paginated list of historical events based on specified criteria.
+        /// </summary>
+        /// <param name="pageNumber">The page number (1-based).</param>
+        /// <param name="startYear">The start year filter.</param>
+        /// <param name="endYear">The end year filter.</param>
+        /// <param name="startDate">The start date filter.</param>
+        /// <param name="endDate">The end date filter.</param>
+        /// <param name="keyword">The keyword to search for.</param>
+        /// <returns>A paginated list of historical events matching the criteria.</returns>
+        public List<HSTEVT01> SearchEvents(int pageNumber, int? startYear, int? endYear, string startDate, string endDate, string keyword)
         {
+            int offset = (pageNumber - 1) * _pageSize; // Calculate the offset
+
             // Construct the base query
-            string query = @"SELECT 
-                                    t01f01, 
-                                    t01f02, 
-                                    t01f03, 
-                                    t01f04 
-                            FROM 
-                                    hstevt01 
-                            WHERE 
-                                    1 = 1";
+            string query = $@"SELECT 
+                            t01f01, 
+                            t01f02, 
+                            t01f03, 
+                            t01f04 
+                    FROM 
+                            hstevt01 
+                    WHERE 
+                            1 = 1";
 
             // Append conditions based on parameters
             if (startYear.HasValue && endYear.HasValue)
@@ -94,12 +135,20 @@ namespace Historical_Events.DL
                 query += $" AND t01f04 LIKE '%{keyword}%'";
             }
 
-            List<hstevt01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            query += $" LIMIT {_pageSize} OFFSET {offset}"; // Apply pagination
+
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
 
             return lstHstEvt01;
         }
 
-        public List<hstevt01> GetEventsByCategory(string category)
+
+        /// <summary>
+        /// Retrieves historical events belonging to a specific category.
+        /// </summary>
+        /// <param name="category">The category to filter by.</param>
+        /// <returns>A list of historical events in the specified category.</returns>
+        public List<HSTEVT01> GetEventsByCategory(string category)
         {
             string query = $@"SELECT 
                                     t01f01, 
@@ -111,11 +160,16 @@ namespace Historical_Events.DL
                             WHERE 
                                     t01f03 = '{category}';";
 
-            List<hstevt01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
         }
 
-        public List<hstevt01> GetLatestEvents(int count)
+        /// <summary>
+        /// Retrieves the latest historical events up to the specified count.
+        /// </summary>
+        /// <param name="count">The number of latest events to retrieve.</param>
+        /// <returns>A list of the latest historical events.</returns>
+        public List<HSTEVT01> GetLatestEvents(int count)
         {
             string query = $@"SELECT 
                                     t01f01, 
@@ -129,11 +183,17 @@ namespace Historical_Events.DL
                             DESC 
                                 LIMIT {count};";
 
-            List<hstevt01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
         }
 
-        public List<hstevt01> GetEventsByDateRange(string startDate, string endDate)
+        /// <summary>
+        /// Retrieves historical events within the specified date range.
+        /// </summary>
+        /// <param name="startDate">The start date of the range.</param>
+        /// <param name="endDate">The end date of the range.</param>
+        /// <returns>A list of historical events within the date range.</returns>
+        public List<HSTEVT01> GetEventsByDateRange(string startDate, string endDate)
         {
             string query = $@"SELECT 
                                     t01f01, 
@@ -148,11 +208,16 @@ namespace Historical_Events.DL
                                     '{startDate}' AND '{endDate}';";
 
 
-            List<hstevt01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
         }
 
-        public List<hstevt01> GetEventsByKeyword(string keyword)
+        /// <summary>
+        /// Retrieves historical events containing the specified keyword.
+        /// </summary>
+        /// <param name="keyword">The keyword to search for.</param>
+        /// <returns>A list of historical events containing the keyword.</returns>
+        public List<HSTEVT01> GetEventsByKeyword(string keyword)
         {
             string query = $@"SELECT 
                                     t01f01, 
@@ -164,10 +229,14 @@ namespace Historical_Events.DL
                             WHERE 
                                     t01f04 LIKE '{keyword}';";
 
-            List<hstevt01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
         }
 
+        /// <summary>
+        /// Retrieves unique categories of historical events.
+        /// </summary>
+        /// <returns>A list of unique categories.</returns>
         public List<string> GetUniqueCategories()
         {
             string query = @"SELECT 
@@ -187,129 +256,47 @@ namespace Historical_Events.DL
             }
         }
 
-        //public Response CreateHistoricalEvent(hstevt01 newEvent)
-        //{
-        //    string query = @"INSERT INTO 
-        //                            hstevt01 
-        //                                    (t01f02, 
-        //                                    t01f03, 
-        //                                    t01f04) 
-        //                    VALUES 
-        //                                    (@t01f02, 
-        //                                    @t01f03, 
-        //                                    @t01f04);";
+        /// <summary>
+        /// Retrieves historical events that occurred on the current date.
+        /// </summary>
+        /// <returns>A list of historical events for today.</returns>
+        public List<HSTEVT01> GetEventsForToday(int pageNumber)
+        {
+            // Calculate the offset based on the page number and page size
+            int offset = (pageNumber - 1) * _pageSize;
 
-        //    using (MySqlConnection connection = new MySqlConnection(_connection))
-        //    {
-        //        connection.Open();
+            // Get today's day and month in the format "MMdd"
+            string today = DateTime.Today.ToString("MMdd");
 
-        //        using (MySqlCommand insertCommand = new MySqlCommand(query, connection))
-        //        {
-        //            insertCommand.Parameters.AddWithValue("@t01f02", newEvent.t01f02);
-        //            insertCommand.Parameters.AddWithValue("@t01f03", newEvent.t01f03);
-        //            insertCommand.Parameters.AddWithValue("@t01f04", newEvent.t01f04);
+            // Construct the query to retrieve events for today's day and month
+            string query = $@"SELECT 
+                        t01f01, 
+                        t01f02, 
+                        t01f03, 
+                        t01f04 
+                    FROM 
+                        hstevt01 
+                    WHERE 
+                        SUBSTRING(t01f02, 5) = '{today}' -- Matches day and month only
+                    LIMIT
+                        {_pageSize} OFFSET {offset};";
 
-        //            insertCommand.ExecuteNonQuery();
-        //        }
-        //    }
+            // Retrieve events from the database based on the constructed query
+            List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
+            return lstHstEvt01;
+        }
 
-        //    Response response = new Response
-        //    {
-        //        isError = false,
-        //        Message = " Created history event",
-        //        Data = null
-        //    };
 
-        //    return response;
-        //}
-
-        //public Response EditHistoricalEvent(int id, hstevt01 updatedEvent)
-        //{
-        //    string query = $"SELECT t01f01, t01f02, t01f03, t01f04  FROM hstevt01 WHERE t01f01 = {id};";
-        //    List<hstevt01> existingEvents = GetHistoricalEventsFromDatabase(query);
-
-        //    if (existingEvents.Count == 0)
-        //    {
-        //        throw new Exception("Event not found");
-        //    }
-
-        //    hstevt01 existingEvent = existingEvents[0];
-
-        //    // Update event properties
-        //    existingEvent.t01f02 = updatedEvent.t01f02;
-        //    existingEvent.t01f03 = updatedEvent.t01f03;
-        //    existingEvent.t01f04 = updatedEvent.t01f04;
-
-        //    // Execute the update query
-        //    query = @"UPDATE 
-        //                        hstevt01 
-        //            SET 
-        //                        t01f02 = @t01f02,  
-        //                        t01f03 = @t01f03,  
-        //                        t01f04 = @t01f04  
-        //            WHERE 
-        //                        t01f01 = @Id;";
-
-        //    using (MySqlConnection connection = new MySqlConnection(_connection))
-        //    {
-        //        connection.Open();
-
-        //        using (MySqlCommand updateCommand = new MySqlCommand(query, connection))
-        //        {
-        //            updateCommand.Parameters.AddWithValue("@t01f02", existingEvent.t01f02);
-        //            updateCommand.Parameters.AddWithValue("@t01f03", existingEvent.t01f03);
-        //            updateCommand.Parameters.AddWithValue("@t01f04", existingEvent.t01f04);
-        //            updateCommand.Parameters.AddWithValue("@Id", id);
-
-        //            updateCommand.ExecuteNonQuery();
-        //        }
-        //    }
-
-        //    Response response = new Response
-        //    {
-        //        isError = false,
-        //        Message = "updated successfully",
-        //        Data = null
-        //    };
-
-        //    return response;
-        //}
-
-        //public Response DeleteHistoricalEvent(int id)
-        //{
-        //    string query = @"DELETE FROM 
-        //                                    hstevt01 
-        //                    WHERE 
-        //                                    t01f01 = @Id;";
-        //    using (MySqlConnection connection = new MySqlConnection(_connection))
-        //    {
-        //        connection.Open();
-
-        //        using (MySqlCommand deleteCommand = new MySqlCommand(query, connection))
-        //        {
-        //            deleteCommand.Parameters.AddWithValue("@Id", id);
-
-        //            int rowsAffected = deleteCommand.ExecuteNonQuery();
-        //            if (rowsAffected == 0)
-        //            {
-        //                throw new Exception("Event not found");
-        //            }
-        //        }
-        //    }
-
-        //    Response response = new Response
-        //    {
-        //        isError = false,
-        //        Message = "Deleted successfully",
-        //        Data = null
-        //    };
-        //    return response;
-        //}
         #endregion
 
         #region Private Methods
 
-        private List<hstevt01> GetHistoricalEventsFromDatabase(string query)
+        /// <summary>
+        /// Retrieves historical events from the database based on the provided query.
+        /// </summary>
+        /// <param name="query">The SQL query to retrieve historical events.</param>
+        /// <returns>A list of historical events.</returns>
+        private List<HSTEVT01> GetHistoricalEventsFromDatabase(string query)
         {
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -322,15 +309,20 @@ namespace Historical_Events.DL
             }
         }
 
-        private List<hstevt01> GetHistoricalEventsFromDatabase(MySqlCommand command)
+        /// <summary>
+        /// Retrieves historical events from the database using the provided MySqlCommand object.
+        /// </summary>
+        /// <param name="command">The MySqlCommand object to execute.</param>
+        /// <returns>A list of historical events.</returns>
+        private List<HSTEVT01> GetHistoricalEventsFromDatabase(MySqlCommand command)
         {
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                List<hstevt01> resultList = new List<hstevt01>();
+                List<HSTEVT01> resultList = new List<HSTEVT01>();
 
                 while (reader.Read())
                 {
-                    hstevt01 historicalEvent = new hstevt01
+                    HSTEVT01 historicalEvent = new HSTEVT01
                     {
                         t01f01 = Convert.ToInt32(reader["t01f01"]),
                         t01f02 = Convert.ToInt32(reader["t01f02"]),
@@ -345,6 +337,11 @@ namespace Historical_Events.DL
             }
         }
 
+        /// <summary>
+        /// Retrieves categories from the database using the provided MySqlCommand object.
+        /// </summary>
+        /// <param name="command">The MySqlCommand object to execute.</param>
+        /// <returns>A list of category names.</returns>
         private List<string> GetCategoriesFromDatabase(MySqlCommand command)
         {
             using (MySqlDataReader reader = command.ExecuteReader())

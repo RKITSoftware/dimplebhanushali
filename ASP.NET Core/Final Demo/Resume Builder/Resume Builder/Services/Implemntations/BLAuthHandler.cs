@@ -2,7 +2,6 @@
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Models;
 using Resume_Builder.Models.POCO;
-using ServiceStack.Data;
 using ServiceStack.OrmLite;
 
 namespace Resume_Builder.BL.Services

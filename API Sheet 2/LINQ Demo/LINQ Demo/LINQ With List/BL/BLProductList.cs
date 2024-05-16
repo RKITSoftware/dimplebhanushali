@@ -34,7 +34,7 @@ namespace LINQ_With_List.BL
         /// Gets a copy of all products in List.
         /// </summary>
         /// <returns>A List containing all products.</returns>
-        public static List<Product> GetProducts()
+        public List<Product> GetProducts()
         {
             return ProductsList;
         }
@@ -45,7 +45,7 @@ namespace LINQ_With_List.BL
         /// <param name="columnName">Name of the property to sort by.</param>
         /// <param name="ascending">True for ascending order, False for descending order.</param>
         /// <returns>A sorted List.</returns>
-        public static List<Product> GetSortedProducts(string columnName, bool ascending = true)
+        public List<Product> GetSortedProducts(string columnName, bool ascending = true)
         {
             // Use LINQ to sort products based on the specified column and order
             var sortedProducts = ascending
@@ -60,7 +60,7 @@ namespace LINQ_With_List.BL
         /// </summary>
         /// <param name="id">The ID of the product to retrieve.</param>
         /// <returns>A Product representing the product or null if not found.</returns>
-        public static Product GetProductById(int id)
+        public Product GetProductById(int id)
         {
             return ProductsList.FirstOrDefault(p => p.Id == id);
         }
@@ -69,7 +69,7 @@ namespace LINQ_With_List.BL
         /// Adds a new product to the List.
         /// </summary>
         /// <param name="newProduct">The new product to add.</param>
-        public static void AddProduct(Product newProduct)
+        public void AddProduct(Product newProduct)
         {
             if (newProduct != null)
             {
@@ -86,7 +86,7 @@ namespace LINQ_With_List.BL
         /// </summary>
         /// <param name="id">The ID of the product to update.</param>
         /// <param name="updatedProduct">The updated product data.</param>
-        public static void UpdateProduct(int id, Product updatedProduct)
+        public void UpdateProduct(int id, Product updatedProduct)
         {
             if (updatedProduct != null)
             {
@@ -107,11 +107,13 @@ namespace LINQ_With_List.BL
         /// Deletes a product from the List.
         /// </summary>
         /// <param name="id">The ID of the product to delete.</param>
-        public static void DeleteProduct(int id)
+        public void DeleteProduct(int id)
         {
             // Remove the product
             ProductsList.RemoveAll(p => p.Id == id);
         }
+
+        //// int list Except
 
         #endregion
 
@@ -123,7 +125,7 @@ namespace LINQ_With_List.BL
         /// <param name="obj">The object from which to retrieve the property value.</param>
         /// <param name="propertyName">The name of the property whose value is to be retrieved.</param>
         /// <returns>The value of the specified property, or null if the property is not found.</returns>
-        private static object GetPropertyValue(object obj, string propertyName)
+        private object GetPropertyValue(object obj, string propertyName)
         {
             return obj.GetType().GetProperty(propertyName)?.GetValue(obj, null);
         }

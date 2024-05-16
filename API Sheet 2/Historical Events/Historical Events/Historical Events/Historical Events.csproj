@@ -217,13 +217,14 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Basic Authorisation\BasicAuthenticationAttribute.cs" />
+    <Compile Include="Basic Authorisation\BasicAuthenticationFilter.cs" />
     <Compile Include="Basic Authorisation\BasicAuthorisationAttribute.cs" />
     <Compile Include="BL\BLAES.cs" />
     <Compile Include="BL\BLHistory.cs" />
     <Compile Include="BL\BLUser.cs" />
-    <Compile Include="Controllers\HistoryController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\CLAdminController.cs" />
+    <Compile Include="Controllers\CLHistoryController.cs" />
+    <Compile Include="Controllers\CLUserController.cs" />
     <Compile Include="Data\MyDbContext.cs" />
     <Compile Include="DL\DbHst01Context.cs" />
     <Compile Include="DL\DbUsr01Context.cs" />
@@ -232,11 +233,12 @@
     </Compile>
     <Compile Include="Helpers\enmMessageExtensions.cs" />
     <Compile Include="Helpers\Mapper.cs" />
+    <Compile Include="Helpers\Utility.cs" />
     <Compile Include="Models\DTO\DTOHstEvt01.cs" />
     <Compile Include="Models\DTO\DTOUSR01.cs" />
-    <Compile Include="Models\POCO\hstevt01.cs" />
+    <Compile Include="Models\POCO\HSTEVT01.cs" />
     <Compile Include="Models\Response.cs" />
-    <Compile Include="Models\POCO\usr01.cs" />
+    <Compile Include="Models\POCO\USR01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BL\BLValidateUser.cs" />
   </ItemGroup>

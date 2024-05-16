@@ -2,6 +2,7 @@
 using ServiceStack.OrmLite;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ORMDemo.BL
 {
@@ -10,6 +11,8 @@ namespace ORMDemo.BL
     /// </summary>
     public class BLProduct
     {
+        //// All ORM Query Methods.
+
         #region Public Methods
         /// <summary>
         /// Retrieves all products from the database.
@@ -17,7 +20,7 @@ namespace ORMDemo.BL
         /// <returns>List of products.</returns>
         public List<prdct01> GetAllProducts()
         {
-            using (var db = Connection.connectionFactory.OpenDbConnection())
+            using (IDbConnection db = Connection.connectionFactory.OpenDbConnection())
             {
                 if (db.TableExists<prdct01>())
                 {
@@ -58,7 +61,7 @@ namespace ORMDemo.BL
         /// <returns>The product with the specified identifier.</returns>
         public static prdct01 GetProduct(int id)
         {
-            using (var db = Connection.connectionFactory.OpenDbConnection())
+            using (IDbConnection db = Connection.connectionFactory.OpenDbConnection())
             {
                 if (db.TableExists<prdct01>())
                 {
@@ -77,18 +80,32 @@ namespace ORMDemo.BL
         /// <param name="id">Identifier of the product to be updated.</param>
         /// <param name="objProduct">Updated product data.</param>
         /// <returns>The updated product.</returns>
-        public prdct01 EditProduct(int id, prdct01 objProduct)
+        public prdct01 EditProduct(prdct01 updatedFields)
         {
-            using (var db = Connection.connectionFactory.OpenDbConnection())
+            using (IDbConnection db = Connection.connectionFactory.OpenDbConnection())
             {
                 if (db.TableExists<prdct01>())
                 {
-                    prdct01 objExistingProduct = db.SingleById<prdct01>(id);
-                    objExistingProduct.t01f02 = objProduct.t01f02;
-                    objExistingProduct.t01f03 = objProduct.t01f03;
+                    prdct01 existingProduct = db.SingleById<prdct01>(updatedFields.t01f01);
+                    if (existingProduct != null)
+                    {
+                        //db.UpdateOnlyFields(existingProduct,
+                        //     new[] { nameof(prdct01.t01f02), nameof(prdct01.t01f03) },
+                        //     q => q.t01f01 == existingProduct.t01f01);
 
-                    db.Update(objExistingProduct);
-                    return objExistingProduct;
+                        // Update only specific fields
+                        db.UpdateOnlyFields<prdct01>(
+                            existingProduct,
+                            new[] { nameof(prdct01.t01f02), nameof(prdct01.t01f03) },
+                            q => q.t01f01 == updatedFields.t01f01);
+
+
+                        return existingProduct;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Product not found");
+                    }
                 }
                 else
                 {
@@ -104,7 +121,7 @@ namespace ORMDemo.BL
         /// <returns>The removed product.</returns>
         public prdct01 RemoveProduct(int id)
         {
-            using (var db = Connection.connectionFactory.OpenDbConnection())
+            using (IDbConnection db = Connection.connectionFactory.OpenDbConnection())
             {
                 if (db.TableExists<prdct01>())
                 {
@@ -118,6 +135,8 @@ namespace ORMDemo.BL
                 }
             }
         }
+
+
         #endregion
     }
 }

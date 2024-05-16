@@ -2,6 +2,11 @@ using System.Web.Http;
 using WebActivatorEx;
 using Historical_Events;
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
+using System.Collections.Generic;
+using System.Web.Http.Description;
+using System.Linq;
+using Historical_Events.Basic_Authorisation;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -57,11 +62,20 @@ namespace Historical_Events
                         // at the document or operation level to indicate which schemes are required for an operation. To do this,
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
-                        //
+
+                        //c.BasicAuth("basic")
+                        //    .Description("Basic HTTP Authentication");
+
+                        c.ApiKey("BearerToken")
+                                         .Description("Bearer Token Authentication")
+                                         .Name("Authorization")
+                                         .In("header");
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -250,6 +264,39 @@ namespace Historical_Events
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+    }
+
+    /// <summary>
+    /// Class implementing operation filter for assigning OAuth2 security requirements.
+    /// </summary>
+    public class AssignOAuth2SecurityRequirements : IOperationFilter
+    {
+        /// <summary>
+        /// Apply OAuth2 security requirements to the operation based on the presence of BasicAuthentication or BearerAuthentication attributes.
+        /// </summary>
+        /// <param name="operation">The operation to apply security requirements.</param>
+        /// <param name="schemaRegistry">The schema registry.</param>
+        /// <param name="apiDescription">The API description.</param>
+        public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+        {
+
+            // Check if the method has the BearerAuth attribute
+            var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthenticationFilter>().Any();
+
+            if (bearerAuthRequired)
+            {
+                // Apply Bearer Authentication
+                if (operation.security == null)
+                    operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                var bearerAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "BearerToken", new string[] { } }
+                    };
+
+                operation.security.Add(bearerAuth);
+            }
         }
     }
 }

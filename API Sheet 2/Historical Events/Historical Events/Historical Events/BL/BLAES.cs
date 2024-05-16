@@ -4,12 +4,43 @@ using System.Text;
 
 namespace Historical_Events.BL
 {
+    /// <summary>
+    /// Class For Handling CryptoGraphy.
+    /// </summary>
     public class BLAES
     {
-        #region Static Members 
+        #region Private Members 
 
-        // AES Crypto Service Provider class implements logic of AES Algorithm
-        private static AesCryptoServiceProvider _objAes = new AesCryptoServiceProvider();
+        /// <summary>
+        /// AES Crypto Service Provider class implements logic of AES Algorithm
+        /// </summary>
+        private readonly AesCryptoServiceProvider _aes;
+
+        /// <summary>
+        /// key for AES algorithm
+        /// </summary>
+        private readonly byte[] key = Encoding.UTF8.GetBytes("IamPrivateKeyofExpenseTracker123");
+
+        /// <summary>
+        /// initial vector for AES algorithm
+        /// </summary>
+        private readonly byte[] iv = Encoding.UTF8.GetBytes("IamInitialVector");
+
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Provide Instance to class
+        /// </summary>
+        public BLAES()
+        {
+            _aes = new AesCryptoServiceProvider
+            {
+                Key = key,
+                IV = iv
+            };
+        }
 
         #endregion
 
@@ -20,13 +51,13 @@ namespace Historical_Events.BL
         /// </summary>
         /// <param name="plainText"> Plain text in base64 string </param>
         /// <returns> Cipher Text in base64 string </returns>
-        public static string Encrypt(string plainText)
+        public string Encrypt(string plainText)
         {
             // String to bytes
             byte[] plainBytes = Encoding.UTF8.GetBytes(plainText);
 
             // Generate Key & Initilize Vector (IV)
-            using (ICryptoTransform encryptor = _objAes.CreateEncryptor())
+            using (ICryptoTransform encryptor = _aes.CreateEncryptor())
             {
                 // TransformFinalBlock method encrypts or decrypts data 
                 // O is offset -> Means plaintext starting from begining
@@ -40,16 +71,16 @@ namespace Historical_Events.BL
 
         /// <summary>
         /// Decryption of cipher text to plain text
-        /// </summary> |
+        /// </summary>
         /// <param name="cipherText"> Cipher text in base64 string </param>
         /// <returns> Plain text in UTF8 string </returns>
-        public static string Decrypt(string cipherText)
+        public string Decrypt(string cipherText)
         {
             // string to bytes
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
 
             // Uses key & Initialize Vector (IV)
-            using (ICryptoTransform decryptor = _objAes.CreateDecryptor())
+            using (ICryptoTransform decryptor = _aes.CreateDecryptor())
             {
                 // TransformFinalBlock method encrypts or decrypts data from region of the data 
                 // O is offset -> Means cipherText starting from begining

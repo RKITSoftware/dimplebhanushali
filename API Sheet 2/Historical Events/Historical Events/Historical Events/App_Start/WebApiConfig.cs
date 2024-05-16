@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Historical_Events.Basic_Authorisation;
 using System.Web.Http;
 
 namespace Historical_Events
@@ -13,6 +11,8 @@ namespace Historical_Events
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            //config.Filters.Add(new BasicAuthenticationFilter());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

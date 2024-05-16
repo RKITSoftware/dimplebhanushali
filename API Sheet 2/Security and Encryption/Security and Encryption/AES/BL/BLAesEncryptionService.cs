@@ -4,11 +4,16 @@ using System.Text;
 
 namespace AES.BL
 {
+    /// <summary>
+    /// AES Encryption Class For Using Encryption Decryption.
+    /// </summary>
     public class BLAesEncryptionService
     {
         #region Static Members 
 
-        // AES Crypto Service Provider class implements logic of AES Algorithm
+        /// <summary>
+        /// Instance of AES Encryption Service Provider.
+        /// </summary>
         private static AesCryptoServiceProvider _objAes = new AesCryptoServiceProvider();
 
         #endregion

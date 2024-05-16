@@ -16,6 +16,10 @@ namespace LINQ_Demo.BL
         public static DataTable productsTable;
 
         /// <summary>
+        /// DataTable to store Orders data.
+        /// </summary>
+        public static DataTable ordersTable;
+        /// <summary>
         /// Static constructor to initialize DataTable and add sample data.
         /// </summary>
         static BLProducts()
@@ -31,6 +35,18 @@ namespace LINQ_Demo.BL
             productsTable.Rows.Add(2, "Book", "Books", 19.99m);
             productsTable.Rows.Add(3, "Smartphone", "Electronics", 599.99m);
             productsTable.Rows.Add(4, "Chair", "Furniture", 49.99m);
+
+
+            // Initialize Orders DataTable and add some sample data
+            ordersTable = new DataTable("Orders");
+            ordersTable.Columns.Add("OrderId", typeof(int));
+            ordersTable.Columns.Add("ProductId", typeof(int));
+            ordersTable.Columns.Add("Quantity", typeof(int));
+
+            ordersTable.Rows.Add(1, 1, 2); // OrderId: 1, ProductId: 1, Quantity: 2
+            ordersTable.Rows.Add(2, 2, 3); // OrderId: 2, ProductId: 2, Quantity: 3
+            ordersTable.Rows.Add(3, 1, 1); // OrderId: 3, ProductId: 1, Quantity: 1
+
         }
 
         #endregion
@@ -41,7 +57,7 @@ namespace LINQ_Demo.BL
         /// Gets a copy of all products in DataTable.
         /// </summary>
         /// <returns>A DataTable containing all products.</returns>
-        public static DataTable GetProducts()
+        public DataTable GetProducts()
         {
             return productsTable.Copy();
         }
@@ -52,7 +68,7 @@ namespace LINQ_Demo.BL
         /// <param name="columnName">Name of the column to sort by.</param>
         /// <param name="ascending">True for ascending order, False for descending order.</param>
         /// <returns>A sorted DataTable.</returns>
-        public static DataTable GetSortedProducts(string columnName, bool ascending = true)
+        public DataTable GetSortedProducts(string columnName, bool ascending = true)
         {
             // Use LINQ to sort products based on the specified column and order
             var sortedProducts = ascending
@@ -74,7 +90,7 @@ namespace LINQ_Demo.BL
         /// </summary>
         /// <param name="id">The ID of the product to retrieve.</param>
         /// <returns>A DataRow representing the product or null if not found.</returns>
-        public static DataRow GetProductById(int id)
+        public DataRow GetProductById(int id)
         {
             return productsTable.AsEnumerable()
                 .FirstOrDefault(row => row.Field<int>("Id") == id);
@@ -84,7 +100,7 @@ namespace LINQ_Demo.BL
         /// Adds a new product to the DataTable.
         /// </summary>
         /// <param name="newProduct">The new product to add.</param>
-        public static void AddProduct(Product newProduct)
+        public void AddProduct(Product newProduct)
         {
             if (newProduct != null)
             {
@@ -101,7 +117,7 @@ namespace LINQ_Demo.BL
         /// </summary>
         /// <param name="id">The ID of the product to update.</param>
         /// <param name="updatedProduct">The updated product data.</param>
-        public static void UpdateProduct(int id, Product updatedProduct)
+        public void UpdateProduct(int id, Product updatedProduct)
         {
             if (updatedProduct != null)
             {
@@ -123,7 +139,7 @@ namespace LINQ_Demo.BL
         /// Deletes a product from the DataTable.
         /// </summary>
         /// <param name="id">The ID of the product to delete.</param>
-        public static void DeleteProduct(int id)
+        public void DeleteProduct(int id)
         {
             // Find the existing product
             DataRow productToDelete = productsTable.AsEnumerable()
@@ -134,6 +150,42 @@ namespace LINQ_Demo.BL
                 // Remove the product from the DataTable
                 productsTable.Rows.Remove(productToDelete);
             }
+        }
+
+        /// <summary>
+        /// Retrieves a DataTable containing product orders by performing an inner join between 
+        /// the Products and Orders DataTables based on the ProductId field.
+        /// </summary>
+        /// <returns>A DataTable containing product orders with columns ProductId, ProductName, OrderId, and Quantity.</returns>
+        public DataTable GetProductOrders()
+        {
+            //// Left Join Right Join (Keyword)
+            var productOrders = productsTable.AsEnumerable()
+                .Join(ordersTable.AsEnumerable(),
+                    productRow => productRow.Field<int>("Id"),
+                    orderRow => orderRow.Field<int>("ProductId"),
+                    (productRow, orderRow) => new
+                    {
+                        ProductId = productRow.Field<int>("Id"),
+                        ProductName = productRow.Field<string>("Name"),
+                        OrderId = orderRow.Field<int>("OrderId"),
+                        Quantity = orderRow.Field<int>("Quantity")
+                    });
+
+            // Create a new DataTable to store the result
+            DataTable resultTable = new DataTable("ProductOrders");
+            resultTable.Columns.Add("ProductId", typeof(int));
+            resultTable.Columns.Add("ProductName", typeof(string));
+            resultTable.Columns.Add("OrderId", typeof(int));
+            resultTable.Columns.Add("Quantity", typeof(int));
+
+            // Populate the result DataTable with the query result
+            foreach (var item in productOrders)
+            {
+                resultTable.Rows.Add(item.ProductId, item.ProductName, item.OrderId, item.Quantity);
+            }
+
+            return resultTable;
         }
 
         #endregion

@@ -12,6 +12,7 @@ namespace ORMDemo.Models
         /// <summary>
         /// Gets or sets the unique identifier for the product.
         /// </summary>
+        [PrimaryKey,AutoIncrement]
         public int t01f01 { get; set; }
 
         /// <summary>

@@ -6,19 +6,36 @@
     public enum enmOperation
     {
         /// <summary>
-        /// Record inserted successfully.
+        /// Insert.
         /// </summary>
         I,
 
         /// <summary>
-        /// Record deleted successfully.
+        /// Delete.
         /// </summary>
         D,
 
         /// <summary>
-        /// Record updated successfully.
+        /// Update.
         /// </summary>
         U,
+    }
+
+    /// <summary>
+    /// Enum defining messages for different operations.
+    /// </summary>
+    public enum enmRoles
+    {
+        /// <summary>
+        /// Admin.
+        /// </summary>
+        A,
+
+        /// <summary>
+        /// User.
+        /// </summary>
+        U,
+
     }
 
     public static class enmMessageExtensions

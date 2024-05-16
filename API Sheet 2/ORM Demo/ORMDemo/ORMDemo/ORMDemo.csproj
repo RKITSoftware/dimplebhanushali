@@ -166,7 +166,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\BLProduct.cs" />
     <Compile Include="Connections\Connection.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\CLProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

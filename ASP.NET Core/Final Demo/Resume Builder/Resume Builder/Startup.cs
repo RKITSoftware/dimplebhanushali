@@ -6,6 +6,7 @@ using Resume_Builder.Data;
 using Resume_Builder.DL.Implemntations;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.DL.Services;
+using Resume_Builder.Helpers;
 using Resume_Builder.Middlewares;
 using Resume_Builder.Middlewares.Filters;
 using Resume_Builder.Models.POCO;
@@ -113,6 +114,29 @@ namespace Resume_Builder
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                await CustomExceptionHandler.HandleExceptionAsync(context);
+            }));
+
+            ////Using UseDeveloperExceptionPage Middleware to Show Exception Details
+            //app.UseExceptionHandler(a => a.Run(async context =>
+            //{
+            //    var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+            //    var exception = exceptionHandlerPathFeature.Error;
+
+            //    // Custom logic for handling the exception
+            //    // ...
+
+            //    context.Response.ContentType = "text/html";
+            //    await context.Response.WriteAsync("<html><body>\r\n");
+            //    await context.Response.WriteAsync("<b>Custom Error Page</b><br><br>\r\n");
+
+            //    // Display custom error details
+            //    await context.Response.WriteAsync($"<strong>Error:</strong> {exception.Message}<br>\r\n");
+            //    await context.Response.WriteAsync("</body></html>\r\n");
+            //}));
 
             app.UseRateLimitingMiddleware();
             app.UseHttpsRedirection();

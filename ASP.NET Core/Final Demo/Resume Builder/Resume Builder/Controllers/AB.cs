@@ -11,6 +11,9 @@ namespace Resume_Builder.Controllers
     [Route("[controller]")]
     public class AB : ControllerBase
     {
+        /// <summary>
+        /// instance of ResumeGenrationService
+        /// </summary>
         private readonly ResumeGenerationService _resumeGenerationService;
 
         /// <summary>

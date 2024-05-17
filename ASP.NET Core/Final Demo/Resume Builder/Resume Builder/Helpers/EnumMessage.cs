@@ -6,17 +6,17 @@
     public enum EnumMessage
     {
         /// <summary>
-        /// Record inserted successfully.
+        /// Insert.
         /// </summary>
         I,
 
         /// <summary>
-        /// Record deleted successfully.
+        /// Delete.
         /// </summary>
         D,
 
         /// <summary>
-        /// Record updated successfully.
+        /// Update.
         /// </summary>
         U,
 

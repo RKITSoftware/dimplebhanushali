@@ -16,6 +16,9 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLUSR01 : ControllerBase
     {
+        /// <summary>
+        /// Instance of ICRUDService.
+        /// </summary>
         private readonly ICRUDService<USR01> _crudService;
         public Response response;
 

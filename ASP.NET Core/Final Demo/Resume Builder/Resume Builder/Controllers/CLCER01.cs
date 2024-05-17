@@ -15,9 +15,22 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLCER01 : ControllerBase
     {
+        #region Private Member
+        /// <summary>
+        /// intance of ICRUDService<CER01>
+        /// </summary>
         private readonly ICRUDService<CER01> _crudService;
-        public Response response;
 
+        #endregion
+
+        #region Public Member
+        /// <summary>
+        /// instance of Response
+        /// </summary>
+        public Response response;
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="CLCER01"/> class.
         /// </summary>
@@ -27,6 +40,9 @@ namespace Resume_Builder.Controllers
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        #endregion
+
+        #region Public Method
         /// <summary>
         /// Retrieves all certifications.
         /// </summary>
@@ -104,5 +120,7 @@ namespace Resume_Builder.Controllers
 
             return Ok(response);
         }
+
+        #endregion
     }
 }

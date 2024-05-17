@@ -13,7 +13,14 @@ namespace Resume_Builder.Controllers
     [AllowAnonymous]
     public class CLTables : ControllerBase
     {
+        /// <summary>
+        /// instance of Response
+        /// </summary>
         public Response response;
+
+        /// <summary>
+        /// instance of BLTable
+        /// </summary>
         private BLTables _blTables;
 
         /// <summary>

@@ -15,9 +15,23 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLEDU01 : ControllerBase
     {
+        #region private member
+        /// <summary>
+        /// instance of ICRUDService<EDU01>
+        /// </summary>
         private readonly ICRUDService<EDU01> _crudService;
+
+        #endregion
+
+        #region public member
+        /// <summary>
+        /// instance of Response
+        /// </summary>
         public Response response;
 
+        #endregion
+
+        #region constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="CLEDU01"/> class.
         /// </summary>
@@ -27,6 +41,9 @@ namespace Resume_Builder.Controllers
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        #endregion
+
+        #region Public Method
         /// <summary>
         /// Retrieves all education details.
         /// </summary>
@@ -104,5 +121,6 @@ namespace Resume_Builder.Controllers
 
             return Ok(response);
         }
+        #endregion
     }
 }

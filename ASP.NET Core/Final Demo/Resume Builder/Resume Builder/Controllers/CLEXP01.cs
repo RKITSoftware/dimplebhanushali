@@ -15,8 +15,24 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLEXP01 : ControllerBase
     {
+        #region Private member
+        /// <summary>
+        /// instance of ICRUDService<EXP01>
+        /// </summary>
         private readonly ICRUDService<EXP01> _crudService;
+
+        #endregion
+
+        #region Public Member
+
+        /// <summary>
+        /// instance of Response
+        /// </summary>
         public Response response;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CLEXP01"/> class.
@@ -27,6 +43,9 @@ namespace Resume_Builder.Controllers
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
 
+        #endregion
+
+        #region Public method
         /// <summary>
         /// Retrieves all work experience details.
         /// </summary>
@@ -104,5 +123,7 @@ namespace Resume_Builder.Controllers
 
             return Ok(response);
         }
+
+        #endregion
     }
 }

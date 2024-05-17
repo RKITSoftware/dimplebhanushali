@@ -12,8 +12,14 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class Bulk : ControllerBase
     {
+        /// <summary>
+        /// instance of BulkResumeGenerationService
+        /// </summary>
         private readonly BulkResumeGenerationService _resumeGenerationService;
-        private readonly CSVToJSON _csvToJSON;
+
+        /// <summary>
+        /// instance of HttpClient
+        /// </summary>
         private readonly HttpClient _httpClient;
 
         /// <summary>
@@ -22,10 +28,9 @@ namespace Resume_Builder.Controllers
         /// <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
         /// <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
         /// <param name="httpClient">The HTTP client for making HTTP requests.</param>
-        public Bulk(BulkResumeGenerationService resumeGenerationService, CSVToJSON csvToJSON, HttpClient httpClient)
+        public Bulk(BulkResumeGenerationService resumeGenerationService, HttpClient httpClient)
         {
-            _resumeGenerationService = resumeGenerationService;
-            _csvToJSON = csvToJSON;
+            _resumeGenerationService = resumeGenerationService;   
             _httpClient = httpClient;
         }
 
@@ -54,30 +59,6 @@ namespace Resume_Builder.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"An error occurred: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Converts an uploaded Excel file to JSON format.
-        /// </summary>
-        /// <param name="file">The Excel file to convert.</param>
-        /// <returns>The converted JSON data.</returns>
-        [HttpPost("upload")]
-        public async Task<IActionResult> ConvertFromExcel(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-            {
-                return BadRequest("No file uploaded");
-            }
-
-            try
-            {
-                var json = await _csvToJSON.Convert(file);
-                return Ok(json);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
             }
         }
     }

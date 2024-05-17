@@ -15,7 +15,14 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLSKL01 : ControllerBase
     {
+        /// <summary>
+        /// instance of ICRUDService<SKL01>
+        /// </summary>
         private readonly ICRUDService<SKL01> _crudService;
+
+        /// <summary>
+        /// Instance of Response
+        /// </summary>
         public Response response;
 
         /// <summary>

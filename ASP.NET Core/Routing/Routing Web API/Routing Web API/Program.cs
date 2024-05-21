@@ -12,20 +12,14 @@ namespace Routing_Web_API
         public static void Main(string[] args)
         {
             // Build and run the web host
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        /// <summary>
-        /// Creates an instance of the web host builder.
-        /// </summary>
-        /// <param name="args">Command-line arguments.</param>
-        /// <returns>An instance of IHostBuilder.</returns>
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     // Use the Startup class for configuring the application
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .Build()
+                .Run();
+        }
     }
 }

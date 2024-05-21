@@ -48,7 +48,7 @@ namespace Resume_Builder
 
             services.AddScoped<ResumeGenerationService>();
             services.AddScoped<BulkResumeGenerationService>();
-            services.AddScoped<CSVToJSON>();
+            //services.AddScoped<CSVToJSON>();
 
 
             // Configures Controllers
@@ -100,6 +100,9 @@ namespace Resume_Builder
                     }
                 });
             });
+
+            services.AddHostedService<RequestProcessingService>();
+
         }
 
         /// <summary>

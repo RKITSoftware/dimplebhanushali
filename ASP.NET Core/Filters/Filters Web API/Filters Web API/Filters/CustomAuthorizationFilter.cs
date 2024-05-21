@@ -3,15 +3,26 @@ using System.Text;
 
 namespace Filters_Web_API.Filters
 {
+    /// <summary>
+    /// Custom authorization filter to handle basic authentication.
+    /// </summary>
     public class CustomAuthorizationFilter : IAsyncAuthorizationFilter
     {
         private readonly ILogger _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomAuthorizationFilter"/> class.
+        /// </summary>
+        /// <param name="logger">The logger to log information.</param>
         public CustomAuthorizationFilter(ILogger<CustomAuthorizationFilter> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        /// Method called to handle authorization asynchronously.
+        /// </summary>
+        /// <param name="context">The authorization filter context.</param>
         public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
         {
             // Retrieve the authorization header

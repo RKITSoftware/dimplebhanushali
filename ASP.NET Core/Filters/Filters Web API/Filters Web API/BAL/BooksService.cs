@@ -3,48 +3,80 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace Filters_Web_API.BAL
 {
+    /// <summary>
+    /// Service class to manage book-related operations including caching.
+    /// </summary>
     public class BooksService
     {
-        public static IMemoryCache _cache;
+        #region Private Member
+        private static IMemoryCache _cache;
         private const string CacheKey = "BooksCacheKey";
+        #endregion
 
+        #region Constructor
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BooksService"/> class with the specified cache.
+        /// </summary>
+        /// <param name="cache">The memory cache to be used for caching books data.</param>
         public BooksService(IMemoryCache cache)
         {
             _cache = cache;
         }
+        #endregion
 
-        public IEnumerable<Book> GetAllBooks()
+        #region Public Methods
+
+        /// <summary>
+        /// Retrieves all books, either from the cache or from the data source if not cached.
+        /// </summary>
+        /// <returns>An enumerable collection of books.</returns>
+        public List<Book> GetAllBooks()
         {
             // Try to get books from cache
             if (_cache.TryGetValue(CacheKey, out IEnumerable<Book> cachedBooks))
             {
-                return cachedBooks;
+                return cachedBooks.ToList();
             }
 
             // If not found in cache, retrieve from source and cache it
-            var books = GetBooksFromSource();
+            List<Book> books = GetBooksFromSource();
             _cache.Set(CacheKey, books, TimeSpan.FromMinutes(5)); // Cache for 5 minutes
             return books;
         }
 
+        /// <summary>
+        /// Retrieves a book by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the book.</param>
+        /// <returns>The book with the specified identifier, or null if not found.</returns>
         public Book GetBookById(int id)
         {
-            var books = GetAllBooks();
+            List<Book> books = GetAllBooks();
             return books.FirstOrDefault(b => b.Id == id);
         }
 
+        /// <summary>
+        /// Adds a new book to the collection and updates the cache.
+        /// </summary>
+        /// <param name="book">The book to add.</param>
         public void AddBook(Book book)
         {
-            var books = GetAllBooks().ToList();
+            List<Book> books = GetAllBooks().ToList();
             book.Id = books.Count + 1;
             books.Add(book);
             _cache.Set(CacheKey, books, TimeSpan.FromMinutes(5)); // Update cache
         }
 
+        /// <summary>
+        /// Updates an existing book's information and updates the cache.
+        /// </summary>
+        /// <param name="id">The unique identifier of the book to update.</param>
+        /// <param name="book">The updated book information.</param>
+        /// <returns>True if the book was updated successfully, otherwise false.</returns>
         public bool UpdateBook(int id, Book book)
         {
-            var books = GetAllBooks().ToList();
-            var existingBook = books.FirstOrDefault(b => b.Id == id);
+            List<Book> books = GetAllBooks().ToList();
+            Book existingBook = books.FirstOrDefault(b => b.Id == id);
             if (existingBook == null)
                 return false;
 
@@ -56,10 +88,15 @@ namespace Filters_Web_API.BAL
             return true;
         }
 
+        /// <summary>
+        /// Deletes a book by its unique identifier and updates the cache.
+        /// </summary>
+        /// <param name="id">The unique identifier of the book to delete.</param>
+        /// <returns>True if the book was deleted successfully, otherwise false.</returns>
         public bool DeleteBook(int id)
         {
-            var books = GetAllBooks().ToList();
-            var existingBook = books.FirstOrDefault(b => b.Id == id);
+            List<Book> books = GetAllBooks().ToList();
+            Book existingBook = books.FirstOrDefault(b => b.Id == id);
             if (existingBook == null)
                 return false;
 
@@ -68,7 +105,10 @@ namespace Filters_Web_API.BAL
             return true;
         }
 
-        // Simulated data source
+        /// <summary>
+        /// Simulated data source method to retrieve a list of books.
+        /// </summary>
+        /// <returns>A list of books from the simulated data source.</returns>
         private List<Book> GetBooksFromSource()
         {
             return new List<Book>
@@ -78,5 +118,7 @@ namespace Filters_Web_API.BAL
                 new Book { Id = 3, Title = "Book 3", Author = "Author 3", Year = 2010 }
             };
         }
+
+        #endregion
     }
 }

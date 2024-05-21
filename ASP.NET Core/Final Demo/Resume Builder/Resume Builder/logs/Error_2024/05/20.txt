@@ -1,0 +1,24 @@
+2024-05-20 12:24:55.9769||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 70
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 58
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-20 12:25:40.2574||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 70
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 58
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-20 12:30:10.4269||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 70
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 58
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)

@@ -7,8 +7,11 @@ namespace Middleware_API.Middlewares
     /// </summary>
     public class DataRetrievalMiddleware
     {
+        #region Private Member
         private readonly RequestDelegate _next;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Constructor for DataRetrievalMiddleware.
         /// </summary>
@@ -17,7 +20,9 @@ namespace Middleware_API.Middlewares
         {
             _next = next;
         }
+        #endregion
 
+        #region Public Async Method
         /// <summary>
         /// Invokes the data retrieval middleware.
         /// </summary>
@@ -57,8 +62,10 @@ namespace Middleware_API.Middlewares
                 await httpContext.Response.WriteAsync("Unauthorized: You must be authenticated to retrieve data.");
             }
         }
+        #endregion
     }
 
+    #region Middleware Extension Class
     /// <summary>
     /// Extension method used to add the data retrieval middleware to the HTTP request pipeline.
     /// </summary>
@@ -74,4 +81,5 @@ namespace Middleware_API.Middlewares
             return builder.UseMiddleware<DataRetrievalMiddleware>();
         }
     }
+    #endregion
 }

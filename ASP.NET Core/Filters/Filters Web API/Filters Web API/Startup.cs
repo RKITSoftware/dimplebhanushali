@@ -4,18 +4,35 @@ using Microsoft.OpenApi.Models;
 
 namespace Filters_Web_API
 {
+    /// <summary>
+    /// Configures the application's services and middleware.
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Startup"/> class with the provided configuration.
+        /// </summary>
+        /// <param name="configuration">The configuration of the application.</param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// Configuration
+        /// </summary>
         public IConfiguration Configuration { get; }
 
+        /// <summary>
+        /// Configures services for the application.
+        /// </summary>
+        /// <param name="services">The service collection to configure.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add controllers
             services.AddControllers();
+
+            // Register services
             services.AddScoped<BooksService>();
             services.AddScoped<CustomActionFilter>();
             services.AddScoped<CustomAuthorizationFilter>();
@@ -26,9 +43,10 @@ namespace Filters_Web_API
             // Register IMemoryCache service
             services.AddMemoryCache();
 
+            // Add API Explorer
             services.AddEndpointsApiExplorer();
 
-            // Add Swagger
+            // Configure Swagger documentation
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -61,11 +79,19 @@ namespace Filters_Web_API
             });
         }
 
+        /// <summary>
+        /// Configures the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">The application builder to configure.</param>
+        /// <param name="env">The hosting environment.</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
+                // Enable development environment features
                 app.UseDeveloperExceptionPage();
+
+                // Enable Swagger UI
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
@@ -73,10 +99,12 @@ namespace Filters_Web_API
                 });
             }
 
+            // Enable HTTPS redirection, authorization, and routing
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.UseRouting();
 
+            // Map endpoints
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

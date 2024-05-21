@@ -1,4 +1,5 @@
 ﻿//#define DEBUG_MODE
+using Debug_Points.Models;
 using System.Diagnostics;
 using System.Web.Http;
 
@@ -21,14 +22,25 @@ namespace Debug_Points.Controllers
             Trace.WriteLine($"Value of Number => {num}");
 
             //Temporary BreakPoint
-            int sum = AddIntegers(num, 5);
+            int sum = AddIntegers(num, 10);
+
+            Trace.WriteLine("Sum => " + sum);
+
+            //// Model Manipulation
+            Temp objTemp = new Temp 
+            {
+                Id = 1, Name = "Dimple", Age = 23
+            };
+
+            Trace.WriteLine($"Obj Temp =>  {objTemp.Id} {objTemp.Name} {objTemp.Age}");
 
             //Conditional BreakPoint
-            for (int i = 0; i < 10; i++)
-            
+            for (int i = 0; i < 5; i++)
             {
                 Trace.WriteLine(i);
             }
+
+            //// Search Depth => The Search Depth defines how far the nested search goes into a given object tree.
 
             //Dependent BreakPoint
             Trace.WriteLine(num);
@@ -36,19 +48,20 @@ namespace Debug_Points.Controllers
             // Simulate some processing
             int result = ProcessData(num);
 
+            //// Release Mode
+            //// Model in Autos Locals
+
 #if DEBUG_MODE
             // Code Included When DEBUG_MODE is Defined
             int debugVariable = 100;
             System.Diagnostics.Debug.WriteLine($"Debug variable: {debugVariable}");
 #else
-            // Code included when DEBUG_MODE is not defined
+             // Code included when DEBUG_MODE is not defined
             int releaseVariable = 200;
             System.Diagnostics.Debug.WriteLine($"Release variable: {releaseVariable}");
 #endif
-
             return Ok(result);
         }
-
 
         /// <summary>
         /// Adds two integers.

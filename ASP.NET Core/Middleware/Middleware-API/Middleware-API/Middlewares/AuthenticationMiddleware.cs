@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Middleware_API.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Middleware_API.Data;
 
 namespace Middleware_API.Middlewares
 {
@@ -10,8 +7,11 @@ namespace Middleware_API.Middlewares
     /// </summary>
     public class AuthenticationMiddleware
     {
+        #region Private Member
         private readonly RequestDelegate _next;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Constructor for AuthenticationMiddleware.
         /// </summary>
@@ -20,7 +20,9 @@ namespace Middleware_API.Middlewares
         {
             _next = next;
         }
+        #endregion
 
+        #region Public Async Method
         /// <summary>
         /// Invokes the authentication middleware.
         /// </summary>
@@ -48,8 +50,10 @@ namespace Middleware_API.Middlewares
                 //await httpContext.Response.WriteAsync("Unauthorized: Invalid username or password");
             }
         }
+        #endregion
     }
 
+    #region Middleware Extension Class
     /// <summary>
     /// Extension method used to add the authentication middleware to the HTTP request pipeline.
     /// </summary>
@@ -65,4 +69,5 @@ namespace Middleware_API.Middlewares
             return builder.UseMiddleware<AuthenticationMiddleware>();
         }
     }
+    #endregion
 }

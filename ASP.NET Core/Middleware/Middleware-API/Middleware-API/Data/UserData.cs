@@ -7,6 +7,7 @@ namespace Middleware_API.Data
     /// </summary>
     public class UserData
     {
+        #region User Data
         /// <summary>
         /// Gets the list of hardcoded user data.
         /// </summary>
@@ -38,5 +39,7 @@ namespace Middleware_API.Data
                 City = "Chicago"
             },
         };
+
+        #endregion
     }
 }

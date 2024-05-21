@@ -3,6 +3,9 @@ using System.Web.Http;
 
 namespace AES.Controllers
 {
+    /// <summary>
+    /// Controller for Managing Cryptography.
+    /// </summary>
     [RoutePrefix("api")]
     public class EncryptionController : ApiController
     {
@@ -47,7 +50,6 @@ namespace AES.Controllers
         {
             return Ok(BLTripleDES.Decrypt(cipherText));
         }
-
 
         /// <summary>
         /// Encryption by RSA Algorithm

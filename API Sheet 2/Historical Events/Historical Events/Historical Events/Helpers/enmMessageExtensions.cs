@@ -37,7 +37,6 @@
         U,
 
     }
-
     public static class enmMessageExtensions
     {
         /// <summary>

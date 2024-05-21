@@ -37,6 +37,5 @@ namespace Historical_Events.Models
         /// </summary>
         [Column("t01f05")]
         public int t01f05 { get; set; }
-
     }
 }

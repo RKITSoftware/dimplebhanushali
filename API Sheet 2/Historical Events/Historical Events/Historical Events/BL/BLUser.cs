@@ -72,10 +72,10 @@ namespace Historical_Events.BL
             objUser.Map(_objUser);
             BLAES _objBlAes = new BLAES();
             _objUser.r01f06 = _objBlAes.Encrypt(_objUser.r01f06);
+            _objUser.r01f07 = enmRoles.U.ToString();
 
             if (operation == enmOperation.I)
             {
-                _objUser.r01f07 = enmRoles.U.ToString();
                 _objUser.r01f08 = DateTime.Now;
             }
             else if (operation == enmOperation.U)

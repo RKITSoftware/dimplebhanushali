@@ -10,11 +10,14 @@ namespace Historical_Events.DL
     /// </summary>
     public class DbUsr01Context
     {
+        #region Private Member
         /// <summary>
         /// Connection string.
         /// </summary>
         private static string _connection;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="DbUsr01Context"/> class.
         /// </summary>
@@ -23,7 +26,9 @@ namespace Historical_Events.DL
         {
             _connection = connectionString;
         }
+        #endregion
 
+        #region Public Methods
         /// <summary>
         /// Retrieves all users from the database.
         /// </summary>
@@ -63,7 +68,9 @@ namespace Historical_Events.DL
 
             return users.Count > 0 ? users[0] : null;
         }
+        #endregion
 
+        #region Private Methods
         /// <summary>
         /// Retrieves users from the database based on the provided query.
         /// </summary>
@@ -107,5 +114,7 @@ namespace Historical_Events.DL
 
             return resultList;
         }
+
+        #endregion
     }
 }

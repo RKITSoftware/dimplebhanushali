@@ -16,19 +16,23 @@ namespace Historical_Events.Controllers
     /// </summary>
     [RoutePrefix("api/User")]
     [BasicAuthenticationFilter]
-
     public class CLUserController : ApiController
     {
+        #region Private Member
         /// <summary>
         /// Instance of Business Logic of User Class.
         /// </summary>
         private readonly BLUser _userManager;
-        
+        #endregion
+
+        #region Public Member
         /// <summary>
         /// Instance of Response Class.
         /// </summary>
         public Response response;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Constructor for initialising new instance of User BL Class.
         /// </summary>
@@ -36,6 +40,7 @@ namespace Historical_Events.Controllers
         {
             _userManager = new BLUser(ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString);
         }
+        #endregion
 
         /// <summary>
         /// Registers a new user.
@@ -124,7 +129,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Gets Current Logged in User Id from Claims.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Current User id Logged in.</returns>
         private int GetCurrentUser()
         {
             ClaimsPrincipal currentUser = User as ClaimsPrincipal;

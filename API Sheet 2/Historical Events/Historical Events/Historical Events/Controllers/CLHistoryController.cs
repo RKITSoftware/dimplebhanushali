@@ -10,22 +10,30 @@ namespace Historical_Events.Controllers
     /// Controller for managing historical events.
     /// </summary>
     [RoutePrefix("api/History")]
+    [AllowAnonymous]
     public class CLHistoryController : ApiController
     {
+        #region Private Member
         /// <summary>
         ///  Instance of Business Logic for Historical Events manager.
         /// </summary>
         private readonly BLHistory _blHistory;
+        #endregion
 
+        #region Public Member
         /// <summary>
         /// Initializes a new instance of the <see cref="CLHistoryController"/> class.
         /// </summary>
         public Response response;
+        #endregion
+
+        #region Construcotr
         public CLHistoryController()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
             _blHistory = new BLHistory(connectionString);
         }
+        #endregion
 
         /// <summary>
         /// Retrieves all historical events.

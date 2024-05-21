@@ -107,12 +107,6 @@ namespace Historical_Events.BL
 
                 if (isIdExists)
                 {
-                    response.isError = false;
-                    response.Message = "Id exists in database";
-                    return response;
-                }
-                else
-                {
                     response.isError = true;
                     response.Message = "No such id exists in database";
                     return response;
@@ -173,8 +167,6 @@ namespace Historical_Events.BL
                 {
                     db.DeleteById<HSTEVT01>(id);
                 }
-
-                response.isError = false;
                 response.Message = enmOperation.D.GetMessage();
                 return response;
             }
@@ -342,5 +334,6 @@ namespace Historical_Events.BL
 
 
         #endregion
+
     }
 }

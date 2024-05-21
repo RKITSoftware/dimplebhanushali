@@ -17,6 +17,7 @@ namespace Historical_Events.Controllers
     [BasicAuthorisation(Roles = "A")]
     public class CLAdminController : ApiController
     {
+        #region Private Members
         /// <summary>
         ///  Instance of Business Logic for Historical Events manager.
         /// </summary>
@@ -26,12 +27,16 @@ namespace Historical_Events.Controllers
         /// Instance of Business Logic of User Class.
         /// </summary>
         private readonly BLUser _userManager;
+        #endregion
 
+        #region Public Member
         /// <summary>
         /// Initializes a new instance of the <see cref="CLHistoryController"/> class.
         /// </summary>
         public Response response;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Constructor For Initialising BlHistory and BlUser Instances.
         /// </summary>
@@ -42,6 +47,7 @@ namespace Historical_Events.Controllers
             _userManager = new BLUser(connectionString);
 
         }
+        #endregion
 
         /// <summary>
         /// Creates a new historical event.
@@ -89,12 +95,11 @@ namespace Historical_Events.Controllers
         public IHttpActionResult DeleteHistoricalEvent(int id)
         {
             response = _blHistory.ValidateOnDelete(id);
-            if (response.isError)
+            if (!response.isError)
             {
-                return Ok(response);
+                response = _blHistory.Delete(id);
             }
 
-            response = _blHistory.Delete(id);
             return Ok(response);
         }
 

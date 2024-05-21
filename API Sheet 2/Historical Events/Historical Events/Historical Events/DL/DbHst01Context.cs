@@ -142,7 +142,6 @@ namespace Historical_Events.DL
             return lstHstEvt01;
         }
 
-
         /// <summary>
         /// Retrieves historical events belonging to a specific category.
         /// </summary>

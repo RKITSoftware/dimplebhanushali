@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using System.Collections.Concurrent;
 
 namespace Resume_Builder.Middlewares
 {
@@ -8,119 +7,59 @@ namespace Resume_Builder.Middlewares
     /// </summary>
     public class RateLimitingMiddleware
     {
-        //#region Private Members
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        //private readonly RequestDelegate _next;
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        //private readonly IMemoryCache _cache;
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        //private readonly ConcurrentQueue<HttpContext> _requestQueue;
-
-        //private readonly string _queueKey = "RateLimitingQueue";
-
-
-        ///// <summary>
-        /////
-        ///// </summary>
-        //private readonly ILogger<RateLimitingMiddleware> _logger;
-
-        //#endregion
-
-        //#region Constructor
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="next"></param>
-        ///// <param name="cache"></param>
-        ///// <param name="logger"></param>
-        //public RateLimitingMiddleware(RequestDelegate next, IMemoryCache cache, ILogger<RateLimitingMiddleware> logger)
-        //{
-        //    _next = next;
-        //    _cache = cache;
-        //    _logger = logger;
-        //    _requestQueue = new ConcurrentQueue<HttpContext>();
-        //}
-
-        //#endregion
-
-        //#region Public Methods
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="context"></param>
-        ///// <returns></returns>
-        //public async Task Invoke(HttpContext context)
-        //{
-        //    string ipAddress = context.Connection.RemoteIpAddress.ToString();
-
-        //    // Define the rate limit settings (requests per minute)
-        //    int limit = 500;
-        //    int expireInMinutes = 1;
-
-        //    string cacheKey = $"{ipAddress}";
-
-        //    if (!_cache.TryGetValue(cacheKey, out int? requestCount))
-        //    {
-        //        requestCount = 0;
-        //    }
-
-        //    requestCount++;
-
-        //    _cache.Set(cacheKey, requestCount, TimeSpan.FromMinutes(expireInMinutes));
-
-        //    if (requestCount > limit)
-        //    {
-        //        _requestQueue.Enqueue(context);
-        //        _logger.LogInformation($"Rate limit exceeded for IP address: {ipAddress}");
-        //        context.Response.StatusCode = StatusCodes.Status429TooManyRequests;
-        //        await context.Response.WriteAsync("Rate limit exceeded. Please try again later.");
-        //        return;
-        //    }
-
-        //    await _next(context);
-        //}
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <returns></returns>
-        //public async Task ProcessQueue()
-        //{
-        //    while (_requestQueue.TryDequeue(out var context))
-        //    {
-        //        await _next(context);
-        //    }
-        //}
-
-        //#endregion
-
+        #region Private Members
+        /// <summary>
+        /// Represents the delegate representing the next middleware in the pipeline.
+        /// </summary>
         private readonly RequestDelegate _next;
-        private readonly IMemoryCache _cache;
-        private readonly ILogger<RateLimitingMiddleware> _logger;
-        private readonly string _queueKey = "RateLimitingQueue";
 
-        public RateLimitingMiddleware(RequestDelegate next, 
-                                      IMemoryCache cache, 
-                                      ILogger<RateLimitingMiddleware> logger)
+        /// <summary>
+        /// Represents the memory cache service used for rate limiting.
+        /// </summary>
+        private readonly IMemoryCache _cache;
+
+        /// <summary>
+        /// Represents the logger service used for logging rate limit exceeded events.
+        /// </summary>
+        private readonly ILogger<RateLimitingMiddleware> _logger;
+
+        /// <summary>
+        /// Represents the service provider used for resolving dependencies.
+        /// </summary>
+        private readonly IServiceProvider _serviceProvider;
+        #endregion
+
+        #region Constructor
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RateLimitingMiddleware"/> class.
+        /// </summary>
+        /// <param name="next">The delegate representing the next middleware in the pipeline.</param>
+        /// <param name="cache">The memory cache service used for rate limiting.</param>
+        /// <param name="logger">The logger service used for logging rate limit exceeded events.</param>
+        /// <param name="serviceProvider">The service provider used for resolving dependencies.</param>
+        public RateLimitingMiddleware(RequestDelegate next,
+                                      IMemoryCache cache,
+                                      ILogger<RateLimitingMiddleware> logger,
+                                      IServiceProvider serviceProvider)
         {
             _next = next;
             _cache = cache;
             _logger = logger;
+            _serviceProvider = serviceProvider;
         }
+        #endregion
 
+        #region Public Method
+        /// <summary>
+        /// Invokes the rate limiting logic for incoming requests.
+        /// </summary>
+        /// <param name="context">The HttpContext representing the incoming request.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
         public async Task Invoke(HttpContext context)
         {
+            // Obtain a reference to RateLimitingQueueProcessor from the service provider
+            var queueProcessor = _serviceProvider.GetRequiredService<RequestProcessingService>();
+
             string ipAddress = context.Connection.RemoteIpAddress.ToString();
             int limit = 2;
             int expireInMinutes = 1;
@@ -136,14 +75,7 @@ namespace Resume_Builder.Middlewares
 
             if (requestCount > limit)
             {
-                if (!_cache.TryGetValue(_queueKey, out ConcurrentQueue<HttpContext> requestQueue))
-                {
-                    requestQueue = new ConcurrentQueue<HttpContext>();
-                    _cache.Set(_queueKey, requestQueue);
-                }
-
-                context.Items["RequestDelegate"] = _next;
-                requestQueue.Enqueue(context);
+                queueProcessor.EnqueueRequest(context);
                 _logger.LogInformation($"Rate limit exceeded for IP address: {ipAddress}");
                 context.Response.StatusCode = StatusCodes.Status429TooManyRequests;
                 await context.Response.WriteAsync("Rate limit exceeded. Please try again later.");
@@ -152,8 +84,10 @@ namespace Resume_Builder.Middlewares
 
             await _next(context);
         }
+        #endregion
     }
-     
+
+    #region Middleware Extension Class
     /// <summary>
     /// Extension Method to add Middleware to builder Services.
     /// </summary>
@@ -164,4 +98,5 @@ namespace Resume_Builder.Middlewares
             return builder.UseMiddleware<RateLimitingMiddleware>();
         }
     }
+    #endregion
 }

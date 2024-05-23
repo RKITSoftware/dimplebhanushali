@@ -30,7 +30,7 @@ namespace Resume_Builder.DL.Services
         /// <summary>
         /// Enume Message Operation 
         /// </summary>
-        public static EnumMessage operation;
+        public static enmMessage operation;
 
         #endregion
 
@@ -160,19 +160,19 @@ namespace Resume_Builder.DL.Services
             // Initialize response object
             response = new Response();
 
-            if (operation == EnumMessage.I)
+            if (operation == enmMessage.I)
             {
                 // Insert operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
                 db.Insert(_objT);
-                response.Message = EnumMessage.I.GetMessage();
+                response.Message = enmMessage.I.GetMessage();
             }
-            else if (operation == EnumMessage.U)
+            else if (operation == enmMessage.U)
             {
                 // Update operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
                 db.Update(_objT);
-                response.Message = EnumMessage.U.GetMessage();
+                response.Message = enmMessage.U.GetMessage();
             }
 
             return response;
@@ -376,7 +376,7 @@ namespace Resume_Builder.DL.Services
         {
             response = new Response();
 
-            if (operation == EnumMessage.D)
+            if (operation == enmMessage.D)
             {
                 try
                 {

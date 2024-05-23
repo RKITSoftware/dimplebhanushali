@@ -24,6 +24,9 @@ namespace Resume_Builder
             services.AddMemoryCache();
             services.AddHttpContextAccessor();
 
+            services.AddSingleton<RequestProcessingService>();
+            services.AddHostedService<RequestProcessingService>();
+
             services.AddSingleton<DbConnectionFactory>();
 
             services.AddSingleton<ICryptography,AesCrptographyService>();
@@ -141,9 +144,11 @@ namespace Resume_Builder
             //    await context.Response.WriteAsync("</body></html>\r\n");
             //}));
 
-            app.UseRateLimitingMiddleware();
+            //app.UseRateLimitingMiddleware();
             app.UseHttpsRedirection();
             app.UseAuthorization();
+
+            app.UseMiddleware<RateLimitingMiddleware>();
 
             app.UseRouting();
             app.UseEndpoints(endpoints =>

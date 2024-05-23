@@ -66,7 +66,7 @@ namespace Resume_Builder.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] DTORES01 model)
         {
-            CRUDImplementation<RES01>.operation = EnumMessage.I;
+            CRUDImplementation<RES01>.operation = enmMessage.I;
             _crudService.PreSave(model);
             response = _crudService.Validate();
             if (!response.HasError)
@@ -84,7 +84,7 @@ namespace Resume_Builder.Controllers
         [HttpPut]
         public IActionResult Put([FromBody] DTORES01 model)
         {
-            CRUDImplementation<RES01>.operation = EnumMessage.U;
+            CRUDImplementation<RES01>.operation = enmMessage.U;
             _crudService.PreSave(model);
             response = _crudService.Validate();
             if (!response.HasError)
@@ -102,7 +102,7 @@ namespace Resume_Builder.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            CRUDImplementation<RES01>.operation = EnumMessage.D;
+            CRUDImplementation<RES01>.operation = enmMessage.D;
             response = _crudService.ValidateOnDelete(id);
             if (!response.HasError)
             {

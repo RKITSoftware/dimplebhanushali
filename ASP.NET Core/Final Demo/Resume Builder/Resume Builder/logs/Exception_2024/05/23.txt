@@ -1,0 +1,261 @@
+2024-05-23 17:29:25.6997||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 69
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 59
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:32:01.3267||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Items()
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 69
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 59
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:33:07.7646||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeAlwaysRunResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Resume_Builder.Middlewares.RequestProcessingService.ProcessRequest(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 70
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 59
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:38:20.6619||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:38:33.9157||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:39:24.5417||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:44:52.2785||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:45:05.4129||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:45:12.5171||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:45:12.5478||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:45:17.6238||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:45:17.6538||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 214
+2024-05-23 17:47:57.5225||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:10.6096||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:10.6369||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:11.6802||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:11.7086||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:11.7394||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.7733||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.7990||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.8250||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.8526||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.8799||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.9097||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.9391||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:12.9677||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:37.1200||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:40.1863||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:48:40.2135||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Error processing request from the queue. System.ObjectDisposedException: IFeatureCollection has been disposed.
+Object name: 'Collection'.
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.ThrowContextDisposed()
+   at Microsoft.AspNetCore.Http.Features.FeatureReferences`1.Fetch[TFeature](TFeature& cached, Func`2 factory)
+   at Microsoft.AspNetCore.Http.DefaultConnectionInfo.get_RemoteIpAddress()
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.ProcessQueue() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 216
+2024-05-23 17:51:57.4846||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 62
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:52:51.2630||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RateLimitingQueueProcessor.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingQueueProcessor.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:53:28.6214||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RateLimitingQueueProcessor.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingQueueProcessor.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:53:47.4335||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RateLimitingQueueProcessor.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingQueueProcessor.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:54:40.7711||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RateLimitingQueueProcessor.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingQueueProcessor.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 17:55:12.3102||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RateLimitingQueueProcessor.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingQueueProcessor.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-05-23 18:08:23.6291||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:08:24.9706||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:08:39.1011||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:08:39.7698||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:08:40.3535||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:11:41.4107||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:11:45.4111||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-05-23 18:11:46.2861||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: No service for type 'Resume_Builder.Middlewares.RequestProcessingService' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 260
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)

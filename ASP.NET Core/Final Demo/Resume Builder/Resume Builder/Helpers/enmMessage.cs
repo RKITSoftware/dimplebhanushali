@@ -3,7 +3,7 @@
     /// <summary>
     /// Enum defining messages for different operations.
     /// </summary>
-    public enum EnumMessage
+    public enum enmMessage
     {
         /// <summary>
         /// Insert.
@@ -32,15 +32,15 @@
         /// </summary>
         /// <param name="enumValue">The enum value.</param>
         /// <returns>The message corresponding to the enum value.</returns>
-        public static string GetMessage(this EnumMessage enumValue)
+        public static string GetMessage(this enmMessage enumValue)
         {
             switch (enumValue)
             {
-                case EnumMessage.I:
+                case enmMessage.I:
                     return "Record inserted successfully.";
-                case EnumMessage.D:
+                case enmMessage.D:
                     return "Record deleted successfully.";
-                case EnumMessage.U:
+                case enmMessage.U:
                     return "Record updated successfully.";
                 default:
                     return "Unknown operation.";

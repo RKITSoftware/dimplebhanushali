@@ -1,4 +1,3 @@
-F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.dll
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Nlog.config
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\appsettings.Development.json
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\appsettings.json
@@ -6,6 +5,7 @@ F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Build
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.exe
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.deps.json
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.runtimeconfig.json
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.dll
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Resume Builder.pdb
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Aspose.Cells.dll
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\BouncyCastle.Crypto.dll

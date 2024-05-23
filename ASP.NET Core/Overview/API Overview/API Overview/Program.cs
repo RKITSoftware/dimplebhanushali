@@ -17,11 +17,21 @@ if (app.Environment.IsDevelopment())
 }
 app.UseRouting();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
 // Endpoints, Routing
 // Startup
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(cors =>
+{
+    cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+});
 
 app.Run();

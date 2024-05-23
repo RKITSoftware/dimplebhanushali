@@ -10,7 +10,6 @@ namespace Historical_Events.Controllers
     /// Controller for managing historical events.
     /// </summary>
     [RoutePrefix("api/History")]
-    [AllowAnonymous]
     public class CLHistoryController : ApiController
     {
         #region Private Member

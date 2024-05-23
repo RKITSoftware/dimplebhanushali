@@ -36,13 +36,19 @@ namespace Historical_Events.DL
         public List<USR01> GetAllUsers()
         {
             string query = @"SELECT 
-                                    r01f01, 
-                                    r01f02, 
-                                    r01f03, 
-                                    r01f04, 
-                                    r01f05 
-                            FROM 
-                                    usr01";
+                                        r01f01, 
+                                        r01f02, 
+                                        r01f03, 
+                                        r01f04, 
+                                        r01f05,
+                                        CASE 
+                                            WHEN r01f07 = 'A' THEN 'Admin'
+                                            WHEN r01f07 = 'U' THEN 'User'
+                                            ELSE 'Unknown'
+                                        END AS r01f07
+                                FROM 
+                                        usr01";
+
 
             return GetUsersFromDatabase(query);
         }
@@ -59,7 +65,12 @@ namespace Historical_Events.DL
                                     r01f02, 
                                     r01f03, 
                                     r01f04, 
-                                    r01f05 
+                                    r01f05,
+                                    CASE 
+                                        WHEN r01f07 = 'A' THEN 'Admin'
+                                        WHEN r01f07 = 'U' THEN 'User'
+                                        ELSE 'Unknown'
+                                    END AS r01f07
                               FROM 
                                     usr01 
                               WHERE 
@@ -106,7 +117,8 @@ namespace Historical_Events.DL
                     r01f02 = reader["r01f02"].ToString(),
                     r01f03 = reader["r01f03"].ToString(),
                     r01f04 = reader["r01f04"].ToString(),
-                    r01f05 = reader["r01f05"].ToString()
+                    r01f05 = reader["r01f05"].ToString(),
+                    r01f07 = reader["r01f07"].ToString()
                 };
 
                 resultList.Add(objUser);

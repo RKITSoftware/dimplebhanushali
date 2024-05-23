@@ -13,7 +13,6 @@ namespace Historical_Events.Controllers
     /// Controller for managing Admin-related operations.
     /// </summary>
     [RoutePrefix("api/User")]
-    [BasicAuthenticationFilter]
     [BasicAuthorisation(Roles = "A")]
     public class CLAdminController : ApiController
     {
@@ -89,6 +88,21 @@ namespace Historical_Events.Controllers
         }
 
         /// <summary>
+        /// Promotes a user to admin based on the provided user ID.
+        /// </summary>
+        /// <param name="id">The ID of the user to promote to admin.</param>
+        /// <returns>An HTTP response indicating the success of the operation.</returns>
+        [HttpPut,Route("CreateAdmin/{id}")]
+        public IHttpActionResult PromoteUserToAdmin(int id)
+        {
+            // Call the CreateAdmin method to promote the user with the provided userId to admin
+            _userManager.CreateAdmin(id);
+
+            // Return a success response
+            return Ok("User promoted to admin successfully.");
+        }
+
+        /// <summary>
         /// Deletes a historical event.
         /// </summary>
         [HttpDelete, Route("Delete/{id}")]
@@ -106,8 +120,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Retrieves all users. (Requires admin or superadmin role)
         /// </summary>
-        [HttpGet, Route("GetAll")]
-        [BasicAuthorisation(Roles = "Admin, SuperAdmin")]
+        [HttpGet]
         public IHttpActionResult GetAllUsers()
         {
             response = _userManager.GetAllUsers();
@@ -135,10 +148,11 @@ namespace Historical_Events.Controllers
             return Ok(response);
         }
 
+        #region Private Method
         /// <summary>
         /// Method Gets Current USer Id from Claims
         /// </summary>
-        /// <returns></returns>
+        /// <returns>User Id of Current Logged in user.</returns>
         private int GetCurrentUser()
         {
             ClaimsPrincipal currentUser = User as ClaimsPrincipal;
@@ -150,6 +164,6 @@ namespace Historical_Events.Controllers
             }
             return 0;
         }
-
+        #endregion
     }
 }

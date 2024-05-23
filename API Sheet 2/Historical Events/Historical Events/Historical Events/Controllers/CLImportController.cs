@@ -8,7 +8,6 @@ namespace Historical_Events.Controllers
     /// Controller for importing CSV data into the database.
     /// </summary>
     [RoutePrefix("api/import")]
-    [BasicAuthenticationFilter]
     [BasicAuthorisation(Roles = "A")]
     public class CLImportController : ApiController
     {

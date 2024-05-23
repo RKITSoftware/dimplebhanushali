@@ -220,6 +220,12 @@ namespace Historical_Events.BL
             return response;
         }
 
+        /// <summary>
+        /// Retrieves the current user ID and role based on the provided username and password.
+        /// </summary>
+        /// <param name="username">The username of the user.</param>
+        /// <param name="password">The password of the user.</param>
+        /// <returns>A tuple containing the user ID and role.</returns>
         public (int userId, string role) GetCurrentUserIdAndRole(string username, string password)
         {
             BLValidateUser blValidateUser = new BLValidateUser();
@@ -257,6 +263,28 @@ namespace Historical_Events.BL
             return (-1, null); // or throw an exception
         }
 
+        /// <summary>
+        /// Creates an admin user and updates the role from user to admin based on the provided id.
+        /// </summary>
+        /// <param name="id">The id of the user to promote to admin.</param>
+        public void CreateAdmin(int id)
+        {
+            string query = $@"UPDATE 
+                                        USR01 
+                                  SET 
+                                        r01f07 = '{enmRoles.A.ToString()}' 
+                                  WHERE 
+                                        r01f01 = {id};";
+
+            using (MySqlConnection connection = new MySqlConnection(_connection))
+            {
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
         /// <summary>
         /// Retrieves all users from the database.

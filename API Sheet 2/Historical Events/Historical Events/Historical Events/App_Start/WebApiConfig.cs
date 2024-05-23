@@ -12,7 +12,7 @@ namespace Historical_Events
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            //config.Filters.Add(new BasicAuthenticationFilter());
+            config.Filters.Add(new BasicAuthenticationFilter());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

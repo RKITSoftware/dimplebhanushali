@@ -6,14 +6,29 @@ using System.IO;
 
 namespace Historical_Events.BL
 {
+    /// <summary>
+    /// Service class to import data from a CSV file into the database.
+    /// </summary>
     public class BLCsvToDatabaseService
     {
+        #region Public Method
+        /// <summary>
+        /// Imports data from a CSV file into the database.
+        /// </summary>
+        /// <param name="csvFilePath">The path of the CSV file to import.</param>
         public void ImportCsvToDatabase(string csvFilePath)
         {
             List<HSTEVT01> records = ReadCsvFile(csvFilePath);
             InsertRecordsIntoDatabase(records);
         }
+        #endregion
 
+        #region Private Methods
+        /// <summary>
+        /// Reads data from a CSV file and constructs a list of HSTEVT01 records.
+        /// </summary>
+        /// <param name="filePath">The path of the CSV file to read.</param>
+        /// <returns>A list of HSTEVT01 records.</returns>
         private List<HSTEVT01> ReadCsvFile(string filePath)
         {
             List<HSTEVT01> records = new List<HSTEVT01>();
@@ -36,6 +51,10 @@ namespace Historical_Events.BL
             return records;
         }
 
+        /// <summary>
+        /// Inserts a list of HSTEVT01 records into the database.
+        /// </summary>
+        /// <param name="records">The list of HSTEVT01 records to insert.</param>
         private void InsertRecordsIntoDatabase(List<HSTEVT01> records)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
@@ -59,5 +78,7 @@ namespace Historical_Events.BL
                 }
             }
         }
+
+        #endregion
     }
 }

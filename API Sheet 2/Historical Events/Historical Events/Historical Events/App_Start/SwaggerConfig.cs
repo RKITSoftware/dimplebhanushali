@@ -284,19 +284,16 @@ namespace Historical_Events
             // Check if the method has the BearerAuth attribute
             var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthenticationFilter>().Any();
 
-            if (bearerAuthRequired)
-            {
-                // Apply Bearer Authentication
-                if (operation.security == null)
-                    operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+            // Apply Bearer Authentication
+            if (operation.security == null)
+                operation.security = new List<IDictionary<string, IEnumerable<string>>>();
 
-                var bearerAuth = new Dictionary<string, IEnumerable<string>>
+            var bearerAuth = new Dictionary<string, IEnumerable<string>>
                     {
                         { "BearerToken", new string[] { } }
                     };
 
-                operation.security.Add(bearerAuth);
-            }
+            operation.security.Add(bearerAuth);
         }
     }
 }

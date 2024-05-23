@@ -9,7 +9,7 @@ namespace AES.BL
     /// </summary>
     public class BLAesEncryptionService
     {
-        #region Static Members 
+        #region Private Members 
 
         /// <summary>
         /// Instance of AES Encryption Service Provider.

@@ -22,6 +22,8 @@ namespace Historical_Events.Models.DTO
         [Required(ErrorMessage = "Date Required")]
         public int t01f02 { get; set; }
 
+        //// Length
+
         /// <summary>
         /// Tag
         /// </summary>

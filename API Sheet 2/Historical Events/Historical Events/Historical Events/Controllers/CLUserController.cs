@@ -126,6 +126,7 @@ namespace Historical_Events.Controllers
             return Ok(response);
         }
 
+        #region Private Method
         /// <summary>
         /// Gets Current Logged in User Id from Claims.
         /// </summary>
@@ -141,5 +142,6 @@ namespace Historical_Events.Controllers
             }
             return 0;
         }
+        #endregion
     }
 }

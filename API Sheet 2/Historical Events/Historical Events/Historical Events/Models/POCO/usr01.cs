@@ -42,7 +42,7 @@ namespace Historical_Events.Models
         /// <summary>
         /// Roles
         /// </summary>
-        public string r01f07 { get; set; } = enmRoles.U.ToString();
+        public string r01f07 { get; set; }
 
         /// <summary>
         /// CreatedAt

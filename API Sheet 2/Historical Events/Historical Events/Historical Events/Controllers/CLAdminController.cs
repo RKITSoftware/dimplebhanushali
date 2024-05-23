@@ -12,7 +12,7 @@ namespace Historical_Events.Controllers
     /// <summary>
     /// Controller for managing Admin-related operations.
     /// </summary>
-    [RoutePrefix("api/User")]
+    [RoutePrefix("api/Admin")]
     [BasicAuthorisation(Roles = "A")]
     public class CLAdminController : ApiController
     {
@@ -49,9 +49,19 @@ namespace Historical_Events.Controllers
         #endregion
 
         /// <summary>
+        /// Creates database tables.
+        /// </summary>
+        [HttpPost, Route("CreateTables")]
+        public IHttpActionResult CreateTable()
+        {
+            _userManager.CreateTables();
+            return Ok("Tables Created Successfully.");
+        }
+
+        /// <summary>
         /// Creates a new historical event.
         /// </summary>
-        [HttpPost, Route("Create")]
+        [HttpPost, Route("CreatePost")]
         public IHttpActionResult CreateHistoricalEvent(DTOHstEvt01 objDTOHstEvt01)
         {
             _blHistory.enmOperation = Helpers.enmOperation.I;
@@ -70,7 +80,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Edits an existing historical event.
         /// </summary>
-        [HttpPut, Route("Edit/{id}")]
+        [HttpPut, Route("EditPost/{id}")]
         public IHttpActionResult EditHistoricalEvent(DTOHstEvt01 objDTOHstEvt01)
         {
             _blHistory.enmOperation = Helpers.enmOperation.U;
@@ -105,7 +115,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Deletes a historical event.
         /// </summary>
-        [HttpDelete, Route("Delete/{id}")]
+        [HttpDelete, Route("DeletePost/{id}")]
         public IHttpActionResult DeleteHistoricalEvent(int id)
         {
             response = _blHistory.ValidateOnDelete(id);
@@ -120,7 +130,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Retrieves all users. (Requires admin or superadmin role)
         /// </summary>
-        [HttpGet]
+        [HttpGet, Route("GetAllUsers")]
         public IHttpActionResult GetAllUsers()
         {
             response = _userManager.GetAllUsers();
@@ -130,7 +140,7 @@ namespace Historical_Events.Controllers
         /// <summary>
         /// Retrieves a user by ID.
         /// </summary>
-        [HttpGet, Route("GetById/{id}")]
+        [HttpGet, Route("GetUserById/{id}")]
         public IHttpActionResult GetUserById(int id)
         {
             response = _userManager.GetUserById(id);

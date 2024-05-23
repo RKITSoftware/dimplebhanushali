@@ -235,6 +235,7 @@
     </Compile>
     <Compile Include="Helpers\enmMessageExtensions.cs" />
     <Compile Include="Helpers\Mapper.cs" />
+    <Compile Include="Helpers\ValidateModelAttribute.cs" />
     <Compile Include="Models\DTO\DTOHstEvt01.cs" />
     <Compile Include="Models\DTO\DTOUSR01.cs" />
     <Compile Include="Models\POCO\HSTEVT01.cs" />

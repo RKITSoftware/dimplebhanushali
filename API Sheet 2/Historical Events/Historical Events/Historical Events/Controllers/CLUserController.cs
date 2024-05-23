@@ -15,7 +15,6 @@ namespace Historical_Events.Controllers
     /// Controller for managing user-related operations.
     /// </summary>
     [RoutePrefix("api/User")]
-    [BasicAuthenticationFilter]
     public class CLUserController : ApiController
     {
         #region Private Member
@@ -59,18 +58,6 @@ namespace Historical_Events.Controllers
                 response = _userManager.Save();
             }
             return Ok(response);
-        }
-
-        /// <summary>
-        /// Creates database tables.
-        /// </summary>
-        [HttpPost,Route("CreateTables")]
-        [BasicAuthorisation(Roles = "A")]
-        //[AllowAnonymous]
-        public IHttpActionResult CreateTable()
-        {
-            _userManager.CreateTables();
-            return Ok();
         }
 
         /// <summary>

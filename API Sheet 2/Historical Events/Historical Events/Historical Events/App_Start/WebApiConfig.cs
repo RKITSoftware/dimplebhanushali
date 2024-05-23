@@ -1,4 +1,5 @@
 ﻿using Historical_Events.Basic_Authorisation;
+using Historical_Events.Helpers;
 using System.Web.Http;
 
 namespace Historical_Events
@@ -9,10 +10,12 @@ namespace Historical_Events
         {
             // Web API configuration and services
 
+            // Global Filters
+            config.Filters.Add(new BasicAuthenticationFilter());
+            config.Filters.Add(new ValidateModelAttribute());
+
             // Web API routes
             config.MapHttpAttributeRoutes();
-
-            config.Filters.Add(new BasicAuthenticationFilter());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -161,7 +161,8 @@ namespace Historical_Events.BL
         {
             using (IDbConnection db = MyDbContext.CreateConnection())
             {
-                db.DropAndCreateTable<USR01>();
+                db.CreateTable<USR01>();
+                //db.DropAndCreateTable<USR01>();
             }
         }
 

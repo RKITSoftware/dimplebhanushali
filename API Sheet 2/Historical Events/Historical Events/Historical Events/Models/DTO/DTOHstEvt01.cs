@@ -12,30 +12,28 @@ namespace Historical_Events.Models.DTO
         /// Id
         /// </summary>
         [JsonProperty("t01101")]
-        [Required(ErrorMessage = "Id required")]
+        [Required(ErrorMessage = "Id is required")]
         public int t01f01 { get; set; }
 
         /// <summary>
         /// Date of News Headline
         /// </summary>
         [JsonProperty("t01102")]
-        [Required(ErrorMessage = "Date Required")]
+        [Required(ErrorMessage = "Date is Required")]
         public int t01f02 { get; set; }
-
-        //// Length
 
         /// <summary>
         /// Tag
         /// </summary>
         [JsonProperty("t01103")]
-        [Required(ErrorMessage = "Tag required")]
+        [Required(ErrorMessage = "Tag is required")]
         public string t01f03 { get; set; }
 
         /// <summary>
         /// News Headline
         /// </summary>
         [JsonProperty("t01104")]
-        [Required(ErrorMessage = "Headline required")]
+        [Required(ErrorMessage = "Headline is required")]
         public string t01f04 { get; set; }
 
         /// <summary>

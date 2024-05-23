@@ -11,7 +11,6 @@ namespace Historical_Events.Models
         /// User Id
         /// </summary>
         [PrimaryKey, AutoIncrement]
-
         public int r01f01 { get; set; }
 
         /// <summary>

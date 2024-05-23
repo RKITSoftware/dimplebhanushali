@@ -36,7 +36,6 @@ namespace Historical_Events.Models.DTO
         /// </summary>
         [JsonProperty("r01104")]
         [Required(ErrorMessage = "Emailid is required")]
-        //[DataType(DataType.EmailAddress)]
         [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email id")]
         public string r01f04 { get; set; }
 

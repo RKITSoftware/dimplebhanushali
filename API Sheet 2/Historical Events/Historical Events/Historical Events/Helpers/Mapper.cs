@@ -8,6 +8,8 @@ namespace Historical_Events.Helpers
     /// </summary>
     public static class Mapper
     {
+        #region Public Method
+
         /// <summary>
         /// Maps properties from a source object to a destination object.
         /// </summary>
@@ -47,5 +49,7 @@ namespace Historical_Events.Helpers
 
             return destination;
         }
+
+        #endregion
     }
 }

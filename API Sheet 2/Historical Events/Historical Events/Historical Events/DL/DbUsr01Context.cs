@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Historical_Events.DL
 {
@@ -33,7 +34,7 @@ namespace Historical_Events.DL
         /// Retrieves all users from the database.
         /// </summary>
         /// <returns>A list of all users.</returns>
-        public List<USR01> GetAllUsers()
+        public DataTable GetAllUsers()
         {
             string query = @"SELECT 
                                         r01f01, 
@@ -58,7 +59,7 @@ namespace Historical_Events.DL
         /// </summary>
         /// <param name="id">The ID of the user to retrieve.</param>
         /// <returns>The user with the specified ID.</returns>
-        public USR01 GetUserById(int id)
+        public DataTable GetUserById(int id)
         {
             string query = $@"SELECT 
                                     r01f01, 
@@ -72,59 +73,39 @@ namespace Historical_Events.DL
                                         ELSE 'Unknown'
                                     END AS r01f07
                               FROM 
-                                    usr01 
+                                    usr01
                               WHERE 
                                     r01f01 = {id};";
-            List<USR01> users = GetUsersFromDatabase(query);
 
-            return users.Count > 0 ? users[0] : null;
+            return GetUsersFromDatabase(query);
         }
         #endregion
 
         #region Private Methods
+
         /// <summary>
         /// Retrieves users from the database based on the provided query.
         /// </summary>
         /// <param name="query">The SQL query to retrieve users.</param>
         /// <returns>A list of users.</returns>
-        private static List<USR01> GetUsersFromDatabase(string query)
+        private static DataTable GetUsersFromDatabase(string query)
         {
+            DataTable dataTable = new DataTable();
+
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
                 connection.Open();
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
-                    return GetUsersFromDataReader(command.ExecuteReader());
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                    }
                 }
             }
-        }
 
-        /// <summary>
-        /// Retrieves users from the provided data reader.
-        /// </summary>
-        /// <param name="reader">The data reader containing user data.</param>
-        /// <returns>A list of users.</returns>
-        private static List<USR01> GetUsersFromDataReader(MySqlDataReader reader)
-        {
-            List<USR01> resultList = new List<USR01>();
-
-            while (reader.Read())
-            {
-                USR01 objUser = new USR01
-                {
-                    r01f01 = Convert.ToInt32(reader["r01f01"]),
-                    r01f02 = reader["r01f02"].ToString(),
-                    r01f03 = reader["r01f03"].ToString(),
-                    r01f04 = reader["r01f04"].ToString(),
-                    r01f05 = reader["r01f05"].ToString(),
-                    r01f07 = reader["r01f07"].ToString()
-                };
-
-                resultList.Add(objUser);
-            }
-
-            return resultList;
+            return dataTable;
         }
 
         #endregion

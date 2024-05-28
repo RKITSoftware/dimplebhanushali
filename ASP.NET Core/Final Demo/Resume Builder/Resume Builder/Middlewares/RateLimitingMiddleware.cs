@@ -61,7 +61,7 @@ namespace Resume_Builder.Middlewares
             var queueProcessor = _serviceProvider.GetRequiredService<RequestProcessingService>();
 
             string ipAddress = context.Connection.RemoteIpAddress.ToString();
-            int limit = 2;
+            int limit = 5000;
             int expireInMinutes = 1;
             string cacheKey = $"{ipAddress}";
 

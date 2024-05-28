@@ -1,37 +1,28 @@
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using API_Overview;
+/// <summary>
+/// The main class of the application.
+/// </summary>
+public class Program
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    /// <summary>
+    /// The entry point of the program.
+    /// </summary>
+    /// <param name="args">Command-line arguments.</param>
+    public static void Main(string[] args)
+    {
+        // Build and run the web host
+        CreateHostBuilder(args).Build().Run();
+    }
+
+    /// <summary>
+    /// Creates an instance of the web host builder.
+    /// </summary>
+    /// <param name="args">Command-line arguments.</param>
+    /// <returns>An instance of IHostBuilder.</returns>
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 }
-app.UseRouting();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-// Endpoints, Routing
-// Startup
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.UseCors(cors =>
-{
-    cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-});
-
-app.Run();

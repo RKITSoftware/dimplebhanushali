@@ -1,12 +1,10 @@
-﻿using Historical_Events.Basic_Authorisation;
-using Historical_Events.BL;
+﻿using Historical_Events.BL;
 using Historical_Events.Helpers;
 using Historical_Events.Models;
 using Historical_Events.Models.DTO;
 using System;
 using System.Configuration;
 using System.Security.Claims;
-using System.Web;
 using System.Web.Http;
 
 namespace Historical_Events.Controllers
@@ -68,17 +66,6 @@ namespace Historical_Events.Controllers
         public IHttpActionResult LoginUser(string userName, string password)
         {
             response = _userManager.LoginUser(userName, password);
-            return Ok(response);
-        }
-
-        /// <summary>
-        /// Retrieves all users. (Requires admin or superadmin role)
-        /// </summary>
-        [HttpGet, Route("GetAll")]
-        [BasicAuthorisation(Roles = "A")]
-        public IHttpActionResult GetAllUsers()
-        {
-            response = _userManager.GetAllUsers();
             return Ok(response);
         }
 

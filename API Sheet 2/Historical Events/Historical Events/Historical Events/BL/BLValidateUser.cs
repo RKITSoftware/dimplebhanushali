@@ -49,9 +49,9 @@ namespace Historical_Events.User_Validation
         public string GenerateJwtToken(string username, int userId, string role)
         {
             // Define token parameters
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("SecretKeyOfHistoricalEventsForJwtToken");
-            var tokenDescriptor = new SecurityTokenDescriptor
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            byte[] key = Encoding.ASCII.GetBytes("SecretKeyOfHistoricalEventsForJwtToken");
+            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
@@ -64,8 +64,8 @@ namespace Historical_Events.User_Validation
             };
 
             // Create and serialize the token
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
+            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+            string tokenString = tokenHandler.WriteToken(token);
 
             return tokenString;
         }
@@ -85,10 +85,10 @@ namespace Historical_Events.User_Validation
             {
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(key),
-                ValidateIssuer = false, // You may want to set this to true if issuer validation is required
-                ValidateAudience = false, // You may want to set this to true if audience validation is required
-                ValidateLifetime = true, // Ensure token hasn't expired
-                ClockSkew = TimeSpan.Zero // No tolerance for the token expiration time
+                ValidateIssuer = false,
+                ValidateAudience = false, 
+                ValidateLifetime = true, 
+                ClockSkew = TimeSpan.Zero
             };
 
             try
@@ -96,7 +96,7 @@ namespace Historical_Events.User_Validation
                 // Validate token and extract claims
                 SecurityToken validatedToken;
                 
-                var claimsPrincipal = tokenHandler.ValidateToken(jwtToken, validationParameters, out validatedToken);
+                ClaimsPrincipal claimsPrincipal = tokenHandler.ValidateToken(jwtToken, validationParameters, out validatedToken);
                 
                 // Set claims in current context
                 HttpContext.Current.User = claimsPrincipal;
@@ -113,3 +113,4 @@ namespace Historical_Events.User_Validation
         #endregion
     }
 }
+ 

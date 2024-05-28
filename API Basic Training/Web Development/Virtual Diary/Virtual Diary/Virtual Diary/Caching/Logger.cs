@@ -10,11 +10,12 @@ namespace Virtual_Diary.Logging
     {
         #region Private Members
 
-        // filename
+        // Filename
         private static readonly string _logFileName = "logs.txt";
 
-        //File Path
-        private static readonly string _logFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Logs", _logFileName);
+        // File Path
+        private static readonly string _logDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+        private static readonly string _logFilePath = Path.Combine(_logDirectory, _logFileName);
 
         #endregion
 

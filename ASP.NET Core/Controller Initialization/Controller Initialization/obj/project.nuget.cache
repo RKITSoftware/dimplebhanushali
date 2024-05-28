@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "kMX4XB9Dp9X0CQeQT9OxB65Hp/MaHeC2LE77U0SZ79IyaiGUW2NO1D4Ko0OcclUUoRwdikM9HclZFA9xj33idw==",
+  "success": true,
+  "projectFilePath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Controller Initialization\\Controller Initialization\\Controller Initialization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dimple.m\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\dimple.m\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\dimple.m\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\dimple.m\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\dimple.m\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\dimple.m\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

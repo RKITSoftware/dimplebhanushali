@@ -24,7 +24,6 @@ namespace Middleware_API
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    // Use the Startup class for configuring the application
                     webBuilder.UseStartup<Startup>();
                 });
     }

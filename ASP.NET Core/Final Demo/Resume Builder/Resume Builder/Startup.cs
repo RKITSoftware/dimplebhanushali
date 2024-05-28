@@ -10,6 +10,7 @@ using Resume_Builder.Helpers;
 using Resume_Builder.Middlewares;
 using Resume_Builder.Middlewares.Filters;
 using Resume_Builder.Models.POCO;
+using System.Reflection;
 
 namespace Resume_Builder
 {
@@ -51,8 +52,6 @@ namespace Resume_Builder
 
             services.AddScoped<ResumeGenerationService>();
             services.AddScoped<BulkResumeGenerationService>();
-            //services.AddScoped<CSVToJSON>();
-
 
             // Configures Controllers
             services.AddControllers(options =>
@@ -75,6 +74,9 @@ namespace Resume_Builder
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+                    $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
+
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Resume Builder API", Version = "v1" });
 
                 // Define the BearerAuth scheme that's in use

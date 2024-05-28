@@ -2,7 +2,6 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Drawing.Printing;
 
 namespace Historical_Events.DL
 {
@@ -56,7 +55,7 @@ namespace Historical_Events.DL
         /// <returns>A paginated list of historical events.</returns>
         public List<HSTEVT01> GetAllEvents(int pageNumber)
         {
-            int offset = (pageNumber - 1) * _pageSize; // Calculate the offset
+            int offset = (pageNumber - 1) * _pageSize; 
 
             string query = $@"SELECT 
                             t01f01, 
@@ -66,7 +65,7 @@ namespace Historical_Events.DL
                     FROM 
                             hstevt01 
                     LIMIT
-                            {_pageSize} OFFSET {offset};"; // Apply pagination
+                            {_pageSize} OFFSET {offset};"; 
 
             List<HSTEVT01> data = GetHistoricalEventsFromDatabase(query);
 
@@ -80,17 +79,20 @@ namespace Historical_Events.DL
         /// <returns>The historical event if found; otherwise, null.</returns>
         public HSTEVT01 GetEventById(int id)
         {
-            string query = $"SELECT " +
-                                    $"t01f01, " +
-                                    $"t01f02, " +
-                                    $"t01f03, " +
-                                    $"t01f04 " +
-                           $"FROM " +
-                                    $"hstevt01 " +
-                            $"WHERE " +
-                                   $"t01f01 = {id};";
+            //// string format
+            string query = $@"SELECT 
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04 
+                              FROM 
+                                    hstevt01 
+                              WHERE 
+                                   t01f01 = {id};";
+
             List<HSTEVT01> events = GetHistoricalEventsFromDatabase(query);
 
+            //// validate in BL
             return events.Count > 0 ? events[0] : null;
         }
 
@@ -108,16 +110,17 @@ namespace Historical_Events.DL
         {
             int offset = (pageNumber - 1) * _pageSize; // Calculate the offset
 
+            //// Where and
             // Construct the base query
             string query = $@"SELECT 
-                            t01f01, 
-                            t01f02, 
-                            t01f03, 
-                            t01f04 
-                    FROM 
-                            hstevt01 
-                    WHERE 
-                            1 = 1";
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04 
+                              FROM 
+                                    hstevt01 
+                              WHERE 
+                                    1 = 1";
 
             // Append conditions based on parameters
             if (startYear.HasValue && endYear.HasValue)
@@ -178,9 +181,8 @@ namespace Historical_Events.DL
                             FROM 
                                     hstevt01 
                             ORDER BY 
-                                    t01f02 
-                            DESC 
-                                LIMIT {count};";
+                                    t01f02 DESC 
+                            LIMIT {count};";
 
             List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
@@ -202,10 +204,7 @@ namespace Historical_Events.DL
                             FROM 
                                     hstevt01 
                             WHERE 
-                                    t01f02 
-                            BETWEEN 
-                                    '{startDate}' AND '{endDate}';";
-
+                                    t01f02 BETWEEN '{startDate}' AND '{endDate}';";
 
             List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
@@ -226,7 +225,7 @@ namespace Historical_Events.DL
                             FROM 
                                     hstevt01 
                             WHERE 
-                                    t01f04 LIKE '{keyword}';";
+                                    t01f04 LIKE '%{keyword}%';";
 
             List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
             return lstHstEvt01;
@@ -238,11 +237,11 @@ namespace Historical_Events.DL
         /// <returns>A list of unique categories.</returns>
         public List<string> GetUniqueCategories()
         {
-            string query = @"SELECT 
-                            DISTINCT 
-                                    t01f03 
+            //// Foramt
+            string query = @"SELECT DISTINCT 
+                                            t01f03 
                             FROM    
-                                    hstevt01;";
+                                            hstevt01;";
 
             using (MySqlConnection connection = new MySqlConnection(_connection))
             {
@@ -269,16 +268,16 @@ namespace Historical_Events.DL
 
             // Construct the query to retrieve events for today's day and month
             string query = $@"SELECT 
-                        t01f01, 
-                        t01f02, 
-                        t01f03, 
-                        t01f04 
-                    FROM 
-                        hstevt01 
-                    WHERE 
-                        SUBSTRING(t01f02, 5) = '{today}' -- Matches day and month only
-                    LIMIT
-                        {_pageSize} OFFSET {offset};";
+                                    t01f01, 
+                                    t01f02, 
+                                    t01f03, 
+                                    t01f04 
+                              FROM 
+                                    hstevt01 
+                              WHERE 
+                                    SUBSTRING(t01f02, 5) = '{today}' -- Matches day and month only
+                              LIMIT
+                                    {_pageSize} OFFSET {offset};";
 
             // Retrieve events from the database based on the constructed query
             List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);

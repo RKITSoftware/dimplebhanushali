@@ -1,9 +1,7 @@
-﻿using System;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Virtual_Diary.BasicAuth;
 using Virtual_Diary.BL;
 using Virtual_Diary.Helper;
-using Virtual_Diary.Logging;
 using Virtual_Diary.Models;
 
 namespace Virtual_Diary.Controllers
@@ -13,6 +11,7 @@ namespace Virtual_Diary.Controllers
     /// </summary>
     [RoutePrefix("api/v2")]
     [BasicAuthentication]
+    //[AllowAnonymous]
     public class CLDiaryEntryV2Controller : ApiController
     {
         #region Private Members
@@ -73,15 +72,7 @@ namespace Virtual_Diary.Controllers
         [BasicAuthorisationAttribute(Roles = "user")]
         public IHttpActionResult GetTaskWithinDiaryEntry(int entryId, int taskId)
         {
-            try
-            {
-                return Ok(_diaryManager.GetTaskWithinDiaryEntry(entryId, taskId));
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError($"Error occurred while retrieving task with Id: {taskId} within diary entry with Id: {entryId}", ex);
-                throw; // Rethrow the exception
-            }
+            return Ok(_diaryManager.GetTaskWithinDiaryEntry(entryId, taskId));
         }
 
         /// <summary>
@@ -92,19 +83,20 @@ namespace Virtual_Diary.Controllers
         /// <param name="updatedTask">Updated details for the task.</param>
         /// <returns>Updated task.</returns>
         [HttpPut]
-        [Route("diary/{entryId}/tasks/{taskId}")]
+        [Route("diary/{entryId}/tasks")]
         [BasicAuthorisationAttribute(Roles = "admin,superadmin")]
-        public IHttpActionResult UpdateTaskWithinDiaryEntry(int entryId, int taskId, [FromBody] TaskDetail updatedTask)
+        public IHttpActionResult UpdateTaskWithinDiaryEntry(int entryId, [FromBody] TaskDetail updatedTask)
         {
-            try
+            response = new Response();
+            _diaryManager.operation = enmOperations.U;
+            _diaryManager.PreSaveTask(entryId, updatedTask);
+
+            response = _diaryManager.ValidateTask();
+            if (!response.IsError)
             {
-                return Ok(_diaryManager.UpdateTaskWithinDiaryEntry(entryId, taskId, updatedTask));
+                response = _diaryManager.SaveTask();
             }
-            catch (Exception ex)
-            {
-                Logger.LogError($"Error occurred while updating task with Id: {taskId} within diary entry with Id: {entryId}", ex);
-                throw; // Rethrow the exception
-            }
+            return Ok(response);
         }
 
         /// <summary>

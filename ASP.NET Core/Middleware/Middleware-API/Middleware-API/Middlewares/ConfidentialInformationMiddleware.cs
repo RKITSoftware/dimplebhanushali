@@ -25,7 +25,7 @@ namespace Middleware_API.Middlewares
         #region Public Async Methods
         /// <summary>
         /// Invokes the confidential information middleware.
-        /// </summary>
+        /// </summary>f
         /// <param name="httpContext">The HTTP context.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         public async Task Invoke(HttpContext httpContext)

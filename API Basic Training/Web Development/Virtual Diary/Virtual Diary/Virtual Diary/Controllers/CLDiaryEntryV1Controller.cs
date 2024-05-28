@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using Virtual_Diary.BasicAuth;
 using Virtual_Diary.BL;
 using Virtual_Diary.Helper;
-using Virtual_Diary.Logging;
 using Virtual_Diary.Models;
 
 namespace Virtual_Diary.Controllers
@@ -14,6 +12,7 @@ namespace Virtual_Diary.Controllers
     /// </summary>
     [RoutePrefix("api/v1")]
     [BasicAuthentication]
+    //[AllowAnonymous]
     public class CLDiaryEntryV1Controller : ApiController
     {
         #region Private Members
@@ -49,16 +48,8 @@ namespace Virtual_Diary.Controllers
         [BasicAuthorisationAttribute(Roles = "admin")]
         public IEnumerable<DiaryEntry> GetAllDiaryEntries()
         {
-            try
-            {
                 List<DiaryEntry> diaryEntries = _diaryManager.GetDiaryEntriesFromCacheOrSource();
                 return diaryEntries;
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError("Error occurred while retrieving diary entries.", ex);
-                throw; // Rethrow the exception
-            }
         }
 
         /// <summary>
@@ -71,16 +62,8 @@ namespace Virtual_Diary.Controllers
         [BasicAuthorisationAttribute(Roles = "user")]
         public IHttpActionResult GetDiaryEntryById(int id)
         {
-            try
-            {
                 DiaryEntry diaryEntry = _diaryManager.GetDiaryEntryById(id);
                 return Ok(diaryEntry);
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError($"Error occurred while retrieving diary entry with Id: {id}", ex);
-                throw; // Rethrow the exception
-            }
         }
 
         /// <summary>

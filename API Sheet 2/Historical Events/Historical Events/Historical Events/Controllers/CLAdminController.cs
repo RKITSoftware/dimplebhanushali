@@ -77,6 +77,8 @@ namespace Historical_Events.Controllers
             return Ok(response);
         }
 
+        //// Class Library
+
         /// <summary>
         /// Edits an existing historical event.
         /// </summary>

@@ -11,7 +11,7 @@ namespace Routing_Web_API.Controllers
         /// </summary>
         /// <param name="name">The name parameter.</param>
         /// <returns>An IActionResult containing a welcome message.</returns>
-        [HttpGet("Greetings")]
+        //[HttpGet("Greetings")]
         public IActionResult Greeting(string name)
         {
             return Ok($"Welcome To Routing Controller {name}");

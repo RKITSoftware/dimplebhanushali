@@ -19,7 +19,7 @@ namespace Historical_Events.Data
         /// </summary>
         public static IDbConnection CreateConnection()
         {
-            var dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
+            OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
             return dbFactory.Open();
         }
     }

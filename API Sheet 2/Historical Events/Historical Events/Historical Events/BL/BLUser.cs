@@ -4,16 +4,11 @@ using Historical_Events.Helpers;
 using Historical_Events.Models;
 using Historical_Events.Models.DTO;
 using Historical_Events.User_Validation;
-using Microsoft.IdentityModel.Tokens;
 using MySql.Data.MySqlClient;
 using ServiceStack;
 using ServiceStack.OrmLite;
 using System;
 using System.Data;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
 
 namespace Historical_Events.BL
 {
@@ -90,39 +85,46 @@ namespace Historical_Events.BL
         public Response Validate()
         {
             response = new Response();
+            bool isDuplicate;
 
             if (operation == enmOperation.I)
             {
                 using (IDbConnection db = MyDbContext.CreateConnection())
                 {
-                    // Check if the table exists
-                    if (!db.TableExists<USR01>())
-                    {
-                        response.isError = true;
-                        response.Message = "Table does not exist.";
-                        return response;
-                    }
+                    isDuplicate = db.Exists<USR01>(x => x.r01f03 == _objUser.r01f03 || x.r01f05 == _objUser.r01f05 || x.r01f04 == _objUser.r01f04);
+                }
 
-                    bool isDuplicate = db.Exists<USR01>(x => x.r01f03 == _objUser.r01f03 || x.r01f05 == _objUser.r01f05 || x.r01f04 == _objUser.r01f04);
-                    if (isDuplicate)
-                    {
-                        response.isError = true;
-                        response.Message = "Duplicate entry found.";
-                    }
+                if (isDuplicate)
+                {
+                    response.isError = true;
+                    response.Message = "Duplicate entry found.";
                 }
             }
             if (operation == enmOperation.U)
             {
+                bool isUserIdExists;
+
                 using (IDbConnection db = MyDbContext.CreateConnection())
                 {
                     // Check if user ID exists in database 
-                    bool isUserIdExists = db.Exists<USR01>(x => x.r01f01 == _objUser.r01f01);
-                    if (!isUserIdExists)
-                    {
-                        response.isError = true;
-                        response.Message = "User ID not exists.";
-                        return response;
-                    }
+                    isUserIdExists = db.Exists<USR01>(x => x.r01f01 == _objUser.r01f01);
+
+                    isDuplicate = db.Exists<USR01>(x =>
+                        (x.r01f03 == _objUser.r01f03 || x.r01f05 == _objUser.r01f05 || x.r01f04 == _objUser.r01f04) &&
+                        x.r01f01 != _objUser.r01f01);
+                }
+
+                if (!isUserIdExists)
+                {
+                    response.isError = true;
+                    response.Message = "User ID not exists.";
+                    return response;
+                }
+
+                if (isDuplicate)
+                {
+                    response.isError = true;
+                    response.Message = "Duplicate entry found.";
                 }
             }
             return response;
@@ -135,17 +137,14 @@ namespace Historical_Events.BL
         {
             response = new Response();
 
-            if (operation == enmOperation.I)
+            using (IDbConnection db = MyDbContext.CreateConnection())
             {
-                using (IDbConnection db = MyDbContext.CreateConnection())
+                if (operation == enmOperation.I)
                 {
                     db.Insert(_objUser);
                     response.Message = enmOperation.I.GetMessage();
                 }
-            }
-            else if (operation == enmOperation.U)
-            {
-                using (IDbConnection db = MyDbContext.CreateConnection())
+                else if (operation == enmOperation.U)
                 {
                     db.Update(_objUser);
                     response.Message = enmOperation.U.GetMessage();
@@ -162,7 +161,6 @@ namespace Historical_Events.BL
             using (IDbConnection db = MyDbContext.CreateConnection())
             {
                 db.CreateTable<USR01>();
-                //db.DropAndCreateTable<USR01>();
             }
         }
 
@@ -203,7 +201,7 @@ namespace Historical_Events.BL
             BLValidateUser blValidateUser = new BLValidateUser();
 
             // Get user ID after validating credentials
-            (int userId, string role) = GetCurrentUserIdAndRole(userName, password);
+            USR01 objUser = GetCurrentUserIdAndRole(userName, password);
 
             bool isCredentialCorrect = blValidateUser.IsLogin(userName, password);
             if (!isCredentialCorrect)
@@ -213,7 +211,7 @@ namespace Historical_Events.BL
                 return response;
             }
 
-            string token = blValidateUser.GenerateJwtToken(userName, userId, role);
+            string token = blValidateUser.GenerateJwtToken(userName, objUser.r01f01, objUser.r01f06);
 
             response.isError = false;
             response.Message = "Token generated";
@@ -227,7 +225,7 @@ namespace Historical_Events.BL
         /// <param name="username">The username of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>A tuple containing the user ID and role.</returns>
-        public (int userId, string role) GetCurrentUserIdAndRole(string username, string password)
+        public USR01 GetCurrentUserIdAndRole(string username, string password)
         {
             BLValidateUser blValidateUser = new BLValidateUser();
 
@@ -237,12 +235,13 @@ namespace Historical_Events.BL
             {
                 BLAES _objBlAes = new BLAES();
                 password = _objBlAes.Encrypt(password);
-                string query = $@"SELECT r01f01, r01f07 FROM 
-                                USR01 
-                          WHERE 
-                                r01f03 = '{username}' 
-                          AND 
-                                r01f06 = '{password}'";
+                string query = $@"SELECT 
+                                        r01f01, 
+                                        r01f07 
+                                  FROM 
+                                        USR01 
+                                  WHERE 
+                                        r01f03 = '{username}' AND r01f06 = '{password}'";
 
                 using (MySqlConnection connection = new MySqlConnection(_connection))
                 {
@@ -253,15 +252,16 @@ namespace Historical_Events.BL
                         {
                             if (reader.Read())
                             {
-                                int userId = reader.GetInt32(0); // Assuming the user ID is in the first column
-                                string role = reader.GetString(1); // Assuming the role is in the second column
-                                return (userId, role);
+                                int userId = reader.GetInt32(0);
+                                string role = reader.GetString(1);
+                                USR01 user = new USR01 { r01f01 = userId, r01f06 = role };
+                                return user;
                             }
                         }
                     }
                 }
             }
-            return (-1, null); // or throw an exception
+            return null;
         }
 
         /// <summary>

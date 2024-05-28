@@ -1,0 +1,2182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Resume Builder</name>
+    </assembly>
+    <members>
+        <member name="T:Resume_Builder.BL.BLTables">
+            <summary>
+            Class for handling table operations using ORMLite.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.BLTables._connectionFactory">
+            <summary>
+            Instance of Db Connection Factory.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.BLTables.#ctor(Resume_Builder.Data.DbConnectionFactory)">
+            <summary>
+            Constructor for BLTables.
+            </summary>
+            <param name="dbConnectionFactory">Database connection factory.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.BLTables.CreateTables">
+            <summary>
+            Creates tables if they do not exist.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.BLTables.DropNCreateTables">
+            <summary>
+            Drops existing tables and recreates them.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.BL.Interfaces.ICRUDService`1">
+            <summary>
+            Interface defining CRUD (Create, Read, Update, Delete) operations and user details retrieval.
+            </summary>
+            <typeparam name="T">The type of the model class.</typeparam>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Get">
+            <summary>
+            Retrieves all items.
+            </summary>
+            <returns>A response containing the result of the operation.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Get(System.Int32)">
+            <summary>
+            Retrieves an item by its ID.
+            </summary>
+            <param name="id">The ID of the item to retrieve.</param>
+            <returns>A response containing the result of the operation.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Delete(System.Int32)">
+            <summary>
+            Deletes an item by its ID.
+            </summary>
+            <param name="id">The ID of the item to delete.</param>
+            <returns>A response containing the result of the operation.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.PreSave(System.Object)">
+            <summary>
+            Performs actions before saving an object.
+            </summary>
+            <param name="obj">The object to be saved.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Validate">
+            <summary>
+            Validates the object before saving.
+            </summary>
+            <returns>A response containing the validation result.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Save">
+            <summary>
+            Saves the object.
+            </summary>
+            <returns>A response containing the result of the save operation.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.ValidateOnDelete(System.Int32)">
+            <summary>
+            Validates before deleting an item.
+            </summary>
+            <param name="id">The ID of the item to delete.</param>
+            <returns>A response containing the validation result.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.GetUserDetails(System.Int32)">
+            <summary>
+            Retrieves details of a user.
+            </summary>
+            <param name="id">The ID of the user.</param>
+            <returns>The user details.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.SendEmail(System.String,System.String)">
+            <summary>
+            Sends Email to perticular Email Address.
+            </summary>
+            <param name="email">Email id</param>
+            <param name="message">Email Message/ Body.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.IAuthService.Login(System.String,System.String)">
+            <summary>
+            Login method which generates token for correct credential 
+            </summary>
+            <param name="email"> email id </param>
+            <param name="password"> password </param>
+            <returns> object of response </returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICryptography.Encrypt(System.String)">
+            <summary>
+            To encrypt data
+            </summary>
+            <param name="plainText"> plain text </param>
+            <returns> cipher text </returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICryptography.Decrypt(System.String)">
+            <summary>
+            To decrypt data
+            </summary>
+            <param name="cipherText"> cipher text </param>
+            <returns> plain text </returns>
+        </member>
+        <member name="T:Resume_Builder.BL.Services.BulkResumeGenerationService">
+            <summary>
+            This Class Handles BUlk Resume Generations.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BulkResumeGenerationService._httpContextAccessor">
+            <summary>
+            Http Context Accessor Instance.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BulkResumeGenerationService._sender">
+            <summary>
+            Email Send Service.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
+            <summary>
+            Constructor for initialising httpContextAccessor and EmailService Instance.
+            </summary>
+            <param name="httpContextAccessor">Http Context Accessor</param>
+            <param name="sender">IEmailService</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.GenerateResumesFromJson(System.String)">
+            <summary>
+            Generates resumes in PDF format from JSON data.
+            </summary>
+            <param name="json">JSON string containing resume data.</param>
+            <returns>A ZIP archive containing PDF resumes as byte arrays.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.GenerateResumePDF(Resume_Builder.Models.DTO.RES02)">
+            <summary>
+            Generates a PDF resume for a user.
+            </summary>
+            <param name="userData">User data to include in the resume.</param>
+            <returns>Byte array representing the PDF resume.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.DTO.RES02)">
+            <summary>
+            Adds user details to a PDF document.
+            </summary>
+            <param name="document">The PDF document to which user details are added.</param>
+            <param name="userData">User data containing information to be added.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.DTO.User)">
+            <summary>
+            Adds basic user details to a PDF document.
+            </summary>
+            <param name="cell">The cell to which user details are added.</param>
+            <param name="user">User data containing basic information.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.CreateZip(System.Collections.Generic.List{System.Byte[]})">
+            <summary>
+            Creates a ZIP archive containing PDF resumes.
+            </summary>
+            <param name="files">List of byte arrays representing PDF resumes.</param>
+            <returns>Byte array representing the ZIP archive.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddDetailsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Boolean,System.String[])">
+            <summary>
+            Adds a section with details to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the section is added.</param>
+            <param name="sectionTitle">Title of the section.</param>
+            <param name="includeTitle">Specifies whether to include the section title.</param>
+            <param name="fields">Fields to include in the section.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddLanguagesSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Adds a section for listing languages to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the section is added.</param>
+            <param name="title">Title of the section.</param>
+            <param name="languages">List of languages to include.</param>
+            <param name="includeTitle">Specifies whether to include the section title.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Adds a section for listing skills to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the section is added.</param>
+            <param name="title">Title of the section.</param>
+            <param name="skills">List of skills to include.</param>
+            <param name="includeTitle">Specifies whether to include the section title.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
+            <summary>
+            Adds an objective section to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the objective section is added.</param>
+        </member>
+        <member name="T:Resume_Builder.BL.Services.ResumeGenerationService">
+            <summary>
+            Service for generating resumes in PDF format.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._httpContextAccessor">
+            <summary>
+            Instance of HttpContextAccessor.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._dbConnectionFactory">
+            <summary>
+            DbFactory Instance.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._sender">
+            <summary>
+            IEmailService Instance.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IEmailService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.BL.Services.ResumeGenerationService"/> class.
+            </summary>
+            <param name="httpContextAccessor">The HTTP context accessor.</param>
+            <param name="dbConnectionFactory">The database connection factory.</param>
+            <param name="sender">The email service used for sending resumes.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.GenerateResume(System.Int32)">
+            <summary>
+            Generates a resume for the specified user ID and sends it via email.
+            </summary>
+            <param name="userId">The ID of the user for whom the resume is generated.</param>
+            <returns>The generated resume as a byte array.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.POCO.USR01)">
+            <summary>
+            Adds user details including photo, contact information, skills, education, work experience, certifications, and projects to a PDF document.
+            </summary>
+            <param name="document">The PDF document to which user details are added.</param>
+            <param name="user">The user whose details are added to the document.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.POCO.USR01)">
+            <summary>
+            Adds basic user details to a PDF document.
+            </summary>
+            <param name="cell">The cell to which user details are added.</param>
+            <param name="user">User data containing basic information.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddDetailsSection``1(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Func{``0,System.Object}})">
+            <summary>
+            Adds contact information to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which contact information is added.</param>
+            <param name="email">The email address.</param>
+            <param name="phone">The phone number.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.SKL01})">
+            <summary>
+            Adds the name and professional title to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the name and title are added.</param>
+            <param name="firstName">The first name of the user.</param>
+            <param name="lastName">The last name of the user.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddLanguageSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.LAN01})">
+            <summary>
+            Adds a section for displaying languages to a PDF cell.
+            </summary>
+            <param name="document">The PDF cell to which the language section is added.</param>
+            <param name="title">The title of the language section.</param>
+            <param name="languageList">The list of languages to be displayed.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
+            <summary>
+            Adds the objective section to a PDF cell.
+            </summary>
+            <param name="cell">The PDF cell to which the objective section is added.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.FetchUserDetails(System.Int32)">
+            <summary>
+            Fetches user details from the database based on the provided user ID.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+            <returns>The user details.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.FetchDetailsForUser``1(System.Int32)">
+            <summary>
+            Fetches details of a specific type for the given user from the database.
+            </summary>
+            <typeparam name="T">The type of details to fetch.</typeparam>
+            <param name="userId">The ID of the user.</param>
+            <returns>The list of details.</returns>
+        </member>
+        <member name="T:Resume_Builder.BL.Services.BLAuthHandler">
+            <summary>
+            Implements interface of CLAuth handler
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._cryptography">
+            <summary>
+            Implementation of cryptography
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._objResponse">
+            <summary>
+            Response of action method
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._dbFactory">
+            <summary>
+            OrmLite Connection Factory
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._authService">
+            <summary>
+            Authentication Service 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.#ctor(Resume_Builder.BL.Interfaces.ICryptography,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IAuthentication)">
+            <summary>
+            Configures necessary dependency injections
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.Login(System.String,System.String)">
+            <summary>
+            Login Method 
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Resume_Builder.DL.Services.CRUDImplementation`1">
+            <summary>
+            Implementation of the CRUD service interface.
+            </summary>
+            <typeparam name="T">Type of the model class.</typeparam>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1.response">
+            <summary>
+            Instance of Response.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._objT">
+            <summary>
+            Instance of T - Type Object.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1.operation">
+            <summary>
+            Enume Message Operation 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._dbConnectionFactory">
+            <summary>
+            Instance of Db Connection Factory.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._httpContextAccessor">
+            <summary>
+            Instance of HttpContextAccessor for Passing user id from Http Context.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._sender">
+            <summary>
+            Instance of HttpContextAccessor for Passing user id from Http Context.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.#ctor(Resume_Builder.Data.DbConnectionFactory,Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
+            <summary>
+            Constructor for CRUDImplementation.
+            </summary>
+            <param name="dbConnectionFactory">Database connection factory.</param>
+            <param name="httpContextAccessor">HTTP context accessor.</param>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Get">
+            <summary>
+            Retrieves all items.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Get(System.Int32)">
+            <summary>
+            Retrieves an item by its ID.
+            </summary>
+            <param name="userId">The ID of the user.</param>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Save">
+            <summary>
+            Saves the object.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Validate">
+            <summary>
+            Validates the object before saving.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.ValidateOnDelete(System.Int32)">
+            <summary>
+            Validates before deleting an item.
+            </summary>
+            <param name="id">The ID of the item to delete.</param>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Delete(System.Int32)">
+            <summary>
+            Deletes an item by its ID.
+            </summary>
+            <param name="id">The ID of the item to delete.</param>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.PreSave(System.Object)">
+            <summary>
+            Performs actions before saving an object.
+            </summary>
+            <param name="obj">The object to be saved.</param>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Resume_Builder#BL#Interfaces#ICRUDService{T}#GetUserDetails(System.Int32)">
+            <summary>
+            Get user details by user id 
+            </summary>
+            <param name="r01f01"> user id </param>
+            <returns> object of user details </returns>
+        </member>
+        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.SendEmail(System.String,System.String)">
+            <summary>
+            Sends an email message to the specified email address.
+            </summary>
+            <param name="email">The email address of the recipient.</param>
+            <param name="message">The message content to be sent.</param>
+        </member>
+        <member name="T:Resume_Builder.DL.Implemntations.AesCrptographyService">
+            <summary>
+            Implements ICryptography interface using Aes Algorithm
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.AesCrptographyService._aes">
+            <summary>
+            AES Crypto Service Provider class implements logic of AES Algorithm
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.AesCrptographyService._config">
+            <summary>
+            Configuration of api 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Resume_Builder.DL.Implemntations.AesCrptographyService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)" -->
+        <member name="M:Resume_Builder.DL.Implemntations.AesCrptographyService.Encrypt(System.String)">
+            <summary>
+            To encrypt data
+            </summary>
+            <param name="plainText"> plain text </param>
+            <returns> cipher text </returns>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.AesCrptographyService.Decrypt(System.String)">
+            <summary>
+            To decrypt data
+            </summary>
+            <param name="cipherText"> cipher text </param>
+            <returns> plain text </returns> 
+        </member>
+        <member name="T:Resume_Builder.DL.Implemntations.AuthenticationService">
+            <summary>
+            Implements IAuthentication Service
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.AuthenticationService._tokenHandler">
+            <summary>
+            Jwt Token Handler
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.AuthenticationService._configuration">
+            <summary>
+            Server configurations
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.AuthenticationService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Take reference of DI from IoC
+            </summary>
+            <param name="configuration"></param>
+            <param name="cryptography"></param>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.AuthenticationService.ValidateToken(System.String)">
+            <summary>
+            Validates token 
+            </summary>
+            <param name="token"> jwt token </param>
+            <returns> CLaims of jwt token </returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.AuthenticationService.GenerateJwtToken(System.String,System.Int32)">
+            <summary>
+            Generates Jwt Token 
+            </summary>
+            <param name="emailId"></param>
+            <param name="userId"></param>
+            <param name="walletId"></param>
+            <returns> Jwt Token </returns>
+        </member>
+        <member name="T:Resume_Builder.DL.Implemntations.EmailService">
+            <summary>
+            Email Service which implements ISender
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.DL.Implemntations.NLogService">
+            <summary>
+            Implementation of Ilogging Service 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.NLogService._logger">
+            <summary>
+            ILogger Service
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.#ctor">
+            <summary>
+            Starting NLog Service 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogError(System.String)">
+            <summary>
+            Logs error
+            </summary>
+            <param name="message"> error message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogException(System.Exception,System.String)">
+            <summary>
+            Logs Exception
+            </summary>
+            <param name="ex"> exception </param>
+            <param name="message"> exception message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogInformation(System.String)">
+            <summary>
+            Logs information 
+            </summary>
+            <param name="message"> information message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogTrace(System.String)">
+            <summary>
+            Logs trace 
+            </summary>
+            <param name="message"> trace message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogWarning(System.String)">
+            <summary>
+            Logs Warning
+            </summary>
+            <param name="message"> warning message </param>
+        </member>
+        <member name="T:Resume_Builder.DL.Implemntations.RedisService">
+            <summary>
+            Implementation of Redis Service interface 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.RedisService._redis">
+            <summary>
+            Redis Connection
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.RedisService._db">
+            <summary>
+            Redis database 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.DL.Implemntations.RedisService._config">
+            <summary>
+            refer to configuration setup of application
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.RedisService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures redis stack 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.RedisService.Get(System.String)">
+            <summary>
+            Get value from cache
+            </summary>
+            <param name="key"> key </param>
+            <returns> value </returns>
+        </member>
+        <member name="M:Resume_Builder.DL.Implemntations.RedisService.Set(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Set value in redis cache 
+            </summary>
+            <param name="key"> key </param>
+            <param name="value"> value </param>
+            <param name="expiry"> expiry duration </param>
+        </member>
+        <member name="T:Resume_Builder.DL.Interfaces.IAuthentication">
+            <summary>
+            Authentication interface 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.IAuthentication.ValidateToken(System.String)">
+            <summary>
+            Validate jwt token 
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.IAuthentication.GenerateJwtToken(System.String,System.Int32)">
+            <summary>
+            Generate Jwt Token and also add roles
+            </summary>
+            <param name="emailId"> email id </param>
+            <param name="userId"> user id </param>
+            <param name="walletId"> wallet id </param>
+            <returns> jwt token </returns>
+        </member>
+        <member name="T:Resume_Builder.DL.Interfaces.IEmailService">
+            <summary>
+            Interface for any message sending 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.IEmailService.Send(System.String,System.String,System.Byte[])">
+            <summary>
+            Sending message to user
+            </summary>
+            <param name="message"> message which we are sending to user </param>
+            <param name="address"> email id on whiich we are sending message </param>
+        </member>
+        <member name="T:Resume_Builder.DL.Interfaces.ILogging">
+            <summary>
+            interface of Logging Service
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.ILogging.LogInformation(System.String)">
+            <summary>
+            Logs information 
+            </summary>
+            <param name="message"> information message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.ILogging.LogWarning(System.String)">
+            <summary>
+            Logs Warning
+            </summary>
+            <param name="message"> warning message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.ILogging.LogError(System.String)">
+            <summary>
+            Logs error
+            </summary>
+            <param name="message"> error message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.ILogging.LogException(System.Exception,System.String)">
+            <summary>
+            Logs Exception
+            </summary>
+            <param name="ex"> exception </param>
+            <param name="message"> exception message </param>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.ILogging.LogTrace(System.String)">
+            <summary>
+            Logs Trace message
+            </summary>
+            <param name="message"> message </param>
+        </member>
+        <member name="T:Resume_Builder.DL.Interfaces.IRedisService">
+            <summary>
+            Interface for Redis Caching Service 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.IRedisService.Get(System.String)">
+            <summary>
+            Get by key from redis 
+            </summary>
+            <param name="key"> key </param>
+            <returns> value </returns>
+        </member>
+        <member name="M:Resume_Builder.DL.Interfaces.IRedisService.Set(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Set cahe in redis 
+            </summary>
+            <param name="key"> key </param>
+            <param name="value"> value </param>
+            <param name="expiry"> expiry of interval </param>
+        </member>
+        <member name="T:Resume_Builder.Controllers.AB">
+            <summary>
+            Controller responsible for handling resume generation requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.AB._resumeGenerationService">
+            <summary>
+            instance of ResumeGenrationService
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.AB.#ctor(Resume_Builder.BL.Services.ResumeGenerationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.AB"/> class.
+            </summary>
+            <param name="resumeGenerationService">The service responsible for generating resumes.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.AB.GenerateResume">
+            <summary>
+            Generates a resume for the authenticated user.
+            </summary>
+            <returns>A file containing the generated resume in PDF format.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.Bulk">
+            <summary>
+            Controller responsible for bulk operations related to resume generation.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.Bulk._resumeGenerationService">
+            <summary>
+            instance of BulkResumeGenerationService
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.Bulk._httpClient">
+            <summary>
+            instance of HttpClient
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.Bulk.#ctor(Resume_Builder.BL.Services.BulkResumeGenerationService,System.Net.Http.HttpClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.Bulk"/> class.
+            </summary>
+            <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
+            <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
+            <param name="httpClient">The HTTP client for making HTTP requests.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.Bulk.GenerateResumes(System.Collections.Generic.List{Resume_Builder.Models.DTO.RES02})">
+            <summary>
+            Generates resumes in bulk from a list of RES02 objects.
+            </summary>
+            <param name="lstRes">The list of RES02 objects representing resume data.</param>
+            <returns>A zip file containing the generated resumes.</returns>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLAuth._objBLAuthHandler">
+            <summary>
+            Implemnts  IBLAuthHandler interface
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLAuth.#ctor(Resume_Builder.BL.Interfaces.IAuthService)">
+            <summary>
+            Constructor Injection
+            </summary>
+            <param name="authentication"> IAuthentication </param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLAuth.Login(Resume_Builder.Models.CRE01)">
+            <summary>
+            Authenticates user credential
+            </summary>
+            <param name="objDTOLog01"> Login Model </param>
+            <returns> jwt token => if credential is correct
+                      else => Login Failed 
+            </returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLCER01">
+            <summary>
+            Controller responsible for CRUD operations related to certifications.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLCER01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLCER01.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.CER01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLCER01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for certifications.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.GetAll">
+            <summary>
+            Retrieves all certifications.
+            </summary>
+            <returns>An HTTP response containing the list of certifications.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.Get">
+            <summary>
+            Retrieves certifications associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of certifications.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.Post(Resume_Builder.Models.DTO.DTOCER01)">
+            <summary>
+            Adds a new certification.
+            </summary>
+            <param name="model">The certification data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.Put(Resume_Builder.Models.DTO.DTOCER01)">
+            <summary>
+            Updates an existing certification.
+            </summary>
+            <param name="model">The certification data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLCER01.Delete(System.Int32)">
+            <summary>
+            Deletes a certification.
+            </summary>
+            <param name="id">The ID of the certification to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLEDU01">
+            <summary>
+            Controller responsible for CRUD operations related to education details.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLEDU01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLEDU01.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.EDU01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLEDU01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for education details.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.GetAll">
+            <summary>
+            Retrieves all education details.
+            </summary>
+            <returns>An HTTP response containing the list of education details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.Get">
+            <summary>
+            Retrieves education details associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of education details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.Post(Resume_Builder.Models.DTO.DTOEDU01)">
+            <summary>
+            Adds a new education detail.
+            </summary>
+            <param name="model">The education detail data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.Put(Resume_Builder.Models.DTO.DTOEDU01)">
+            <summary>
+            Updates an existing education detail.
+            </summary>
+            <param name="model">The education detail data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEDU01.Delete(System.Int32)">
+            <summary>
+            Deletes an education detail.
+            </summary>
+            <param name="id">The ID of the education detail to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLEXP01">
+            <summary>
+            Controller responsible for CRUD operations related to work experience details.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLEXP01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLEXP01.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.EXP01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLEXP01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for work experience details.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.GetAll">
+            <summary>
+            Retrieves all work experience details.
+            </summary>
+            <returns>An HTTP response containing the list of work experience details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.Get">
+            <summary>
+            Retrieves work experience details associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of work experience details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.Post(Resume_Builder.Models.DTO.DTOEXP01)">
+            <summary>
+            Adds a new work experience detail.
+            </summary>
+            <param name="model">The work experience detail data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.Put(Resume_Builder.Models.DTO.DTOEXP01)">
+            <summary>
+            Updates an existing work experience detail.
+            </summary>
+            <param name="model">The work experience detail data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLEXP01.Delete(System.Int32)">
+            <summary>
+            Deletes a work experience detail.
+            </summary>
+            <param name="id">The ID of the work experience detail to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLLAN01">
+            <summary>
+            Controller responsible for CRUD operations related to language details.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLLAN01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLLAN01.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.LAN01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLLAN01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for language details.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.GetAll">
+            <summary>
+            Retrieves all language details.
+            </summary>
+            <returns>An HTTP response containing the list of language details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.Get">
+            <summary>
+            Retrieves language details associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of language details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.Post(Resume_Builder.Models.DTO.DTOLAN01)">
+            <summary>
+            Adds a new language detail.
+            </summary>
+            <param name="model">The language detail data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.Put(Resume_Builder.Models.DTO.DTOLAN01)">
+            <summary>
+            Updates an existing language detail.
+            </summary>
+            <param name="model">The language detail data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLLAN01.Delete(System.Int32)">
+            <summary>
+            Deletes a language detail.
+            </summary>
+            <param name="id">The ID of the language detail to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLPRO01">
+            <summary>
+            Controller responsible for CRUD operations related to project details.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLPRO01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLPRO01.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.PRO01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLPRO01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for project details.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.GetAll">
+            <summary>
+            Retrieves all project details.
+            </summary>
+            <returns>An HTTP response containing the list of project details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.Get">
+            <summary>
+            Retrieves project details associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of project details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.Post(Resume_Builder.Models.DTO.DTOPRO01)">
+            <summary>
+            Adds a new project detail.
+            </summary>
+            <param name="model">The project detail data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.Put(Resume_Builder.Models.DTO.DTOPRO01)">
+            <summary>
+            Updates an existing project detail.
+            </summary>
+            <param name="model">The project detail data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLPRO01.Delete(System.Int32)">
+            <summary>
+            Deletes a project detail.
+            </summary>
+            <param name="id">The ID of the project detail to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLRES01">
+            <summary>
+            Controller responsible for CRUD operations related to resume details.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLRES01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLRES01.response">
+            <summary>
+            instance of Reponse
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.RES01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLRES01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for resume details.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.GetAll">
+            <summary>
+            Retrieves all resume details.
+            </summary>
+            <returns>An HTTP response containing the list of resume details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.Get">
+            <summary>
+            Retrieves resume details associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of resume details.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.Post(Resume_Builder.Models.DTO.DTORES01)">
+            <summary>
+            Adds a new resume detail.
+            </summary>
+            <param name="model">The resume detail data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.Put(Resume_Builder.Models.DTO.DTORES01)">
+            <summary>
+            Updates an existing resume detail.
+            </summary>
+            <param name="model">The resume detail data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLRES01.Delete(System.Int32)">
+            <summary>
+            Deletes a resume detail.
+            </summary>
+            <param name="id">The ID of the resume detail to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLSKL01">
+            <summary>
+            Controller responsible for CRUD operations related to skills.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Resume_Builder.Controllers.CLSKL01._crudService" -->
+        <member name="F:Resume_Builder.Controllers.CLSKL01.response">
+            <summary>
+            Instance of Response
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.SKL01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLSKL01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for skills.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.GetAll">
+            <summary>
+            Retrieves all skills.
+            </summary>
+            <returns>An HTTP response containing the list of skills.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.Get">
+            <summary>
+            Retrieves skills associated with the current user.
+            </summary>
+            <returns>An HTTP response containing the list of skills.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.Post(Resume_Builder.Models.DTO.DTOSKL01)">
+            <summary>
+            Adds a new skill.
+            </summary>
+            <param name="model">The skill data to add.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.Put(Resume_Builder.Models.DTO.DTOSKL01)">
+            <summary>
+            Updates an existing skill.
+            </summary>
+            <param name="model">The skill data to update.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLSKL01.Delete(System.Int32)">
+            <summary>
+            Deletes a skill.
+            </summary>
+            <param name="id">The ID of the skill to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLTables">
+            <summary>
+            Controller responsible for managing database tables.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLTables.response">
+            <summary>
+            instance of Response
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLTables._blTables">
+            <summary>
+            instance of BLTable
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLTables.#ctor(Resume_Builder.BL.BLTables)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLTables"/> class.
+            </summary>
+            <param name="bLTables">The business logic layer for table management.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLTables.CreateTables">
+            <summary>
+            Creates tables in the database.
+            </summary>
+            <returns>An HTTP response indicating success.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLTables.DropAndCreateTables">
+            <summary>
+            Drops existing tables and creates new ones in the database.
+            </summary>
+            <returns>An HTTP response indicating success.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLUSR01">
+            <summary>
+            Controller for managing user operations.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLUSR01._crudService">
+            <summary>
+            Instance of ICRUDService.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.USR01})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLUSR01"/> class.
+            </summary>
+            <param name="crudService">The CRUD service for managing user data.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.GetAll">
+            <summary>
+            Retrieves all users.
+            </summary>
+            <returns>An HTTP response containing the list of users.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.Get">
+            <summary>
+            Retrieves user information by ID.
+            </summary>
+            <returns>An HTTP response containing the user's information.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.Post(Resume_Builder.Models.DTO.DTOUSR01)">
+            <summary>
+            Registers a new user.
+            </summary>
+            <param name="model">The user data to register.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.Put(Resume_Builder.Models.DTO.DTOUSR01)">
+            <summary>
+            Updates an existing user.
+            </summary>
+            <param name="model">The updated user data.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.Delete(System.Int32)">
+            <summary>
+            Deletes a user by ID.
+            </summary>
+            <param name="id">The ID of the user to delete.</param>
+            <returns>An HTTP response indicating success or failure.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLUSR01.GetUserInfo">
+            <summary>
+            Retrieves details of the authenticated user.
+            </summary>
+            <returns>An HTTP response containing the authenticated user's details.</returns>
+        </member>
+        <member name="T:Resume_Builder.Data.DbConnectionFactory">
+            <summary>
+            Factory class for creating database connections.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Data.DbConnectionFactory._configuration">
+            <summary>
+            Instance of IConfiguration.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Data.DbConnectionFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Data.DbConnectionFactory"/> class.
+            </summary>
+            <param name="configuration">The configuration object.</param>
+        </member>
+        <member name="M:Resume_Builder.Data.DbConnectionFactory.CreateConnection">
+            <summary>
+            Creates a new database connection.
+            </summary>
+            <returns>A new instance of IDbConnection representing the database connection.</returns>
+        </member>
+        <member name="T:Resume_Builder.Helpers.CustomExceptionHandler">
+            <summary>
+            Handles exceptions that occur during request processing and generates appropriate error responses.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Helpers.CustomExceptionHandler.HandleExceptionAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Handles the exception asynchronously and generates an error response.
+            </summary>
+            <param name="context">The HttpContext associated with the request.</param>
+        </member>
+        <member name="T:Resume_Builder.Helpers.enmMessage">
+            <summary>
+            Enum defining messages for different operations.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Helpers.enmMessage.I">
+            <summary>
+            Insert.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Helpers.enmMessage.D">
+            <summary>
+            Delete.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Helpers.enmMessage.U">
+            <summary>
+            Update.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Helpers.EnumMessageExtensions">
+            <summary>
+            Extension methods for EnumMessage enum.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Helpers.EnumMessageExtensions.GetMessage(Resume_Builder.Helpers.enmMessage)">
+            <summary>
+            Gets the corresponding message for the enum value.
+            </summary>
+            <param name="enumValue">The enum value.</param>
+            <returns>The message corresponding to the enum value.</returns>
+        </member>
+        <member name="T:Resume_Builder.Helpers.MapperExtension">
+            <summary>
+            Extension methods for object mapping.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Helpers.MapperExtension.Map``2(``0,``1)">
+            <summary>
+            Maps properties from the source object to the destination object.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <typeparam name="TDestination">The type of the destination object.</typeparam>
+            <param name="source">The source object.</param>
+            <param name="destination">The destination object.</param>
+            <returns>The destination object with mapped properties.</returns>
+        </member>
+        <member name="T:Resume_Builder.Helpers.Utility">
+            <summary>
+            Utility methods for common operations.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Helpers.Utility.GetUserIdFromClaims(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Extension method to get user id from jwt claims
+            </summary>
+            <param name="httpContext"> http context </param>
+            <returns> user id </returns>
+        </member>
+        <member name="M:Resume_Builder.Helpers.Utility.GetEmailIdFromClaims(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Extension method to get user id from jwt claims
+            </summary>
+            <param name="httpContext"> http context </param>
+            <returns> email id </returns>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter">
+            <summary>
+            Authentication filter which valides jwt token
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter._authService">
+            <summary>
+            Implements IAuthentication interface
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter._redisService">
+            <summary>
+            Redis Stack Service 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter._expiryTime">
+            <summary>
+            Expiry time of cache
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter.#ctor(Resume_Builder.DL.Interfaces.IAuthentication,Resume_Builder.DL.Interfaces.IRedisService)">
+            <summary>
+            Reference of IoC
+            </summary>
+            <param name="authService"> IAuthentication </param>
+            <param name="redisService"> IRedisService </param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter.Microsoft#AspNetCore#Mvc#Filters#IAuthorizationFilter#OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Core Logic of Authorization Filters
+            It's role based authorization
+            </summary>
+            <param name="context"> AuthorizationFilter Context </param>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.RateLimitingMiddleware">
+            <summary>
+            RateLimitingMiddleware For Performing RaeLimiting in Requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._next">
+            <summary>
+            Represents the delegate representing the next middleware in the pipeline.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._cache">
+            <summary>
+            Represents the memory cache service used for rate limiting.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._logger">
+            <summary>
+            Represents the logger service used for logging rate limit exceeded events.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._serviceProvider">
+            <summary>
+            Represents the service provider used for resolving dependencies.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.RateLimitingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Logging.ILogger{Resume_Builder.Middlewares.RateLimitingMiddleware},System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Middlewares.RateLimitingMiddleware"/> class.
+            </summary>
+            <param name="next">The delegate representing the next middleware in the pipeline.</param>
+            <param name="cache">The memory cache service used for rate limiting.</param>
+            <param name="logger">The logger service used for logging rate limit exceeded events.</param>
+            <param name="serviceProvider">The service provider used for resolving dependencies.</param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the rate limiting logic for incoming requests.
+            </summary>
+            <param name="context">The HttpContext representing the incoming request.</param>
+            <returns>A Task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.RateLimitingMiddlewareExtensions">
+            <summary>
+            Extension Method to add Middleware to builder Services.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.RequestProcessingService">
+            <summary>
+            Background service for processing requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RequestProcessingService._cache">
+            <summary>
+            Represents the memory cache service used for storing request counts.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RequestProcessingService._logger">
+            <summary>
+            Represents the logger service used for logging errors and information.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RequestProcessingService._requestQueue">
+            <summary>
+            Represents the queue of HttpContext objects representing requests to be processed.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.RequestProcessingService._queueSemaphore">
+            <summary>
+            Represents a semaphore used for controlling access to the request queue.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.RequestProcessingService.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Logging.ILogger{Resume_Builder.Middlewares.RequestProcessingService})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Middlewares.RequestProcessingService"/> class.
+            </summary>
+            <param name="cache">The memory cache service.</param>
+            <param name="logger">The logger service.</param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.RequestProcessingService.EnqueueRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Enqueues a request to be processed.
+            </summary>
+            <param name="context">The HttpContext representing the request to be processed.</param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Executes the background processing logic asynchronously.
+            </summary>
+            <param name="stoppingToken">The cancellation token that indicates when the background service is stopping.</param>
+        </member>
+        <member name="P:Resume_Builder.Models.CertificateRequest.ParticipantName">
+            <summary>
+            
+            </summary>
+            <example>Dimple</example>
+        </member>
+        <member name="T:Resume_Builder.Models.CRE01">
+            <summary>
+            Credential
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.CRE01.Email">
+            <summary>
+            Email Id
+            </summary>
+            <example>dimplemithiya@gmail.com</example>
+        </member>
+        <member name="P:Resume_Builder.Models.CRE01.Password">
+            <summary>
+            Password
+            </summary>
+            <example>abc123</example>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOCER01">
+            <summary>
+            Data Transfer Object (DTO) for Certification.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOCER01.R01F01">
+            <summary>
+            Certificate Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOCER01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOCER01.R01F03">
+            <summary>
+            Certification Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOCER01.R01F04">
+            <summary>
+            Issuing Organization
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOCER01.R01F05">
+            <summary>
+            Issue Date
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOEDU01">
+            <summary>
+            Data Transfer Object (DTO) for Education.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.U01F01">
+            <summary>
+            Education Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.U01F03">
+            <summary>
+            Institution
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.U01F04">
+            <summary>
+            Degree
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.U01F05">
+            <summary>
+            Field of Study
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEDU01.U01F06">
+            <summary>
+            Education Year
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOEXP01">
+            <summary>
+            Data Transfer Object (DTO) for Experience.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F01">
+            <summary>
+            Experiance Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F03">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F04">
+            <summary>
+            Position
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F05">
+            <summary>
+            StartDate
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F06">
+            <summary>
+            EndDate
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOEXP01.P01F07">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOLAN01">
+            <summary>
+            Data Transfer Object (DTO) for Language.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOLAN01.N01F01">
+            <summary>
+            Language Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOLAN01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOLAN01.N01F03">
+            <summary>
+            Language Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOLAN01.N01F04">
+            <summary>
+            Proficiency Level
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOPRO01">
+            <summary>
+            Data Transfer Object (DTO) for Projects.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.O01F01">
+            <summary>
+            Project Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.O01F03">
+            <summary>
+            Project Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.O01F04">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.O01F05">
+            <summary>
+            Start Date
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOPRO01.O01F06">
+            <summary>
+            End Date
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTORES01">
+            <summary>
+            Data Transfer Object (DTO) for Response.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTORES01.S01F01">
+            <summary>
+            Resume Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTORES01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTORES01.S01F03">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTORES01.S01F04">
+            <summary>
+            Summary
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOSKL01">
+            <summary>
+            Data Transfer Object (DTO) for Skill.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F01">
+            <summary>
+            Skill Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F03">
+            <summary>
+            Skill Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F04">
+            <summary>
+            ProficiencyLevel
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOUSR01">
+            <summary>
+            Data Transfer Object (DTO) for User.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F01">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F02">
+            <summary>
+            First Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F03">
+            <summary>
+            Last Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F04">
+            <summary>
+            Email Id of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F05">
+            <summary>
+            Mobile Number of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F06">
+            <summary>
+            Age of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F07">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.RES02">
+            <summary>
+            Data Transfer Object (DTO) for representing a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.UserDetails">
+            <summary>
+            Gets or sets the user details.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.Education">
+            <summary>
+            Gets or sets the list of education details.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.WorkExperience">
+            <summary>
+            Gets or sets the list of work experience details.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.Projects">
+            <summary>
+            Gets or sets the list of project details.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.Certificates">
+            <summary>
+            Gets or sets the list of certificates.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.KnownLanguages">
+            <summary>
+            Gets or sets the list of known languages.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.RES02.Skills">
+            <summary>
+            Gets or sets the list of skills.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.User">
+            <summary>
+            Represents user details in a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.FirstName">
+            <summary>
+            Gets or sets the first name of the user.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.LastName">
+            <summary>
+            Gets or sets the last name of the user.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.Email">
+            <summary>
+            Gets or sets the email of the user.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.Mobile">
+            <summary>
+            Gets or sets the mobile number of the user.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.Age">
+            <summary>
+            Gets or sets the age of the user.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.User.ProfessionalTitle">
+            <summary>
+            Gets or sets the professional title of the user.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.Certificate">
+            <summary>
+            Represents a certificate in a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Certificate.CertificateName">
+            <summary>
+            Gets or sets the name of the certificate.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Certificate.Organization">
+            <summary>
+            Gets or sets the issuing organization of the certificate.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.Education">
+            <summary>
+            Represents education details in a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Education.Institute">
+            <summary>
+            Gets or sets the institute name.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Education.Degree">
+            <summary>
+            Gets or sets the degree obtained.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Education.FieldOfStudy">
+            <summary>
+            Gets or sets the field of study.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Education.EducationYear">
+            <summary>
+            Gets or sets the year of education.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.WorkExperience">
+            <summary>
+            Represents work experience details in a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.WorkExperience.Company">
+            <summary>
+            Gets or sets the company name.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.WorkExperience.Position">
+            <summary>
+            Gets or sets the position held.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.WorkExperience.StartDate">
+            <summary>
+            Gets or sets the start date of the work experience.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.WorkExperience.EndDate">
+            <summary>
+            Gets or sets the end date of the work experience.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.WorkExperience.Responsibilities">
+            <summary>
+            Gets or sets the responsibilities in the position.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.Project">
+            <summary>
+            Represents project details in a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Project.ProjectName">
+            <summary>
+            Gets or sets the project name.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Project.Description">
+            <summary>
+            Gets or sets the project description.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Project.StartDate">
+            <summary>
+            Gets or sets the start date of the project.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.Project.EndDate">
+            <summary>
+            Gets or sets the end date of the project.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.ErrorModel">
+            <summary>
+            Model class representing an error response.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.ErrorModel.RequestId">
+            <summary>
+            Gets or sets the request identifier associated with the error.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.ErrorModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether to show the request identifier.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.ErrorModel.ExceptionMsg">
+            <summary>
+            Gets or sets the exception message describing the error.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.CER01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a certificate.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.CER01.R01F01">
+            <summary>
+            Certificate Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.CER01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.CER01.R01F03">
+            <summary>
+            Certification Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.CER01.R01F04">
+            <summary>
+            Issuing Organization
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.CER01.R01F05">
+            <summary>
+            Issue Date
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.EDU01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Education.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.U01F01">
+            <summary>
+            Education Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.U01F03">
+            <summary>
+            Institution
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.U01F04">
+            <summary>
+            Degree
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.U01F05">
+            <summary>
+            Field of Study
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EDU01.U01F06">
+            <summary>
+            Education Year
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.EXP01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Experience.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F01">
+            <summary>
+            Experiance Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F03">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F04">
+            <summary>
+            Position
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F05">
+            <summary>
+            StartDate
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F06">
+            <summary>
+            EndDate
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.EXP01.P01F07">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.LAN01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Language.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.LAN01.N01F01">
+            <summary>
+            Language Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.LAN01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.LAN01.N01F03">
+            <summary>
+            Language Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.LAN01.N01F04">
+            <summary>
+            Proficiency Level
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.PRO01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Project.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.O01F01">
+            <summary>
+            Project Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.O01F03">
+            <summary>
+            Project Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.O01F04">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.O01F05">
+            <summary>
+            Start Date
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.PRO01.O01F06">
+            <summary>
+            End Date
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.RES01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Resume.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.RES01.S01F01">
+            <summary>
+            Resume Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.RES01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.RES01.S01F03">
+            <summary>
+            Template Id
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.SKL01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a Skill.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.SKL01.L01F01">
+            <summary>
+            Skill Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.SKL01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.SKL01.L01F03">
+            <summary>
+            Skill Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.SKL01.L01F04">
+            <summary>
+            ProficiencyLevel
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.POCO.USR01">
+            <summary>
+            Plain Old CLR Object (POCO) representing a User.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F01">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F02">
+            <summary>
+            First Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F03">
+            <summary>
+            Last Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F04">
+            <summary>
+            Email Id of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F05">
+            <summary>
+            Mobile Number of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F06">
+            <summary>
+            Age of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F07">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F08">
+            <summary>
+            User Created Date
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.POCO.USR01.R01F09">
+            <summary>
+            User Updated Date
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.Response">
+            <summary>
+            Represents a generic response model.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.Response.HasError">
+            <summary>
+            Gets or sets a value indicating whether the response has error.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.Response.Message">
+            <summary>
+            Gets or sets the message associated with the response.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.Response.Data">
+            <summary>
+            Gets or sets the data associated with the response.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the services.
+            </summary>
+            <param name="services">The service collection.</param>
+        </member>
+        <member name="M:Resume_Builder.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures the application's request pipeline.
+            </summary>
+            <param name="app">The application builder.</param>
+            <param name="env">The hosting environment.</param>
+        </member>
+    </members>
+</doc>

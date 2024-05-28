@@ -15,7 +15,7 @@ namespace Virtual_Diary.BL
     {
 
         #region Private Members
-     
+
         /// <summary>
         /// Instance of Cache
         /// </summary>
@@ -153,7 +153,7 @@ namespace Virtual_Diary.BL
                 }
             },
          };
-        
+
         #endregion
 
         #region Public Members
@@ -275,11 +275,13 @@ namespace Virtual_Diary.BL
         public Response Save()
         {
             Response response = new Response();
+
             //Logger.LogInfo("Attempting to create a new diary entry.");
             if (operation == enmOperations.I)
             {
                 _objDiary.Id = lstDiaryEntries.Count + 1;
                 lstDiaryEntries.Add(_objDiary);
+                GetDiaryEntriesFromCacheOrSource();
                 response.Message = enmOperations.I.GetMessage();
                 Logger.LogInfo("New diary entry created successfully.");
             }
@@ -318,7 +320,7 @@ namespace Virtual_Diary.BL
             {
                 // Check if the entry with the given ID exists in the list
                 DiaryEntry diaryEntryToDelete = lstDiaryEntries.FirstOrDefault(d => d.Id == id);
-                
+
                 if (diaryEntryToDelete != null)
                 {
                     // If the entry exists, it can be deleted
@@ -395,7 +397,16 @@ namespace Virtual_Diary.BL
         {
             _objTask = taskDetail;
             _objDiary = lstDiaryEntries.FirstOrDefault(d => d.Id == entryId);
-            _objTask.Id = _objDiary.Tasks.Count + 1;
+
+            if (operation == enmOperations.I)
+            {
+                if (_objDiary.Tasks == null)
+                {
+                    _objDiary.Tasks = new List<TaskDetail>();
+                }
+
+                _objTask.Id = _objDiary.Tasks.Count + 1;
+            }
         }
 
         /// <summary>
@@ -415,9 +426,15 @@ namespace Virtual_Diary.BL
                 {
                     Logger.LogWarn($"No Entry Found With Id => {_entryId}");
                     response.IsError = true;
+                    return response;
                 }
 
-                ////
+                // Ensure diaryEntry.Tasks is not null
+                if (diaryEntry.Tasks == null)
+                {
+                    diaryEntry.Tasks = new List<TaskDetail>();
+                }
+
                 // Check if any existing task matches the new task's details
                 TaskDetail duplicateTask = diaryEntry.Tasks.FirstOrDefault(t =>
                     t.TaskName.Equals(_objTask.TaskName, StringComparison.OrdinalIgnoreCase));
@@ -430,7 +447,6 @@ namespace Virtual_Diary.BL
                     response.IsError = true;
                     response.Message = "Duplicate task found within diary entry.";
                 }
-
             }
             catch (Exception ex)
             {
@@ -464,22 +480,18 @@ namespace Virtual_Diary.BL
             }
             else if (operation == enmOperations.U)
             {
-                // Updating an existing task
-                TaskDetail existingTask = _objDiary.Tasks.FirstOrDefault(t => t.Id == _objTask.Id);
-                if (existingTask == null)
-                {
-                    Logger.LogWarn($"No Task Found With Id => {_objTask.Id}");
-                    response.IsError = true;
-                    response.Message = "";
-                }
+                response = UpdateTaskWithinDiaryEntry(_objDiary.Id, _objTask);
 
-                // Update task details
-                existingTask.TaskName = _objTask.TaskName;
-                existingTask.IsCompleted = _objTask.IsCompleted;
+                //// Updating an existing task
+                //TaskDetail existingTask = _objDiary.Tasks.FirstOrDefault(t => t.Id == _objTask.Id);
 
-                response.Message = enmOperations.U.GetMessage();
+                //// Update task details
+                //existingTask.TaskName = _objTask.TaskName;
+                //existingTask.IsCompleted = _objTask.IsCompleted;
 
-                Logger.LogInfo($"Task with Id {_objTask.Id} within diary entry with Id {_entryId} updated successfully.");
+                //response.Message = enmOperations.U.GetMessage();
+
+                //Logger.LogInfo($"Task with Id {_objTask.Id} within diary entry with Id {_entryId} updated successfully.");
             }
 
             return response;
@@ -554,7 +566,7 @@ namespace Virtual_Diary.BL
         /// <param name="taskId">ID of the task.</param>
         /// <param name="updatedTask">Updated details for the task.</param>
         /// <returns>Updated task.</returns>
-        public Response UpdateTaskWithinDiaryEntry(int entryId, int taskId, TaskDetail updatedTask)
+        public Response UpdateTaskWithinDiaryEntry(int entryId, TaskDetail updatedTask)
         {
             response = new Response();
 
@@ -571,27 +583,42 @@ namespace Virtual_Diary.BL
                     Logger.LogInfo("Diary entries cache invalidated.");
                 }
 
-                DiaryEntry diaryEntry = lstDiaryEntries.FirstOrDefault(d => d.Id == entryId);
-
-                if (diaryEntry == null)
+                // Ensure lstDiaryEntries is not null
+                if (lstDiaryEntries == null)
                 {
-                    Logger.LogWarn($"No Entry Found With Id => {entryId}");
-                    throw new InvalidOperationException($"No Entry Found With Id => {entryId}");
+                    //Logger.LogError("Diary entries list is null.");
+                    throw new InvalidOperationException("Diary entries list is null.");
                 }
 
-                TaskDetail task = diaryEntry.Tasks.FirstOrDefault(t => t.Id == taskId);
+                DiaryEntry diaryEntry = lstDiaryEntries.FirstOrDefault(d => d.Id == entryId);
+
+                // Check if diaryEntry is null
+                if (diaryEntry == null)
+                {
+                    Logger.LogWarn($"No Diary Entry Found With Id => {entryId}");
+                    throw new InvalidOperationException($"No Diary Entry Found With Id => {entryId}");
+                }
+
+                // Ensure diaryEntry.Tasks is not null
+                if (diaryEntry.Tasks == null)
+                {
+                    //Logger.LogError($"Tasks list for diary entry with Id {entryId} is null.");
+                    throw new InvalidOperationException($"Tasks list for diary entry with Id {entryId} is null.");
+                }
+
+                TaskDetail task = diaryEntry.Tasks.FirstOrDefault(t => t.Id == updatedTask.Id);
 
                 if (task == null)
                 {
-                    Logger.LogWarn($"No Task Found With Id => {taskId}");
-                    throw new InvalidOperationException($"No Task Found With Id => {taskId}");
+                    Logger.LogWarn($"No Task Found With Id => {updatedTask.Id}");
+                    throw new InvalidOperationException($"No Task Found With Id => {updatedTask.Id}");
                 }
 
                 // Update task details
                 task.TaskName = updatedTask.TaskName;
                 task.IsCompleted = updatedTask.IsCompleted;
 
-                Logger.LogInfo($"Task with Id {taskId} within diary entry with Id {entryId} updated successfully.");
+                Logger.LogInfo($"Task with Id {updatedTask.Id} within diary entry with Id {entryId} updated successfully.");
 
                 response.Data = task;
 
@@ -599,10 +626,11 @@ namespace Virtual_Diary.BL
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Error occurred while updating task with Id: {taskId} within diary entry with Id: {entryId}", ex);
+                Logger.LogError($"Error occurred while updating task with Id: {updatedTask.Id} within diary entry with Id: {entryId}", ex);
                 throw; // Rethrow the exception
             }
         }
+
 
         /// <summary>
         /// Deletes a task within a diary entry.

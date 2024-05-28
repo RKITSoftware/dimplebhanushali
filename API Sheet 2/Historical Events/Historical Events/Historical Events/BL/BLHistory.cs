@@ -184,12 +184,13 @@ namespace Historical_Events.BL
         {
             _dbHst01Context = new DbHst01Context(_connection);
 
-            response = new Response
-            {
-                isError = false,
-                Message = "Fetched all events",
-                Data = _dbHst01Context.GetAllEvents(pageNumber),
-            };
+                response = new Response
+                {
+                    isError = false,
+                    Message = "Fetched all events",
+                    //Data = db.Select<HSTEVT01>()
+                    Data = _dbHst01Context.GetAllEvents(pageNumber),
+                };
 
             return response;
         }
@@ -323,6 +324,8 @@ namespace Historical_Events.BL
         /// <returns>Response containing the list of Categories.</returns>
         public Response GetUniqueCategories()
         {
+            _dbHst01Context = new DbHst01Context(_connection);
+
             response = new Response
             {
                 isError = false,

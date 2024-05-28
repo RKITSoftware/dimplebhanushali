@@ -11,9 +11,17 @@ namespace Virtual_Diary.Controllers
     /// </summary>
     [BasicAuthentication]
     [BasicAuthorisation(Roles = "admin,superadmin")]
+    //[AllowAnonymous]
     public class CLUserController : ApiController
     {
+        /// <summary>
+        /// Instance of Response.
+        /// </summary>
         public Response response;
+
+        /// <summary>
+        /// Instacne of BLuser for managing operations of users.
+        /// </summary>
         public BLUser _blUser;
 
         /// <summary>

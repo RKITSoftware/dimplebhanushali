@@ -44,7 +44,7 @@ namespace Resume_Builder.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("")]
-        public IActionResult Login([FromBody] CRE01 objDTOLog01)
+        public IActionResult Login([FromBody] DTOLOG01 objDTOLog01)
         {
             return Ok(_objBLAuthHandler.Login(objDTOLog01.Email, objDTOLog01.Password));
         }

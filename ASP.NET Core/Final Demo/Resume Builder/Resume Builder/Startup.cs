@@ -14,6 +14,9 @@ using System.Reflection;
 
 namespace Resume_Builder
 {
+    /// <summary>
+    /// Startup Class.
+    /// </summary>
     public class Startup
     {
         /// <summary>
@@ -38,20 +41,21 @@ namespace Resume_Builder
 
             services.AddSingleton<BLTables>();
 
-            services.AddScoped<ICRUDService<EDU01>,CRUDImplementation<EDU01>>();
-            services.AddScoped<ICRUDService<CER01>,CRUDImplementation<CER01>>();
-            services.AddScoped<ICRUDService<EXP01>,CRUDImplementation<EXP01>>();
-            services.AddScoped<ICRUDService<LAN01>,CRUDImplementation<LAN01>>();
-            services.AddScoped<ICRUDService<PRO01>,CRUDImplementation<PRO01>>();
-            services.AddScoped<ICRUDService<RES01>,CRUDImplementation<RES01>>();
-            services.AddScoped<ICRUDService<SKL01>,CRUDImplementation<SKL01>>();
-            services.AddScoped<ICRUDService<USR01>,CRUDImplementation<USR01>>();
+            services.AddScoped<ICRUDService<EDU01>,BLCRUDImplementation<EDU01>>();
+            services.AddScoped<ICRUDService<CER01>,BLCRUDImplementation<CER01>>();
+            services.AddScoped<ICRUDService<EXP01>,BLCRUDImplementation<EXP01>>();
+            services.AddScoped<ICRUDService<LAN01>,BLCRUDImplementation<LAN01>>();
+            services.AddScoped<ICRUDService<PRO01>,BLCRUDImplementation<PRO01>>();
+            services.AddScoped<ICRUDService<RES01>,BLCRUDImplementation<RES01>>();
+            services.AddScoped<ICRUDService<SKL01>,BLCRUDImplementation<SKL01>>();
+            services.AddScoped<ICRUDService<USR01>,BLCRUDImplementation<USR01>>();
             
             services.AddScoped<IEmailService,EmailService>();
             services.AddScoped<ILogging,NLogService>();
 
-            services.AddScoped<ResumeGenerationService>();
-            services.AddScoped<BulkResumeGenerationService>();
+            services.AddScoped<BLResumeGenerationService>();
+            services.AddScoped<BLBulkResumeGenerationService>();
+            services.AddScoped<BLAICertificate>();
 
             // Configures Controllers
             services.AddControllers(options =>

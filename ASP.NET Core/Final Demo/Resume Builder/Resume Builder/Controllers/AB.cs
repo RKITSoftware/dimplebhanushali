@@ -14,13 +14,13 @@ namespace Resume_Builder.Controllers
         /// <summary>
         /// instance of ResumeGenrationService
         /// </summary>
-        private readonly ResumeGenerationService _resumeGenerationService;
+        private readonly BLResumeGenerationService _resumeGenerationService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AB"/> class.
         /// </summary>
         /// <param name="resumeGenerationService">The service responsible for generating resumes.</param>
-        public AB(ResumeGenerationService resumeGenerationService)
+        public AB(BLResumeGenerationService resumeGenerationService)
         {
             _resumeGenerationService = resumeGenerationService;
         }

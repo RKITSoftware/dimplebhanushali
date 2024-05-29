@@ -11,7 +11,7 @@ namespace Resume_Builder.BL.Services
     /// <summary>
     /// This Class Handles BUlk Resume Generations.
     /// </summary>
-    public class BulkResumeGenerationService
+    public class BLBulkResumeGenerationService
     {
         #region Private Members
 
@@ -34,7 +34,7 @@ namespace Resume_Builder.BL.Services
         /// </summary>
         /// <param name="httpContextAccessor">Http Context Accessor</param>
         /// <param name="sender">IEmailService</param>
-        public BulkResumeGenerationService(IHttpContextAccessor httpContextAccessor,
+        public BLBulkResumeGenerationService(IHttpContextAccessor httpContextAccessor,
             IEmailService sender)
         {
             _httpContextAccessor = httpContextAccessor;

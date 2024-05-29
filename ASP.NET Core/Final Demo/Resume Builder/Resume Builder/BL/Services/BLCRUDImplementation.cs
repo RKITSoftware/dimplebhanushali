@@ -13,7 +13,7 @@ namespace Resume_Builder.DL.Services
     /// Implementation of the CRUD service interface.
     /// </summary>
     /// <typeparam name="T">Type of the model class.</typeparam>
-    public class CRUDImplementation<T> : ICRUDService<T> where T : class
+    public class BLCRUDImplementation<T> : ICRUDService<T> where T : class
     {
         #region Public Members
 
@@ -60,7 +60,7 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         /// <param name="dbConnectionFactory">Database connection factory.</param>
         /// <param name="httpContextAccessor">HTTP context accessor.</param>
-        public CRUDImplementation(DbConnectionFactory dbConnectionFactory, 
+        public BLCRUDImplementation(DbConnectionFactory dbConnectionFactory, 
                                   IHttpContextAccessor httpContextAccessor,
                                   IEmailService sender)
         {

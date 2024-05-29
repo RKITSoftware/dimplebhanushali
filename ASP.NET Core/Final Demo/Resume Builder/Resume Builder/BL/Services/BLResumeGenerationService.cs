@@ -12,7 +12,7 @@ namespace Resume_Builder.BL.Services
     /// <summary>
     /// Service for generating resumes in PDF format.
     /// </summary>
-    public class ResumeGenerationService
+    public class BLResumeGenerationService
     {
         #region Private Members
 
@@ -35,12 +35,12 @@ namespace Resume_Builder.BL.Services
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResumeGenerationService"/> class.
+        /// Initializes a new instance of the <see cref="BLResumeGenerationService"/> class.
         /// </summary>
         /// <param name="httpContextAccessor">The HTTP context accessor.</param>
         /// <param name="dbConnectionFactory">The database connection factory.</param>
         /// <param name="sender">The email service used for sending resumes.</param>
-        public ResumeGenerationService(IHttpContextAccessor httpContextAccessor,
+        public BLResumeGenerationService(IHttpContextAccessor httpContextAccessor,
                                        DbConnectionFactory dbConnectionFactory,
                                        IEmailService sender)
         {

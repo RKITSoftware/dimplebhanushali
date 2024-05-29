@@ -117,64 +117,108 @@
             <param name="cipherText"> cipher text </param>
             <returns> plain text </returns>
         </member>
-        <member name="T:Resume_Builder.BL.Services.BulkResumeGenerationService">
+        <member name="T:Resume_Builder.BL.Services.BLAICertificate">
+            <summary>
+            Service for generating AI-based certificates.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAICertificate._httpClient">
+            <summary>
+            HttpClient
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAICertificate._configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAICertificate.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor to initialize dependencies.
+            </summary>
+            <param name="httpClient">HttpClient instance for making API requests.</param>
+            <param name="configuration">Configuration instance to access app settings.</param>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAICertificate.GenerateAndSaveCertificateAsync(Resume_Builder.Models.DTOCER02)">
+            <summary>
+            Generates and saves a certificate PDF asynchronously.
+            </summary>
+            <param name="request">Certificate request details.</param>
+            <returns>The file path of the generated certificate.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAICertificate.GenerateImageFromPrompt(System.String)">
+            <summary>
+            Generates an image from the given prompt asynchronously.
+            </summary>
+            <param name="prompt">The prompt for generating the image.</param>
+            <returns>The byte array of the generated image.</returns>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAICertificate.GenerateCertificate(Resume_Builder.Models.DTOCER02,System.Byte[])">
+            <summary>
+            Generates the certificate PDF based on the request and background image.
+            </summary>
+            <param name="request">The certificate request details.</param>
+            <param name="backgroundImageBytes">The byte array of the background image.</param>
+            <returns>The byte array of the generated certificate PDF.</returns>
+        </member>
+        <member name="T:Resume_Builder.BL.Services.BLBulkResumeGenerationService">
             <summary>
             This Class Handles BUlk Resume Generations.
             </summary>
         </member>
-        <member name="F:Resume_Builder.BL.Services.BulkResumeGenerationService._httpContextAccessor">
+        <member name="F:Resume_Builder.BL.Services.BLBulkResumeGenerationService._httpContextAccessor">
             <summary>
             Http Context Accessor Instance.
             </summary>
         </member>
-        <member name="F:Resume_Builder.BL.Services.BulkResumeGenerationService._sender">
+        <member name="F:Resume_Builder.BL.Services.BLBulkResumeGenerationService._sender">
             <summary>
             Email Send Service.
             </summary>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
             <summary>
             Constructor for initialising httpContextAccessor and EmailService Instance.
             </summary>
             <param name="httpContextAccessor">Http Context Accessor</param>
             <param name="sender">IEmailService</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.GenerateResumesFromJson(System.String)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumesFromJson(System.String)">
             <summary>
             Generates resumes in PDF format from JSON data.
             </summary>
             <param name="json">JSON string containing resume data.</param>
             <returns>A ZIP archive containing PDF resumes as byte arrays.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.GenerateResumePDF(Resume_Builder.Models.DTO.RES02)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumePDF(Resume_Builder.Models.DTO.RES02)">
             <summary>
             Generates a PDF resume for a user.
             </summary>
             <param name="userData">User data to include in the resume.</param>
             <returns>Byte array representing the PDF resume.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.DTO.RES02)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.DTO.RES02)">
             <summary>
             Adds user details to a PDF document.
             </summary>
             <param name="document">The PDF document to which user details are added.</param>
             <param name="userData">User data containing information to be added.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.DTO.User)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.DTO.User)">
             <summary>
             Adds basic user details to a PDF document.
             </summary>
             <param name="cell">The cell to which user details are added.</param>
             <param name="user">User data containing basic information.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.CreateZip(System.Collections.Generic.List{System.Byte[]})">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.CreateZip(System.Collections.Generic.List{System.Byte[]})">
             <summary>
             Creates a ZIP archive containing PDF resumes.
             </summary>
             <param name="files">List of byte arrays representing PDF resumes.</param>
             <returns>Byte array representing the ZIP archive.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddDetailsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Boolean,System.String[])">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddDetailsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Boolean,System.String[])">
             <summary>
             Adds a section with details to a PDF cell.
             </summary>
@@ -183,7 +227,7 @@
             <param name="includeTitle">Specifies whether to include the section title.</param>
             <param name="fields">Fields to include in the section.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddLanguagesSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddLanguagesSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
             <summary>
             Adds a section for listing languages to a PDF cell.
             </summary>
@@ -192,7 +236,7 @@
             <param name="languages">List of languages to include.</param>
             <param name="includeTitle">Specifies whether to include the section title.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{System.String},System.Boolean)">
             <summary>
             Adds a section for listing skills to a PDF cell.
             </summary>
@@ -201,62 +245,62 @@
             <param name="skills">List of skills to include.</param>
             <param name="includeTitle">Specifies whether to include the section title.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BulkResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
             <summary>
             Adds an objective section to a PDF cell.
             </summary>
             <param name="cell">The PDF cell to which the objective section is added.</param>
         </member>
-        <member name="T:Resume_Builder.BL.Services.ResumeGenerationService">
+        <member name="T:Resume_Builder.BL.Services.BLResumeGenerationService">
             <summary>
             Service for generating resumes in PDF format.
             </summary>
         </member>
-        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._httpContextAccessor">
+        <member name="F:Resume_Builder.BL.Services.BLResumeGenerationService._httpContextAccessor">
             <summary>
             Instance of HttpContextAccessor.
             </summary>
         </member>
-        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._dbConnectionFactory">
+        <member name="F:Resume_Builder.BL.Services.BLResumeGenerationService._dbConnectionFactory">
             <summary>
             DbFactory Instance.
             </summary>
         </member>
-        <member name="F:Resume_Builder.BL.Services.ResumeGenerationService._sender">
+        <member name="F:Resume_Builder.BL.Services.BLResumeGenerationService._sender">
             <summary>
             IEmailService Instance.
             </summary>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IEmailService)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IEmailService)">
             <summary>
-            Initializes a new instance of the <see cref="T:Resume_Builder.BL.Services.ResumeGenerationService"/> class.
+            Initializes a new instance of the <see cref="T:Resume_Builder.BL.Services.BLResumeGenerationService"/> class.
             </summary>
             <param name="httpContextAccessor">The HTTP context accessor.</param>
             <param name="dbConnectionFactory">The database connection factory.</param>
             <param name="sender">The email service used for sending resumes.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.GenerateResume(System.Int32)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.GenerateResume(System.Int32)">
             <summary>
             Generates a resume for the specified user ID and sends it via email.
             </summary>
             <param name="userId">The ID of the user for whom the resume is generated.</param>
             <returns>The generated resume as a byte array.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.POCO.USR01)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.POCO.USR01)">
             <summary>
             Adds user details including photo, contact information, skills, education, work experience, certifications, and projects to a PDF document.
             </summary>
             <param name="document">The PDF document to which user details are added.</param>
             <param name="user">The user whose details are added to the document.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.POCO.USR01)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddBasicUserDetails(iTextSharp.text.pdf.PdfPCell,Resume_Builder.Models.POCO.USR01)">
             <summary>
             Adds basic user details to a PDF document.
             </summary>
             <param name="cell">The cell to which user details are added.</param>
             <param name="user">User data containing basic information.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddDetailsSection``1(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Func{``0,System.Object}})">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddDetailsSection``1(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.Func{``0,System.Object}})">
             <summary>
             Adds contact information to a PDF cell.
             </summary>
@@ -264,7 +308,7 @@
             <param name="email">The email address.</param>
             <param name="phone">The phone number.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.SKL01})">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddSkillsSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.SKL01})">
             <summary>
             Adds the name and professional title to a PDF cell.
             </summary>
@@ -272,7 +316,7 @@
             <param name="firstName">The first name of the user.</param>
             <param name="lastName">The last name of the user.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddLanguageSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.LAN01})">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddLanguageSection(iTextSharp.text.pdf.PdfPCell,System.String,System.Collections.Generic.List{Resume_Builder.Models.POCO.LAN01})">
             <summary>
             Adds a section for displaying languages to a PDF cell.
             </summary>
@@ -280,20 +324,20 @@
             <param name="title">The title of the language section.</param>
             <param name="languageList">The list of languages to be displayed.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.AddObjectiveSection(iTextSharp.text.pdf.PdfPCell)">
             <summary>
             Adds the objective section to a PDF cell.
             </summary>
             <param name="cell">The PDF cell to which the objective section is added.</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.FetchUserDetails(System.Int32)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.FetchUserDetails(System.Int32)">
             <summary>
             Fetches user details from the database based on the provided user ID.
             </summary>
             <param name="userId">The ID of the user.</param>
             <returns>The user details.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.ResumeGenerationService.FetchDetailsForUser``1(System.Int32)">
+        <member name="M:Resume_Builder.BL.Services.BLResumeGenerationService.FetchDetailsForUser``1(System.Int32)">
             <summary>
             Fetches details of a specific type for the given user from the database.
             </summary>
@@ -339,96 +383,96 @@
             <param name="password"></param>
             <returns></returns>
         </member>
-        <member name="T:Resume_Builder.DL.Services.CRUDImplementation`1">
+        <member name="T:Resume_Builder.DL.Services.BLCRUDImplementation`1">
             <summary>
             Implementation of the CRUD service interface.
             </summary>
             <typeparam name="T">Type of the model class.</typeparam>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1.response">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1.response">
             <summary>
             Instance of Response.
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._objT">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._objT">
             <summary>
             Instance of T - Type Object.
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1.operation">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1.operation">
             <summary>
             Enume Message Operation 
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._dbConnectionFactory">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._dbConnectionFactory">
             <summary>
             Instance of Db Connection Factory.
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._httpContextAccessor">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._httpContextAccessor">
             <summary>
             Instance of HttpContextAccessor for Passing user id from Http Context.
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.CRUDImplementation`1._sender">
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._sender">
             <summary>
             Instance of HttpContextAccessor for Passing user id from Http Context.
             </summary>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.#ctor(Resume_Builder.Data.DbConnectionFactory,Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.#ctor(Resume_Builder.Data.DbConnectionFactory,Microsoft.AspNetCore.Http.IHttpContextAccessor,Resume_Builder.DL.Interfaces.IEmailService)">
             <summary>
             Constructor for CRUDImplementation.
             </summary>
             <param name="dbConnectionFactory">Database connection factory.</param>
             <param name="httpContextAccessor">HTTP context accessor.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Get">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Get">
             <summary>
             Retrieves all items.
             </summary>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Get(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Get(System.Int32)">
             <summary>
             Retrieves an item by its ID.
             </summary>
             <param name="userId">The ID of the user.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Save">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Save">
             <summary>
             Saves the object.
             </summary>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Validate">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Validate">
             <summary>
             Validates the object before saving.
             </summary>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.ValidateOnDelete(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.ValidateOnDelete(System.Int32)">
             <summary>
             Validates before deleting an item.
             </summary>
             <param name="id">The ID of the item to delete.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Delete(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Delete(System.Int32)">
             <summary>
             Deletes an item by its ID.
             </summary>
             <param name="id">The ID of the item to delete.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.PreSave(System.Object)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.PreSave(System.Object)">
             <summary>
             Performs actions before saving an object.
             </summary>
             <param name="obj">The object to be saved.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.Resume_Builder#BL#Interfaces#ICRUDService{T}#GetUserDetails(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Resume_Builder#BL#Interfaces#ICRUDService{T}#GetUserDetails(System.Int32)">
             <summary>
             Get user details by user id 
             </summary>
             <param name="r01f01"> user id </param>
             <returns> object of user details </returns>
         </member>
-        <member name="M:Resume_Builder.DL.Services.CRUDImplementation`1.SendEmail(System.String,System.String)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.SendEmail(System.String,System.String)">
             <summary>
             Sends an email message to the specified email address.
             </summary>
@@ -694,7 +738,7 @@
             instance of ResumeGenrationService
             </summary>
         </member>
-        <member name="M:Resume_Builder.Controllers.AB.#ctor(Resume_Builder.BL.Services.ResumeGenerationService)">
+        <member name="M:Resume_Builder.Controllers.AB.#ctor(Resume_Builder.BL.Services.BLResumeGenerationService)">
             <summary>
             Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.AB"/> class.
             </summary>
@@ -705,6 +749,41 @@
             Generates a resume for the authenticated user.
             </summary>
             <returns>A file containing the generated resume in PDF format.</returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.AIImage">
+            <summary>
+            Controller to handle AI image and certificate generation requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.AIImage._requestSemaphore">
+            <summary>
+            SemaphoreSlim for Handling requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.AIImage._aiCert">
+            <summary>
+            Instance of AICertificate BL Class.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.AIImage.#ctor(Resume_Builder.BL.Services.BLAICertificate)">
+            <summary>
+            Constructor to initialize dependencies.
+            </summary>
+            <param name="aiCert">Service for AI-based certificate generation.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.AIImage.GenerateCertificate(Resume_Builder.Models.DTOCER02)">
+            <summary>
+            Endpoint to generate a certificate PDF based on the provided request.
+            </summary>
+            <param name="request">Details for the certificate generation.</param>
+            <returns>Returns the file path of the generated certificate.</returns>
+        </member>
+        <member name="M:Resume_Builder.Controllers.AIImage.GenerateAndSaveImage(Resume_Builder.Models.DTOCER02)">
+            <summary>
+            Endpoint to generate an image based on the provided request and save it as a JPG file.
+            </summary>
+            <param name="request">Details for the image generation.</param>
+            <returns>Returns the file path of the generated image.</returns>
         </member>
         <member name="T:Resume_Builder.Controllers.Bulk">
             <summary>
@@ -721,7 +800,7 @@
             instance of HttpClient
             </summary>
         </member>
-        <member name="M:Resume_Builder.Controllers.Bulk.#ctor(Resume_Builder.BL.Services.BulkResumeGenerationService,System.Net.Http.HttpClient)">
+        <member name="M:Resume_Builder.Controllers.Bulk.#ctor(Resume_Builder.BL.Services.BLBulkResumeGenerationService,System.Net.Http.HttpClient)">
             <summary>
             Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.Bulk"/> class.
             </summary>
@@ -1417,12 +1496,6 @@
             </summary>
             <param name="stoppingToken">The cancellation token that indicates when the background service is stopping.</param>
         </member>
-        <member name="P:Resume_Builder.Models.CertificateRequest.ParticipantName">
-            <summary>
-            
-            </summary>
-            <example>Dimple</example>
-        </member>
         <member name="T:Resume_Builder.Models.CRE01">
             <summary>
             Credential
@@ -1864,6 +1937,48 @@
             <summary>
             Gets or sets the end date of the project.
             </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.ParticipantName">
+            <summary>
+            Participant Name
+            </summary>
+            <example>Dimple Mithiya</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.Theme">
+            <summary>
+            Theme
+            </summary>
+            <example>Artificial Intelligence</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.CertificateType">
+            <summary>
+            Certificate Type
+            </summary>
+            <example>Participation</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.Date">
+            <summary>
+            Date of the certificate issuance
+            </summary>
+            <example>2023-05-29</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.Award">
+            <summary>
+            The award being given
+            </summary>
+            <example>Excellence in AI</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.IssuerName">
+            <summary>
+            Name of the issuer
+            </summary>
+            <example>OpenAI</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOCER02.Description">
+            <summary>
+            Description or additional information for the certificate
+            </summary>
+            <example>For outstanding performance in AI development</example>
         </member>
         <member name="T:Resume_Builder.Models.ErrorModel">
             <summary>

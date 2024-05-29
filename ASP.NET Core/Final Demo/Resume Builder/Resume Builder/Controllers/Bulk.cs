@@ -15,7 +15,7 @@ namespace Resume_Builder.Controllers
         /// <summary>
         /// instance of BulkResumeGenerationService
         /// </summary>
-        private readonly BulkResumeGenerationService _resumeGenerationService;
+        private readonly BLBulkResumeGenerationService _resumeGenerationService;
 
         /// <summary>
         /// instance of HttpClient
@@ -28,7 +28,7 @@ namespace Resume_Builder.Controllers
         /// <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
         /// <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
         /// <param name="httpClient">The HTTP client for making HTTP requests.</param>
-        public Bulk(BulkResumeGenerationService resumeGenerationService, HttpClient httpClient)
+        public Bulk(BLBulkResumeGenerationService resumeGenerationService, HttpClient httpClient)
         {
             _resumeGenerationService = resumeGenerationService;   
             _httpClient = httpClient;

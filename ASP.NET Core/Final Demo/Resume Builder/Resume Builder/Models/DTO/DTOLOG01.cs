@@ -5,7 +5,7 @@ namespace Resume_Builder.Models
     /// <summary>
     /// Credential
     /// </summary>
-    public class CRE01
+    public class DTOLOG01
     {
         /// <summary>
         /// Email Id

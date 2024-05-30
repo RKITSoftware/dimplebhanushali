@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Resume_Builder.BL.Interfaces;
-using Resume_Builder.DL.Services;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models;
 using Resume_Builder.Models.DTO;
@@ -76,12 +75,16 @@ namespace Resume_Builder.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] DTOEDU01 model)
         {
-            BLCRUDImplementation<EDU01>.operation = enmMessage.I;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.I;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -94,12 +97,16 @@ namespace Resume_Builder.Controllers
         [HttpPut]
         public IActionResult Put([FromBody] DTOEDU01 model)
         {
-            BLCRUDImplementation<EDU01>.operation = enmMessage.U;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.U;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -112,7 +119,7 @@ namespace Resume_Builder.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            BLCRUDImplementation<EDU01>.operation = enmMessage.D;
+            _crudService.operation = enmOperation.D;
             response = _crudService.ValidateOnDelete(id);
             if (!response.HasError)
             {

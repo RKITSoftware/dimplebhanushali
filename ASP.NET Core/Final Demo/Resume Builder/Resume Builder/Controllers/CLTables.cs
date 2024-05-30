@@ -13,16 +13,21 @@ namespace Resume_Builder.Controllers
     [AllowAnonymous]
     public class CLTables : ControllerBase
     {
+        #region Public Member
         /// <summary>
         /// instance of Response
         /// </summary>
         public Response response;
+        #endregion
 
+        #region Private Member
         /// <summary>
         /// instance of BLTable
         /// </summary>
         private BLTables _blTables;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="CLTables"/> class.
         /// </summary>
@@ -31,6 +36,7 @@ namespace Resume_Builder.Controllers
         {
             _blTables = bLTables;
         }
+        #endregion
 
         /// <summary>
         /// Creates tables in the database.

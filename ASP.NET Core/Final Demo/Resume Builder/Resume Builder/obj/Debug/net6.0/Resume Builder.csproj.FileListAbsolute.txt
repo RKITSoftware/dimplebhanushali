@@ -128,3 +128,7 @@ F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Build
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\obj\Debug\net6.0\ref\Resume Builder.dll
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\HuggingFace.dll
 F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Tiktoken.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\bin\Debug\net6.0\Swashbuckle.AspNetCore.Newtonsoft.dll

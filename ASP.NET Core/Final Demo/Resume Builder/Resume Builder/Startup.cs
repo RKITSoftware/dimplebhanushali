@@ -28,34 +28,40 @@ namespace Resume_Builder
             services.AddMemoryCache();
             services.AddHttpContextAccessor();
 
+            // Middleware Background Service
             services.AddSingleton<RequestProcessingService>();
             services.AddHostedService<RequestProcessingService>();
 
+            // DB COnnection Factory ORMLite
             services.AddSingleton<DbConnectionFactory>();
 
-            services.AddSingleton<ICryptography,AesCrptographyService>();
-            services.AddSingleton<IRedisService,RedisService>();
-            services.AddSingleton<IAuthentication,AuthenticationService>();
-
-            services.AddSingleton<IAuthService,BLAuthHandler>();
+            // Interface And Services
+            services.AddSingleton<ICryptography, AesCrptographyService>();
+            services.AddSingleton<IRedisService, RedisService>();
+            services.AddSingleton<IAuthentication, AuthenticationService>();
+            services.AddSingleton<IAuthService, BLAuthHandler>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ILogging, NLogService>();
 
             services.AddSingleton<BLTables>();
 
-            services.AddScoped<ICRUDService<EDU01>,BLCRUDImplementation<EDU01>>();
-            services.AddScoped<ICRUDService<CER01>,BLCRUDImplementation<CER01>>();
-            services.AddScoped<ICRUDService<EXP01>,BLCRUDImplementation<EXP01>>();
-            services.AddScoped<ICRUDService<LAN01>,BLCRUDImplementation<LAN01>>();
-            services.AddScoped<ICRUDService<PRO01>,BLCRUDImplementation<PRO01>>();
-            services.AddScoped<ICRUDService<RES01>,BLCRUDImplementation<RES01>>();
-            services.AddScoped<ICRUDService<SKL01>,BLCRUDImplementation<SKL01>>();
-            services.AddScoped<ICRUDService<USR01>,BLCRUDImplementation<USR01>>();
-            
-            services.AddScoped<IEmailService,EmailService>();
-            services.AddScoped<ILogging,NLogService>();
+            // CRUD Implementations
+            services.AddScoped<ICRUDService<EDU01>, BLCRUDImplementation<EDU01>>();
+            services.AddScoped<ICRUDService<CER01>, BLCRUDImplementation<CER01>>();
+            services.AddScoped<ICRUDService<EXP01>, BLCRUDImplementation<EXP01>>();
+            services.AddScoped<ICRUDService<LAN01>, BLCRUDImplementation<LAN01>>();
+            services.AddScoped<ICRUDService<PRO01>, BLCRUDImplementation<PRO01>>();
+            services.AddScoped<ICRUDService<RES01>, BLCRUDImplementation<RES01>>();
+            services.AddScoped<ICRUDService<SKL01>, BLCRUDImplementation<SKL01>>();
+            services.AddScoped<ICRUDService<USR01>, BLCRUDImplementation<USR01>>();
 
+            // PDF and Image Generation Services
             services.AddScoped<BLResumeGenerationService>();
             services.AddScoped<BLBulkResumeGenerationService>();
             services.AddScoped<BLAICertificate>();
+
+            // Add Filters
+            services.AddScoped<JwtAuthenticationFilter>();
 
             // Configures Controllers
             services.AddControllers(options =>
@@ -63,17 +69,14 @@ namespace Resume_Builder
                 // Add JwtAuthenticationFilter as a global filter, excluding specific endpoint
                 options.Filters.Add(typeof(JwtAuthenticationFilter));
 
-            });
+            })
+                .AddNewtonsoftJson();
 
             //services.AddControllers();
-
             services.AddHttpClient("YourHttpClientName", client =>
             {
                 client.Timeout = TimeSpan.FromSeconds(30); // Set a timeout of 30 seconds for both read and write operations
             });
-
-            // Add Filters
-            services.AddScoped<JwtAuthenticationFilter>();
 
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
@@ -110,8 +113,17 @@ namespace Resume_Builder
                 });
             });
 
-            services.AddHostedService<RequestProcessingService>();
+            services.AddSwaggerGenNewtonsoftSupport();
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin();
+                    policy.AllowAnyHeader();
+                    policy.AllowAnyMethod();
+                });
+            });
         }
 
         /// <summary>
@@ -135,11 +147,10 @@ namespace Resume_Builder
             ////Using UseDeveloperExceptionPage Middleware to Show Exception Details
             //app.UseExceptionHandler(a => a.Run(async context =>
             //{
-            //    var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+            //    var exceptionHandlerPathFeature = context
+            //                            .Features
+            //                            .Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
             //    var exception = exceptionHandlerPathFeature.Error;
-
-            //    // Custom logic for handling the exception
-            //    // ...
 
             //    context.Response.ContentType = "text/html";
             //    await context.Response.WriteAsync("<html><body>\r\n");
@@ -150,13 +161,15 @@ namespace Resume_Builder
             //    await context.Response.WriteAsync("</body></html>\r\n");
             //}));
 
-            //app.UseRateLimitingMiddleware();
             app.UseHttpsRedirection();
             app.UseAuthorization();
 
-            app.UseMiddleware<RateLimitingMiddleware>();
+            app.UseRateLimitingMiddleware();
 
             app.UseRouting();
+
+            app.UseCors();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

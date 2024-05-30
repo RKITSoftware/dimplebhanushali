@@ -36,6 +36,11 @@
             </summary>
             <typeparam name="T">The type of the model class.</typeparam>
         </member>
+        <member name="P:Resume_Builder.BL.Interfaces.ICRUDService`1.operation">
+            <summary>
+            Enm Operation Instance
+            </summary>
+        </member>
         <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Get">
             <summary>
             Retrieves all items.
@@ -95,6 +100,18 @@
             <param name="email">Email id</param>
             <param name="message">Email Message/ Body.</param>
         </member>
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.PreValidation(System.Int32)">
+            <summary>
+            PreValidation Method for Validating Passed User id and Currently Logged in user id
+            </summary>
+            <param name="obj">DTO Object</param>
+            <returns></returns>
+        </member>
+        <member name="T:Resume_Builder.BL.Interfaces.IAuthService">
+            <summary>
+            Authorization / Login interface 
+            </summary>
+        </member>
         <member name="M:Resume_Builder.BL.Interfaces.IAuthService.Login(System.String,System.String)">
             <summary>
             Login method which generates token for correct credential 
@@ -102,6 +119,11 @@
             <param name="email"> email id </param>
             <param name="password"> password </param>
             <returns> object of response </returns>
+        </member>
+        <member name="T:Resume_Builder.BL.Interfaces.ICryptography">
+            <summary>
+            Cryptography interface 
+            </summary>
         </member>
         <member name="M:Resume_Builder.BL.Interfaces.ICryptography.Encrypt(System.String)">
             <summary>
@@ -146,7 +168,7 @@
             <param name="request">Certificate request details.</param>
             <returns>The file path of the generated certificate.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BLAICertificate.GenerateImageFromPrompt(System.String)">
+        <member name="M:Resume_Builder.BL.Services.BLAICertificate.GenerateImageFromPromptWithRetry(System.String)">
             <summary>
             Generates an image from the given prompt asynchronously.
             </summary>
@@ -399,7 +421,7 @@
             Instance of T - Type Object.
             </summary>
         </member>
-        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1.operation">
+        <member name="P:Resume_Builder.DL.Services.BLCRUDImplementation`1.operation">
             <summary>
             Enume Message Operation 
             </summary>
@@ -465,7 +487,7 @@
             </summary>
             <param name="obj">The object to be saved.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Resume_Builder#BL#Interfaces#ICRUDService{T}#GetUserDetails(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.GetUserDetails(System.Int32)">
             <summary>
             Get user details by user id 
             </summary>
@@ -728,92 +750,40 @@
             <param name="value"> value </param>
             <param name="expiry"> expiry of interval </param>
         </member>
-        <member name="T:Resume_Builder.Controllers.AB">
-            <summary>
-            Controller responsible for handling resume generation requests.
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.Controllers.AB._resumeGenerationService">
-            <summary>
-            instance of ResumeGenrationService
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.Controllers.AB.#ctor(Resume_Builder.BL.Services.BLResumeGenerationService)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.AB"/> class.
-            </summary>
-            <param name="resumeGenerationService">The service responsible for generating resumes.</param>
-        </member>
-        <member name="M:Resume_Builder.Controllers.AB.GenerateResume">
-            <summary>
-            Generates a resume for the authenticated user.
-            </summary>
-            <returns>A file containing the generated resume in PDF format.</returns>
-        </member>
-        <member name="T:Resume_Builder.Controllers.AIImage">
+        <member name="T:Resume_Builder.Controllers.CLAI">
             <summary>
             Controller to handle AI image and certificate generation requests.
             </summary>
         </member>
-        <member name="F:Resume_Builder.Controllers.AIImage._requestSemaphore">
+        <member name="F:Resume_Builder.Controllers.CLAI._requestSemaphore">
             <summary>
             SemaphoreSlim for Handling requests.
             </summary>
         </member>
-        <member name="F:Resume_Builder.Controllers.AIImage._aiCert">
+        <member name="F:Resume_Builder.Controllers.CLAI._aiCert">
             <summary>
             Instance of AICertificate BL Class.
             </summary>
         </member>
-        <member name="M:Resume_Builder.Controllers.AIImage.#ctor(Resume_Builder.BL.Services.BLAICertificate)">
+        <member name="M:Resume_Builder.Controllers.CLAI.#ctor(Resume_Builder.BL.Services.BLAICertificate)">
             <summary>
             Constructor to initialize dependencies.
             </summary>
             <param name="aiCert">Service for AI-based certificate generation.</param>
         </member>
-        <member name="M:Resume_Builder.Controllers.AIImage.GenerateCertificate(Resume_Builder.Models.DTOCER02)">
+        <member name="M:Resume_Builder.Controllers.CLAI.GenerateCertificate(Resume_Builder.Models.DTOCER02)">
             <summary>
             Endpoint to generate a certificate PDF based on the provided request.
             </summary>
             <param name="request">Details for the certificate generation.</param>
             <returns>Returns the file path of the generated certificate.</returns>
         </member>
-        <member name="M:Resume_Builder.Controllers.AIImage.GenerateAndSaveImage(Resume_Builder.Models.DTOCER02)">
+        <member name="M:Resume_Builder.Controllers.CLAI.GenerateAndSaveImage(System.String)">
             <summary>
             Endpoint to generate an image based on the provided request and save it as a JPG file.
             </summary>
             <param name="request">Details for the image generation.</param>
             <returns>Returns the file path of the generated image.</returns>
-        </member>
-        <member name="T:Resume_Builder.Controllers.Bulk">
-            <summary>
-            Controller responsible for bulk operations related to resume generation.
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.Controllers.Bulk._resumeGenerationService">
-            <summary>
-            instance of BulkResumeGenerationService
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.Controllers.Bulk._httpClient">
-            <summary>
-            instance of HttpClient
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.Controllers.Bulk.#ctor(Resume_Builder.BL.Services.BLBulkResumeGenerationService,System.Net.Http.HttpClient)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.Bulk"/> class.
-            </summary>
-            <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
-            <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
-            <param name="httpClient">The HTTP client for making HTTP requests.</param>
-        </member>
-        <member name="M:Resume_Builder.Controllers.Bulk.GenerateResumes(System.Collections.Generic.List{Resume_Builder.Models.DTO.RES02})">
-            <summary>
-            Generates resumes in bulk from a list of RES02 objects.
-            </summary>
-            <param name="lstRes">The list of RES02 objects representing resume data.</param>
-            <returns>A zip file containing the generated resumes.</returns>
         </member>
         <member name="F:Resume_Builder.Controllers.CLAuth._objBLAuthHandler">
             <summary>
@@ -826,7 +796,7 @@
             </summary>
             <param name="authentication"> IAuthentication </param>
         </member>
-        <member name="M:Resume_Builder.Controllers.CLAuth.Login(Resume_Builder.Models.CRE01)">
+        <member name="M:Resume_Builder.Controllers.CLAuth.Login(Resume_Builder.Models.DTOLOG01)">
             <summary>
             Authenticates user credential
             </summary>
@@ -834,6 +804,31 @@
             <returns> jwt token => if credential is correct
                       else => Login Failed 
             </returns>
+        </member>
+        <member name="T:Resume_Builder.Controllers.CLBulk">
+            <summary>
+            Controller responsible for bulk operations related to resume generation.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLBulk._resumeGenerationService">
+            <summary>
+            instance of BulkResumeGenerationService
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLBulk.#ctor(Resume_Builder.BL.Services.BLBulkResumeGenerationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLBulk"/> class.
+            </summary>
+            <param name="resumeGenerationService">The service responsible for generating bulk resumes.</param>
+            <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
+            <param name="httpClient">The HTTP client for making HTTP requests.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLBulk.GenerateResumes(System.Collections.Generic.List{Resume_Builder.Models.DTO.RES02})">
+            <summary>
+            Generates resumes in bulk from a list of RES02 objects.
+            </summary>
+            <param name="lstRes">The list of RES02 objects representing resume data.</param>
+            <returns>A zip file containing the generated resumes.</returns>
         </member>
         <member name="T:Resume_Builder.Controllers.CLCER01">
             <summary>
@@ -1135,6 +1130,28 @@
             <param name="id">The ID of the resume detail to delete.</param>
             <returns>An HTTP response indicating success or failure.</returns>
         </member>
+        <member name="T:Resume_Builder.Controllers.CLResumeGeneration">
+            <summary>
+            Controller responsible for handling resume generation requests.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Controllers.CLResumeGeneration._resumeGenerationService">
+            <summary>
+            instance of ResumeGenrationService
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLResumeGeneration.#ctor(Resume_Builder.BL.Services.BLResumeGenerationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLResumeGeneration"/> class.
+            </summary>
+            <param name="resumeGenerationService">The service responsible for generating resumes.</param>
+        </member>
+        <member name="M:Resume_Builder.Controllers.CLResumeGeneration.GenerateResume">
+            <summary>
+            Generates a resume for the authenticated user.
+            </summary>
+            <returns>A file containing the generated resume in PDF format.</returns>
+        </member>
         <member name="T:Resume_Builder.Controllers.CLSKL01">
             <summary>
             Controller responsible for CRUD operations related to skills.
@@ -1228,6 +1245,11 @@
             Instance of ICRUDService.
             </summary>
         </member>
+        <member name="F:Resume_Builder.Controllers.CLUSR01.response">
+            <summary>
+            Instance of Response.
+            </summary>
+        </member>
         <member name="M:Resume_Builder.Controllers.CLUSR01.#ctor(Resume_Builder.BL.Interfaces.ICRUDService{Resume_Builder.Models.POCO.USR01})">
             <summary>
             Initializes a new instance of the <see cref="T:Resume_Builder.Controllers.CLUSR01"/> class.
@@ -1306,22 +1328,22 @@
             </summary>
             <param name="context">The HttpContext associated with the request.</param>
         </member>
-        <member name="T:Resume_Builder.Helpers.enmMessage">
+        <member name="T:Resume_Builder.Helpers.enmOperation">
             <summary>
             Enum defining messages for different operations.
             </summary>
         </member>
-        <member name="F:Resume_Builder.Helpers.enmMessage.I">
+        <member name="F:Resume_Builder.Helpers.enmOperation.I">
             <summary>
             Insert.
             </summary>
         </member>
-        <member name="F:Resume_Builder.Helpers.enmMessage.D">
+        <member name="F:Resume_Builder.Helpers.enmOperation.D">
             <summary>
             Delete.
             </summary>
         </member>
-        <member name="F:Resume_Builder.Helpers.enmMessage.U">
+        <member name="F:Resume_Builder.Helpers.enmOperation.U">
             <summary>
             Update.
             </summary>
@@ -1331,7 +1353,7 @@
             Extension methods for EnumMessage enum.
             </summary>
         </member>
-        <member name="M:Resume_Builder.Helpers.EnumMessageExtensions.GetMessage(Resume_Builder.Helpers.enmMessage)">
+        <member name="M:Resume_Builder.Helpers.EnumMessageExtensions.GetMessage(Resume_Builder.Helpers.enmOperation)">
             <summary>
             Gets the corresponding message for the enum value.
             </summary>
@@ -1495,23 +1517,6 @@
             Executes the background processing logic asynchronously.
             </summary>
             <param name="stoppingToken">The cancellation token that indicates when the background service is stopping.</param>
-        </member>
-        <member name="T:Resume_Builder.Models.CRE01">
-            <summary>
-            Credential
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.CRE01.Email">
-            <summary>
-            Email Id
-            </summary>
-            <example>dimplemithiya@gmail.com</example>
-        </member>
-        <member name="P:Resume_Builder.Models.CRE01.Password">
-            <summary>
-            Password
-            </summary>
-            <example>abc123</example>
         </member>
         <member name="T:Resume_Builder.Models.DTO.DTOCER01">
             <summary>
@@ -1938,6 +1943,11 @@
             Gets or sets the end date of the project.
             </summary>
         </member>
+        <member name="T:Resume_Builder.Models.DTOCER02">
+            <summary>
+            Data Transfer Object (DTO) for Certificate Request.
+            </summary>
+        </member>
         <member name="P:Resume_Builder.Models.DTOCER02.ParticipantName">
             <summary>
             Participant Name
@@ -1979,6 +1989,23 @@
             Description or additional information for the certificate
             </summary>
             <example>For outstanding performance in AI development</example>
+        </member>
+        <member name="T:Resume_Builder.Models.DTOLOG01">
+            <summary>
+            Credential
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOLOG01.Email">
+            <summary>
+            Email Id
+            </summary>
+            <example>dimplemithiya@gmail.com</example>
+        </member>
+        <member name="P:Resume_Builder.Models.DTOLOG01.Password">
+            <summary>
+            Password
+            </summary>
+            <example>abc123</example>
         </member>
         <member name="T:Resume_Builder.Models.ErrorModel">
             <summary>
@@ -2278,6 +2305,22 @@
         <member name="P:Resume_Builder.Models.Response.Data">
             <summary>
             Gets or sets the data associated with the response.
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Program">
+            <summary>
+            Program Class.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Program.Main(System.String[])">
+            <summary>
+            Main Entry point of the Program.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:Resume_Builder.Startup">
+            <summary>
+            Startup Class.
             </summary>
         </member>
         <member name="M:Resume_Builder.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">

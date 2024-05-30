@@ -48,7 +48,7 @@ namespace Resume_Builder.BL.Services
         public async Task<string> GenerateAndSaveCertificateAsync(DTOCER02 request)
         {
             // Generate the image based on the theme
-            byte[] backgroundImage = await GenerateImageFromPrompt(request.Award);
+            byte[] backgroundImage = await GenerateImageFromPromptWithRetry(request.Award);
 
             // Generate the PDF certificate with the background image
             byte[] pdfBytes = GenerateCertificate(request, backgroundImage);
@@ -73,7 +73,7 @@ namespace Resume_Builder.BL.Services
         /// </summary>
         /// <param name="prompt">The prompt for generating the image.</param>
         /// <returns>The byte array of the generated image.</returns>
-        public async Task<byte[]> GenerateImageFromPrompt(string prompt)
+        public async Task<byte[]> GenerateImageFromPromptWithRetry(string prompt)
         {
             string apiUrl = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2";
             string apiKey = _configuration["HuggingFace:ApiKey"];
@@ -81,7 +81,6 @@ namespace Resume_Builder.BL.Services
             StringContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-            // Retry logic parameters
             int maxRetries = 5;
             int delaySeconds = 10;
 
@@ -92,22 +91,18 @@ namespace Resume_Builder.BL.Services
                 {
                     byte[] imageBytes = await response.Content.ReadAsByteArrayAsync();
 
-                    // Ensure the image is in landscape mode
                     using (MemoryStream ms = new MemoryStream(imageBytes))
+                    using (System.Drawing.Image image = System.Drawing.Image.FromStream(ms))
                     {
-                        using (System.Drawing.Image image = System.Drawing.Image.FromStream(ms))
-                        {
-                            if (image.Width < image.Height)
+                        //if (image.Width < image.Height)
+                        //{
+                        //    image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                            using (MemoryStream rotatedMs = new MemoryStream())
                             {
-                                // Rotate the image to landscape mode
-                                image.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                                using (var rotatedMs = new MemoryStream())
-                                {
-                                    image.Save(rotatedMs, System.Drawing.Imaging.ImageFormat.Png);
-                                    return rotatedMs.ToArray();
-                                }
+                                image.Save(rotatedMs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                return rotatedMs.ToArray();
                             }
-                        }
+                        //}
                     }
 
                     return imageBytes;
@@ -115,13 +110,8 @@ namespace Resume_Builder.BL.Services
                 else
                 {
                     string errorContent = await response.Content.ReadAsStringAsync();
-                    if (errorContent.Contains("CUDA out of memory"))
+                    if (errorContent.Contains("Model stabilityai/stable-diffusion-2 is currently loading"))
                     {
-                        if (attempt == maxRetries - 1)
-                        {
-                            throw new HttpRequestException($"Error response from API after {maxRetries} attempts: {errorContent}", null, response.StatusCode);
-                        }
-                        // Wait before retrying with exponential backoff
                         await Task.Delay(delaySeconds * (int)Math.Pow(2, attempt) * 1000);
                     }
                     else
@@ -134,6 +124,7 @@ namespace Resume_Builder.BL.Services
             throw new HttpRequestException("Exceeded maximum retry attempts.");
         }
 
+
         #endregion
 
         #region Private Method
@@ -145,7 +136,7 @@ namespace Resume_Builder.BL.Services
         /// <returns>The byte array of the generated certificate PDF.</returns>
         private byte[] GenerateCertificate(DTOCER02 request, byte[] backgroundImageBytes)
         {
-            using (var ms = new MemoryStream())
+            using (MemoryStream ms = new MemoryStream())
             {
                 var document = new Document(PageSize.A4.Rotate()); // Landscape mode
                 var writer = PdfWriter.GetInstance(document, ms);

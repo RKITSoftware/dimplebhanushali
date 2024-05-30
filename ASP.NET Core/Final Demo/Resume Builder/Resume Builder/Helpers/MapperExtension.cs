@@ -5,7 +5,7 @@
     /// </summary>
     public static class MapperExtension
     {
-        #region Publci Methods
+        #region Public Methods
 
         /// <summary>
         /// Maps properties from the source object to the destination object.

@@ -200,7 +200,7 @@ namespace Resume_Builder.BL.Services
         /// <returns>Byte array representing the ZIP archive.</returns>
         private byte[] CreateZip(List<byte[]> files)
         {
-            using (var memoryStream = new MemoryStream())
+            using (MemoryStream memoryStream = new MemoryStream())
             {
                 using (var zipArchive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
                 {

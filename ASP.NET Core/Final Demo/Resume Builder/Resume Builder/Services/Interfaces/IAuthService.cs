@@ -2,6 +2,9 @@
 
 namespace Resume_Builder.BL.Interfaces
 {
+    /// <summary>
+    /// Authorization / Login interface 
+    /// </summary>
     public interface IAuthService
     {
 

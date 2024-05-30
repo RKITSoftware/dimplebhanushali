@@ -1,0 +1,2 @@
+2024-05-30 13:12:46.2833 | FATAL | Logging.Controllers.WeatherForecastController | An exception occurred while getting the weather forecast. System.Exception: Custom Exception
+   at Logging.Controllers.WeatherForecastController.Get() in F:\Dimple - 371\Git\training\ASP.NET Core\5. Logging\Logging\Logging\Controllers\WeatherForecastController.cs:line 35

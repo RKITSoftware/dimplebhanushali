@@ -1,5 +1,8 @@
 ﻿namespace Resume_Builder.Models
 {
+    /// <summary>
+    /// Data Transfer Object (DTO) for Certificate Request.
+    /// </summary>
     public class DTOCER02
     {
         /// <summary>

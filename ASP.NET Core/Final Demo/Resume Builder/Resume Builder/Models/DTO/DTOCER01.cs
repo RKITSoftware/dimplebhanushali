@@ -41,7 +41,7 @@ namespace Resume_Builder.Models.DTO
         /// </summary>
         [JsonProperty("R01105")]
         [Required(ErrorMessage = "Issue Date is Required.")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime? R01F05 { get; set; }
     }
 }

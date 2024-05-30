@@ -1,4 +1,5 @@
-﻿using Resume_Builder.Models;
+﻿using Resume_Builder.Helpers;
+using Resume_Builder.Models;
 
 namespace Resume_Builder.BL.Interfaces
 {
@@ -8,6 +9,11 @@ namespace Resume_Builder.BL.Interfaces
     /// <typeparam name="T">The type of the model class.</typeparam>
     public interface ICRUDService<T> where T : class
     {
+        /// <summary>
+        /// Enm Operation Instance
+        /// </summary>
+        enmOperation operation { get; set; }
+
         /// <summary>
         /// Retrieves all items.
         /// </summary>
@@ -66,5 +72,12 @@ namespace Resume_Builder.BL.Interfaces
         /// <param name="email">Email id</param>
         /// <param name="message">Email Message/ Body.</param>
         void SendEmail(string email, string message);
+
+        /// <summary>
+        /// PreValidation Method for Validating Passed User id and Currently Logged in user id
+        /// </summary>
+        /// <param name="obj">DTO Object</param>
+        /// <returns></returns>
+        Response PreValidation(int id);
     }
 }

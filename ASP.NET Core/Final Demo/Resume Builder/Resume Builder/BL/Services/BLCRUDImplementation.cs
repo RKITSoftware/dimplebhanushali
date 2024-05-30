@@ -1,4 +1,5 @@
-﻿using Resume_Builder.BL.Interfaces;
+﻿using iTextSharp.tool.xml.util;
+using Resume_Builder.BL.Interfaces;
 using Resume_Builder.Data;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Helpers;
@@ -30,7 +31,7 @@ namespace Resume_Builder.DL.Services
         /// <summary>
         /// Enume Message Operation 
         /// </summary>
-        public static enmMessage operation;
+        public enmOperation operation { get; set; }
 
         #endregion
 
@@ -51,6 +52,7 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         private readonly IEmailService _sender;
 
+
         #endregion
 
         #region Constructor
@@ -60,7 +62,7 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         /// <param name="dbConnectionFactory">Database connection factory.</param>
         /// <param name="httpContextAccessor">HTTP context accessor.</param>
-        public BLCRUDImplementation(DbConnectionFactory dbConnectionFactory, 
+        public BLCRUDImplementation(DbConnectionFactory dbConnectionFactory,
                                   IHttpContextAccessor httpContextAccessor,
                                   IEmailService sender)
         {
@@ -109,7 +111,7 @@ namespace Resume_Builder.DL.Services
             }
 
             // Create a database connection using the connection factory
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
                 // Fetch data from the database table corresponding to type T for the authenticated user
                 List<T> data = db.Select<T>(q => Sql.In("UserId", userId));
@@ -129,13 +131,13 @@ namespace Resume_Builder.DL.Services
             response = new Response();
 
             // Create a database connection using the connection factory
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
                 // Define the table name dynamically based on the type T
-                var tableName = typeof(T).Name;
+                string tableName = typeof(T).Name;
 
                 // Construct the SQL query string
-                var sql = $"SELECT * FROM {tableName} WHERE UserId = @UserId";
+                string sql = $"SELECT * FROM {tableName} WHERE UserId = @UserId";
 
                 // Execute the query and fetch records
                 List<T> entities = db.Select<T>(sql, new { UserId = userId });
@@ -160,19 +162,19 @@ namespace Resume_Builder.DL.Services
             // Initialize response object
             response = new Response();
 
-            if (operation == enmMessage.I)
+            if (operation == enmOperation.I)
             {
                 // Insert operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
                 db.Insert(_objT);
-                response.Message = enmMessage.I.GetMessage();
+                response.Message = enmOperation.I.GetMessage();
             }
-            else if (operation == enmMessage.U)
+            else if (operation == enmOperation.U)
             {
                 // Update operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
                 db.Update(_objT);
-                response.Message = enmMessage.U.GetMessage();
+                response.Message = enmOperation.U.GetMessage();
             }
 
             return response;
@@ -187,7 +189,7 @@ namespace Resume_Builder.DL.Services
 
             try
             {
-                using (var db = _dbConnectionFactory.CreateConnection())
+                using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                 {
                     // Check if the table exists
                     if (!db.TableExists<T>())
@@ -206,9 +208,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             EDU01 eduObj = _objT as EDU01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<EDU01>(x => x.U01F04 == eduObj.U01F04);
+                                bool isDuplicate = db.Exists<EDU01>(x => x.U01F04 == eduObj.U01F04
+                                                    && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -227,9 +230,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             CER01 cerObj = _objT as CER01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<CER01>(x => x.R01F03 == cerObj.R01F03);
+                                bool isDuplicate = db.Exists<CER01>(x => x.R01F03 == cerObj.R01F03
+                                                    && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -248,9 +252,11 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             EXP01 expObj = _objT as EXP01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<EXP01>(x => x.P01F03 == expObj.P01F03 && x.P01F04 == expObj.P01F04);
+                                bool isDuplicate = db.Exists<EXP01>(x => x.P01F03 == expObj.P01F03
+                                                    && x.P01F04 == expObj.P01F04
+                                                    && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -269,9 +275,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             LAN01 expObj = _objT as LAN01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<LAN01>(x => x.N01F03 == expObj.N01F03);
+                                bool isDuplicate = db.Exists<LAN01>(x => x.N01F03 == expObj.N01F03
+                                                   && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -290,9 +297,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             PRO01 proObj = _objT as PRO01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<PRO01>(x => x.O01F03 == proObj.O01F03);
+                                bool isDuplicate = db.Exists<PRO01>(x => x.O01F03 == proObj.O01F03
+                                                    && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -311,9 +319,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             SKL01 sklObj = _objT as SKL01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<SKL01>(x => x.L01F03 == sklObj.L01F03);
+                                bool isDuplicate = db.Exists<SKL01>(x => x.L01F03 == sklObj.L01F03
+                                                  && x.UserId == _httpContextAccessor.HttpContext.GetUserIdFromClaims());
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -332,9 +341,10 @@ namespace Resume_Builder.DL.Services
                         if (_objT != null)
                         {
                             USR01 usrObj = _objT as USR01;
-                            using (var db = _dbConnectionFactory.CreateConnection())
+                            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                             {
-                                bool isDuplicate = db.Exists<USR01>(x => x.R01F04 == usrObj.R01F04 && x.R01F05 == usrObj.R01F05);
+                                bool isDuplicate = db.Exists<USR01>(x => x.R01F04 == usrObj.R01F04
+                                                   && x.R01F05 == usrObj.R01F05);
                                 if (isDuplicate)
                                 {
                                     response.HasError = true;
@@ -376,11 +386,11 @@ namespace Resume_Builder.DL.Services
         {
             response = new Response();
 
-            if (operation == enmMessage.D)
+            if (operation == enmOperation.D)
             {
                 try
                 {
-                    using (var db = _dbConnectionFactory.CreateConnection())
+                    using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                     {
                         T existingObj = db.SingleById<T>(id);
 
@@ -419,7 +429,7 @@ namespace Resume_Builder.DL.Services
             response = new Response();
 
             // Create a database connection using the connection factory
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
                 // Deleting the record with the specified id from the database table corresponding to type T
                 int rowsAffected = db.DeleteById<T>(id);
@@ -455,12 +465,12 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         /// <param name="r01f01"> user id </param>
         /// <returns> object of user details </returns>
-        object ICRUDService<T>.GetUserDetails(int id)
+        public object GetUserDetails(int id)
         {
             // Object of user details 
             object userDetails = null;
 
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
                 userDetails = db.SingleById<USR01>(id);
             }
@@ -476,6 +486,17 @@ namespace Resume_Builder.DL.Services
         public void SendEmail(string email, string message)
         {
             _sender.Send(email, message, null);
+        }
+
+        public Response PreValidation(int id)
+        {
+            response = new Response();
+            if (!(id == _httpContextAccessor.HttpContext.GetUserIdFromClaims()))
+            {
+                response.HasError = true;
+                response.Message = "Invalid User Id Passed !!!";
+            }
+            return response;
         }
 
         #endregion

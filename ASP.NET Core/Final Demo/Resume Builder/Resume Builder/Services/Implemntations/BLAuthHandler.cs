@@ -3,6 +3,7 @@ using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Models;
 using Resume_Builder.Models.POCO;
 using ServiceStack.OrmLite;
+using System.Data;
 
 namespace Resume_Builder.BL.Services
 {
@@ -65,7 +66,7 @@ namespace Resume_Builder.BL.Services
 
             // Credential Verification & 
             // extracting information to be added in claims
-            using (var db = _dbFactory.CreateConnection())
+            using (IDbConnection db = _dbFactory.CreateConnection())
             {
                 USR01 objUsr01 = db.Single<USR01>(usr => usr.R01F04 == email && usr.R01F07 == password);
                 // Invalid Credential

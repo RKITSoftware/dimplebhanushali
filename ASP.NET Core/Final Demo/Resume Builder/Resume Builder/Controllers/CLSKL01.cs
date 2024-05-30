@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Resume_Builder.BL.Interfaces;
-using Resume_Builder.DL.Services;
 using Resume_Builder.Helpers;
+using Resume_Builder.Models;
 using Resume_Builder.Models.DTO;
 using Resume_Builder.Models.POCO;
-using Resume_Builder.Models;
 
 namespace Resume_Builder.Controllers
 {
@@ -15,16 +14,21 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLSKL01 : ControllerBase
     {
+        #region Private Member
         /// <summary>
         /// instance of ICRUDService<SKL01>
         /// </summary>
         private readonly ICRUDService<SKL01> _crudService;
+        #endregion
 
+        #region Public Member
         /// <summary>
         /// Instance of Response
         /// </summary>
         public Response response;
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="CLSKL01"/> class.
         /// </summary>
@@ -33,6 +37,7 @@ namespace Resume_Builder.Controllers
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
+        #endregion
 
         /// <summary>
         /// Retrieves all skills.
@@ -66,12 +71,16 @@ namespace Resume_Builder.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] DTOSKL01 model)
         {
-            BLCRUDImplementation<SKL01>.operation = enmMessage.I;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.I;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -84,12 +93,16 @@ namespace Resume_Builder.Controllers
         [HttpPut]
         public IActionResult Put([FromBody] DTOSKL01 model)
         {
-            BLCRUDImplementation<SKL01>.operation = enmMessage.U;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.U;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -102,7 +115,7 @@ namespace Resume_Builder.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            BLCRUDImplementation<SKL01>.operation = enmMessage.D;
+            _crudService.operation = enmOperation.D;
             response = _crudService.ValidateOnDelete(id);
             if (!response.HasError)
             {

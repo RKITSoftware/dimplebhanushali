@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Resume_Builder.BL.Interfaces;
-using Resume_Builder.DL.Services;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models;
 using Resume_Builder.Models.DTO;
@@ -16,12 +15,21 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLUSR01 : ControllerBase
     {
+        #region Private Member
         /// <summary>
         /// Instance of ICRUDService.
         /// </summary>
         private readonly ICRUDService<USR01> _crudService;
-        public Response response;
+        #endregion
 
+        #region Public Member
+        /// <summary>
+        /// Instance of Response.
+        /// </summary>
+        public Response response;
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="CLUSR01"/> class.
         /// </summary>
@@ -30,6 +38,7 @@ namespace Resume_Builder.Controllers
         {
             _crudService = crudService ?? throw new ArgumentNullException(nameof(crudService));
         }
+        #endregion
 
         /// <summary>
         /// Retrieves all users.
@@ -64,7 +73,7 @@ namespace Resume_Builder.Controllers
         [AllowAnonymous]
         public IActionResult Post([FromBody] DTOUSR01 model)
         {
-            BLCRUDImplementation<USR01>.operation = enmMessage.I;
+            _crudService.operation = enmOperation.I;
             _crudService.PreSave(model);
             response = _crudService.Validate();
             if (!response.HasError)
@@ -83,7 +92,7 @@ namespace Resume_Builder.Controllers
         [HttpPut]
         public IActionResult Put([FromBody] DTOUSR01 model)
         {
-            BLCRUDImplementation<USR01>.operation = enmMessage.U;
+            _crudService.operation = enmOperation.U;
             _crudService.PreSave(model);
             response = _crudService.Validate();
             if (!response.HasError)
@@ -101,7 +110,7 @@ namespace Resume_Builder.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            BLCRUDImplementation<USR01>.operation = enmMessage.D;
+            _crudService.operation = enmOperation.D;
             response = _crudService.ValidateOnDelete(id);
             if (!response.HasError)
             {

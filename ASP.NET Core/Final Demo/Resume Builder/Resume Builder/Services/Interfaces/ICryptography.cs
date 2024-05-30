@@ -1,5 +1,8 @@
 ﻿namespace Resume_Builder.BL.Interfaces
 {
+    /// <summary>
+    /// Cryptography interface 
+    /// </summary>
     public interface ICryptography
     {
         #region Public Methods

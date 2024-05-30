@@ -1,0 +1,6 @@
+2024-05-30 13:12:34.7827 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-30 13:12:35.7236 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2024-05-30 13:12:35.8443 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-05-30 13:12:35.8752 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2024-05-30 13:12:35.8897 Info Validating config: TargetNames=logfile, console, ConfigItems=29, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\5. Logging\Logging\Logging\NLog.config
+2024-05-30 13:12:35.9387 Info Configuration initialized.

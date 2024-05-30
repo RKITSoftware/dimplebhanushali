@@ -5,6 +5,7 @@ using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models.POCO;
 using ServiceStack.OrmLite;
+using System.Data;
 using System.Net;
 
 namespace Resume_Builder.BL.Services
@@ -356,7 +357,7 @@ namespace Resume_Builder.BL.Services
         /// <returns>The user details.</returns>
         private USR01 FetchUserDetails(int userId)
         {
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
                 return db.SingleById<USR01>(userId);
             }
@@ -370,10 +371,10 @@ namespace Resume_Builder.BL.Services
         /// <returns>The list of details.</returns>
         private List<T> FetchDetailsForUser<T>(int userId)
         {
-            using (var db = _dbConnectionFactory.CreateConnection())
+            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
             {
-                var tableName = typeof(T).Name;
-                var sql = $"SELECT * FROM {tableName} WHERE UserId = @UserId";
+                string tableName = typeof(T).Name;
+                string sql = $"SELECT * FROM {tableName} WHERE UserId = @UserId";
                 return db.Select<T>(sql, new { UserId = userId });
             }
         }

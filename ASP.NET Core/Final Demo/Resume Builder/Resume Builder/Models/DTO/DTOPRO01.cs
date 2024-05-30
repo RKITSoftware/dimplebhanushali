@@ -41,7 +41,7 @@ namespace Resume_Builder.Models.DTO
         /// </summary>
         [JsonProperty("O01105")]
         [Required(ErrorMessage = "Start Date is Required.")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime O01F05 { get; set; }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Resume_Builder.Models.DTO
         /// </summary>
         [JsonProperty("O01106")]
         [Required(ErrorMessage = "End Date is Required.")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime O01F06 { get; set; }
     }
 }

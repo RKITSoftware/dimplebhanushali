@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Resume_Builder.BL.Interfaces;
-using Resume_Builder.DL.Services;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models;
 using Resume_Builder.Models.DTO;
@@ -15,15 +14,19 @@ namespace Resume_Builder.Controllers
     [ApiController]
     public class CLRES01 : ControllerBase
     {
+        #region Private Member
         /// <summary>
         /// Instance of ICRUDService<RES01>
         /// </summary>
         private readonly ICRUDService<RES01> _crudService;
+        #endregion
 
+        #region Public Member
         /// <summary>
         /// instance of Reponse
         /// </summary>
         public Response response;
+        #endregion
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CLRES01"/> class.
@@ -66,12 +69,16 @@ namespace Resume_Builder.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] DTORES01 model)
         {
-            BLCRUDImplementation<RES01>.operation = enmMessage.I;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.I;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -84,12 +91,16 @@ namespace Resume_Builder.Controllers
         [HttpPut]
         public IActionResult Put([FromBody] DTORES01 model)
         {
-            BLCRUDImplementation<RES01>.operation = enmMessage.U;
-            _crudService.PreSave(model);
-            response = _crudService.Validate();
+            _crudService.operation = enmOperation.U;
+            response = _crudService.PreValidation(model.UserId);
             if (!response.HasError)
             {
-                response = _crudService.Save();
+                _crudService.PreSave(model);
+                response = _crudService.Validate();
+                if (!response.HasError)
+                {
+                    response = _crudService.Save();
+                }
             }
             return Ok(response);
         }
@@ -102,7 +113,7 @@ namespace Resume_Builder.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            BLCRUDImplementation<RES01>.operation = enmMessage.D;
+            _crudService.operation = enmOperation.D;
             response = _crudService.ValidateOnDelete(id);
             if (!response.HasError)
             {

@@ -9,6 +9,7 @@ namespace Resume_Builder.Helpers
     /// </summary>
     public class CustomExceptionHandler
     {
+        #region Public Method
         /// <summary>
         /// Handles the exception asynchronously and generates an error response.
         /// </summary>
@@ -16,6 +17,7 @@ namespace Resume_Builder.Helpers
         public static async Task HandleExceptionAsync(HttpContext context)
         {
             // Retrieve the exception details from the IExceptionHandlerPathFeature
+            
             var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
             var exception = exceptionHandlerPathFeature.Error;
 
@@ -45,5 +47,6 @@ namespace Resume_Builder.Helpers
             context.Response.StatusCode = StatusCodes.Status500InternalServerError;
             await context.Response.WriteAsJsonAsync(errorModel);
         }
+        #endregion
     }
 }

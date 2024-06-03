@@ -1,3 +1,5 @@
+using NLog.Web;
+
 namespace Filters_Web_API
 {
     /// <summary>
@@ -26,6 +28,7 @@ namespace Filters_Web_API
                 {
                     // Use the Startup class for configuring the application
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .UseNLog();
     }
 }

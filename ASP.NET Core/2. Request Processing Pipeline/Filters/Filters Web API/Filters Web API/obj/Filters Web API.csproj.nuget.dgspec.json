@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj": {}
+    "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj": {}
   },
   "projects": {
-    "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj": {
+    "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj",
+        "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj",
         "projectName": "Filters Web API",
-        "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj",
+        "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Filters\\Filters Web API\\Filters Web API\\Filters Web API.csproj",
         "packagesPath": "C:\\Users\\dimple.m\\.nuget\\packages\\",
-        "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Filters\\Filters Web API\\Filters Web API\\obj\\",
+        "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Filters\\Filters Web API\\Filters Web API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dimple.m\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[5.3.2, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.3.11, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.3.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

@@ -30,18 +30,29 @@ namespace Filters_Web_API
         public void ConfigureServices(IServiceCollection services)
         {
             // Add controllers
-            services.AddControllers();
-
-            // Register services
-            services.AddScoped<BooksService>();
-            services.AddScoped<CustomActionFilter>();
-            services.AddScoped<CustomAuthorizationFilter>();
-            services.AddScoped<CustomExceptionFilter>();
-            services.AddScoped<CustomResourceFilter>();
-            services.AddScoped<CustomResultFilter>();
+            // Add controllers
+            services.AddControllers(options =>
+            {
+                // Apply filters globally
+                options.Filters.Add<CustomAuthorizationFilter>();
+                options.Filters.Add<CustomExceptionFilter>();
+                options.Filters.Add<CustomActionFilter>();
+                options.Filters.Add<CustomResourceFilter>();
+                options.Filters.Add<CustomResultFilter>();
+            });
 
             // Register IMemoryCache service
             services.AddMemoryCache();
+
+            // Register services
+            services.AddScoped<BLBooksService>();
+            
+            //services.AddScoped<CustomAuthorizationFilter>();
+            //services.AddScoped<CustomExceptionFilter>();
+            //services.AddScoped<CustomActionFilter>();
+            //services.AddScoped<CustomResourceFilter>();
+            //services.AddScoped<CustomResultFilter>();
+
 
             // Add API Explorer
             services.AddEndpointsApiExplorer();
@@ -95,7 +106,7 @@ namespace Filters_Web_API
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Filters API V1");
                 });
             }
 

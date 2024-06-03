@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\ActionMethod\\ActionMethod\\ActionMethod.csproj",
+      "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\ActionMethod\\ActionMethod\\ActionMethod.csproj",
       "projectName": "ActionMethod",
-      "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\ActionMethod\\ActionMethod\\ActionMethod.csproj",
+      "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\ActionMethod\\ActionMethod\\ActionMethod.csproj",
       "packagesPath": "C:\\Users\\dimple.m\\.nuget\\packages\\",
-      "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\ActionMethod\\ActionMethod\\obj\\",
+      "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\ActionMethod\\ActionMethod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dimple.m\\AppData\\Roaming\\NuGet\\NuGet.Config",

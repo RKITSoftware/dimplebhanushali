@@ -67,7 +67,7 @@ namespace ActionMethod.Controllers
         /// <param name="id">The ID of the product to update.</param>
         /// <param name="product">The updated product data.</param>
         [HttpPut("{id}")]
-        public ActionResult Update(int id, [FromBody] PRO01 product)
+        public IActionResult Update(int id, [FromBody] PRO01 product)
         {
             if (product == null || product.O01F01 != id)
             {
@@ -106,6 +106,8 @@ namespace ActionMethod.Controllers
         {
             return new EmptyResult();
         }
+        //// JS
+
 
         /// <summary>
         /// Returns a plain text response.
@@ -122,6 +124,7 @@ namespace ActionMethod.Controllers
         [HttpGet("FileContent")]
         public FileContentResult FileContent()
         {
+            //// Excel return
             string currentDirectory = Directory.GetCurrentDirectory();
             string filePath = Path.Combine(currentDirectory, "file.txt");
             var fileBytes = System.IO.File.ReadAllBytes(filePath);
@@ -162,6 +165,7 @@ namespace ActionMethod.Controllers
         [HttpGet("UnAuthorized")]
         public UnauthorizedResult Unauthorized()
         {
+            //// Use
             return Unauthorized();
         }
     }

@@ -1,0 +1,128 @@
+2024-05-31 11:44:11.1968 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:44:11.4338 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 11:44:11.4711 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 11:44:11.5250 Info Configuration initialized.
+2024-05-31 11:52:31.1660 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:52:31.2002 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 11:52:31.2243 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 11:52:31.2447 Info Configuration initialized.
+2024-05-31 11:52:42.0454 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:52:42.0454 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:52:42.0454 Info Closing old configuration.
+2024-05-31 11:52:42.0776 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:52:42.0776 Info Configuration initialized.
+2024-05-31 11:53:08.8222 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:53:08.8310 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:53:08.8310 Info Closing old configuration.
+2024-05-31 11:53:08.8310 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:53:08.8310 Info Configuration initialized.
+2024-05-31 11:54:08.1970 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:54:08.2309 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 11:54:08.2568 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 11:54:08.2793 Info Configuration initialized.
+2024-05-31 11:54:22.4271 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:54:22.4271 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:54:22.4271 Info Closing old configuration.
+2024-05-31 11:54:22.4709 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:54:22.4709 Info Configuration initialized.
+2024-05-31 11:58:23.4791 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:58:23.5461 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 11:58:23.6295 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 11:58:23.6710 Info Configuration initialized.
+2024-05-31 11:58:47.2053 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:58:47.2053 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 11:58:47.2053 Info Closing old configuration.
+2024-05-31 11:58:47.2530 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 11:58:47.2530 Info Configuration initialized.
+2024-05-31 12:00:17.5832 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:00:17.5832 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:00:17.5832 Info Closing old configuration.
+2024-05-31 12:00:17.5832 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:00:17.5832 Info Configuration initialized.
+2024-05-31 12:00:42.7788 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:00:42.7788 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:00:42.7788 Info Closing old configuration.
+2024-05-31 12:00:42.7870 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:00:42.7870 Info Configuration initialized.
+2024-05-31 12:05:17.3944 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:05:17.4336 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 12:05:17.4653 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 12:05:17.4880 Info Configuration initialized.
+2024-05-31 12:06:27.4651 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:06:27.4651 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:06:27.4880 Info Closing old configuration.
+2024-05-31 12:06:27.6197 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:06:27.6197 Info Configuration initialized.
+2024-05-31 12:06:45.3104 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:06:45.3222 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:06:45.3222 Info Closing old configuration.
+2024-05-31 12:06:45.3222 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:06:45.3222 Info Configuration initialized.
+2024-05-31 12:08:08.5586 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:08.5586 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:08:08.5586 Info Closing old configuration.
+2024-05-31 12:08:08.5586 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:08.5586 Info Configuration initialized.
+2024-05-31 12:08:15.7028 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:15.7028 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:08:15.7028 Info Closing old configuration.
+2024-05-31 12:08:15.7028 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:15.7028 Info Configuration initialized.
+2024-05-31 12:08:18.9504 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:18.9504 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:08:18.9504 Info Closing old configuration.
+2024-05-31 12:08:18.9504 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:18.9504 Info Configuration initialized.
+2024-05-31 12:08:40.9386 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:40.9386 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:08:40.9386 Info Closing old configuration.
+2024-05-31 12:08:40.9386 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:08:40.9386 Info Configuration initialized.
+2024-05-31 12:09:09.0436 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:09:09.0912 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 12:09:09.1207 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 12:09:09.1459 Info Configuration initialized.
+2024-05-31 12:10:12.7707 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:12.7838 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:10:12.7838 Info Closing old configuration.
+2024-05-31 12:10:12.8104 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:12.8104 Info Configuration initialized.
+2024-05-31 12:10:39.2918 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:39.2918 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:10:39.2918 Info Closing old configuration.
+2024-05-31 12:10:39.3008 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:39.3008 Info Configuration initialized.
+2024-05-31 12:10:44.9581 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:44.9581 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 12:10:44.9581 Info Closing old configuration.
+2024-05-31 12:10:44.9581 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 12:10:44.9581 Info Configuration initialized.
+2024-05-31 16:16:21.7603 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 16:16:21.8689 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 16:16:21.8973 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 16:16:21.9235 Info Configuration initialized.
+2024-05-31 16:16:39.1651 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:16:39.1651 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 16:16:39.1673 Info Closing old configuration.
+2024-05-31 16:16:39.1859 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:16:39.1859 Info Configuration initialized.
+2024-05-31 16:25:41.1197 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:25:41.1197 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 16:25:41.1197 Info Closing old configuration.
+2024-05-31 16:25:41.1197 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:25:41.1350 Info Configuration initialized.
+2024-05-31 16:30:28.5582 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 16:30:28.7573 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-05-31 16:30:28.7878 Info Validating config: TargetNames=logfile, ConfigItems=10, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\NLog.config
+2024-05-31 16:30:28.8212 Warn FileTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'FileName' on 'FileTarget(Name=logfile)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(ConfigurationItemFactory configFactory, Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2024-05-31 16:30:28.9230 Info Configuration initialized.
+2024-05-31 16:30:52.2986 Info Loading NLog config from XML file: F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:30:52.2986 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-05-31 16:30:52.2986 Info Closing old configuration.
+2024-05-31 16:30:52.3198 Info Validating config: TargetNames=logfile, ConfigItems=10, FilePath=F:\Dimple - 371\Git\training\ASP.NET Core\2. Request Processing Pipeline\Filters\Filters Web API\Filters Web API\bin\Debug\net6.0\nlog.config
+2024-05-31 16:30:52.3198 Warn FileTarget(Name=logfile): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'FileName' on 'FileTarget(Name=logfile)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(ConfigurationItemFactory configFactory, Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2024-05-31 16:30:52.3198 Info Configuration initialized.

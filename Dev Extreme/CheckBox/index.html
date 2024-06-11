@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Box Demo</title>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DevExtreme semi-dark theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.11/css/dx.dark.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.all.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <div class="demo-container">
+        <div class="form">
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Checked</div>
+                <div class="dx-field-value">
+                    <div id="checked"></div>
+                    <button id="toggleChecked" class="button">Toggle Checked</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Un Checked</div>
+                <div class="dx-field-value">
+                    <div id="unChecked"></div>
+                    <button id="toggleUnchecked" class="button">Toggle Unchecked</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Disabled</div>
+                <div class="dx-field-value">
+                    <div id="disable"></div>
+                    <button id="enableDisable" class="button">Enable/Disable</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Access Key Enabled (Key => c)</div>
+                <div class="dx-field-value">
+                    <div id="access"></div>
+                    <button id="toggleAccess" class="button">Toggle Access</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Element Attribute</div>
+                <div class="dx-field-value">
+                    <div id="elementAttr"></div>
+                    <button id="toggleElementAttr" class="button">Toggle Element Attribute</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Height Width</div>
+                <div class="dx-field-value">
+                    <div id="height" class="height"></div>
+                    <button id="toggleHeightWidth" class="button">Toggle Height/Width</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Read Only</div>
+                <div class="dx-field-value">
+                    <div id="visible"></div>
+                    <button id="toggleReadOnly" class="button">Toggle Read Only</button>
+                </div>
+            </div>
+
+            <div class="label-checkbox-pair">
+                <div class="dx-field-label">Validation Status</div>
+                <div class="dx-field-value">
+                    <div id="validation"></div>
+                    <button id="validate" class="button">Validate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="method-buttons">
+        <!-- Button for beginUpdate() -->
+        <div class="label-checkbox-pair">
+            <button id="btnBeginUpdate" class="button">beginUpdate()</button>
+        </div>
+
+        <!-- Button for defaultOptions(rule) -->
+        <div class="label-checkbox-pair">
+            <button id="btnDefaultOptions" class="button">defaultOptions(rule)</button>
+        </div>
+
+        <!-- Button for dispose() -->
+        <div class="label-checkbox-pair">
+            <button id="btnDispose" class="button">dispose()</button>
+        </div>
+
+        <!-- Button for element() -->
+        <div class="label-checkbox-pair">
+            <button id="btnElement" class="button">element()</button>
+        </div>
+
+        <!-- Button for endUpdate() -->
+        <div class="label-checkbox-pair">
+            <button id="btnEndUpdate" class="button">endUpdate()</button>
+        </div>
+
+        <!-- Button for focus() -->
+        <div class="label-checkbox-pair">
+            <button id="btnFocus" class="button">focus()</button>
+        </div>
+
+        <!-- Button for getInstance(element) -->
+        <div class="label-checkbox-pair">
+            <button id="btnGetInstance" class="button">getInstance(element)</button>
+        </div>
+
+        <!-- Button for instance() -->
+        <div class="label-checkbox-pair">
+            <button id="btnInstance" class="button">instance()</button>
+        </div>
+
+        <!-- Button for off(eventName) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOffEventName" class="button">off(eventName)</button>
+        </div>
+
+        <!-- Button for off(eventName, eventHandler) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOffEventNameHandler" class="button">off(eventName, eventHandler)</button>
+        </div>
+
+        <!-- Button for on(eventName, eventHandler) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOnEventNameHandler" class="button">on(eventName, eventHandler)</button>
+        </div>
+
+        <!-- Button for on(events) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOnEvents" class="button">on(events)</button>
+        </div>
+
+        <!-- Button for option() -->
+        <div class="label-checkbox-pair">
+            <button id="btnOption" class="button">option()</button>
+        </div>
+
+        <!-- Button for option(optionName) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOptionName" class="button">option(optionName)</button>
+        </div>
+
+        <!-- Button for option(optionName, optionValue) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOptionNameValue" class="button">option(optionName, optionValue)</button>
+        </div>
+
+        <!-- Button for option(options) -->
+        <div class="label-checkbox-pair">
+            <button id="btnOptionOptions" class="button">option(options)</button>
+        </div>
+
+        <!-- Button for registerKeyHandler(key, handler) -->
+        <div class="label-checkbox-pair">
+            <button id="btnRegisterKeyHandler" class="button">registerKeyHandler(key, handler)</button>
+        </div>
+
+        <!-- Button for repaint() -->
+        <div class="label-checkbox-pair">
+            <button id="btnRepaint" class="button">repaint()</button>
+        </div>
+
+        <!-- Button for reset() -->
+        <div class="label-checkbox-pair">
+            <button id="btnReset" class="button">reset()</button>
+        </div>
+
+        <!-- Button for resetOption(optionName) -->
+        <div class="label-checkbox-pair">
+            <button id="btnResetOptionName" class="button">resetOption(optionName)</button>
+        </div>
+    </div>
+
+    <script src="js/checkbox.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

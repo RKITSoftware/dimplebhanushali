@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "name": "Alice Johnson",
+        "age": 30,
+        "occupation": "Software Developer",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "email": "alice.johnson@example.com"
+    },
+    {
+        "id": "2",
+        "name": "Bob Smith",
+        "age": 28,
+        "occupation": "Graphic Designer",
+        "skills": [
+            "Photoshop",
+            "Illustrator",
+            "InDesign"
+        ],
+        "email": "bob.smith@example.com"
+    },
+    {
+        "id": "3",
+        "name": "Charlie Brown",
+        "age": 35,
+        "occupation": "Project Manager",
+        "skills": [
+            "Agile",
+            "Scrum",
+            "Leadership"
+        ],
+        "email": "charlie.brown@example.com"
+    },
+    {
+        "id": "4",
+        "name": "Diana Prince",
+        "age": 32,
+        "occupation": "UX Designer",
+        "skills": [
+            "User Research",
+            "Prototyping",
+            "Wireframing"
+        ],
+        "email": "diana.prince@example.com"
+    },
+    {
+        "id": "5",
+        "name": "Ethan Hunt",
+        "age": 40,
+        "occupation": "Security Specialist",
+        "skills": [
+            "Cybersecurity",
+            "Penetration Testing",
+            "Risk Management"
+        ],
+        "email": "ethan.hunt@example.com"
+    },
+    {
+        "id": "6",
+        "name": "Fiona Gallagher",
+        "age": 27,
+        "occupation": "Marketing Coordinator",
+        "skills": [
+            "SEO",
+            "Content Marketing",
+            "Social Media"
+        ],
+        "email": "fiona.gallagher@example.com"
+    },
+    {
+        "id": "7",
+        "name": "George Clooney",
+        "age": 50,
+        "occupation": "Actor",
+        "skills": [
+            "Acting",
+            "Directing",
+            "Screenwriting"
+        ],
+        "email": "george.clooney@example.com"
+    }
+]

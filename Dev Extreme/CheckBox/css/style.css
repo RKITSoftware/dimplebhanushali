@@ -1,0 +1,114 @@
+#unChecked {
+    background-color: #4d94ff;
+    /* Dark blue */
+    border-color: #337ab7;
+    /* Darker blue */
+    color: white;
+}
+
+.element {
+    background-color: #808080;
+    /* Dark gray */
+    border-color: #000000;
+    border-radius: 50%;
+}
+
+.height {
+    background-color: #999999;
+    /* Gray */
+}
+
+/* Custom CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+}
+
+.demo-container {
+    width: 100vw;
+    /* 100% of the viewport width */
+    height: 100vh;
+    /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: #4f4f4f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 800px;
+    /* Maximum width to maintain readability */
+}
+
+.dx-field-label {
+    font-weight: bold;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+.dx-field-value {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20%;
+    /* margin-right: 10px; */
+    /* Add margin to the right */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.label-checkbox-pair {
+    display: flex;
+    align-items: center;
+}
+
+.dx-field-label {
+    flex: 1;
+    padding-right: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Styling for method buttons */
+.method-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.method-buttons .button {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .method-buttons .button {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 400px) {
+    .method-buttons .button {
+        flex: 1 1 100%;
+    }
+}

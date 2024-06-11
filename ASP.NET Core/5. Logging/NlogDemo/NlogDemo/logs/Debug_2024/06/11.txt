@@ -1,0 +1,54 @@
+2024-06-11 09:39:09.6819 | DEBUG | Microsoft.Extensions.Hosting.Internal.Host | Hosting starting 
+2024-06-11 09:39:10.4171 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-06-11 09:39:10.7753 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: FCBE0DFD0A16744F1D0462A90AD4E142C4EEDB5B) 
+2024-06-11 09:39:10.8559 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly NlogDemo 
+2024-06-11 09:39:10.8559 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2024-06-11 09:39:10.8559 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2024-06-11 09:39:10.8559 | DEBUG | Microsoft.Extensions.Hosting.Internal.Host | Hosting started 
+2024-06-11 09:39:11.2370 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJP" accepted. 
+2024-06-11 09:39:11.2370 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJQ" accepted. 
+2024-06-11 09:39:11.2388 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJQ" started. 
+2024-06-11 09:39:11.2388 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJP" started. 
+2024-06-11 09:39:13.8875 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJR" accepted. 
+2024-06-11 09:39:13.9093 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJR" started. 
+2024-06-11 09:39:13.9857 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN49PGVOPUJR established using the following protocol: Tls12 
+2024-06-11 09:39:14.1632 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed. 
+2024-06-11 09:39:14.6467 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection. 
+2024-06-11 09:39:15.1199 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection. 
+2024-06-11 09:39:21.2635 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out. 
+2024-06-11 09:39:21.2635 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out. 
+2024-06-11 09:39:21.2707 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJP" stopped. 
+2024-06-11 09:39:21.2707 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PGVOPUJQ" stopped. 
+2024-06-11 09:39:21.2707 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PGVOPUJQ" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-11 09:39:21.2707 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PGVOPUJP" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-11 09:40:41.3968 | DEBUG | Microsoft.Extensions.Hosting.Internal.Host | Hosting starting 
+2024-06-11 09:40:41.6786 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-06-11 09:40:41.9435 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: FCBE0DFD0A16744F1D0462A90AD4E142C4EEDB5B) 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly NlogDemo 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PHQT2HUJ" received FIN. 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PHQT2HUI" received FIN. 
+2024-06-11 09:40:42.2713 | DEBUG | Microsoft.Extensions.Hosting.Internal.Host | Hosting started 
+2024-06-11 09:40:42.2894 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUJ" accepted. 
+2024-06-11 09:40:42.2894 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUI" accepted. 
+2024-06-11 09:40:42.2894 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUI" started. 
+2024-06-11 09:40:42.2894 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUJ" started. 
+2024-06-11 09:40:42.3141 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-06-11 09:40:42.3141 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-06-11 09:40:42.3274 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUJ" stopped. 
+2024-06-11 09:40:42.3274 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUI" stopped. 
+2024-06-11 09:40:42.3274 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PHQT2HUJ" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-11 09:40:42.3274 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN49PHQT2HUI" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-11 09:40:43.2730 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUK" accepted. 
+2024-06-11 09:40:43.2730 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN49PHQT2HUK" started. 
+2024-06-11 09:40:43.3450 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN49PHQT2HUK established using the following protocol: Tls12 
+2024-06-11 09:40:43.5083 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed. 
+2024-06-11 09:40:43.8027 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection. 
+2024-06-11 09:40:44.0151 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection. 

@@ -18,10 +18,10 @@ namespace Developer_Exception_Page.Custom_Exception_Handler
         {
             // Retrieve the exception details from the IExceptionHandlerPathFeature
             var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
-            var exception = exceptionHandlerPathFeature.Error;
+            Exception exception = exceptionHandlerPathFeature.Error;
 
             // Create an ErrorModel instance to encapsulate the error information
-            var errorModel = new ErrorModel();
+            ErrorModel errorModel = new ErrorModel();
 
             // Set the RequestId to either the current activity ID or the trace identifier of the HTTP context
             errorModel.RequestId = Activity.Current?.Id ?? context.TraceIdentifier;

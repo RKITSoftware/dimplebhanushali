@@ -18,6 +18,7 @@ namespace DILifeTime.Helpers
             // Register services with different lifetimes
             services.AddTransient<ITransientService, OperationService>();
             services.AddScoped<IScopedService, OperationService>();
+            services.AddScoped<IScopedService, ScopedService>();
             services.AddSingleton<ISingletonService, OperationService>();
 
             return services;

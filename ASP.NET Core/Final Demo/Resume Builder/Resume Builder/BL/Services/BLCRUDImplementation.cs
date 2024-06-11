@@ -1,5 +1,4 @@
-﻿using iTextSharp.tool.xml.util;
-using Resume_Builder.BL.Interfaces;
+﻿using Resume_Builder.BL.Interfaces;
 using Resume_Builder.Data;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Helpers;
@@ -166,7 +165,7 @@ namespace Resume_Builder.DL.Services
             {
                 // Insert operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
-                db.Insert(_objT);
+                db.Insert(_objT);   
                 response.Message = enmOperation.I.GetMessage();
             }
             else if (operation == enmOperation.U)

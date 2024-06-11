@@ -77,7 +77,7 @@ namespace DILifeTime.Controllers
         [HttpGet("Difference")]
         public IActionResult Difference()
         {
-            var data = new
+            object data = new
             {
                 transient1 = _transientService1.GetOperationID().ToString(),
                 transient2 = _transientService2.GetOperationID().ToString(),

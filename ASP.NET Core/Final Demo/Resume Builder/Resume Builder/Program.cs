@@ -18,6 +18,14 @@ namespace Resume_Builder
                {
                    logging.ClearProviders();
                    logging.AddConsole();
+
+                   // Set console colors
+                   Console.ForegroundColor = ConsoleColor.Green;
+                   Console.BackgroundColor = ConsoleColor.Black;
+                   Console.Clear();
+
+                   logging.SetMinimumLevel(LogLevel.Information);
+
                })
                .ConfigureWebHostDefaults(webBuilder =>
                {

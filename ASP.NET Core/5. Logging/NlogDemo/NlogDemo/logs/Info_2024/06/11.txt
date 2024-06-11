@@ -1,0 +1,26 @@
+2024-06-11 09:39:10.8559 | INFO | Microsoft.Hosting.Lifetime | Now listening on: https://localhost:7003 
+2024-06-11 09:39:10.8559 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5244 
+2024-06-11 09:39:10.8559 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-06-11 09:39:10.8559 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-06-11 09:39:10.8559 | INFO | Microsoft.Hosting.Lifetime | Content root path: F:\Dimple - 371\Git\training\ASP.NET Core\5. Logging\NlogDemo\NlogDemo 
+2024-06-11 09:39:14.0925 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/index.html - - 
+2024-06-11 09:39:15.1199 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/index.html - - - 200 - text/html;charset=utf-8 1036.9416ms 
+2024-06-11 09:39:15.6484 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_vs/browserLink - - 
+2024-06-11 09:39:15.6484 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-11 09:39:15.6788 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 24.6766ms 
+2024-06-11 09:39:15.7547 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.2464ms 
+2024-06-11 09:39:15.8873 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - 
+2024-06-11 09:39:16.0463 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.0526ms 
+2024-06-11 09:40:42.2707 | INFO | Microsoft.Hosting.Lifetime | Now listening on: https://localhost:7003 
+2024-06-11 09:40:42.2713 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://localhost:5244 
+2024-06-11 09:40:42.2713 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2024-06-11 09:40:42.2713 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Development 
+2024-06-11 09:40:42.2713 | INFO | Microsoft.Hosting.Lifetime | Content root path: F:\Dimple - 371\Git\training\ASP.NET Core\5. Logging\NlogDemo\NlogDemo 
+2024-06-11 09:40:43.4458 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/index.html - - 
+2024-06-11 09:40:44.0151 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/index.html - - - 200 - text/html;charset=utf-8 578.9797ms 
+2024-06-11 09:40:44.7260 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - 
+2024-06-11 09:40:44.7260 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/_vs/browserLink - - 
+2024-06-11 09:40:44.7406 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 18.0279ms 
+2024-06-11 09:40:44.7712 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.0311ms 
+2024-06-11 09:40:45.0011 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - 
+2024-06-11 09:40:45.1669 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7003/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.9485ms 

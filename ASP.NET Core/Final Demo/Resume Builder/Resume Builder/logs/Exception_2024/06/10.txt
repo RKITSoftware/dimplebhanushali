@@ -1,0 +1,19 @@
+2024-06-10 10:24:52.5061||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Helpers\Utility.cs:line 25
+   at Resume_Builder.Helpers.Utility.LogWithUserIdentity(HttpContext httpContext, String message, LogLevel level) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Helpers\Utility.cs:line 44
+   at Resume_Builder.Controllers.CLAI.PerformServiceOperation() in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Controllers\CLAI.cs:line 103
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.VoidResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 85
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)

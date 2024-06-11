@@ -40,6 +40,8 @@ namespace MiddlewareWithFilters
             services.AddSingleton<AuthorizationFilter>();
             services.AddSingleton<ExceptionFilter>();
 
+            //// Add Middleware
+
             services.AddControllers();
 
             services.AddMemoryCache();

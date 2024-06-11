@@ -39,6 +39,12 @@ namespace Logging_API
                             return level >= LogLevel.Warning;
                         };
                     });
+
+                    // Set console colors
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.Clear();
+
                     logging.SetMinimumLevel(LogLevel.Trace);
                 })
                 .Build()

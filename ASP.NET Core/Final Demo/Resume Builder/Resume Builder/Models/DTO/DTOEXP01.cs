@@ -12,7 +12,7 @@ namespace Resume_Builder.Models.DTO
         /// Experiance Id
         /// </summary>
         [JsonProperty("P01101")]
-        [ServiceStack.DataAnnotations.PrimaryKey, ServiceStack.DataAnnotations.AutoIncrement]
+        [Range(0,int.MaxValue)]
         public int P01F01 { get; set; }
 
         /// <summary>

@@ -10,6 +10,7 @@ using Resume_Builder.Helpers;
 using Resume_Builder.Middlewares;
 using Resume_Builder.Middlewares.Filters;
 using Resume_Builder.Models.POCO;
+using Resume_Builder.Services.Implemntations;
 using System.Reflection;
 
 namespace Resume_Builder

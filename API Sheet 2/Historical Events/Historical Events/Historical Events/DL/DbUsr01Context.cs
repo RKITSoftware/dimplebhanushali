@@ -1,7 +1,4 @@
-﻿using Historical_Events.Models;
-using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
 
 namespace Historical_Events.DL

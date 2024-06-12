@@ -203,11 +203,13 @@ namespace Historical_Events.BL
         {
             _dbHst01Context = new DbHst01Context(_connection);
 
+            HSTEVT01 objHst = _dbHst01Context.GetEventById(id);
+
             response = new Response
             {
                 isError = false,
-                Message = "Fetched event by id",
-                Data = _dbHst01Context.GetEventById(id),
+                Message = objHst is null ? "Event Could not be fetched" : "Event Fetched",
+                Data = objHst,
             };
 
             return response;
@@ -335,8 +337,6 @@ namespace Historical_Events.BL
             return response;
         }
 
-
         #endregion
-
     }
 }

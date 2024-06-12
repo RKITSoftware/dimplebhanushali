@@ -1,7 +1,7 @@
 ﻿using NLog;
 using Resume_Builder.DL.Interfaces;
 
-namespace Resume_Builder.DL.Implemntations
+namespace Resume_Builder.Services.Implemntations
 {
     /// <summary>
     /// Implementation of Ilogging Service 

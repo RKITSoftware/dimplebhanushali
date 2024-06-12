@@ -1,5 +1,6 @@
 ﻿using Historical_Events.Models;
 using MySql.Data.MySqlClient;
+using ServiceStack;
 using System;
 using System.Collections.Generic;
 
@@ -79,7 +80,6 @@ namespace Historical_Events.DL
         /// <returns>The historical event if found; otherwise, null.</returns>
         public HSTEVT01 GetEventById(int id)
         {
-            //// string format
             string query = $@"SELECT 
                                     t01f01, 
                                     t01f02, 
@@ -92,8 +92,7 @@ namespace Historical_Events.DL
 
             List<HSTEVT01> events = GetHistoricalEventsFromDatabase(query);
 
-            //// validate in BL
-            return events.Count > 0 ? events[0] : null;
+            return events[0];
         }
 
         /// <summary>
@@ -110,8 +109,24 @@ namespace Historical_Events.DL
         {
             int offset = (pageNumber - 1) * _pageSize; // Calculate the offset
 
-            //// Where and
-            // Construct the base query
+            string whereClause = string.Empty;
+
+            // Append conditions based on parameters
+            if (startYear.HasValue && endYear.HasValue)
+            {
+                whereClause += (string.IsNullOrEmpty(whereClause) ? "WHERE " : " AND ") + $"YEAR(t01f02) BETWEEN {startYear} AND {endYear}";
+            }
+
+            if (!string.IsNullOrEmpty(startDate) && !string.IsNullOrEmpty(endDate))
+            {
+                whereClause += (string.IsNullOrEmpty(whereClause) ? "WHERE " : " AND ") + $"t01f02 BETWEEN '{startDate}' AND '{endDate}'";
+            }
+
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                whereClause += (string.IsNullOrEmpty(whereClause) ? "WHERE " : " AND ") + $"t01f04 LIKE '%{keyword}%'";
+            }
+
             string query = $@"SELECT 
                                     t01f01, 
                                     t01f02, 
@@ -119,26 +134,8 @@ namespace Historical_Events.DL
                                     t01f04 
                               FROM 
                                     hstevt01 
-                              WHERE 
-                                    1 = 1";
-
-            // Append conditions based on parameters
-            if (startYear.HasValue && endYear.HasValue)
-            {
-                query += $" AND YEAR(t01f02) BETWEEN {startYear} AND {endYear}";
-            }
-
-            if (!string.IsNullOrEmpty(startDate) && !string.IsNullOrEmpty(endDate))
-            {
-                query += $" AND t01f02 BETWEEN '{startDate}' AND '{endDate}'";
-            }
-
-            if (!string.IsNullOrEmpty(keyword))
-            {
-                query += $" AND t01f04 LIKE '%{keyword}%'";
-            }
-
-            query += $" LIMIT {_pageSize} OFFSET {offset}"; // Apply pagination
+                             {whereClause}
+                                LIMIT {_pageSize} OFFSET {offset}";
 
             List<HSTEVT01> lstHstEvt01 = GetHistoricalEventsFromDatabase(query);
 
@@ -237,7 +234,6 @@ namespace Historical_Events.DL
         /// <returns>A list of unique categories.</returns>
         public List<string> GetUniqueCategories()
         {
-            //// Foramt
             string query = @"SELECT DISTINCT 
                                             t01f03 
                             FROM    

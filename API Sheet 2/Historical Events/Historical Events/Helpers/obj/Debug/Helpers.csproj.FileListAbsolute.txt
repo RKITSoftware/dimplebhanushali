@@ -1,0 +1,6 @@
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\bin\Debug\Helpers.dll
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\bin\Debug\Helpers.pdb
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\obj\Debug\Helpers.csproj.AssemblyReference.cache
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\obj\Debug\Helpers.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\obj\Debug\Helpers.dll
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Helpers\obj\Debug\Helpers.pdb

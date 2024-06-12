@@ -12,6 +12,7 @@ namespace Historical_Events.Models.DTO
         /// Id
         /// </summary>
         [JsonProperty("t01101")]
+        [Range(0, int.MaxValue, ErrorMessage = "Invalid user id")]
         [Required(ErrorMessage = "Id is required")]
         public int t01f01 { get; set; }
 

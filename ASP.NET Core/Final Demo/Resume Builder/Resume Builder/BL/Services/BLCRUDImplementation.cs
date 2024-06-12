@@ -51,7 +51,6 @@ namespace Resume_Builder.DL.Services
         /// </summary>
         private readonly IEmailService _sender;
 
-
         #endregion
 
         #region Constructor
@@ -62,8 +61,8 @@ namespace Resume_Builder.DL.Services
         /// <param name="dbConnectionFactory">Database connection factory.</param>
         /// <param name="httpContextAccessor">HTTP context accessor.</param>
         public BLCRUDImplementation(DbConnectionFactory dbConnectionFactory,
-                                  IHttpContextAccessor httpContextAccessor,
-                                  IEmailService sender)
+                                    IHttpContextAccessor httpContextAccessor,
+                                    IEmailService sender)
         {
             _dbConnectionFactory = dbConnectionFactory;
             _httpContextAccessor = httpContextAccessor;
@@ -82,16 +81,9 @@ namespace Resume_Builder.DL.Services
             // Initialize response object
             response = new Response();
 
-            // Check if the user is authenticated
-            if (!_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
-            {
-                response.HasError = true;
-                response.Message = "Unauthorized";
-                return response;
-            }
-
             // Extract user's claims
-            var userIdClaim = _httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "jwt_userId");
+            var userIdClaim = _httpContextAccessor.HttpContext
+                                .User.Claims.FirstOrDefault(c => c.Type == "jwt_userId");
 
             if (userIdClaim == null)
             {
@@ -487,6 +479,11 @@ namespace Resume_Builder.DL.Services
             _sender.Send(email, message, null);
         }
 
+        /// <summary>
+        /// Prevalidation for Checking current user.
+        /// </summary>
+        /// <param name="id">user id</param>
+        /// <returns>Response with is User id entered and currently logged in user is same or not.</returns>
         public Response PreValidation(int id)
         {
             response = new Response();

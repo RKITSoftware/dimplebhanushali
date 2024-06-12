@@ -12,7 +12,7 @@ using System.Data;
 
 namespace Historical_Events.BL
 {
-    /// <summary>
+    /// <summary> 
     /// Business logic class for managing users.
     /// </summary>
     public class BLUser

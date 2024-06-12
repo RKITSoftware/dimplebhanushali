@@ -1,0 +1,37 @@
+2024-06-11 11:30:28.9937||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-11 11:30:28.9937||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLCER01 (Resume Builder) 
+2024-06-11 11:30:29.1583||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLCER01 (Resume Builder) 
+2024-06-11 11:30:29.1583||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-11 11:30:29.2365||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-11 11:30:29.2365||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-11 11:30:29.2365||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-11 11:30:29.2365||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLCER01.Get (Resume Builder) - Validation state: Valid 
+2024-06-11 11:30:47.9991||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLCER01.Get (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18759.3498ms. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-11 11:30:48.0111||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-11 11:30:48.0111||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-11 11:30:48.0111||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-11 11:30:48.0111||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-11 11:30:48.0111||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-11 11:30:48.0111||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-11 11:30:48.0111||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" sending HEADERS frame for stream ID 1 with length 80 and flags END_HEADERS. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" sending DATA frame for stream ID 1 with length 254 and flags NONE. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-11 11:30:48.0297||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLCER01.Get (Resume Builder) in 19625.0519ms 
+2024-06-11 11:30:48.0297||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLCER01.Get (Resume Builder)' 
+2024-06-11 11:30:48.0297||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-11 11:30:48.0367||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7286/api/CLCER01/GetById - - - 200 254 application/json;+charset=utf-8 19643.0701ms 
+2024-06-11 11:30:52.2211||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN49REEHPE18" received FIN. 
+2024-06-11 11:30:52.2211||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN49REEHPE18" is closed. The last processed stream ID was 1. 
+2024-06-11 11:30:52.2211||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN49REEHPE18" sending FIN because: "The client closed the connection." 
+2024-06-11 11:30:52.2932||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN49REEHPE18" stopped. 

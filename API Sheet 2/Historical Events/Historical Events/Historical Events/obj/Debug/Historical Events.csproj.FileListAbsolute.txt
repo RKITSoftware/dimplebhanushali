@@ -264,3 +264,5 @@ F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\His
 F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Historical Events\bin\System.Text.Encodings.Web.xml
 F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Historical Events\bin\System.Text.Json.xml
 F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Historical Events\bin\System.ValueTuple.xml
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Historical Events\bin\Helpers.dll
+F:\Dimple - 371\Git\training\API Sheet 2\Historical Events\Historical Events\Historical Events\bin\Helpers.pdb

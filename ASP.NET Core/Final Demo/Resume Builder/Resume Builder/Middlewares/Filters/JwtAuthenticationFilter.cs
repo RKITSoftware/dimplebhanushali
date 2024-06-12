@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using NLog;
 using Resume_Builder.DL.Interfaces;
 using System.Security.Claims;
 
@@ -60,6 +61,7 @@ namespace Resume_Builder.Middlewares.Filters
             // Check if the endpoint is excluded from authentication
             if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
             {
+                GlobalDiagnosticsContext.Set("userId","Anonymous");
                 return; // Skip authentication for this endpoint
             }
 
@@ -92,6 +94,7 @@ namespace Resume_Builder.Middlewares.Filters
 
                     // extend expiry time
                     _redisService.Set(token, cachedValue, _expiryTime);
+                    GlobalDiagnosticsContext.Set("userId", cachedData[0]);
 
                     return;
                 }
@@ -112,6 +115,7 @@ namespace Resume_Builder.Middlewares.Filters
                                                         claimsPrincipal.Claims.FirstOrDefault(c => c.Type == "jwt_emailId")?.Value);
 
                         _redisService.Set(token, value, _expiryTime);
+                        GlobalDiagnosticsContext.Set("userId", claimsPrincipal.Claims.FirstOrDefault(c => c.Type == "jwt_userId")?.Value);
                         return;
                     }
                 }

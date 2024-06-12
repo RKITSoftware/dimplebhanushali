@@ -1,5 +1,4 @@
-﻿using NLog;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 
 namespace Resume_Builder.Helpers
 {
@@ -9,8 +8,6 @@ namespace Resume_Builder.Helpers
     public static class Utility
     {
         #region Public Methods
-
-        private static readonly NLog.ILogger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Extension method to get user id from jwt claims

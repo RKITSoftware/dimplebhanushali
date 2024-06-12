@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Routing\\Routing Web API\\Routing Web API\\Routing Web API.csproj",
+      "projectUniqueName": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Routing\\Routing Web API\\Routing Web API\\Routing Web API.csproj",
       "projectName": "Routing Web API",
-      "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Routing\\Routing Web API\\Routing Web API\\Routing Web API.csproj",
+      "projectPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Routing\\Routing Web API\\Routing Web API\\Routing Web API.csproj",
       "packagesPath": "C:\\Users\\dimple.m\\.nuget\\packages\\",
-      "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\Routing\\Routing Web API\\Routing Web API\\obj\\",
+      "outputPath": "F:\\Dimple - 371\\Git\\training\\ASP.NET Core\\2. Request Processing Pipeline\\Routing\\Routing Web API\\Routing Web API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dimple.m\\AppData\\Roaming\\NuGet\\NuGet.Config",

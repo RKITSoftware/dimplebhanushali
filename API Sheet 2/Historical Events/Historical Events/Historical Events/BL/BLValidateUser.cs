@@ -6,7 +6,6 @@ using ServiceStack.OrmLite;
 using System;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Web;
@@ -113,4 +112,3 @@ namespace Historical_Events.User_Validation
         #endregion
     }
 }
- 

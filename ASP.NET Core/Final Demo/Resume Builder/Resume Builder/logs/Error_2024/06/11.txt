@@ -1,0 +1,52 @@
+2024-06-11 10:24:08.0606||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at Microsoft.Extensions.Caching.Memory.MemoryCache.<ValidateCacheKey>g__Throw|32_0()
+   at Microsoft.Extensions.Caching.Memory.MemoryCache.TryGetValue(Object key, Object& result)
+   at Microsoft.Extensions.Caching.Memory.CacheExtensions.TryGetValue[TItem](IMemoryCache cache, Object key, TItem& value)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 82
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-06-11 10:27:22.1780||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-06-11 10:27:37.2238||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-06-11 10:32:36.7700||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-06-11 10:42:03.7627||ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Helpers\Utility.cs:line 23
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 71
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-06-11 10:44:40.3867||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:46:41.8859||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:48:16.4527||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:49:44.3700||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:50:21.0455||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext)
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:53:07.3478||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:53:47.7792||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context)
+2024-06-11 10:54:38.6833||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Helpers\Utility.cs:line 22
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 81
+2024-06-11 10:55:45.7763||ERROR|Resume_Builder.Middlewares.RateLimitingMiddleware|Failed to get user ID from claims System.NullReferenceException: Object reference not set to an instance of an object.
+   at Resume_Builder.Helpers.Utility.GetUserIdFromClaims(HttpContext httpContext) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Helpers\Utility.cs:line 22
+   at Resume_Builder.Middlewares.RateLimitingMiddleware.Invoke(HttpContext context) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RateLimitingMiddleware.cs:line 81

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
+﻿using Developer_Exception_Page.Custom_Exception_Handler;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Developer_Exception_Page
 {
@@ -44,10 +45,11 @@ namespace Developer_Exception_Page
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseDeveloperExceptionPage(new DeveloperExceptionPageOptions
-            {
-                SourceCodeLineCount = 10
-            });
+
+            //app.UseDeveloperExceptionPage(new DeveloperExceptionPageOptions
+            //{
+            //    SourceCodeLineCount = 10
+            //});
 
             //app.UseExceptionHandler(a => a.Run(async context =>
             //{
@@ -55,19 +57,19 @@ namespace Developer_Exception_Page
             //}));
 
             //Using UseDeveloperExceptionPage Middleware to Show Exception Details
-            //app.UseExceptionHandler(a => a.Run(async context =>
-            //{
-            //    var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
-            //    var exception = exceptionHandlerPathFeature.Error;
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
 
-            //    context.Response.ContentType = "text/html";
-            //    await context.Response.WriteAsync("<html><body>\r\n");
-            //    await context.Response.WriteAsync("Custom Error Page<br><br>\r\n");
+                context.Response.ContentType = "text/html";
+                await context.Response.WriteAsync("<html><body>\r\n");
+                await context.Response.WriteAsync("Custom Error Page<br><br>\r\n");
 
-            //    // Display custom error details
-            //    await context.Response.WriteAsync($"<strong>Error:</strong> {exception.Message}<br>\r\n");
-            //    await context.Response.WriteAsync("</body></html>\r\n");
-            //}));
+                // Display custom error details
+                await context.Response.WriteAsync($"<strong>Error:</strong> {exception.Message}<br>\r\n");
+                await context.Response.WriteAsync("</body></html>\r\n");
+            }));
 
             app.UseHttpsRedirection();
             app.UseAuthorization();

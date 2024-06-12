@@ -501,6 +501,13 @@
             <param name="email">The email address of the recipient.</param>
             <param name="message">The message content to be sent.</param>
         </member>
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.PreValidation(System.Int32)">
+            <summary>
+            Prevalidation for Checking current user.
+            </summary>
+            <param name="id">user id</param>
+            <returns>Response with is User id entered and currently logged in user is same or not.</returns>
+        </member>
         <member name="T:Resume_Builder.DL.Implemntations.AesCrptographyService">
             <summary>
             Implements ICryptography interface using Aes Algorithm

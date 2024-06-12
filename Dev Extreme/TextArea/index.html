@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Box Demo</title>
+    <title>Text Box Demo</title>
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -19,29 +19,28 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="../styles/style.css">
-
 </head>
 
 <body>
+
     <div id="container">
-        <!-- Button examples -->
-        <div>
-            <button id="defaultModeBtn">Default mode</button>
-            <button id="spinClearBtn">With spin and clear buttons</button>
-            <button id="disabledBtn">Disabled</button>
-            <button id="maxMinBtn">With max and min values</button>
-            <button id="eventHandlingBtn">Event Handling</button>
-            <button id="monthSalesBtn">This month sales</button>
-            <button id="stockBtn">Stock</button>
-            <button id="blurBtn">Blur</button>
-        </div>
-        <!-- Number Box -->
+
+        <button id="repaintBtn">Repaint</button>
+        <button id="disposeBtn">Dispose</button>
+        <button id="resetBtn">Reset</button>
+        <button id="blurBtn">Blur</button>
+
         <div id="numberBoxContainer">
-            <div id="numberBox"></div>
+            <label for="heightBox">Set TextArea Height:</label>
+            <div id="heightBox"></div>
+        </div>
+
+        <div class="textarea-wrapper">
+            <div id="textArea"></div>
         </div>
     </div>
 
-    <script src="js/numberBox.js"></script>
+    <script src="js/textArea.js"></script>
     <script src="../scripts/script.js"></script>
 </body>
 

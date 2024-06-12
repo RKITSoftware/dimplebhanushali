@@ -49,6 +49,11 @@ $(() => {
     // Additional methods usage
     numberWidget.focus();
 
+    // Blur
+    $('#blurBtn').on('click', () => {
+        numberWidget.blur();
+    });
+
     // Button click event handlers
     $('#defaultModeBtn').click(function () {
         numberWidget.option({

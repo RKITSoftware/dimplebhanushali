@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8b5b5;
+}
+
+#container {
+    max-width: 800px;
+    width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-field-template {
+    display: flex;
+    align-items: center;
+}
+
+.field-movie-poster {
+    width: 30px;
+    height: 45px;
+    margin-left: 10px;
+}
+
+.movie-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie-poster {
+    width: 50px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-info {
+    font-size: 12px;
+    color: #666;
+}
+
+.group-header {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #f0f0f0;
+}

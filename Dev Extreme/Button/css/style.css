@@ -14,22 +14,3 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.item-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.item-row {
-    border-bottom: 1px solid #ddd;
-}
-
-.item-cell {
-    padding: 8px;
-    text-align: left;
-}
-
-.item-cell:first-child {
-    font-weight: bold;
-    width: 100px;
-}

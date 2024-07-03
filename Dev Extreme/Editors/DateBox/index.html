@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Box Demo</title>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DevExtreme semi-dark theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.11/css/dx.light.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.11/js/dx.all.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="demo-container">
+            <div class="form">
+                <div class="dx-fieldset">
+
+                    <!-- Date Boxes Section 1 -->
+                    <div class="dx-field">
+                        <div class="dx-field-label">Normal Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxNormal"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Min and Max Dates</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxMinMax"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Custom Placeholder</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxPlaceholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Disabled Dates</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxDisabledDates"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Validation</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxValidation"></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Various Options</div>
+                        <div class="dx-field-value">
+                            <div id="dateBoxVarious"></div>
+                        </div>
+                    </div> -->
+
+                    <!-- Date Boxes Section 2 -->
+                    <div class="dx-field">
+                        <div class="dx-field-label">Default Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="default"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Constant Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="constant"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Pattern Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="pattern"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Escape Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="escape"></div>
+                        </div>
+                    </div>
+
+                    <!-- Date Boxes Section 3 -->
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="date"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Time Box</div>
+                        <div class="dx-field-value">
+                            <div id="time"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date-Time Box</div>
+                        <div class="dx-field-value">
+                            <div id="date-time"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Custom Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="custom"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date by Picker Box</div>
+                        <div class="dx-field-value">
+                            <div id="date-by-picker"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Disabled Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="disabled"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Date Box with Federal Holidays</div>
+                        <div class="dx-field-value">
+                            <div id="disabledDates"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Clearable Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="dx-field">
+                        <div class="dx-field-label">Birthday Date Box</div>
+                        <div class="dx-field-value">
+                            <div id="birthday"></div>
+                        </div>
+                        <div class="dx-field-label"><strong> Age in Days </strong>
+                            <div class="dx-field-value" id="age">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dateBox.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

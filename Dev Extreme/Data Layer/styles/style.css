@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+.sidebar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar li {
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 15px 20px;
+    /* Increase padding for better spacing */
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    /* Smooth hover transition */
+}
+
+.sidebar li a:hover {
+    background-color: #f0f0f0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Additional styles for a professional look */
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Add more styles as needed */

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8b5b5;
+}
+
+#container {
+    width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#controls input,
+#controls button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#productList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#productList th,
+#productList td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#productList th {
+    background-color: #f0f0f0;
+}
+
+.pagination-button:disabled {
+    cursor: not-allowed;
+    background-color: #ddd;
+}
+
+#aggregateResults {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+#aggregateResults h3 {
+    margin-top: 0;
+}
+
+.edit,
+.delete {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+.delete {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+}
+
+.button-container {
+    margin-bottom: 10px;
+}
+
+.button-container button {
+    /* padding: 10px 20px; */
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button:disabled {
+    cursor: not-allowed;
+    background-color: #6c757d;
+}

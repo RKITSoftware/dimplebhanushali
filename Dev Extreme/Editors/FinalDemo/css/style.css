@@ -1,0 +1,51 @@
+/* Basic styling, adjust as per your design */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#container {
+    max-width: 800px;
+    width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1,
+h2 {
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dx-textbox,
+.dx-numberbox,
+.dx-selectbox,
+.dx-textarea,
+.dx-button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 20px;
+}

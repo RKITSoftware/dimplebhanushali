@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8b5b5;
+}
+
+#container {
+    max-width: 800px;
+    width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskForm {
+    margin-bottom: 10px;
+}
+
+#taskTitle {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#addTask {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addTask:hover {
+    background-color: #45a049;
+}
+
+/* Style for the table */
+#taskList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Style for table headers */
+#taskList th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for table rows */
+#taskList td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row background color */
+#taskList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on table rows */
+#taskList tr:hover {
+    background-color: #ddd;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Edit button */
+.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #0056b3;
+}
+
+/* Delete button */
+.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
+#pagination button {
+    margin-top: 2%;
+}
+
+#pagination #nextPage {
+    margin-left: 75%;
+}

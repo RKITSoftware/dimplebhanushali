@@ -16,6 +16,7 @@
           "HuggingFace": "0.2.4",
           "Microsoft.Azure.CognitiveServices.Language.TextAnalytics": "4.0.0",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
+          "MySql.Data": "8.4.0",
           "NLog": "5.2.8",
           "NLog.Database": "5.2.8",
           "NLog.Extensions.Logging": "5.3.8",
@@ -615,7 +616,7 @@
           }
         }
       },
-      "MySql.Data/8.3.0": {
+      "MySql.Data/8.4.0": {
         "dependencies": {
           "BouncyCastle.Cryptography": "2.2.1",
           "Google.Protobuf": "3.25.1",
@@ -633,8 +634,8 @@
         },
         "runtime": {
           "lib/net6.0/MySql.Data.dll": {
-            "assemblyVersion": "8.3.0.0",
-            "fileVersion": "8.3.0.0"
+            "assemblyVersion": "8.4.0.0",
+            "fileVersion": "8.4.0.0"
           }
         },
         "runtimeTargets": {
@@ -906,7 +907,7 @@
       },
       "ServiceStack.OrmLite.MySql/8.2.2": {
         "dependencies": {
-          "MySql.Data": "8.3.0",
+          "MySql.Data": "8.4.0",
           "ServiceStack.Common": "8.2.2",
           "ServiceStack.Interfaces": "8.2.2",
           "ServiceStack.OrmLite": "8.2.2",
@@ -2310,12 +2311,12 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
-    "MySql.Data/8.3.0": {
+    "MySql.Data/8.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bAQlkLYvTYt5MtXAgHGURSBSUWynIvyN2FVQFUg51I2grxsOfnJSyGvO7YsDRnU7IvUNfMdxq8rNXiP5P4hMlw==",
-      "path": "mysql.data/8.3.0",
-      "hashPath": "mysql.data.8.3.0.nupkg.sha512"
+      "sha512": "sha512-NA273x7ybutfGwGbF2cd8rLVM5t7AkZCzRHr/+tGms1FeMlfl+LgfjHXcb5qN1QxFpeNQQKZ+vqZw8v/S8gUiA==",
+      "path": "mysql.data/8.4.0",
+      "hashPath": "mysql.data.8.4.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

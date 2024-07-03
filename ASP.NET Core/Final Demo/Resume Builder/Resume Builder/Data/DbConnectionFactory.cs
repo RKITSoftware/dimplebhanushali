@@ -13,6 +13,8 @@ namespace Resume_Builder.Data
         /// Instance of IConfiguration.
         /// </summary>
         private readonly IConfiguration _configuration;
+
+        public string connectionString;
         #endregion
 
         #region Constructor
@@ -24,6 +26,7 @@ namespace Resume_Builder.Data
         public DbConnectionFactory(IConfiguration configuration)
         {
             _configuration = configuration;
+            connectionString = _configuration.GetConnectionString("CertGen");
         }
 
         #endregion
@@ -36,7 +39,6 @@ namespace Resume_Builder.Data
         /// <returns>A new instance of IDbConnection representing the database connection.</returns>
         public IDbConnection CreateConnection()
         {
-            string connectionString = _configuration.GetConnectionString("CertGen");
             OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
             return dbFactory.Open();
         }

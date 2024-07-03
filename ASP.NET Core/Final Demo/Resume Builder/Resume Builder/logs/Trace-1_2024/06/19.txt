@@ -1,0 +1,42 @@
+2024-06-19 16:23:40.6314||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-19 16:23:40.6324||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLResumeGeneration (Resume Builder) 
+2024-06-19 16:23:40.6509||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLResumeGeneration (Resume Builder) 
+2024-06-19 16:23:40.6509||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:40.6509||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:40.6509||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:40.6509||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:40.6509||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder) - Validation state: Valid 
+2024-06-19 16:23:48.0462||TRACE|Resume_Builder.Services.Implemntations.NLogService|Email sent successfully to: dimplemithiya@gmail.com 
+2024-06-19 16:23:48.0589||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 7406.571ms. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:48.0589||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-19 16:23:48.0589||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|Executing FileContentResult, sending file with download name 'resume.pdf' ... 
+2024-06-19 16:23:48.0589||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending HEADERS frame for stream ID 1 with length 152 and flags END_HEADERS. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 11335 and flags NONE. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:48.0710||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder) in 7625.9017ms 
+2024-06-19 16:23:48.0710||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder)' 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-19 16:23:48.0710||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/CLResumeGeneration/GenerateResume - 0 - 200 126023 application/pdf 7643.4433ms 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-19 16:23:48.0710||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-19 16:25:05.5538||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4G9N8QA46B" received FIN. 
+2024-06-19 16:25:05.5538||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" is closed. The last processed stream ID was 1. 
+2024-06-19 16:25:05.5538||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending GOAWAY frame for stream ID 0 with length 8 and flags 0x0. 
+2024-06-19 16:25:05.5556||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4G9N8QA46B" sending FIN because: "The client closed the connection." 
+2024-06-19 16:25:05.5556||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4G9N8QA46B" stopped. 

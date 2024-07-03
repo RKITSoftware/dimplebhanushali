@@ -1,7 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Resume_Builder.Models;
-using System.Drawing;
 using System.Net.Http.Headers;
 using System.Text;
 using Font = iTextSharp.text.Font;
@@ -20,6 +19,7 @@ namespace Resume_Builder.BL.Services
         /// HttpClient
         /// </summary>
         private readonly HttpClient _httpClient;
+
         /// <summary>
         /// Configuration
         /// </summary>
@@ -75,14 +75,19 @@ namespace Resume_Builder.BL.Services
         /// <returns>The byte array of the generated image.</returns>
         public async Task<byte[]> GenerateImageFromPromptWithRetry(string prompt)
         {
-            string apiUrl = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2";
-            string apiKey = _configuration["HuggingFace:ApiKey"];
-            string requestBody = $"{{\"inputs\":\"{prompt} in landscape mode\"}}";
+            string apiUrl, apiKey, requestBody;
+
+            apiUrl = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2";
+            apiKey = _configuration["HuggingFace:ApiKey"];
+            requestBody = $"{{\"inputs\":\"{prompt} in landscape mode\"}}";
+            
             StringContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-            int maxRetries = 5;
-            int delaySeconds = 10;
+            int maxRetries, delaySeconds;
+
+            maxRetries = 5;
+            delaySeconds = 10;
 
             for (int attempt = 0; attempt < maxRetries; attempt++)
             {
@@ -124,7 +129,6 @@ namespace Resume_Builder.BL.Services
             throw new HttpRequestException("Exceeded maximum retry attempts.");
         }
 
-
         #endregion
 
         #region Private Method
@@ -138,8 +142,8 @@ namespace Resume_Builder.BL.Services
         {
             using (MemoryStream ms = new MemoryStream())
             {
-                var document = new Document(PageSize.A4.Rotate()); // Landscape mode
-                var writer = PdfWriter.GetInstance(document, ms);
+                Document document = new Document(PageSize.A4.Rotate()); // Landscape mode
+                PdfWriter writer = PdfWriter.GetInstance(document, ms);
                 document.Open();
 
                 // Add background image with reduced opacity
@@ -158,14 +162,14 @@ namespace Resume_Builder.BL.Services
                 canvas.Rectangle(rect);
 
                 // Create a table to hold certificate content
-                var table = new PdfPTable(1);
+                PdfPTable table = new PdfPTable(1);
                 table.TotalWidth = rect.Width - 40; // Adjust width to leave some margin
                 table.DefaultCell.Border = Rectangle.NO_BORDER;
                 table.HorizontalAlignment = Element.ALIGN_CENTER;
 
                 // Certificate Title
                 var titleFont = FontFactory.GetFont("Times-Roman", 36, Font.BOLD, BaseColor.BLACK);
-                var titleCell = new PdfPCell(new Phrase($"Certificate of {request.CertificateType}", titleFont));
+                PdfPCell titleCell = new PdfPCell(new Phrase($"Certificate of {request.CertificateType}", titleFont));
                 titleCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 titleCell.Border = Rectangle.NO_BORDER;
                 titleCell.VerticalAlignment = Element.ALIGN_MIDDLE;
@@ -174,39 +178,39 @@ namespace Resume_Builder.BL.Services
 
                 // Participant Name
                 var bodyFont = FontFactory.GetFont("Times-Roman", 18, Font.NORMAL, BaseColor.BLACK);
-                var nameCell = new PdfPCell(new Phrase($"This is to certify that {request.ParticipantName} has been awarded", bodyFont));
+                PdfPCell nameCell = new PdfPCell(new Phrase($"This is to certify that {request.ParticipantName} has been awarded", bodyFont));
                 nameCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 nameCell.Border = Rectangle.NO_BORDER;
                 nameCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                 table.AddCell(nameCell);
 
                 // Award
-                var awardCell = new PdfPCell(new Phrase(request.Award, titleFont));
+                PdfPCell awardCell = new PdfPCell(new Phrase(request.Award, titleFont));
                 awardCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 awardCell.Border = Rectangle.NO_BORDER;
                 awardCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                 table.AddCell(awardCell);
 
                 // Description
-                var descriptionCell = new PdfPCell(new Phrase(request.Description, bodyFont));
+                PdfPCell descriptionCell = new PdfPCell(new Phrase(request.Description, bodyFont));
                 descriptionCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 descriptionCell.Border = Rectangle.NO_BORDER;
                 descriptionCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                 table.AddCell(descriptionCell);
 
                 // Add blank cell for spacing
-                var blankCell = new PdfPCell(new Phrase(""));
+                PdfPCell blankCell = new PdfPCell(new Phrase(""));
                 blankCell.Border = Rectangle.NO_BORDER;
                 table.AddCell(blankCell);
 
                 // Add blank cell for spacing
-                var blankCell2 = new PdfPCell(new Phrase(""));
+                PdfPCell blankCell2 = new PdfPCell(new Phrase(""));
                 blankCell2.Border = Rectangle.NO_BORDER;
                 table.AddCell(blankCell2);
 
                 // Date and Issuer
                 var infoFont = FontFactory.GetFont("Times-Roman", 12, Font.NORMAL, BaseColor.BLACK);
-                var dateIssuerCell = new PdfPCell(new Phrase($"Date: {request.Date.ToString("yyyy-MM-dd")}\nIssuer: {request.IssuerName}", infoFont));
+                PdfPCell dateIssuerCell = new PdfPCell(new Phrase($"Date: {request.Date.ToString("yyyy-MM-dd")}\nIssuer: {request.IssuerName}", infoFont));
                 dateIssuerCell.HorizontalAlignment = Element.ALIGN_RIGHT;
                 dateIssuerCell.Border = Rectangle.NO_BORDER;
                 dateIssuerCell.VerticalAlignment = Element.ALIGN_TOP;

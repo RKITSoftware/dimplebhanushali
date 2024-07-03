@@ -14,18 +14,19 @@ namespace Resume_Builder.BL.Interfaces
         /// </summary>
         enmOperation operation { get; set; }
 
+
         /// <summary>
         /// Retrieves all items.
         /// </summary>
         /// <returns>A response containing the result of the operation.</returns>
-        Response Get();
+        Response GetData();
 
         /// <summary>
         /// Retrieves an item by its ID.
         /// </summary>
         /// <param name="id">The ID of the item to retrieve.</param>
         /// <returns>A response containing the result of the operation.</returns>
-        Response Get(int id);
+        Response GetById(int id);
 
         /// <summary>
         /// Deletes an item by its ID.

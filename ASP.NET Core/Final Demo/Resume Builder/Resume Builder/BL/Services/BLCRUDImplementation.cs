@@ -1,5 +1,6 @@
 ﻿using Resume_Builder.BL.Interfaces;
 using Resume_Builder.Data;
+using Resume_Builder.Data.Services;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Helpers;
 using Resume_Builder.Models;
@@ -42,6 +43,11 @@ namespace Resume_Builder.DL.Services
         private readonly DbConnectionFactory _dbConnectionFactory;
 
         /// <summary>
+        /// Instance of Db Common Context.
+        /// </summary>
+        private readonly DbCommonContext _dbContext;
+
+        /// <summary>
         /// Instance of HttpContextAccessor for Passing user id from Http Context.
         /// </summary>
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -65,6 +71,7 @@ namespace Resume_Builder.DL.Services
                                     IEmailService sender)
         {
             _dbConnectionFactory = dbConnectionFactory;
+            _dbContext = new DbCommonContext();
             _httpContextAccessor = httpContextAccessor;
             _sender = sender;
         }
@@ -76,7 +83,7 @@ namespace Resume_Builder.DL.Services
         /// <summary>
         /// Retrieves all items.
         /// </summary>
-        public Response Get()
+        public Response GetData()
         {
             // Initialize response object
             response = new Response();
@@ -84,13 +91,6 @@ namespace Resume_Builder.DL.Services
             // Extract user's claims
             var userIdClaim = _httpContextAccessor.HttpContext
                                 .User.Claims.FirstOrDefault(c => c.Type == "jwt_userId");
-
-            if (userIdClaim == null)
-            {
-                response.HasError = true;
-                response.Message = "User ID claim not found";
-                return response;
-            }
 
             // Parse user ID from claim
             int userId;
@@ -101,13 +101,7 @@ namespace Resume_Builder.DL.Services
                 return response;
             }
 
-            // Create a database connection using the connection factory
-            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
-            {
-                // Fetch data from the database table corresponding to type T for the authenticated user
-                List<T> data = db.Select<T>(q => Sql.In("UserId", userId));
-                response.Data = data;
-            }
+            response = _dbContext.GetData(_dbConnectionFactory.connectionString, userId);
 
             return response;
         }
@@ -116,32 +110,22 @@ namespace Resume_Builder.DL.Services
         /// Retrieves an item by its ID.
         /// </summary>
         /// <param name="userId">The ID of the user.</param>
-        public Response Get(int userId)
+        public Response GetById(int userId)
         {
             // Initialize response object
             response = new Response();
 
-            // Create a database connection using the connection factory
-            using (IDbConnection db = _dbConnectionFactory.CreateConnection())
+            try
             {
-                // Define the table name dynamically based on the type T
-                string tableName = typeof(T).Name;
-
-                // Construct the SQL query string
-                string sql = $"SELECT * FROM {tableName} WHERE UserId = @UserId";
-
-                // Execute the query and fetch records
-                List<T> entities = db.Select<T>(sql, new { UserId = userId });
-
-                if (entities.Count > 0)
-                {
-                    response.Data = entities;
-                }
-                else
-                {
-                    response.Message = $"No records found for user id {userId}.";
-                }
+                // Call DbCommonContext's GetById method to fetch specific records for the user
+                response = _dbContext.GetById<T>(userId, _dbConnectionFactory.connectionString);
             }
+            catch (Exception ex)
+            {
+                response.HasError = true;
+                response.Message = $"Failed to retrieve data: {ex.Message}";
+            }
+
             return response;
         }
 
@@ -157,7 +141,7 @@ namespace Resume_Builder.DL.Services
             {
                 // Insert operation
                 using IDbConnection db = _dbConnectionFactory.CreateConnection();
-                db.Insert(_objT);   
+                db.Insert(_objT);
                 response.Message = enmOperation.I.GetMessage();
             }
             else if (operation == enmOperation.U)
@@ -383,9 +367,9 @@ namespace Resume_Builder.DL.Services
                 {
                     using (IDbConnection db = _dbConnectionFactory.CreateConnection())
                     {
-                        T existingObj = db.SingleById<T>(id);
+                        bool isExist = db.Exists<T>(id);
 
-                        if (existingObj == null)
+                        if (!isExist)
                         {
                             response.HasError = true;
                             response.Message = $"No record found with Id => {id}.";
@@ -405,7 +389,7 @@ namespace Resume_Builder.DL.Services
             else
             {
                 response.HasError = true;
-                response.Message = $"Validation failed";
+                response.Message = $"Operation MisMatched !!!";
             }
             return response;
         }
@@ -444,10 +428,7 @@ namespace Resume_Builder.DL.Services
         /// <param name="obj">The object to be saved.</param>
         public void PreSave(object obj)
         {
-            if (_objT == null)
-            {
-                _objT = Activator.CreateInstance<T>();
-            }
+            _objT = Activator.CreateInstance<T>();
             obj.Map(_objT);
         }
 

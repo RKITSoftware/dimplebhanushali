@@ -3,7 +3,7 @@
     /// <summary>
     /// Data Transfer Object (DTO) for representing a Resume.
     /// </summary>
-    public class RES02
+    public class DTORES02
     {
         /// <summary>
         /// Gets or sets the user details.
@@ -39,6 +39,7 @@
         /// Gets or sets the list of skills.
         /// </summary>
         public List<string> Skills { get; set; }
+
     }
 
     /// <summary>
@@ -75,6 +76,11 @@
         /// Gets or sets the professional title of the user.
         /// </summary>
         public string ProfessionalTitle { get; set; }
+
+        /// <summary>
+        /// Gets or sets the profile image of the user.
+        /// </summary>
+        //public byte[] ProfileImage { get; set; }
     }
 
     /// <summary>

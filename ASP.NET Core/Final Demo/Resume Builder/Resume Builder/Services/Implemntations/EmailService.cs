@@ -28,6 +28,12 @@ namespace Resume_Builder.DL.Implemntations
 
         #region Public Methods
 
+        /// <summary>
+        /// Sending message to user
+        /// </summary>
+        /// <param name="email"> email id of user</param>
+        /// <param name="body"> body for sending message </param>
+        /// <param name="attachmentBytes"> Resume Attachment </param>
         public void Send(string email, string body, byte[] attachmentBytes)
         {
             try

@@ -37,10 +37,9 @@ namespace Resume_Builder.Middlewares
         /// </summary>
         /// <param name="cache">The memory cache service.</param>
         /// <param name="logger">The logger service.</param>
-        public RequestProcessingService(IMemoryCache cache, ILogger<RequestProcessingService> logger)
+        public RequestProcessingService(IMemoryCache cache)
         {
             _cache = cache;
-            _logger = logger;
             _requestQueue = new ConcurrentQueue<HttpContext>();
         }
 

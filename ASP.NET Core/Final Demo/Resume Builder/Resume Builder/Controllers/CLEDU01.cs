@@ -51,7 +51,7 @@ namespace Resume_Builder.Controllers
         public IActionResult GetAll()
         {
             response = new Response();
-            response = _crudService.Get();
+            response = _crudService.GetData();
             return Ok(response);
         }
 
@@ -63,7 +63,7 @@ namespace Resume_Builder.Controllers
         public IActionResult Get()
         {
             response = new Response();
-            response = _crudService.Get(HttpContext.GetUserIdFromClaims());
+            response = _crudService.GetById(HttpContext.GetUserIdFromClaims());
             return Ok(response);
         }
 

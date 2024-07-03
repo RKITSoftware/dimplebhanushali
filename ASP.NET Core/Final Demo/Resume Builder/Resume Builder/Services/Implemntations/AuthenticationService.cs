@@ -98,7 +98,6 @@ namespace Resume_Builder.DL.Implemntations
             {
                 new Claim("jwt_emailId", emailId),
                 new Claim("jwt_userId", Convert.ToString(userId)),
-                //new Claim("jwt_walletId", Convert.ToString(walletId)),
             };
 
             var token = new JwtSecurityToken(

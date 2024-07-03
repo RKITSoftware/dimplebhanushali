@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Resume_Builder.BL.Services;
 using Resume_Builder.Models.DTO;
@@ -38,12 +39,12 @@ namespace Resume_Builder.Controllers
         /// <param name="lstRes">The list of RES02 objects representing resume data.</param>
         /// <returns>A zip file containing the generated resumes.</returns>
         [HttpPost]
-        public async Task<IActionResult> GenerateResumes([FromBody] List<RES02> lstRes)
+        [AllowAnonymous]
+        public async Task<IActionResult> GenerateResumes([FromBody] List<DTORES02> lstRES02)
         {
             try
             {
-                string json = JsonConvert.SerializeObject(lstRes);
-                byte[] zipFile = _resumeGenerationService.GenerateResumesFromJson(json);
+                byte[] zipFile = _resumeGenerationService.GenerateResumesFromJson(lstRES02);
 
                 if (zipFile != null)
                 {

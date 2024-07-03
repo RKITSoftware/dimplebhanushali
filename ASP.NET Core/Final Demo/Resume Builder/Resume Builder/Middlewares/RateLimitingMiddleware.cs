@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
+using NLog;
+using NLog.Targets;
 
 namespace Resume_Builder.Middlewares
 {
@@ -17,6 +19,11 @@ namespace Resume_Builder.Middlewares
         /// Represents the memory cache service used for rate limiting.
         /// </summary>
         private readonly IMemoryCache _cache;
+
+        /// <summary>
+        /// Represents the IHttpContextAccessor service used for Finding User Email.
+        /// </summary>
+        private readonly IHttpContextAccessor _context;
 
         /// <summary>
         /// Represents the logger service used for logging rate limit exceeded events.
@@ -38,14 +45,17 @@ namespace Resume_Builder.Middlewares
         /// <param name="logger">The logger service used for logging rate limit exceeded events.</param>
         /// <param name="serviceProvider">The service provider used for resolving dependencies.</param>
         public RateLimitingMiddleware(RequestDelegate next,
+                                      IHttpContextAccessor context,
                                       IMemoryCache cache,
                                       ILogger<RateLimitingMiddleware> logger,
                                       IServiceProvider serviceProvider)
         {
             _next = next;
             _cache = cache;
-            _logger = logger;
             _serviceProvider = serviceProvider;
+            _context = context;
+            _logger = logger;
+
         }
         #endregion
 
@@ -57,6 +67,14 @@ namespace Resume_Builder.Middlewares
         /// <returns>A Task representing the asynchronous operation.</returns>
         public async Task Invoke(HttpContext context)
         {
+            var config = LogManager.Configuration;
+            FileTarget dynamic = config.FindTargetByName<FileTarget>("dynamicFile");
+            if (dynamic != null)
+            {
+                dynamic.FileName = "${currentdir}/log/dynamic_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
+            }
+            LogManager.ReconfigExistingLoggers();
+
             // Obtain a reference to RateLimitingQueueProcessor from the service provider
             var queueProcessor = _serviceProvider.GetRequiredService<RequestProcessingService>();
 

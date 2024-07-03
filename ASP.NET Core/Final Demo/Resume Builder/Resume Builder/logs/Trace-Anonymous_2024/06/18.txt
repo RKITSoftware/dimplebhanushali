@@ -1,0 +1,1003 @@
+2024-06-18 10:04:49.0278||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:04:49.0278||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:04:49.0278||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:04:49.0522||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:04:49.0573||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-18 10:04:49.0573||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:04:49.0573||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:04:49.0781||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4F9VMQ3ODF", Request id "0HN4F9VMQ3ODF:00000001": started reading request body. 
+2024-06-18 10:04:49.0781||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4F9VMQ3ODF", Request id "0HN4F9VMQ3ODF:00000001": done reading request body. 
+2024-06-18 10:04:49.1515||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:04:49.1515||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:04:49.1515||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:04:49.1515||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:04:49.1515||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:04:49.1515||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:04:49.1515||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:04:49.1515||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:04:49.1712||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-18 10:04:49.1712||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-18 10:04:52.7983||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3619.8228ms. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:04:52.7983||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:04:52.7983||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:04:52.7983||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:04:52.7983||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:04:52.7983||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:04:52.8065||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:04:52.8065||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:04:52.9097||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:04:52.9204||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 3887.3753ms 
+2024-06-18 10:04:52.9204||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-18 10:04:52.9204||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:04:52.9204||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 6093.9027ms 
+2024-06-18 10:04:56.2256||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4F9VMQ3ODF" received FIN. 
+2024-06-18 10:04:56.2256||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4F9VMQ3ODF" is closed. The last processed stream ID was 1. 
+2024-06-18 10:04:56.2256||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4F9VMQ3ODF" sending FIN because: "The client closed the connection." 
+2024-06-18 10:04:56.2256||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4F9VMQ3ODF" stopped. 
+2024-06-18 10:18:13.2580||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:18:13.2745||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:18:13.2745||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:18:13.2968||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:18:13.2968||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-18 10:18:13.2968||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:18:13.2968||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:18:13.3155||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA6MAMGAM", Request id "0HN4FA6MAMGAM:00000001": started reading request body. 
+2024-06-18 10:18:13.3155||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA6MAMGAM", Request id "0HN4FA6MAMGAM:00000001": done reading request body. 
+2024-06-18 10:18:13.4192||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:18:13.4192||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:18:13.4192||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:18:13.4336||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:18:13.4336||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:18:13.4336||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:18:13.4336||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:18:13.4336||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:18:13.4446||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-18 10:18:13.4446||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-18 10:18:15.4405||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1988.6133ms. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:18:15.4405||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:18:15.4450||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:18:15.4450||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:18:15.4450||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:18:15.4450||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:18:15.4450||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:18:15.4450||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAM" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAM" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:18:15.5245||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 2266.2042ms 
+2024-06-18 10:18:15.5245||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-18 10:18:15.5245||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAM" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:18:15.5245||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 3146.1676ms 
+2024-06-18 10:18:20.2371||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA6MAMGAM" received FIN. 
+2024-06-18 10:18:20.2371||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAM" is closed. The last processed stream ID was 1. 
+2024-06-18 10:18:20.2371||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA6MAMGAM" sending FIN because: "The client closed the connection." 
+2024-06-18 10:18:20.2371||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA6MAMGAM" stopped. 
+2024-06-18 10:19:07.0640||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA6MAMGAN" accepted. 
+2024-06-18 10:19:07.0640||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA6MAMGAN" started. 
+2024-06-18 10:19:07.2555||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HN4FA6MAMGAN established using the following protocol: Tls12 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:19:07.4857||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received HEADERS frame for stream ID 1 with length 686 and flags END_HEADERS, PRIORITY. 
+2024-06-18 10:19:07.6357||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received DATA frame for stream ID 1 with length 18 and flags END_STREAM. 
+2024-06-18 10:19:07.6357||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 18 
+2024-06-18 10:19:07.6357||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-06-18 10:19:07.6357||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-06-18 10:19:07.6991||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:19:07.8728||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:19:07.8863||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' with route pattern 'api/CLAI/generate-image' is valid for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:19:07.8863||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:19:07.8863||DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'https://localhost:7286'. 
+2024-06-18 10:19:07.8863||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-06-18 10:19:07.8863||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:19:08.0658||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateAndSaveImage", controller = "CLAI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateAndSaveImage(System.String) on controller Resume_Builder.Controllers.CLAI (Resume Builder). 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-06-18 10:19:08.0658||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: Before executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:19:08.0658||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:19:08.0658||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:19:08.1014||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'System.String' using the name '' in request data ... 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA6MAMGAN", Request id "0HN4FA6MAMGAN:00000001": started reading request body. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA6MAMGAN", Request id "0HN4FA6MAMGAN:00000001": done reading request body. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:19:08.1018||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:19:08.1018||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:19:08.1018||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:19:08.1018||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:19:08.1018||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:19:08.1018||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) - Validation state: Valid 
+2024-06-18 10:19:08.1018||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) with arguments (Car Race on Mars) 
+2024-06-18 10:19:08.7036||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:08.7036||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:19:08.7036||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:08.7036||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:19:09.8877||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 1145.0901ms - 503 
+2024-06-18 10:19:09.8877||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:09 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: F93FW_S9pph_67jpKCzeT
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:19:09.8877||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 1211.056ms - 503 
+2024-06-18 10:19:09.8877||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:09 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: F93FW_S9pph_67jpKCzeT
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:19:19.9035||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:19.9035||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 57
+ 
+2024-06-18 10:19:19.9035||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:19.9035||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 57
+ 
+2024-06-18 10:19:20.1408||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 236.7918ms - 503 
+2024-06-18 10:19:20.1408||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:20 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: fd95KL6nlobcPl1AV7XW7
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:19:20.1408||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 243.9677ms - 503 
+2024-06-18 10:19:20.1408||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:20 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: fd95KL6nlobcPl1AV7XW7
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:19:40.1566||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:40.1566||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 57
+ 
+2024-06-18 10:19:40.1566||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:19:40.1566||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 57
+ 
+2024-06-18 10:19:48.8788||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 8721.6786ms - 200 
+2024-06-18 10:19:48.8788||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:48 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Request-ID: 9f0o3QPMioVTt8EjtCP5Z
+Access-Control-Allow-Credentials: true
+x-compute-characters: 44
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-compute-type: 1-t4
+Server: uvicorn
+x-compute-time: 8.454
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Content-Type: image/jpeg
+ 
+2024-06-18 10:19:48.8788||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 8722.8212ms - 200 
+2024-06-18 10:19:48.8788||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:49:48 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Request-ID: 9f0o3QPMioVTt8EjtCP5Z
+Access-Control-Allow-Credentials: true
+x-compute-characters: 44
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-compute-type: 1-t4
+Server: uvicorn
+x-compute-time: 8.454
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Content-Type: image/jpeg
+ 
+2024-06-18 10:19:49.5554||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41450.7391ms. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:19:49.5568||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:19:49.5568||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:19:49.5568||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:19:49.5568||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:19:49.5568||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:19:49.5568||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending DATA frame for stream ID 1 with length 159 and flags NONE. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:19:49.5568||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:19:49.5568||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) in 41501.1661ms 
+2024-06-18 10:19:49.5568||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:19:49.5796||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:19:49.5796||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 18 - 200 159 application/json;+charset=utf-8 41942.4880ms 
+2024-06-18 10:19:49.5878||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:19:49.5878||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:19:50.2819||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA6MAMGAN" received FIN. 
+2024-06-18 10:19:50.2819||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" is closed. The last processed stream ID was 1. 
+2024-06-18 10:19:50.2819||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA6MAMGAN" sending GOAWAY frame for stream ID 0 with length 8 and flags 0x0. 
+2024-06-18 10:19:50.2819||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA6MAMGAN" stopped. 
+2024-06-18 10:19:50.2921||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA6MAMGAN" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-18 10:22:55.0539||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:22:55.0614||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:22:55.0614||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:22:55.0835||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:22:55.0835||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-18 10:22:55.0835||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:22:55.0835||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:22:55.0998||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA9RBSHUS", Request id "0HN4FA9RBSHUS:00000001": started reading request body. 
+2024-06-18 10:22:55.0998||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA9RBSHUS", Request id "0HN4FA9RBSHUS:00000001": done reading request body. 
+2024-06-18 10:22:55.1725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:22:55.1725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:22:55.1725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:22:55.1725||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:22:55.1853||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:22:55.1853||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:22:55.1853||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:22:55.1853||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:22:55.1853||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-18 10:22:55.1853||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-18 10:22:56.8706||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1673.3774ms. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:22:56.8708||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:22:56.8708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:22:56.8708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:22:56.8708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:22:56.8708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:22:56.8708||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:22:56.8708||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:22:56.9426||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:22:56.9504||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 1888.9842ms 
+2024-06-18 10:22:56.9504||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-18 10:22:56.9504||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:22:56.9504||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 5905.5949ms 
+2024-06-18 10:23:03.0215||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA9RBSHUS" received FIN. 
+2024-06-18 10:23:03.0215||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUS" is closed. The last processed stream ID was 1. 
+2024-06-18 10:23:03.0215||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA9RBSHUS" sending FIN because: "The client closed the connection." 
+2024-06-18 10:23:03.0215||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA9RBSHUS" stopped. 
+2024-06-18 10:23:47.2419||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA9RBSHUT" accepted. 
+2024-06-18 10:23:47.2419||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA9RBSHUT" started. 
+2024-06-18 10:23:47.2766||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HN4FA9RBSHUT established using the following protocol: Tls12 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:23:47.2766||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received HEADERS frame for stream ID 1 with length 685 and flags END_HEADERS, PRIORITY. 
+2024-06-18 10:23:47.2788||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received DATA frame for stream ID 1 with length 18 and flags END_STREAM. 
+2024-06-18 10:23:47.2788||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:23:47.2788||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 18 
+2024-06-18 10:23:47.2788||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-06-18 10:23:47.2788||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-06-18 10:24:42.9049||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:24:42.9049||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' with route pattern 'api/CLAI/generate-image' is valid for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:24:42.9049||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:24:42.9049||DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'https://localhost:7286'. 
+2024-06-18 10:24:42.9049||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-06-18 10:24:42.9049||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:24:42.9446||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateAndSaveImage", controller = "CLAI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateAndSaveImage(System.String) on controller Resume_Builder.Controllers.CLAI (Resume Builder). 
+2024-06-18 10:24:42.9446||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter 
+2024-06-18 10:24:42.9446||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-06-18 10:24:42.9446||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-06-18 10:24:42.9446||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-06-18 10:24:42.9446||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-06-18 10:24:42.9446||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: Before executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:24:42.9524||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:24:42.9524||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'System.String' using the name '' in request data ... 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA9RBSHUT", Request id "0HN4FA9RBSHUT:00000001": started reading request body. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FA9RBSHUT", Request id "0HN4FA9RBSHUT:00000001": done reading request body. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:24:43.0094||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:24:43.0094||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:24:43.0094||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:24:43.0094||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:24:43.0094||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:24:43.0094||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) - Validation state: Valid 
+2024-06-18 10:24:43.0094||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) with arguments (Shinchan Cartoon) 
+2024-06-18 10:24:43.1473||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:24:43.1473||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:24:43.1473||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:24:43.1473||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:24:52.9130||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 9725.611ms - 200 
+2024-06-18 10:24:52.9130||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:54:52 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-compute-type: 1-t4
+x-compute-time: 8.440
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Server: uvicorn
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+X-Request-ID: xkk_g-YxHn2qgZ43AQay4
+x-compute-characters: 44
+Content-Type: image/jpeg
+ 
+2024-06-18 10:24:52.9130||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 9794.2071ms - 200 
+2024-06-18 10:24:52.9130||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:54:52 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-compute-type: 1-t4
+x-compute-time: 8.440
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Server: uvicorn
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+X-Request-ID: xkk_g-YxHn2qgZ43AQay4
+x-compute-characters: 44
+Content-Type: image/jpeg
+ 
+2024-06-18 10:24:53.5831||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10570.168ms. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:24:53.5831||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:24:53.5831||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:24:53.5831||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:24:53.5831||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:24:53.5831||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:24:53.5831||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:24:53.5831||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending DATA frame for stream ID 1 with length 159 and flags NONE. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:24:53.5925||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) in 10648.7913ms 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:24:53.5925||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:24:53.5925||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:24:53.7215||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:24:53.7215||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 18 - 200 159 application/json;+charset=utf-8 66440.9205ms 
+2024-06-18 10:24:58.1685||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA9RBSHUT" received FIN. 
+2024-06-18 10:24:58.2159||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FA9RBSHUT" is closed. The last processed stream ID was 1. 
+2024-06-18 10:24:58.2159||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FA9RBSHUT" sending FIN because: "The client closed the connection." 
+2024-06-18 10:24:58.5290||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FA9RBSHUT" stopped. 
+2024-06-18 10:27:57.8611||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:27:57.9028||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:27:57.9082||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 10:27:57.9354||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:27:57.9416||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-18 10:27:57.9416||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:27:57.9416||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:27:57.9900||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FACHM3JV0", Request id "0HN4FACHM3JV0:00000001": started reading request body. 
+2024-06-18 10:27:57.9900||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FACHM3JV0", Request id "0HN4FACHM3JV0:00000001": done reading request body. 
+2024-06-18 10:27:58.0661||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:27:58.0661||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:27:58.0661||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 10:27:58.0807||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 10:27:58.0807||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:27:58.0807||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:27:58.0807||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:27:58.0807||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:27:58.0807||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-18 10:27:58.0807||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-18 10:28:01.1388||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3040.121ms. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:28:01.1388||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:28:01.1437||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:28:01.1437||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:28:01.1437||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:28:01.1437||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:28:01.1437||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:28:01.1437||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:28:01.2377||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 3377.5325ms 
+2024-06-18 10:28:01.2377||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-18 10:28:01.2377||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:28:01.2377||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 24886.2325ms 
+2024-06-18 10:28:29.1361||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received HEADERS frame for stream ID 3 with length 313 and flags END_HEADERS, PRIORITY. 
+2024-06-18 10:28:29.1361||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 8 
+2024-06-18 10:28:29.1361||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received PING frame for stream ID 0 with length 8 and flags NONE. 
+2024-06-18 10:28:29.1361||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-06-18 10:28:29.1361||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-06-18 10:28:29.1361||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" sending PING frame for stream ID 0 with length 8 and flags ACK. 
+2024-06-18 10:28:29.1361||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received DATA frame for stream ID 3 with length 8 and flags END_STREAM. 
+2024-06-18 10:29:00.8098||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:29:00.8098||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' with route pattern 'api/CLAI/generate-image' is valid for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:29:00.8098||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:29:00.8098||DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'https://localhost:7286'. 
+2024-06-18 10:29:00.8098||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-06-18 10:29:00.8098||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:29:00.8296||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateAndSaveImage", controller = "CLAI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateAndSaveImage(System.String) on controller Resume_Builder.Controllers.CLAI (Resume Builder). 
+2024-06-18 10:29:00.8296||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter 
+2024-06-18 10:29:00.8296||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-06-18 10:29:00.8296||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-06-18 10:29:00.8296||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-06-18 10:29:00.8296||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-06-18 10:29:00.8296||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: Before executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:29:00.8296||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:29:00.8303||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'System.String' using the name '' in request data ... 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FACHM3JV0", Request id "0HN4FACHM3JV0:00000003": started reading request body. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FACHM3JV0", Request id "0HN4FACHM3JV0:00000003": done reading request body. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:29:00.8648||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:29:00.8648||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:29:00.8648||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:29:00.8648||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:29:00.8648||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:29:00.8648||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) - Validation state: Valid 
+2024-06-18 10:29:00.8648||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) with arguments (string) 
+2024-06-18 10:29:00.9648||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:00.9648||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:29:00.9648||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:00.9648||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:29:02.0947||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 1094.1347ms - 503 
+2024-06-18 10:29:02.1020||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:59:01 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: _yZjqNNTSnmcxNNxVtswk
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:29:02.1020||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 1154.1136ms - 503 
+2024-06-18 10:29:02.1020||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:59:01 GMT
+Connection: keep-alive
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Access-Control-Allow-Credentials: true
+X-Request-ID: _yZjqNNTSnmcxNNxVtswk
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:29:12.1282||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:12.1282||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ 
+2024-06-18 10:29:12.1282||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:12.1282||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ 
+2024-06-18 10:29:12.3651||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 236.3818ms - 503 
+2024-06-18 10:29:12.3651||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:59:12 GMT
+Connection: keep-alive
+X-Request-ID: AgsHwgEXcyf9q9-8gh2gQ
+Access-Control-Allow-Credentials: true
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:29:12.3651||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 237.346ms - 503 
+2024-06-18 10:29:12.3651||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 04:59:12 GMT
+Connection: keep-alive
+X-Request-ID: AgsHwgEXcyf9q9-8gh2gQ
+Access-Control-Allow-Credentials: true
+Vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+Content-Type: application/json
+Content-Length: 104
+ 
+2024-06-18 10:29:32.3790||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:32.3790||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ 
+2024-06-18 10:29:32.3790||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:29:32.3790||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ 
+2024-06-18 10:29:33.1576||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" received RST_STREAM frame for stream ID 3 with length 4 and flags 0x0. 
+2024-06-18 10:29:33.2258||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FACHM3JV0" received FIN. 
+2024-06-18 10:29:33.2258||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" is closed. The last processed stream ID was 3. 
+2024-06-18 10:29:33.2258||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FACHM3JV0" sending GOAWAY frame for stream ID 0 with length 8 and flags 0x0. 
+2024-06-18 10:29:33.2258||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FACHM3JV0" sending FIN because: "The client closed the connection." 
+2024-06-18 10:49:23.0370||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:49:23.0441||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:49:23.0572||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:49:23.0784||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:49:23.0784||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'System.String' using the name '' in request data ... 
+2024-06-18 10:49:23.0784||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:49:23.0784||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:49:23.1037||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FAG4Q3PAI", Request id "0HN4FAG4Q3PAI:00000001": started reading request body. 
+2024-06-18 10:49:23.1037||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FAG4Q3PAI", Request id "0HN4FAG4Q3PAI:00000001": done reading request body. 
+2024-06-18 10:49:23.1386||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:49:23.1386||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:49:23.1386||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:49:23.1487||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:49:23.1487||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:49:23.1487||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:49:23.1487||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:49:23.1487||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:49:23.1487||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) - Validation state: Valid 
+2024-06-18 10:49:23.1487||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) with arguments (Coffee) 
+2024-06-18 10:49:23.2855||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:49:23.2855||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:49:23.2855||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:49:23.2855||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:49:32.8222||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 9509.8588ms - 200 
+2024-06-18 10:49:32.8222||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 05:19:32 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Access-Control-Allow-Credentials: true
+Server: uvicorn
+x-compute-type: 1-t4
+x-compute-characters: 34
+X-Request-ID: UONEYISfFbqS6wqkdN5e-
+x-compute-time: 8.427
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Content-Type: image/jpeg
+ 
+2024-06-18 10:49:32.8222||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 9557.7262ms - 200 
+2024-06-18 10:49:32.8222||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 05:19:32 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Access-Control-Allow-Credentials: true
+Server: uvicorn
+x-compute-type: 1-t4
+x-compute-characters: 34
+X-Request-ID: UONEYISfFbqS6wqkdN5e-
+x-compute-time: 8.427
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Content-Type: image/jpeg
+ 
+2024-06-18 10:49:33.2929||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10127.2149ms. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:49:33.2929||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:49:33.2929||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:49:33.2929||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:49:33.2929||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:49:33.2929||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:49:33.2929||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:49:33.2929||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" sending DATA frame for stream ID 1 with length 149 and flags NONE. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 10:49:33.3847||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) in 10366.31ms 
+2024-06-18 10:49:33.3847||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:49:33.3847||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:49:33.3847||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 8 - 200 149 application/json;+charset=utf-8 916431.7056ms 
+2024-06-18 10:49:39.3607||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FAG4Q3PAI" received FIN. 
+2024-06-18 10:49:39.3607||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAI" is closed. The last processed stream ID was 1. 
+2024-06-18 10:49:39.3607||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FAG4Q3PAI" sending FIN because: "The client closed the connection." 
+2024-06-18 10:49:39.3856||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FAG4Q3PAI" stopped. 
+2024-06-18 10:50:56.1797||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FAG4Q3PAJ" accepted. 
+2024-06-18 10:50:56.1797||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FAG4Q3PAJ" started. 
+2024-06-18 10:50:56.2521||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HN4FAG4Q3PAJ established using the following protocol: Tls12 
+2024-06-18 10:50:56.2615||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-06-18 10:50:56.2956||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:50:56.2956||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-06-18 10:50:56.2956||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:50:56.2956||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:50:56.2956||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received HEADERS frame for stream ID 1 with length 686 and flags END_HEADERS, PRIORITY. 
+2024-06-18 10:50:56.3256||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received DATA frame for stream ID 1 with length 6 and flags END_STREAM. 
+2024-06-18 10:50:56.3534||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 6 
+2024-06-18 10:50:56.3534||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-06-18 10:50:56.3534||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-06-18 10:50:59.1592||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' with route pattern 'api/CLAI/generate-image' is valid for the request path '/api/CLAI/generate-image' 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'https://localhost:7286'. 
+2024-06-18 10:51:49.2305||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-06-18 10:51:49.2305||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:51:49.2305||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateAndSaveImage", controller = "CLAI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateAndSaveImage(System.String) on controller Resume_Builder.Controllers.CLAI (Resume Builder). 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: Before executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAI (Resume Builder) 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'System.String' using the name '' in request data ... 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FAG4Q3PAJ", Request id "0HN4FAG4Q3PAJ:00000001": started reading request body. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FAG4Q3PAJ", Request id "0HN4FAG4Q3PAJ:00000001": done reading request body. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'System.String' ... 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'System.String'. 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:51:49.2305||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) - Validation state: Valid 
+2024-06-18 10:51:49.2305||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) with arguments (Game) 
+2024-06-18 10:51:49.2305||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:51:49.2305||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|HttpMessageHandler expired after 120000ms for client '' 
+2024-06-18 10:51:49.2305||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:51:49.2305||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2 
+2024-06-18 10:51:49.2305||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2024-06-18 10:51:58.6292||INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 9393.6571ms - 200 
+2024-06-18 10:51:58.6292||TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Tue, 18 Jun 2024 05:21:58 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-compute-characters: 32
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Server: uvicorn
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+X-Request-ID: NId36I-ZiQ6DWQLcx1IaW
+x-compute-time: 8.427
+Access-Control-Allow-Credentials: true
+x-compute-type: 1-t4
+Content-Type: image/jpeg
+ 
+2024-06-18 10:51:58.6292||INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 9394.4301ms - 200 
+2024-06-18 10:51:58.6292||TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Tue, 18 Jun 2024 05:21:58 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-compute-characters: 32
+Access-Control-Expose-Headers: x-compute-type, x-compute-time
+Server: uvicorn
+x-sha: 1e128c8891e52218b74cde8f26dbfc701cb99d79
+Vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+X-Request-ID: NId36I-ZiQ6DWQLcx1IaW
+x-compute-time: 8.427
+Access-Control-Allow-Credentials: true
+x-compute-type: 1-t4
+Content-Type: image/jpeg
+ 
+2024-06-18 10:51:58.8513||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9616.3526ms. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:51:58.8513||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 10:51:58.8513||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 10:51:58.8513||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 10:51:58.8513||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 10:51:58.8513||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 10:51:58.8513||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending DATA frame for stream ID 1 with length 147 and flags NONE. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 10:51:58.8513||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder) in 9620.732ms 
+2024-06-18 10:51:58.8513||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAI.GenerateAndSaveImage (Resume Builder)' 
+2024-06-18 10:51:58.8513||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 10:51:58.8513||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAI/generate-image application/json-patch+json 6 - 200 147 application/json;+charset=utf-8 62499.2057ms 
+2024-06-18 10:51:58.8548||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FAG4Q3PAJ" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 10:51:59.2444||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:51:59.2487||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0457ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:52:09.2620||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:52:09.2620||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.002ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:52:19.2682||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:52:19.2682||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0018ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:52:29.2694||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:52:29.2694||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.285ms - processed: 1 items - remaining: 0 items 
+2024-06-18 10:53:49.2486||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|HttpMessageHandler expired after 120000ms for client '' 
+2024-06-18 10:53:59.2497||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:53:59.2497||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0019ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:09.2628||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:09.2628||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:19.2702||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:19.2702||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0019ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:29.2826||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:29.2826||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:39.2853||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:39.2853||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:49.2855||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:49.2855||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0016ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:54:59.2856||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:54:59.2856||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:09.2858||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:09.2858||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0031ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:19.2859||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:19.2859||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:29.2861||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:29.2861||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0023ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:39.2862||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:39.2862||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:49.2864||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:49.2864||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0022ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:55:59.2866||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:55:59.2866||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0022ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:56:09.2867||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:56:09.2867||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0017ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:56:19.2962||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:56:19.2962||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0018ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:56:29.3024||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:56:29.3024||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0023ms - processed: 0 items - remaining: 1 items 
+2024-06-18 10:56:39.3026||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2024-06-18 10:56:39.3026||DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.017ms - processed: 1 items - remaining: 0 items 
+2024-06-18 11:10:49.5773||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 11:10:49.6280||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 11:10:49.6280||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-18 11:10:49.6546||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 11:10:49.6546||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-18 11:10:49.6546||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 11:10:49.6546||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 11:10:49.7011||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FB4I0QHSD", Request id "0HN4FB4I0QHSD:00000001": started reading request body. 
+2024-06-18 11:10:49.7011||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FB4I0QHSD", Request id "0HN4FB4I0QHSD:00000001": done reading request body. 
+2024-06-18 11:10:49.7749||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 11:10:49.7749||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 11:10:49.7749||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-18 11:10:49.7841||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-18 11:10:49.7841||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:10:49.7841||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:10:49.7841||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:10:49.7841||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:10:49.7841||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-18 11:10:49.7841||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-18 11:10:52.2427||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2443.7001ms. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:10:52.2427||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 11:10:52.2427||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-18 11:10:52.2485||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-18 11:10:52.2485||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-18 11:10:52.2485||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-18 11:10:52.2485||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-18 11:10:52.2485||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2024-06-18 11:10:52.3172||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 2753.9431ms 
+2024-06-18 11:10:52.3172||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-18 11:10:52.3172||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 11:10:52.3172||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 6802.1919ms 
+2024-06-18 11:10:57.3875||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FB4I0QHSD" received FIN. 
+2024-06-18 11:10:57.3875||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" is closed. The last processed stream ID was 1. 
+2024-06-18 11:10:57.3875||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FB4I0QHSD" sending GOAWAY frame for stream ID 0 with length 8 and flags 0x0. 
+2024-06-18 11:10:57.4318||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FB4I0QHSD" stopped. 
+2024-06-18 11:10:57.4351||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FB4I0QHSD" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-06-18 11:55:22.4702||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 11:55:22.4984||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLBulk (Resume Builder) 
+2024-06-18 11:55:22.5312||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLBulk (Resume Builder) 
+2024-06-18 11:55:22.5663||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' ... 
+2024-06-18 11:55:22.5663||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' using the name '' in request data ... 
+2024-06-18 11:55:22.5663||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2024-06-18 11:55:22.5663||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2024-06-18 11:55:22.6213||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FBRGPUCVH", Request id "0HN4FBRGPUCVH:00000003": started reading request body. 
+2024-06-18 11:55:22.6213||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FBRGPUCVH", Request id "0HN4FBRGPUCVH:00000003": done reading request body. 
+2024-06-18 11:55:22.7487||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 11:55:22.7487||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 11:55:22.7487||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' ... 
+2024-06-18 11:55:22.7727||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'lstRes' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 11:55:22.7727||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:55:22.7727||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:55:22.7727||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:55:22.7727||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:55:22.7816||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) - Validation state: Valid 
+2024-06-18 11:55:22.7816||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) with arguments (System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]) 
+2024-06-18 11:55:29.0644||TRACE|Resume_Builder.Services.Implemntations.NLogService|Email sent successfully to: a@a.c 
+2024-06-18 11:55:29.1214||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 6332.7975ms. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-18 11:55:29.1214||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|Executing FileContentResult, sending file with download name 'resumes.zip' ... 
+2024-06-18 11:55:29.1214||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending HEADERS frame for stream ID 3 with length 144 and flags END_HEADERS. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 16384 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 7499 and flags NONE. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:55:29.1214||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 11:55:29.1369||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-18 11:55:29.1369||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" received WINDOW_UPDATE frame for stream ID 3 with length 4 and flags 0x0. 
+2024-06-18 11:55:29.1555||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) in 6663.9105ms 
+2024-06-18 11:55:29.1555||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder)' 
+2024-06-18 11:55:29.1555||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2024-06-18 11:55:29.1555||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLBulk application/json 1548 - 200 105803 application/zip 9089.2869ms 
+2024-06-18 11:55:34.4399||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FBRGPUCVH" received FIN. 
+2024-06-18 11:55:34.4399||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FBRGPUCVH" is closed. The last processed stream ID was 3. 
+2024-06-18 11:55:34.4399||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4FBRGPUCVH" sending FIN because: "The client closed the connection." 
+2024-06-18 11:55:34.4609||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4FBRGPUCVH" stopped. 
+2024-06-18 14:46:28.0050||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-18 14:46:28.0050||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLBulk (Resume Builder) 
+2024-06-18 14:46:28.0171||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLBulk (Resume Builder) 
+2024-06-18 14:46:28.0328||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' ... 
+2024-06-18 14:46:28.0328||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' using the name '' in request data ... 
+2024-06-18 14:46:28.0328||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 14:46:28.0328||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-18 14:46:28.0473||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FET212TCG", Request id "0HN4FET212TCG:00000001": started reading request body. 
+2024-06-18 14:46:28.0473||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4FET212TCG", Request id "0HN4FET212TCG:00000001": done reading request body. 
+2024-06-18 14:46:28.1414||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 14:46:28.1414||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 14:46:28.1414||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]' ... 
+2024-06-18 14:46:28.1598||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'lstRES02' of type 'System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]'. 
+2024-06-18 14:46:28.1598||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 14:46:28.1598||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 14:46:28.1598||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 14:46:28.1598||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 14:46:28.1598||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) - Validation state: Valid 
+2024-06-18 14:46:28.1598||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) with arguments (System.Collections.Generic.List`1[Resume_Builder.Models.DTO.RES02]) 
+2024-06-18 14:46:29.7636||ERROR|Resume_Builder.Services.Implemntations.NLogService|Failed to send email to: string System.FormatException: The specified string is not in the form required for an e-mail address.
+   at System.Net.Mail.MailAddressParser.TryReadCfwsAndThrowIfIncomplete(String data, Int32 index, Int32& outIndex, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.TryParseDomain(String data, Int32& index, String& domain, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.TryParseAddress(String data, Boolean expectMultipleAddresses, Int32& index, ParseAddressInfo& parseAddressInfo, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.ParseMultipleAddresses(String data)
+   at System.Net.Mail.MailAddressCollection.ParseValue(String addresses)
+   at System.Net.Mail.MailAddressCollection.Add(String addresses)
+   at System.Net.Mail.Message..ctor(String from, String to)
+   at System.Net.Mail.MailMessage..ctor(String from, String to)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Services\Implemntations\EmailService.cs:line 44
+2024-06-18 14:46:29.8703||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 1696.8862ms. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 14:46:29.8703||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-18 14:46:29.8731||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|Executing FileContentResult, sending file with download name 'resumes.zip' ... 
+2024-06-18 14:46:29.8731||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending HEADERS frame for stream ID 1 with length 154 and flags END_HEADERS. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 16384 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 7188 and flags NONE. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 14:46:29.8731||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-18 14:46:29.8883||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder) in 1876.7588ms 
+2024-06-18 14:46:29.8883||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLBulk.GenerateResumes (Resume Builder)' 
+2024-06-18 14:46:29.8883||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4FET212TCG" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-18 14:46:29.8883||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLBulk application/json-patch+json 1000 - 200 105492 application/zip 3573.5531ms 

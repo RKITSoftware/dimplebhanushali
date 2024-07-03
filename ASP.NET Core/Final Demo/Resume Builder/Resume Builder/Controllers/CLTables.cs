@@ -53,7 +53,7 @@ namespace Resume_Builder.Controllers
         /// Drops existing tables and creates new ones in the database.
         /// </summary>
         /// <returns>An HTTP response indicating success.</returns>
-        [HttpPost, Route("DronNCreateTables")]
+        [HttpPost, Route("DropNCreateTables")]
         public IActionResult DropAndCreateTables()
         {
             _blTables.DropNCreateTables();

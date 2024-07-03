@@ -83,8 +83,8 @@ namespace Resume_Builder.BL.Services
             // Get the generated resume as byte array
             byte[] resumeBytes = memoryStream.ToArray();
 
-            //// Send the resume to user's email
-            //_sender.Send(user.R01F04, "Please find attached your resume.", resumeBytes);
+            // Send the resume to user's email
+            _sender.Send(user.R01F04, "Please find attached your resume here ......", resumeBytes);
 
             // Return the generated PDF as a byte array
             return resumeBytes;
@@ -277,7 +277,7 @@ namespace Resume_Builder.BL.Services
             PdfPTable taskTable = new PdfPTable(1);
             taskTable.WidthPercentage = 100;
 
-            foreach (var skill in skillsList)
+            foreach (SKL01 skill in skillsList)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(skill.L01F03, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10)));
                 cell.Border = PdfPCell.NO_BORDER;
@@ -313,7 +313,7 @@ namespace Resume_Builder.BL.Services
             taskTable.WidthPercentage = 100;
 
 
-            foreach (var language in languageList)
+            foreach (LAN01 language in languageList)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(language.N01F03, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10)));
                 cell.Border = PdfPCell.NO_BORDER;

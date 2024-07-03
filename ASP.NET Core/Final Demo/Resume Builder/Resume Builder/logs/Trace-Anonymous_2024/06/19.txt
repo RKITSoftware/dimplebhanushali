@@ -1,0 +1,73 @@
+2024-06-19 16:23:13.6230||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: After executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 
+2024-06-19 16:23:13.6361||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-19 16:23:13.6361||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Resume_Builder.Controllers.CLAuth (Resume Builder) 
+2024-06-19 16:23:13.6737||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-19 16:23:13.6804||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' using the name '' in request data ... 
+2024-06-19 16:23:13.6804||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-19 16:23:13.6804||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2024-06-19 16:23:13.7181||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4G9N8QA46A", Request id "0HN4G9N8QA46A:00000001": started reading request body. 
+2024-06-19 16:23:13.7181||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4G9N8QA46A", Request id "0HN4G9N8QA46A:00000001": done reading request body. 
+2024-06-19 16:23:13.8047||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-19 16:23:13.8047||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-19 16:23:13.8047||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01' ... 
+2024-06-19 16:23:13.8047||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'objDTOLog01' of type 'Resume_Builder.Models.DTOLOG01'. 
+2024-06-19 16:23:13.8189||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:13.8189||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:13.8189||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:13.8189||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:13.8189||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) - Validation state: Valid 
+2024-06-19 16:23:13.8189||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder) with arguments (Resume_Builder.Models.DTOLOG01) 
+2024-06-19 16:23:17.1440||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Resume_Builder.Controllers.CLAuth.Login (Resume Builder), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3310.5234ms. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:17.1440||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:17.1480||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-19 16:23:17.1480||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2024-06-19 16:23:17.1629||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-06-19 16:23:17.1629||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-06-19 16:23:17.1629||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-06-19 16:23:17.1629||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-06-19 16:23:17.1629||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'Resume_Builder.Models.Response'. 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46A" sending HEADERS frame for stream ID 1 with length 83 and flags END_HEADERS. 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46A" sending DATA frame for stream ID 1 with length 390 and flags NONE. 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-06-19 16:23:17.2720||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Resume_Builder.Controllers.CLAuth.Login (Resume Builder) in 3649.7528ms 
+2024-06-19 16:23:17.2720||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Resume_Builder.Controllers.CLAuth.Login (Resume Builder)' 
+2024-06-19 16:23:17.2720||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46A" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2024-06-19 16:23:17.2720||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7286/api/CLAuth application/json-patch+json 64 - 200 390 application/json;+charset=utf-8 5799.7001ms 
+2024-06-19 16:23:17.2876||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46A" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-19 16:23:17.2876||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4G9N8QA46A" received FIN. 
+2024-06-19 16:23:17.2876||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46A" is closed. The last processed stream ID was 1. 
+2024-06-19 16:23:17.2876||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4G9N8QA46A" sending FIN because: "The client closed the connection." 
+2024-06-19 16:23:17.2876||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4G9N8QA46A" stopped. 
+2024-06-19 16:23:40.3975||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4G9N8QA46B" accepted. 
+2024-06-19 16:23:40.3975||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4G9N8QA46B" started. 
+2024-06-19 16:23:40.4206||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HN4G9N8QA46B established using the following protocol: Tls12 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received HEADERS frame for stream ID 1 with length 670 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2024-06-19 16:23:40.4294||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7286/CLResumeGeneration/GenerateResume - 0 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HN4G9N8QA46B" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2024-06-19 16:23:40.4294||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-06-19 16:23:40.4294||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-06-19 16:23:40.4294||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/CLResumeGeneration/GenerateResume' 
+2024-06-19 16:23:40.4294||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder)' with route pattern 'CLResumeGeneration/GenerateResume' is valid for the request path '/CLResumeGeneration/GenerateResume' 
+2024-06-19 16:23:40.4294||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder)' 
+2024-06-19 16:23:40.4294||DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'https://localhost:7286'. 
+2024-06-19 16:23:40.4294||INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-06-19 16:23:40.4294||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Resume_Builder.Controllers.CLResumeGeneration.GenerateResume (Resume Builder)' 
+2024-06-19 16:23:40.4472||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateResume", controller = "CLResumeGeneration"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateResume() on controller Resume_Builder.Controllers.CLResumeGeneration (Resume Builder). 
+2024-06-19 16:23:40.4472||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter 
+2024-06-19 16:23:40.4472||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-06-19 16:23:40.4472||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-06-19 16:23:40.4472||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-06-19 16:23:40.4472||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-06-19 16:23:40.4472||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Authorization Filter: Before executing OnAuthorization on filter Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter. 

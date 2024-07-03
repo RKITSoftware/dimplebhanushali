@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ServiceStack.DataAnnotations;
 
 namespace Resume_Builder.Models.POCO
 {
@@ -10,7 +10,7 @@ namespace Resume_Builder.Models.POCO
         /// <summary>
         /// User Id
         /// </summary>
-        [ServiceStack.DataAnnotations.PrimaryKey, ServiceStack.DataAnnotations.AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int R01F01 { get; set; }
 
         /// <summary>
@@ -46,11 +46,13 @@ namespace Resume_Builder.Models.POCO
         /// <summary>
         /// User Created Date
         /// </summary>
+        [IgnoreOnUpdate]
         public DateTime? R01F08 { get; set; }
 
         /// <summary>
         /// User Updated Date
         /// </summary>
+        [IgnoreOnInsert]
         public DateTime? R01F09 { get; set; }
     }
 }

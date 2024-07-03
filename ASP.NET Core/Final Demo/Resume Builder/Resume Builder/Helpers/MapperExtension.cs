@@ -1,4 +1,6 @@
-﻿namespace Resume_Builder.Helpers
+﻿using System.Reflection;
+
+namespace Resume_Builder.Helpers
 {
     /// <summary>
     /// Extension methods for object mapping.
@@ -22,14 +24,14 @@
                 destination = Activator.CreateInstance<TDestination>();
             }
 
-            var sourceProperties = source.GetType().GetProperties();
-            var destinationProperties = typeof(TDestination).GetProperties();
+            PropertyInfo[] sourceProperties = source.GetType().GetProperties();
+            PropertyInfo[] destinationProperties = typeof(TDestination).GetProperties();
 
             if (sourceProperties != null && destinationProperties != null)
             {
-                foreach (var sourceProp in sourceProperties)
+                foreach (PropertyInfo sourceProp in sourceProperties)
                 {
-                    var destProp = destinationProperties.FirstOrDefault(x => x.Name == sourceProp.Name);
+                    PropertyInfo destProp = destinationProperties.FirstOrDefault(x => x.Name == sourceProp.Name);
 
                     if (destProp != null && destProp.PropertyType == sourceProp.PropertyType)
                     {

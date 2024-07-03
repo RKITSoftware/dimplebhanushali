@@ -30,6 +30,19 @@
             Drops existing tables and recreates them.
             </summary>
         </member>
+        <member name="T:Resume_Builder.BL.Interfaces.IAuthService">
+            <summary>
+            Authorization / Login interface 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Interfaces.IAuthService.Login(System.String,System.String)">
+            <summary>
+            Login method which generates token for correct credential 
+            </summary>
+            <param name="email"> email id </param>
+            <param name="password"> password </param>
+            <returns> object of response </returns>
+        </member>
         <member name="T:Resume_Builder.BL.Interfaces.ICRUDService`1">
             <summary>
             Interface defining CRUD (Create, Read, Update, Delete) operations and user details retrieval.
@@ -41,13 +54,13 @@
             Enm Operation Instance
             </summary>
         </member>
-        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Get">
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.GetData">
             <summary>
             Retrieves all items.
             </summary>
             <returns>A response containing the result of the operation.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.Get(System.Int32)">
+        <member name="M:Resume_Builder.BL.Interfaces.ICRUDService`1.GetById(System.Int32)">
             <summary>
             Retrieves an item by its ID.
             </summary>
@@ -106,19 +119,6 @@
             </summary>
             <param name="obj">DTO Object</param>
             <returns></returns>
-        </member>
-        <member name="T:Resume_Builder.BL.Interfaces.IAuthService">
-            <summary>
-            Authorization / Login interface 
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.BL.Interfaces.IAuthService.Login(System.String,System.String)">
-            <summary>
-            Login method which generates token for correct credential 
-            </summary>
-            <param name="email"> email id </param>
-            <param name="password"> password </param>
-            <returns> object of response </returns>
         </member>
         <member name="T:Resume_Builder.BL.Interfaces.ICryptography">
             <summary>
@@ -183,6 +183,44 @@
             <param name="backgroundImageBytes">The byte array of the background image.</param>
             <returns>The byte array of the generated certificate PDF.</returns>
         </member>
+        <member name="T:Resume_Builder.BL.Services.BLAuthHandler">
+            <summary>
+            Implements interface of CLAuth handler
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._cryptography">
+            <summary>
+            Implementation of cryptography
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._objResponse">
+            <summary>
+            Response of action method
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._dbFactory">
+            <summary>
+            OrmLite Connection Factory
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._authService">
+            <summary>
+            Authentication Service 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.#ctor(Resume_Builder.BL.Interfaces.ICryptography,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IAuthentication)">
+            <summary>
+            Configures necessary dependency injections
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.Login(System.String,System.String)">
+            <summary>
+            Login Method 
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
         <member name="T:Resume_Builder.BL.Services.BLBulkResumeGenerationService">
             <summary>
             This Class Handles BUlk Resume Generations.
@@ -205,21 +243,21 @@
             <param name="httpContextAccessor">Http Context Accessor</param>
             <param name="sender">IEmailService</param>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumesFromJson(System.String)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumesFromJson(System.Collections.Generic.List{Resume_Builder.Models.DTO.DTORES02})">
             <summary>
             Generates resumes in PDF format from JSON data.
             </summary>
             <param name="json">JSON string containing resume data.</param>
             <returns>A ZIP archive containing PDF resumes as byte arrays.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumePDF(Resume_Builder.Models.DTO.RES02)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.GenerateResumePDF(Resume_Builder.Models.DTO.DTORES02)">
             <summary>
             Generates a PDF resume for a user.
             </summary>
             <param name="userData">User data to include in the resume.</param>
             <returns>Byte array representing the PDF resume.</returns>
         </member>
-        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.DTO.RES02)">
+        <member name="M:Resume_Builder.BL.Services.BLBulkResumeGenerationService.AddUserDetails(iTextSharp.text.Document,Resume_Builder.Models.DTO.DTORES02)">
             <summary>
             Adds user details to a PDF document.
             </summary>
@@ -367,44 +405,6 @@
             <param name="userId">The ID of the user.</param>
             <returns>The list of details.</returns>
         </member>
-        <member name="T:Resume_Builder.BL.Services.BLAuthHandler">
-            <summary>
-            Implements interface of CLAuth handler
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._cryptography">
-            <summary>
-            Implementation of cryptography
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._objResponse">
-            <summary>
-            Response of action method
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._dbFactory">
-            <summary>
-            OrmLite Connection Factory
-            </summary>
-        </member>
-        <member name="F:Resume_Builder.BL.Services.BLAuthHandler._authService">
-            <summary>
-            Authentication Service 
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.#ctor(Resume_Builder.BL.Interfaces.ICryptography,Resume_Builder.Data.DbConnectionFactory,Resume_Builder.DL.Interfaces.IAuthentication)">
-            <summary>
-            Configures necessary dependency injections
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.BL.Services.BLAuthHandler.Login(System.String,System.String)">
-            <summary>
-            Login Method 
-            </summary>
-            <param name="email"></param>
-            <param name="password"></param>
-            <returns></returns>
-        </member>
         <member name="T:Resume_Builder.DL.Services.BLCRUDImplementation`1">
             <summary>
             Implementation of the CRUD service interface.
@@ -431,6 +431,11 @@
             Instance of Db Connection Factory.
             </summary>
         </member>
+        <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._dbContext">
+            <summary>
+            Instance of Db Common Context.
+            </summary>
+        </member>
         <member name="F:Resume_Builder.DL.Services.BLCRUDImplementation`1._httpContextAccessor">
             <summary>
             Instance of HttpContextAccessor for Passing user id from Http Context.
@@ -448,12 +453,12 @@
             <param name="dbConnectionFactory">Database connection factory.</param>
             <param name="httpContextAccessor">HTTP context accessor.</param>
         </member>
-        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Get">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.GetData">
             <summary>
             Retrieves all items.
             </summary>
         </member>
-        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.Get(System.Int32)">
+        <member name="M:Resume_Builder.DL.Services.BLCRUDImplementation`1.GetById(System.Int32)">
             <summary>
             Retrieves an item by its ID.
             </summary>
@@ -582,51 +587,13 @@
             Email Service which implements ISender
             </summary>
         </member>
-        <member name="T:Resume_Builder.DL.Implemntations.NLogService">
+        <member name="M:Resume_Builder.DL.Implemntations.EmailService.Send(System.String,System.String,System.Byte[])">
             <summary>
-            Implementation of Ilogging Service 
+            Sending message to user
             </summary>
-        </member>
-        <member name="F:Resume_Builder.DL.Implemntations.NLogService._logger">
-            <summary>
-            ILogger Service
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.#ctor">
-            <summary>
-            Starting NLog Service 
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogError(System.String)">
-            <summary>
-            Logs error
-            </summary>
-            <param name="message"> error message </param>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogException(System.Exception,System.String)">
-            <summary>
-            Logs Exception
-            </summary>
-            <param name="ex"> exception </param>
-            <param name="message"> exception message </param>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogInformation(System.String)">
-            <summary>
-            Logs information 
-            </summary>
-            <param name="message"> information message </param>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogTrace(System.String)">
-            <summary>
-            Logs trace 
-            </summary>
-            <param name="message"> trace message </param>
-        </member>
-        <member name="M:Resume_Builder.DL.Implemntations.NLogService.LogWarning(System.String)">
-            <summary>
-            Logs Warning
-            </summary>
-            <param name="message"> warning message </param>
+            <param name="email"> email id of user</param>
+            <param name="body"> body for sending message </param>
+            <param name="attachmentBytes"> Resume Attachment </param>
         </member>
         <member name="T:Resume_Builder.DL.Implemntations.RedisService">
             <summary>
@@ -698,8 +665,9 @@
             <summary>
             Sending message to user
             </summary>
-            <param name="message"> message which we are sending to user </param>
-            <param name="address"> email id on whiich we are sending message </param>
+            <param name="email"> email id of user</param>
+            <param name="body"> body for sending message </param>
+            <param name="attachmentBytes"> Resume Attachment </param>
         </member>
         <member name="T:Resume_Builder.DL.Interfaces.ILogging">
             <summary>
@@ -830,7 +798,7 @@
             <param name="csvToJSON">The service responsible for converting CSV files to JSON.</param>
             <param name="httpClient">The HTTP client for making HTTP requests.</param>
         </member>
-        <member name="M:Resume_Builder.Controllers.CLBulk.GenerateResumes(System.Collections.Generic.List{Resume_Builder.Models.DTO.RES02})">
+        <member name="M:Resume_Builder.Controllers.CLBulk.GenerateResumes(System.Collections.Generic.List{Resume_Builder.Models.DTO.DTORES02})">
             <summary>
             Generates resumes in bulk from a list of RES02 objects.
             </summary>
@@ -1324,17 +1292,6 @@
             </summary>
             <returns>A new instance of IDbConnection representing the database connection.</returns>
         </member>
-        <member name="T:Resume_Builder.Helpers.CustomExceptionHandler">
-            <summary>
-            Handles exceptions that occur during request processing and generates appropriate error responses.
-            </summary>
-        </member>
-        <member name="M:Resume_Builder.Helpers.CustomExceptionHandler.HandleExceptionAsync(Microsoft.AspNetCore.Http.HttpContext)">
-            <summary>
-            Handles the exception asynchronously and generates an error response.
-            </summary>
-            <param name="context">The HttpContext associated with the request.</param>
-        </member>
         <member name="T:Resume_Builder.Helpers.enmOperation">
             <summary>
             Enum defining messages for different operations.
@@ -1401,6 +1358,68 @@
             <param name="httpContext"> http context </param>
             <returns> email id </returns>
         </member>
+        <member name="T:Resume_Builder.Middlewares.ExceptionMiddleware">
+            <summary>
+            Middleware for handling exceptions and logging them.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.ExceptionMiddleware._next">
+            <summary>
+            Represents the next middleware in the pipeline.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.ExceptionMiddleware._logger">
+            <summary>
+            Logger instance for logging exceptions.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Resume_Builder.Middlewares.ExceptionMiddleware"/> class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.ExceptionMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <returns>A task representing the completion of request processing.</returns>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.ExceptionMiddlewareExtensions">
+            <summary>
+            Extension method to add the exception middleware to the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.ExceptionMiddlewareExtensions.UseExceptionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds the exception middleware to the application builder.
+            </summary>
+            <param name="builder">The application builder.</param>
+            <returns>The application builder.</returns>
+        </member>
+        <member name="T:Resume_Builder.Middlewares.Filters.ExceptionFilter">
+            <summary>
+            Custom exception filter to log unhandled exceptions.
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Middlewares.Filters.ExceptionFilter._logger">
+            <summary>
+            ILogger
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.Filters.ExceptionFilter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:CustomExceptionFilter"/> class.
+            </summary>
+            <param name="logger">The logger to log exception information.</param>
+        </member>
+        <member name="M:Resume_Builder.Middlewares.Filters.ExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Logs exception into file 
+            </summary>
+            <param name="context">Context of exception filter</param>
+        </member>
         <member name="T:Resume_Builder.Middlewares.Filters.JwtAuthenticationFilter">
             <summary>
             Authentication filter which valides jwt token
@@ -1450,6 +1469,11 @@
             Represents the memory cache service used for rate limiting.
             </summary>
         </member>
+        <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._context">
+            <summary>
+            Represents the IHttpContextAccessor service used for Finding User Email.
+            </summary>
+        </member>
         <member name="F:Resume_Builder.Middlewares.RateLimitingMiddleware._logger">
             <summary>
             Represents the logger service used for logging rate limit exceeded events.
@@ -1460,7 +1484,7 @@
             Represents the service provider used for resolving dependencies.
             </summary>
         </member>
-        <member name="M:Resume_Builder.Middlewares.RateLimitingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Logging.ILogger{Resume_Builder.Middlewares.RateLimitingMiddleware},System.IServiceProvider)">
+        <member name="M:Resume_Builder.Middlewares.RateLimitingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Logging.ILogger{Resume_Builder.Middlewares.RateLimitingMiddleware},System.IServiceProvider)">
             <summary>
             Initializes a new instance of the <see cref="T:Resume_Builder.Middlewares.RateLimitingMiddleware"/> class.
             </summary>
@@ -1506,7 +1530,7 @@
             Represents a semaphore used for controlling access to the request queue.
             </summary>
         </member>
-        <member name="M:Resume_Builder.Middlewares.RequestProcessingService.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.Extensions.Logging.ILogger{Resume_Builder.Middlewares.RequestProcessingService})">
+        <member name="M:Resume_Builder.Middlewares.RequestProcessingService.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
             <summary>
             Initializes a new instance of the <see cref="T:Resume_Builder.Middlewares.RequestProcessingService"/> class.
             </summary>
@@ -1715,107 +1739,42 @@
             Summary
             </summary>
         </member>
-        <member name="T:Resume_Builder.Models.DTO.DTOSKL01">
-            <summary>
-            Data Transfer Object (DTO) for Skill.
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F01">
-            <summary>
-            Skill Id
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.UserId">
-            <summary>
-            User Id
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F03">
-            <summary>
-            Skill Name
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F04">
-            <summary>
-            ProficiencyLevel
-            </summary>
-        </member>
-        <member name="T:Resume_Builder.Models.DTO.DTOUSR01">
-            <summary>
-            Data Transfer Object (DTO) for User.
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F01">
-            <summary>
-            User Id
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F02">
-            <summary>
-            First Name of User
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F03">
-            <summary>
-            Last Name of User
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F04">
-            <summary>
-            Email Id of User
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F05">
-            <summary>
-            Mobile Number of User
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F06">
-            <summary>
-            Age of User
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F07">
-            <summary>
-            Password
-            </summary>
-        </member>
-        <member name="T:Resume_Builder.Models.DTO.RES02">
+        <member name="T:Resume_Builder.Models.DTO.DTORES02">
             <summary>
             Data Transfer Object (DTO) for representing a Resume.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.UserDetails">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.UserDetails">
             <summary>
             Gets or sets the user details.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.Education">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.Education">
             <summary>
             Gets or sets the list of education details.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.WorkExperience">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.WorkExperience">
             <summary>
             Gets or sets the list of work experience details.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.Projects">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.Projects">
             <summary>
             Gets or sets the list of project details.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.Certificates">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.Certificates">
             <summary>
             Gets or sets the list of certificates.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.KnownLanguages">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.KnownLanguages">
             <summary>
             Gets or sets the list of known languages.
             </summary>
         </member>
-        <member name="P:Resume_Builder.Models.DTO.RES02.Skills">
+        <member name="P:Resume_Builder.Models.DTO.DTORES02.Skills">
             <summary>
             Gets or sets the list of skills.
             </summary>
@@ -1950,6 +1909,71 @@
             Gets or sets the end date of the project.
             </summary>
         </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOSKL01">
+            <summary>
+            Data Transfer Object (DTO) for Skill.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F01">
+            <summary>
+            Skill Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F03">
+            <summary>
+            Skill Name
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOSKL01.L01F04">
+            <summary>
+            ProficiencyLevel
+            </summary>
+        </member>
+        <member name="T:Resume_Builder.Models.DTO.DTOUSR01">
+            <summary>
+            Data Transfer Object (DTO) for User.
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F01">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F02">
+            <summary>
+            First Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F03">
+            <summary>
+            Last Name of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F04">
+            <summary>
+            Email Id of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F05">
+            <summary>
+            Mobile Number of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F06">
+            <summary>
+            Age of User
+            </summary>
+        </member>
+        <member name="P:Resume_Builder.Models.DTO.DTOUSR01.R01F07">
+            <summary>
+            Password
+            </summary>
+        </member>
         <member name="T:Resume_Builder.Models.DTOCER02">
             <summary>
             Data Transfer Object (DTO) for Certificate Request.
@@ -2013,26 +2037,6 @@
             Password
             </summary>
             <example>abc123</example>
-        </member>
-        <member name="T:Resume_Builder.Models.ErrorModel">
-            <summary>
-            Model class representing an error response.
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.ErrorModel.RequestId">
-            <summary>
-            Gets or sets the request identifier associated with the error.
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.ErrorModel.ShowRequestId">
-            <summary>
-            Gets a value indicating whether to show the request identifier.
-            </summary>
-        </member>
-        <member name="P:Resume_Builder.Models.ErrorModel.ExceptionMsg">
-            <summary>
-            Gets or sets the exception message describing the error.
-            </summary>
         </member>
         <member name="T:Resume_Builder.Models.POCO.CER01">
             <summary>
@@ -2324,6 +2328,52 @@
             Main Entry point of the Program.
             </summary>
             <param name="args"></param>
+        </member>
+        <member name="T:Resume_Builder.Services.Implemntations.NLogService">
+            <summary>
+            Implementation of Ilogging Service 
+            </summary>
+        </member>
+        <member name="F:Resume_Builder.Services.Implemntations.NLogService._logger">
+            <summary>
+            ILogger Service
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.#ctor">
+            <summary>
+            Starting NLog Service 
+            </summary>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.LogError(System.String)">
+            <summary>
+            Logs error
+            </summary>
+            <param name="message"> error message </param>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.LogException(System.Exception,System.String)">
+            <summary>
+            Logs Exception
+            </summary>
+            <param name="ex"> exception </param>
+            <param name="message"> exception message </param>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.LogInformation(System.String)">
+            <summary>
+            Logs information 
+            </summary>
+            <param name="message"> information message </param>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.LogTrace(System.String)">
+            <summary>
+            Logs trace 
+            </summary>
+            <param name="message"> trace message </param>
+        </member>
+        <member name="M:Resume_Builder.Services.Implemntations.NLogService.LogWarning(System.String)">
+            <summary>
+            Logs Warning
+            </summary>
+            <param name="message"> warning message </param>
         </member>
         <member name="T:Resume_Builder.Startup">
             <summary>

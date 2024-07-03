@@ -3,10 +3,10 @@ using Resume_Builder.BL;
 using Resume_Builder.BL.Interfaces;
 using Resume_Builder.BL.Services;
 using Resume_Builder.Data;
+using Resume_Builder.Data.Services;
 using Resume_Builder.DL.Implemntations;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.DL.Services;
-using Resume_Builder.Helpers;
 using Resume_Builder.Middlewares;
 using Resume_Builder.Middlewares.Filters;
 using Resume_Builder.Models.POCO;
@@ -46,15 +46,17 @@ namespace Resume_Builder
 
             services.AddSingleton<BLTables>();
 
+            services.AddScoped<DbCommonContext>();
+
             // CRUD Implementations
             services.AddScoped<ICRUDService<EDU01>, BLCRUDImplementation<EDU01>>();
             services.AddScoped<ICRUDService<CER01>, BLCRUDImplementation<CER01>>();
             services.AddScoped<ICRUDService<EXP01>, BLCRUDImplementation<EXP01>>();
             services.AddScoped<ICRUDService<LAN01>, BLCRUDImplementation<LAN01>>();
-            services.AddScoped<ICRUDService<PRO01>, BLCRUDImplementation<PRO01>>();
-            services.AddScoped<ICRUDService<RES01>, BLCRUDImplementation<RES01>>();
-            services.AddScoped<ICRUDService<SKL01>, BLCRUDImplementation<SKL01>>();
-            services.AddScoped<ICRUDService<USR01>, BLCRUDImplementation<USR01>>();
+            services.AddTransient<ICRUDService<PRO01>, BLCRUDImplementation<PRO01>>();
+            services.AddTransient<ICRUDService<RES01>, BLCRUDImplementation<RES01>>();
+            services.AddTransient<ICRUDService<SKL01>, BLCRUDImplementation<SKL01>>();
+            services.AddTransient<ICRUDService<USR01>, BLCRUDImplementation<USR01>>();
 
             // PDF and Image Generation Services
             services.AddScoped<BLResumeGenerationService>();
@@ -63,6 +65,7 @@ namespace Resume_Builder
 
             // Add Filters
             services.AddScoped<JwtAuthenticationFilter>();
+            services.AddScoped<ExceptionFilter>();
 
             // Configures Controllers
             services.AddControllers(options =>
@@ -140,33 +143,11 @@ namespace Resume_Builder
                 app.UseSwaggerUI();
             }
 
-            app.UseExceptionHandler(a => a.Run(async context =>
-            {
-                await CustomExceptionHandler.HandleExceptionAsync(context);
-            }));
-
-            ////Using UseDeveloperExceptionPage Middleware to Show Exception Details
-            //app.UseExceptionHandler(a => a.Run(async context =>
-            //{
-            //    var exceptionHandlerPathFeature = context
-            //                            .Features
-            //                            .Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
-            //    var exception = exceptionHandlerPathFeature.Error;
-
-            //    context.Response.ContentType = "text/html";
-            //    await context.Response.WriteAsync("<html><body>\r\n");
-            //    await context.Response.WriteAsync("<b>Custom Error Page</b><br><br>\r\n");
-
-            //    // Display custom error details
-            //    await context.Response.WriteAsync($"<strong>Error:</strong> {exception.Message}<br>\r\n");
-            //    await context.Response.WriteAsync("</body></html>\r\n");
-            //}));
-
             app.UseHttpsRedirection();
             app.UseAuthorization();
 
             app.UseRateLimitingMiddleware();
-
+            app.UseExceptionMiddleware();
             app.UseRouting();
 
             app.UseCors();

@@ -1,0 +1,16 @@
+2024-06-18 10:08:38.9776||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Middlewares\RequestProcessingService.cs:line 66
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-06-18 10:09:54.9917||ERROR|Microsoft.Extensions.Hosting.Internal.Host|BackgroundService failed System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Resume_Builder.Middlewares.RequestProcessingService.ExecuteAsync(CancellationToken stoppingToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2024-06-18 14:46:29.7636||ERROR|Resume_Builder.Services.Implemntations.NLogService|Failed to send email to: string System.FormatException: The specified string is not in the form required for an e-mail address.
+   at System.Net.Mail.MailAddressParser.TryReadCfwsAndThrowIfIncomplete(String data, Int32 index, Int32& outIndex, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.TryParseDomain(String data, Int32& index, String& domain, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.TryParseAddress(String data, Boolean expectMultipleAddresses, Int32& index, ParseAddressInfo& parseAddressInfo, Boolean throwExceptionIfFail)
+   at System.Net.Mail.MailAddressParser.ParseMultipleAddresses(String data)
+   at System.Net.Mail.MailAddressCollection.ParseValue(String addresses)
+   at System.Net.Mail.MailAddressCollection.Add(String addresses)
+   at System.Net.Mail.Message..ctor(String from, String to)
+   at System.Net.Mail.MailMessage..ctor(String from, String to)
+   at Resume_Builder.DL.Implemntations.EmailService.Send(String email, String body, Byte[] attachmentBytes) in F:\Dimple - 371\Git\training\ASP.NET Core\Final Demo\Resume Builder\Resume Builder\Services\Implemntations\EmailService.cs:line 44

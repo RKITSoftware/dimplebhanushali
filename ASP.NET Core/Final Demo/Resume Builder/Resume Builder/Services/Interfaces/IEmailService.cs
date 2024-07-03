@@ -10,8 +10,9 @@
         /// <summary>
         /// Sending message to user
         /// </summary>
-        /// <param name="message"> message which we are sending to user </param>
-        /// <param name="address"> email id on whiich we are sending message </param>
+        /// <param name="email"> email id of user</param>
+        /// <param name="body"> body for sending message </param>
+        /// <param name="attachmentBytes"> Resume Attachment </param>
         void Send(string email, string body, byte[] attachmentBytes);
 
         #endregion

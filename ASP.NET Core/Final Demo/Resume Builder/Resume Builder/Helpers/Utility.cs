@@ -16,10 +16,18 @@ namespace Resume_Builder.Helpers
         /// <returns> user id </returns>
         public static int GetUserIdFromClaims(this HttpContext httpContext)
         {
-            var principal = httpContext.User as ClaimsPrincipal;
-            var userIdClaim = principal.FindFirst(c => c.Type == "jwt_userId");
+            int userId = 0;
+            try
+            {
+                var principal = httpContext.User as ClaimsPrincipal;
+                var userIdClaim = principal.FindFirst(c => c.Type == "jwt_userId");
+                userId = Convert.ToInt32(userIdClaim.Value);
+            }
+            catch (Exception)
+            {
+            }
 
-            return Convert.ToInt32(userIdClaim.Value);
+            return userId;
         }
 
         /// <summary>
@@ -29,10 +37,20 @@ namespace Resume_Builder.Helpers
         /// <returns> email id </returns>
         public static string GetEmailIdFromClaims(this HttpContext httpContext)
         {
-            var principal = httpContext.User as ClaimsPrincipal;
-            var userIdClaim = principal.FindFirst(c => c.Type == "jwt_eamilId");
-
-            return userIdClaim.Value;
+            string email = string.Empty;
+            try
+            {
+                var principal = httpContext.User as ClaimsPrincipal;
+                var userIdClaim = principal.FindFirst(c => c.Type == "jwt_eamilId");
+                if (userIdClaim != null)
+                {
+                    email = userIdClaim.Value;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return email;
         }
 
         #endregion

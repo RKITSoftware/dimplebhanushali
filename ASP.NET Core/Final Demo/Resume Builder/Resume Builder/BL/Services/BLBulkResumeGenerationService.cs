@@ -1,6 +1,5 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
-using Newtonsoft.Json;
 using Resume_Builder.DL.Interfaces;
 using Resume_Builder.Models.DTO;
 using System.IO.Compression;
@@ -50,18 +49,18 @@ namespace Resume_Builder.BL.Services
         /// </summary>
         /// <param name="json">JSON string containing resume data.</param>
         /// <returns>A ZIP archive containing PDF resumes as byte arrays.</returns>
-        public byte[] GenerateResumesFromJson(string json)
+        public byte[] GenerateResumesFromJson(List<DTORES02> lstRES02)
         {
             try
             {
-                var resumesData = JsonConvert.DeserializeObject<List<RES02>>(json);
                 List<byte[]> resumeBytesList = new List<byte[]>();
-
+                string bodyOfEmail = "Resume Via Resume Builder Application !!!";
                 // Generate PDF resumes for each user data
-                foreach (var userData in resumesData)
+                foreach (DTORES02 userData in lstRES02)
                 {
                     byte[] resumeBytes = GenerateResumePDF(userData);
                     resumeBytesList.Add(resumeBytes);
+                    _sender.Send(userData.UserDetails.Email, bodyOfEmail, resumeBytes);
                 }
 
                 // Create a ZIP archive containing all generated resumes
@@ -83,7 +82,7 @@ namespace Resume_Builder.BL.Services
         /// </summary>
         /// <param name="userData">User data to include in the resume.</param>
         /// <returns>Byte array representing the PDF resume.</returns>
-        private byte[] GenerateResumePDF(RES02 userData)
+        private byte[] GenerateResumePDF(DTORES02 userData)
         {
             // Create a new PDF document
             Document document = new Document();
@@ -106,7 +105,7 @@ namespace Resume_Builder.BL.Services
         /// </summary>
         /// <param name="document">The PDF document to which user details are added.</param>
         /// <param name="userData">User data containing information to be added.</param>
-        private void AddUserDetails(Document document, RES02 userData)
+        private void AddUserDetails(Document document, DTORES02 userData)
         {
             PdfPTable table = new PdfPTable(1); // 1 column for user information
             table.WidthPercentage = 100;
@@ -115,40 +114,63 @@ namespace Resume_Builder.BL.Services
             PdfPCell infoCell = new PdfPCell();
             infoCell.Border = PdfPCell.NO_BORDER;
 
+            #region User Details
             // Add basic user details, objective section, education, work experience, certificates, projects, languages, and skills
             AddBasicUserDetails(infoCell, userData.UserDetails);
             infoCell.AddElement(Chunk.NEWLINE);
+            #endregion
+
+            #region Objective Section
             AddObjectiveSection(infoCell);
+            #endregion
+
+            #region Education Details
             bool isTitle = true;
-            foreach (var education in userData.Education)
+            foreach (Education education in userData.Education)
             {
                 AddDetailsSection(infoCell, "EDUCATION", isTitle, education.Institute, education.Degree, education.FieldOfStudy, education.EducationYear.ToString());
                 isTitle = false;
             }
+            #endregion
+
+            #region Experience Details
             isTitle = true;
-            foreach (var experience in userData.WorkExperience)
+            foreach (WorkExperience experience in userData.WorkExperience)
             {
                 AddDetailsSection(infoCell, "WORK EXPERIENCE", isTitle, experience.Company, experience.Position, experience.StartDate.ToString(), experience.EndDate.ToString());
                 isTitle = false;
             }
+            #endregion
+
+            #region Certiifcation Details
             isTitle = true;
-            foreach (var certificate in userData.Certificates)
+            foreach (Certificate certificate in userData.Certificates)
             {
                 AddDetailsSection(infoCell, "CERTIFICATES", isTitle, certificate.CertificateName, certificate.Organization);
                 isTitle = false;
             }
             infoCell.AddElement(Chunk.NEWLINE);
+            #endregion
+
+            #region Project Details
             isTitle = true;
-            foreach (var project in userData.Projects)
+            foreach (Project project in userData.Projects)
             {
                 AddDetailsSection(infoCell, "PROJECTS", isTitle, project.ProjectName, project.Description, project.StartDate.ToString(), project.EndDate.ToString());
                 isTitle = false;
             }
             infoCell.AddElement(Chunk.NEWLINE);
+            #endregion
+
+            #region Language Details
             isTitle = true;
             AddLanguagesSection(infoCell, "LANGUAGES", userData.KnownLanguages, isTitle);
             infoCell.AddElement(Chunk.NEWLINE);
+            #endregion
+
+            #region Skill Details
             AddSkillsSection(infoCell, "SKILLS", userData.Skills, isTitle);
+            #endregion
 
             table.AddCell(infoCell);
             document.Add(table);
@@ -202,11 +224,11 @@ namespace Resume_Builder.BL.Services
         {
             using (MemoryStream memoryStream = new MemoryStream())
             {
-                using (var zipArchive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
+                using (ZipArchive zipArchive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
                 {
                     for (int i = 0; i < files.Count; i++)
                     {
-                        var entry = zipArchive.CreateEntry($"resume_{i + 1}.pdf");
+                        ZipArchiveEntry entry = zipArchive.CreateEntry($"resume_{i + 1}.pdf");
                         using (var entryStream = entry.Open())
                         {
                             entryStream.Write(files[i], 0, files[i].Length);
@@ -271,7 +293,7 @@ namespace Resume_Builder.BL.Services
             PdfPTable table = new PdfPTable(1);
             table.WidthPercentage = 100;
 
-            foreach (var language in languages)
+            foreach (string language in languages)
             {
                 PdfPCell languageCell = new PdfPCell(new Phrase(language, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 11)));
                 languageCell.Border = PdfPCell.NO_BORDER;
@@ -303,7 +325,7 @@ namespace Resume_Builder.BL.Services
             PdfPTable table = new PdfPTable(1);
             table.WidthPercentage = 100;
 
-            foreach (var skill in skills)
+            foreach (string skill in skills)
             {
                 PdfPCell skillCell = new PdfPCell(new Phrase(skill, FontFactory.GetFont(FontFactory.TIMES_ROMAN, 11)));
                 skillCell.Border = PdfPCell.NO_BORDER;

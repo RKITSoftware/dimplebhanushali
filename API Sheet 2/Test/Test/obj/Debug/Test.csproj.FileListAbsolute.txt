@@ -1,0 +1,12 @@
+F:\Dimple - 371\Test\Test\bin\Debug\Test.exe.config
+F:\Dimple - 371\Test\Test\bin\Debug\Test.exe
+F:\Dimple - 371\Test\Test\bin\Debug\Test.pdb
+F:\Dimple - 371\Test\Test\bin\Debug\HtmlAgilityPack.dll
+F:\Dimple - 371\Test\Test\bin\Debug\HtmlAgilityPack.pdb
+F:\Dimple - 371\Test\Test\bin\Debug\HtmlAgilityPack.xml
+F:\Dimple - 371\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+F:\Dimple - 371\Test\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+F:\Dimple - 371\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+F:\Dimple - 371\Test\Test\obj\Debug\Test.csproj.CopyComplete
+F:\Dimple - 371\Test\Test\obj\Debug\Test.exe
+F:\Dimple - 371\Test\Test\obj\Debug\Test.pdb
